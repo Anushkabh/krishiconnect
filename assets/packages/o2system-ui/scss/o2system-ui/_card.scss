@@ -1,0 +1,357 @@
+/** Card **/
+.card {
+	.card-header{
+		.card-options{
+			float: right;
+
+			a {
+			    display: inline-block;
+			    color: rgba(55, 62, 74, 0.7);
+			    text-align: center;
+			    line-height: 1;
+			    padding: 4px 2px;
+			    -webkit-border-radius: 3px;
+			    -webkit-background-clip: padding-box;
+			    -moz-border-radius: 3px;
+			    -moz-background-clip: padding;
+			    border-radius: 3px;
+			    background-clip: padding-box;
+			    -moz-transition: all 300ms ease-in-out;
+			    -o-transition: all 300ms ease-in-out;
+			    -webkit-transition: all 300ms ease-in-out;
+			    transition: all 300ms ease-in-out;
+
+			    i {
+				    margin: 0;
+				    padding: 0;
+				    display: inline-block;
+				}
+
+			}
+
+		}
+	}
+	.card-img-overlay {
+	    color: #fff;
+	    background:rgba(0,0,0,0.3);
+	}
+
+	.card-badge{
+		position: relative;
+
+		.card-badge-container{
+			position: absolute;
+			bottom: 0px;
+
+			.badge{
+				display: block;
+				margin-bottom: 10px;
+				font-size: 14px;
+				font-weight: normal;
+			}
+
+			&.left{
+				left: 0px;
+
+				.badge{
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+				}
+			}
+
+			&.right{
+				right: 0px;
+
+				.badge{
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+				}
+			}
+
+
+			&.inline{
+				padding: 10px;
+				.badge{
+					display: inline-block;
+					margin-bottom: 0;
+					margin-top: 10px;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+
+	.card-ribbon{
+		position: relative;
+
+		.card-ribbon-container{
+			position: absolute;
+			top: -5px;
+			z-index: 1;
+			overflow: hidden;
+			width: 75px;
+			height: 75px;
+			text-align: right;
+			span.ribbon {
+				font-size: 11px;
+				color: #FFF;
+				text-transform: uppercase;
+				text-align: center;
+				line-height: 20px;
+				width: 100px;
+				display: block;
+				background: $gray-light;
+				background: linear-gradient($gray-light 0%, $gray-light 100%);
+				position: absolute;
+				top: 19px;
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0px;
+					top: 100%;
+					z-index: -1;
+					border-left: 3px solid $gray-light;
+					border-right: 3px solid transparent;
+					border-bottom: 3px solid transparent;
+					border-top: 3px solid $gray-light;
+				}
+				&::after {
+					content: "";
+					position: absolute;
+					right: 0px;
+					top: 100%;
+					z-index: -1;
+					border-left: 3px solid transparent;
+					border-right: 3px solid $gray-light;
+					border-bottom: 3px solid transparent;
+					border-top: 3px solid $gray-light;
+				}
+
+				&.ribbon-primary{
+					background: $brand-primary;
+					background: linear-gradient($brand-primary 0%, $brand-primary 100%);
+					&::before {
+						border-left: 3px solid $brand-primary;
+						border-right: 3px solid transparent;
+						border-bottom: 3px solid transparent;
+						border-top: 3px solid $brand-primary;
+					}
+					&::after {
+							border-right: 3px solid $brand-primary;
+							border-bottom: 3px solid transparent;
+							border-top: 3px solid $brand-primary;
+					}
+				}
+
+				&.ribbon-info{
+					background: $brand-info;
+					background: linear-gradient($brand-info 0%, $brand-info 100%);
+					&::before {
+						border-left: 3px solid $brand-info;
+						border-right: 3px solid transparent;
+						border-bottom: 3px solid transparent;
+						border-top: 3px solid $brand-info;
+					}
+					&::after {
+							border-right: 3px solid $brand-info;
+							border-bottom: 3px solid transparent;
+							border-top: 3px solid $brand-info;
+					}
+				}
+
+				&.ribbon-secondary{
+					background: $brand-secondary;
+					background: linear-gradient($brand-secondary 0%, $brand-secondary 100%);
+					&::before {
+						border-left: 3px solid $brand-secondary;
+						border-right: 3px solid transparent;
+						border-bottom: 3px solid transparent;
+						border-top: 3px solid $brand-secondary;
+					}
+					&::after {
+							border-right: 3px solid $brand-secondary;
+							border-bottom: 3px solid transparent;
+							border-top: 3px solid $brand-secondary;
+					}
+				}
+
+				&.ribbon-success{
+					background: $brand-success;
+					background: linear-gradient($brand-success 0%, $brand-success 100%);
+					&::before {
+						border-left: 3px solid $brand-success;
+						border-right: 3px solid transparent;
+						border-bottom: 3px solid transparent;
+						border-top: 3px solid $brand-success;
+					}
+					&::after {
+							border-right: 3px solid $brand-success;
+							border-bottom: 3px solid transparent;
+							border-top: 3px solid $brand-success;
+					}
+				}
+
+				&.ribbon-warning{
+					background: $brand-warning;
+					background: linear-gradient($brand-warning 0%, $brand-warning 100%);
+					&::before {
+						border-left: 3px solid $brand-warning;
+						border-top: 3px solid $brand-warning;
+					}
+					&::after {
+						border-right: 3px solid $brand-warning;
+						border-top: 3px solid $brand-warning;
+					}
+				}
+
+				&.ribbon-danger{
+					background: $brand-danger;
+					background: linear-gradient($brand-danger 0%, $brand-danger 100%);
+					&::before {
+						border-left: 3px solid $brand-danger;
+						border-top: 3px solid $brand-danger;
+					}
+					&::after {
+						border-right: 3px solid $brand-danger;
+						border-top: 3px solid $brand-danger;
+					}
+				}
+			}
+
+			&.right{
+				right: -5px;
+				span {
+					transform: rotate(45deg);
+					-webkit-transform: rotate(45deg);
+					right: -21px;
+				}
+			}
+
+			&.left {
+				left: -5px;
+				span {
+					transform: rotate(-45deg);
+					-webkit-transform: rotate(-45deg);
+					left: -21px;
+				}
+			}
+		}
+	}
+
+	.card-price{
+		margin-bottom: 10px;
+		span{
+			display: block;
+
+			&.reguler{
+				font-size: 16px;
+			}
+
+			&.discount{
+				font-size: 14px;
+				text-decoration: line-through;
+			}
+		}
+	}
+
+	.card-icon{
+		text-align: center;
+		padding: 20px 0;
+
+		.card-icon-image{
+			margin: 0 auto;
+			width: 100px;
+			height: 100px;
+			overflow: hidden;
+			border-radius: 50%;
+			text-align: center;
+			border: 1px solid rgba(0, 0, 0, 0.125);
+
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.card-icon-i{
+			margin: 0 auto;
+			width: 100px;
+			height: 100px;
+			overflow: hidden;
+			border-radius: 50%;
+			text-align: center;
+			border: 1px solid rgba(0, 0, 0, 0.125);
+
+			i, span{
+				font-size: 45px;
+				line-height: 100px;
+			}
+		}
+	}
+
+	.card-author, .card-store{
+		padding: 0.75rem 0;
+		border-top: 1px solid rgba(0, 0, 0, 0.125);
+
+		.card-avatar, .card-logo{
+			float: left;
+			width: 60px;
+			height: 60px;
+			overflow: hidden;
+			border-radius: 50%;
+			margin-right: 10px;
+			border: 1px solid rgba(0, 0, 0, 0.125);
+
+			img{
+				width: 100%;
+			}
+		}
+
+		.card-profile{
+			float: left;
+			h4{
+				margin-top: 0;
+				margin-bottom: 0;
+
+				a{
+					font-size: 14px;
+					font-weight: bold;
+				}
+			}
+
+			span{
+				a{
+					font-weight: normal;
+				}
+			}
+		}
+	}
+
+	.card-footer{
+		.card-footer-options{
+			a{
+				display: inline-block;
+			    color: rgba(55, 62, 74, 0.7);
+			    text-align: center;
+			    line-height: 1;
+			    padding: 4px 2px;
+			    -webkit-border-radius: 3px;
+			    -webkit-background-clip: padding-box;
+			    -moz-border-radius: 3px;
+			    -moz-background-clip: padding;
+			    border-radius: 3px;
+			    background-clip: padding-box;
+			    -moz-transition: all 300ms ease-in-out;
+			    -o-transition: all 300ms ease-in-out;
+			    -webkit-transition: all 300ms ease-in-out;
+			    transition: all 300ms ease-in-out;
+
+			    i {
+				    margin: 0;
+				    padding: 0;
+				    display: inline-block;
+				}
+			}
+		}
+	}
+}

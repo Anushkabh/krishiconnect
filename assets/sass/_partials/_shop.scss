@@ -1,0 +1,120 @@
+.shop-categories{
+	a{
+		color: $gray-dark;
+		.media{
+			padding: 1rem;
+			border: 1px solid #ddd;
+			span{
+				font-size: 1rem;
+				text-align: center;
+
+				i{
+					font-size: 3rem;
+					color: #4A9304;
+				}
+			}
+
+			h5{
+				font-size: 1rem;
+				margin: 0;
+				color: $primary-color;
+			}
+
+			p{
+				font-size: 0.8rem;
+				margin: 0;
+				min-height: 38px;
+			}
+		}
+	}
+}
+
+.product-carousel{
+	.owl-stage-outer {
+		padding: 10px 0;
+	}
+}
+
+.card-product{
+	text-align: center;
+	.card-title{
+		margin-bottom: 0;
+
+		a{
+			color: $gray-dark;
+
+			&:hover, &:focus{
+				color: $primary-color;
+			}
+		}
+	}
+
+	.card-price {
+		span.reguler {
+	    	color: $primary-color;
+	    	font-size: 1rem;
+	    }
+
+	    span.discount{
+	    	color: $gray-light;
+	    	font-size: 0.8rem;
+	    }
+	}
+}
+
+.product-detail{
+	padding-top: 5rem;
+
+	h1{
+		&.detail-title{
+			font-size: 1rem;
+		}
+	}
+
+	.stock{
+		color: #fff;
+		border-radius: 2px;
+		padding: 3px 10px;
+
+		&.available{
+			background: $brand-success;
+		}
+
+		&.empty{
+			background: $brand-danger;
+		}
+	}
+
+	.price{
+		font-size: 1.5rem;
+		color: $primary-color;
+	}
+
+	.old-price{
+		text-decoration: line-through;
+	}
+}
+
+.slider-zoom{
+	position: relative;
+}
+
+.slider-thumbnail{
+	position: relative;
+	min-height: 119px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+
+	/* .thumbelina-but.horiz.left{
+		left: 0;
+	}
+
+	.thumbelina-but.horiz.right{
+		right: 0;
+	} */
+
+	li{
+		cursor: pointer;
+		padding: 0;
+	}
+}

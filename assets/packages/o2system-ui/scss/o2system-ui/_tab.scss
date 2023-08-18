@@ -1,0 +1,223 @@
+.tab-content {
+    border: 1px solid #ddd;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(235, 235, 235);
+    border-top: 0;
+    -webkit-border-radius: 0 0 3px 3px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 0 3px 3px;
+    -moz-background-clip: padding;
+    border-radius: 0 0 3px 3px;
+    background-clip: padding-box;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+.tab-below {
+    border-top: 1px solid #ddd;
+    border-bottom: none;
+
+    .nav-item {
+        margin-top: -2px;
+    }
+
+    .nav-link{
+        &:hover{
+            border-top-color: transparent;
+        }
+
+        &.active {
+            border-color: transparent #ddd #ddd #ddd;
+        }
+    }
+    .nav-link {
+        border-bottom-right-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+    }
+}
+
+.tab-content-below {
+    border: 1px solid #ddd;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(235, 235, 235);
+    border-bottom: 0;
+    -webkit-border-radius: 0 0 3px 3px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 0 3px 3px;
+    -moz-background-clip: padding;
+    border-radius: 0 0 3px 3px;
+    background-clip: padding-box;
+    padding: 10px 15px;
+    margin-bottom: 0;
+}
+
+.tabs-vertical-wrap {
+    margin-bottom: 20px;
+    &:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    .tabs-vertical {
+        margin-bottom: 0;
+        + {
+            .tab-content {
+                margin-bottom: 0;
+                border: 1px solid #ddd;
+            }
+        }
+    }
+}
+.tabs-vertical {
+    float: left;
+    background: #f5f5f6;
+    width: 20%;
+    border: 1px solid #ddd;
+    border-right: 0;
+    margin-bottom: 20px;
+    -webkit-border-radius: 3px 0px 0px 3px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 3px 0px 0px 3px;
+    -moz-background-clip: padding;
+    border-radius: 3px 0px 0px 3px;
+    background-clip: padding-box;
+    display: block;
+    >li {
+        border-bottom: 1px solid #ddd;
+        a.nav-link{
+            position: relative;
+            display: block;
+            border-radius: 0;
+
+            &.active{
+                display: block;
+                position: relative;
+                background-color: #ffffff;
+                border-color: #ddd #ddd #fff;
+                border-left: transparent;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 20px 0 20px 13px;
+                    border-color: transparent transparent transparent #ddd;
+                    top: 0;
+                    right: -1px;
+                    margin-right: -12px;
+                    margin-top: -1px;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 18px 0 18px 12px;
+                    border-color: transparent transparent transparent #fff;
+                    top: 2px;
+                    right: 0;
+                    margin-right: -12px;
+                    margin-top: -1px;
+                }
+            }
+        }
+
+        &:first-child {
+            >a.nav-link {
+                -webkit-border-radius: 3px 3px 0 0;
+                -moz-border-radius: 3px 3px 0 0;
+                border-radius: 3px 3px 0 0;
+
+                &.active, &:hover{
+                    border-top-color: transparent;
+                }
+            }
+        }
+        &:last-child {
+            border-bottom: 0;
+            >a.nav-link {
+                -webkit-border-radius: 0 0 3px 3px;
+                -webkit-background-clip: padding-box;
+                -moz-border-radius: 0 0 3px 3px;
+                border-radius: 0 0 3px 3px;
+
+                &.active{
+                    border-bottom-color: #ddd;
+                }
+
+                &:hover{
+                    border-bottom-color: #ddd;
+                }
+            }
+        }
+        &:hover {
+            >a {
+                background-color: rgba(255, 255, 255, 0.3);
+                color: #586376;
+
+                &:hover{
+                    border-color: #ddd #ddd transparent;
+                    border-left-color: transparent;
+                    border-right-color: transparent;
+                }
+            }
+        }
+    }
+    + {
+        .tab-content {
+            float: right;
+            width: 80%;
+            padding-left: 25px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+    }
+}
+.tabs-vertical.right {
+    float: right;
+    border-radius: 0px 3px 3px 0px;
+    border: 1px solid #ddd;
+    border-left: 0;
+    >li {
+        >a.nav-link{
+            &.active {
+                border-right: transparent;
+                &:before {
+                    -webkit-transform: rotate(180deg);
+                    -moz-transform: rotate(180deg);
+                    -o-transform: rotate(180deg);
+                    -ms-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                    right: auto;
+                    left: -13px;
+                }
+                &:after {
+                    -webkit-transform: rotate(180deg);
+                    -moz-transform: rotate(180deg);
+                    -o-transform: rotate(180deg);
+                    -ms-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                    right: auto;
+                    left: -12px;
+                }
+            }
+        }
+    }
+    + {
+        .tab-content {
+            padding-right: 25px;
+        }
+    }
+}

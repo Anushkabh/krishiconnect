@@ -1,0 +1,40 @@
+.banner{
+	.jumbotron{
+		margin-bottom: 0;
+		.container{
+			position: relative;
+			z-index: 5;
+
+			.card{
+				margin-top: 2.3rem;
+				z-index: 5;
+				background-color: transparent;
+
+				.card-icon{
+					.card-icon-i{
+						border-color: $white;
+						color: $white;
+
+						i{
+							color: $white;
+						}
+					}
+				}
+				.card-body{
+					.card-title{
+						color: $white;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
+}
+
+.card{
+	.card-icon-i{
+		&.text-success{
+			border-color: #4A9304;
+		}
+	}
+}

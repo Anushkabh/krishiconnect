@@ -1,0 +1,33 @@
+/** UI Utilities **/
+.bg-transparent {
+    background: transparent !important;
+    box-shadow: none;
+}
+
+.bg-inverse{
+	color: #fff !important;
+}
+.bg-primary{
+	background: $brand-primary !important;
+}
+.bg-secondary{
+	background: $brand-secondary !important;
+}
+.bg-success{
+	background: $brand-success !important;
+}
+.bg-info{
+	background: $brand-info !important;
+}
+.bg-warning{
+	background: $brand-warning !important;
+}
+.bg-danger{
+	background: $brand-danger !important;
+}
+.bg-dark{
+	background: $brand-dark !important;
+}
+.bg-black{
+	background: $black !important;
+}

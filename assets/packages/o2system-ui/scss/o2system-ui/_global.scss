@@ -1,0 +1,184 @@
+body {
+	color: $gray-dark;
+	font-size: 14px;
+	font-family: "Oxygen", "Helvetica Neue", Arial, sans-serif;
+}
+button, input, optgroup, select, textarea {
+    font-family: "Oxygen", "Helvetica Neue", Arial, sans-serif;
+}
+a {
+	text-decoration: none !important;
+	outline: 0 !important;
+	&:hover, &:active, &:visited, &:focus {
+		text-decoration: none !important;
+		outline: 0 !important;
+	}
+}
+input, select, .btn, .form-control, .dropdown-menu, .input-group-text{
+	font-size: 0.8rem;
+}
+.btn-lg, .btn-group-lg > .btn, .form-control-lg{
+    font-size: 1.25rem;
+}
+.btn-sm, .btn-group-sm > .btn, .form-control-sm{
+    font-size: 0.75rem;
+}
+.btn-xs, .btn-group-xs > .btn, .form-control-xs{
+    font-size: 0.675rem;
+}
+.b-r{
+    border-right:1px solid #ddd;
+}
+.b-l{
+    border-left:1px solid #ddd;
+}
+
+@mixin button-variant($color, $background, $border) {
+  	color: $color;
+  	background-color: $background;
+  	border-color: $border;
+
+  	&:focus,
+  	&.focus {
+    	color: $color;
+    	background-color: darken($background, 10%);
+        border-color: darken($border, 25%);
+  	}
+  	&:hover {
+    	color: $color;
+    	background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+  	}
+  	&:active,
+  	&.active,
+  	.open > &.dropdown-toggle {
+    	color: $color;
+    	background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+
+    	&:hover,
+    	&:focus,
+    	&.focus {
+      		color: $color;
+      		background-color: darken($background, 17%);
+          	border-color: darken($border, 25%);
+    	}
+  	}
+  	&:active,
+  	&.active,
+  	.open > &.dropdown-toggle {
+    	background-image: none;
+  	}
+  	&.disabled,
+  	&[disabled],
+  	fieldset[disabled] & {
+    	&:hover,
+    	&:focus,
+    	&.focus {
+      		background-color: $background;
+          	border-color: $border;
+    	}
+  	}
+
+  	.badge {
+    	color: $background;
+    	background-color: $color;
+  	}
+}
+
+.media{
+	.media-img {
+	    display: -ms-flexbox;
+	    display: flex;
+	    margin-right: 1rem;
+	}
+
+	.media-heading{
+		margin-top: 0;
+	}
+}
+.list-group-item {
+	.badge {
+		float: right;
+	}
+}
+.img-logo{
+	width: 25px !important;
+	height: auto;
+}
+blockquote.alert{
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	-ms-flex-align: center !important;
+	align-items: center !important;
+	-ms-flex-pack: center !important;
+	justify-content: center !important;
+
+	i{
+		display: flex;
+		font-size: 2.5rem;
+		margin-right: 1rem;
+	}
+
+	p{
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+.alert{
+	p{
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+#scrollUp, .scroll-to-top {
+	height: 40px;
+	position: fixed;
+	bottom: 20%;
+	right: -60px;
+	background: $primary-color;
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	box-shadow: 0 3px 10px rgba(0,0,0,.2);
+	font-size: 0.8rem;
+	cursor: pointer;
+	z-index: 9998;
+	padding: 0 15px;
+	transition: all .3s;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+
+	i {
+	    font-size: 1rem;
+	    margin-right: 15px; 
+	}
+
+	&:hover{
+		right: 0;
+
+		i{
+			margin-right: 10px;
+		}
+	}
+}
+
+.pagination{
+	.page-item{
+		.page-link{
+			color: $primary-color;
+		}
+
+		&.active{
+			.page-link{
+				background-color: $primary-color;
+				border-color: $primary-color;
+				color: $white;
+			}
+		}
+	}
+}

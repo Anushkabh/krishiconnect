@@ -1,0 +1,19 @@
+/** UI - Accordion **/
+.accordion {
+	>.card {
+		&:not(:first-child) {
+			border-top-left-radius: 0rem;
+			border-top-right-radius: 0rem;
+		}
+		&:not(:last-child) {
+			border-bottom: 0px;
+			border-bottom-left-radius: 0rem;
+			border-bottom-right-radius: 0rem;
+		}
+		/* &:last-child {
+			>.card-header {
+				border-bottom: 0px;
+			}
+		} */
+	}
+}

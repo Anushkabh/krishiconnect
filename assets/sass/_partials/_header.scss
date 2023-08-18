@@ -1,0 +1,124 @@
+.page-header{
+	.navbar{
+		.navbar-brand{
+			img{
+				height: 60px;
+			}
+		}
+
+		.navbar-nav{
+			.nav-link{
+				color: $white;
+				font-size: 1rem;
+				padding-right: 1rem;
+				padding-left: 1rem;
+
+				&:focus, &:hover, &.active{
+					color: $primary-color;
+				}
+			}
+
+			.dropdown{
+				.badge{
+					position: absolute;
+					top: 5px;
+					font-weight: 400;
+					text-align: center;
+				}
+			}
+		}
+
+		&.bg-white{
+			box-shadow: 0 3px 7px rgba(0,0,0,.1);
+			.navbar-nav{
+				.nav-link{
+					color: $gray-dark;
+
+					&:focus, &:hover, &.active{
+						color: $primary-color;
+					}
+				}
+			}
+		}
+
+		.avatar-header{
+			width: 25px;
+			height: 25px;
+			overflow: hidden;
+			border: 1px solid #eee;
+			border-radius: 50%;
+			display: inline-table;
+
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.shopping-cart{
+			width: 300px;
+			right: 0;
+			left: auto;
+
+			ul{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+
+			.drop-title{
+				padding: 11px 20px 15px;
+				border-bottom: 1px solid rgba(120,130,140,0.13);
+
+				&.d-flex{
+					border-top: 1px solid rgba(120,130,140,0.13);
+				}
+			}
+
+			.shopping-cart-list{
+				height: 200px;
+				position: relative;
+				overflow-y: auto;
+
+
+				.media{
+					border-bottom: 1px solid rgba(120,130,140,0.13);
+					padding: 10px 15px;
+					h5{
+						font-size: 0.8rem;
+						margin-top: 0;
+						margin-bottom: 0;
+						color: $gray-dark;
+						font-weight: 400;
+
+						a{
+							color: $gray-dark;
+
+							&:focus, &:hover, &.active{
+								color: $primary-color;
+							}
+						}
+					}
+
+					p{
+						margin: 0;
+					}
+
+					.price{
+						span{
+							display: inline-block;
+							margin-right: 5px;
+							color: $primary-color;
+							font-size: 0.8rem;
+
+							&.discount{
+								font-size: 0.7rem;
+								text-decoration: line-through;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

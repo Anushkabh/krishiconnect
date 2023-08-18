@@ -1,0 +1,52 @@
+.breadcrumb-dot {
+    .breadcrumb-item+.breadcrumb-item {
+        &::before {
+            content: "\2022";
+        }
+    }
+}
+.breadcrumb-bar {
+    .breadcrumb-item+.breadcrumb-item {
+        &::before {
+            content: "|";
+        }
+    }
+}
+.breadcrumb-right-pointer {
+    .breadcrumb-item+.breadcrumb-item {
+        &::before {
+            content: "\232a";
+        }
+    }
+}
+.breadcrumb-hypen {
+    .breadcrumb-item+.breadcrumb-item {
+        &::before {
+            content: "\002d";
+        }
+    }
+}
+.breadcrumb-right-tag {
+    padding: 0;
+    background: none;
+    .breadcrumb-item {
+        background: rgba(2, 117, 216, 0.8);
+        padding: .5em 1em;
+        color: #fff;
+        a {
+            color: #fff;
+        }
+        &:nth-child(2) {
+            background: rgba(2, 117, 216, 0.6);
+        }
+        &:nth-child(3) {
+            background: rgba(2, 117, 216, 0.5);
+        }
+    }
+    .breadcrumb-item+.breadcrumb-item {
+        &::before {
+            content: "";
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.badge{
+	padding: .5em .6em .6em .6em;
+}
+.badge-default {
+    background-color: $white;
+    color: $gray-dark;
+}
+.badge-primary {
+    background-color: $brand-primary;
+}
+
+.badge-secondary {
+    background-color: $brand-secondary;
+}
+
+.badge-success {
+    background-color: $brand-success;
+}
+
+.badge-info {
+    background-color: $brand-info;
+}
+
+.badge-warning {
+    background-color: $brand-warning;
+    color: $white;
+}
+
+.badge-danger {
+    background-color: $brand-danger;
+}
+
+.badge-dark{
+    background-color: $brand-dark;
+}

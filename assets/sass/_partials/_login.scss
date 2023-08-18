@@ -1,0 +1,12 @@
+.card-login{
+	margin: 0 auto;
+	width: 400px;
+	background: rgba($white, 0.5) !important;
+	border-color: rgba(0, 0, 0, 0.125);
+}
+
+@media(max-width:767px) {
+	.card-login{
+		width: 95%;
+	}
+}

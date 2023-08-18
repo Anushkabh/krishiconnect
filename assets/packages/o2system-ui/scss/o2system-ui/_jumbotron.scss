@@ -1,0 +1,30 @@
+.jumbotron{
+	padding: 4rem;
+	&.jumbotron-bg{
+		background-size: cover;
+		color: $white;
+	}
+
+	&.jumbotron-video{
+		position: relative;
+		z-index: 2;
+		overflow: hidden;
+
+		video{
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			overflow: hidden;
+			z-index: 1;
+			width:100%;
+		}
+
+		h1, p{
+			z-index: 5;
+			position: relative;
+			color: $white;
+		}
+	}
+}

@@ -1,0 +1,250 @@
+/** UI - Buttons **/
+.btn{
+	&.btn-icon {
+  		position: relative;
+  		padding-left: 45px;
+
+  		i {
+	  		position: absolute;
+	  		left: 0;
+	  		top: 0;
+	  		height: 100%;
+	  		padding: 9px;
+	  		text-align: center;
+  		}
+  	}
+
+  	&.btn-xs{
+		&.btn-icon {
+	  		padding-left: 30px;
+
+	  		i {
+		  		padding: 4px 7px;
+	  		}
+	  	}
+  	}
+
+  	&.btn-sm{
+		&.btn-icon {
+	  		padding-left: 35px;
+
+	  		i {
+		  		padding: 8px;
+	  		}
+	  	}
+  	}
+
+  	&.btn-lg{
+  		&.btn-icon {
+	  		padding-left: 55px;
+
+	  		i {
+		  		padding: 11px;
+	  		}
+	  	}
+  	}
+
+  	&.btn-xl{
+  		&.btn-icon {
+	  		padding-left: 95px;
+
+	  		i {
+		  		padding: 20px;
+	  		}
+	  	}
+  	}
+}
+
+.btn-light{
+	&.btn-icon {
+		i{
+			background: #e2e6ea;
+		}
+	}
+}
+
+.btn-dark{
+	@include button-variant($white, $brand-dark, $brand-dark);
+	&.btn-icon {
+		i{
+			background: #23272b;
+		}
+	}
+}
+
+.btn-default {
+	@include button-variant($gray-dark, $white, #ccc);
+
+	&.btn-icon {
+		i{
+			background: #ddd; 
+		}
+	}
+}
+
+.btn-primary{
+	@include button-variant($white, $brand-primary, $brand-primary);
+
+	&.btn-icon {
+		i{
+			background: darken($brand-primary, 5%);
+		}
+	}
+}
+
+.btn-secondary{
+	@include button-variant($white, $brand-secondary, $brand-secondary);
+
+	&.btn-icon {
+		i{
+			background: darken($brand-secondary, 5%);
+		}
+	}
+}
+
+.btn-success{
+	@include button-variant($white, $brand-success, $brand-success);
+
+	&.btn-icon {
+		i{
+			background: darken($brand-success, 5%);
+		}
+	}
+}
+
+.btn-info{
+	@include button-variant($white, $brand-info, $brand-info);
+
+	&.btn-icon {
+		i{
+			background: darken($brand-info, 5%);
+		}
+	}
+}
+
+.btn-warning{
+	@include button-variant($white, $brand-warning, $brand-warning);
+
+	&.btn-icon {
+		i{
+			background: darken($brand-warning, 5%);
+		}
+	}
+}
+
+.btn-danger{
+	@include button-variant($white, $brand-danger, $brand-danger);
+
+	&.btn-icon {
+		i{
+			background: darken($brand-danger, 5%);
+		}
+	}
+}
+
+.btn-xs {
+	padding: 0.125rem 0.45rem;
+	font-size: 0.675rem;
+	border-radius: 0.2rem;
+}
+.btn-group-xs {
+	>.btn {
+		padding: 0.125rem 0.45rem;
+		font-size: 0.675rem;
+		border-radius: 0.2rem;
+	}
+}
+.btn-xl {
+	padding: 1rem 1.25rem;
+	font-size: 2rem;
+	border-radius: 0.3rem;
+}
+.btn-group-xl {
+	>.btn {
+		padding: 1rem 1.25rem;
+		font-size: 2rem;
+		border-radius: 0.3rem;
+	}
+}
+.btn-outline-default {
+	background: none;
+	border-color: #ddd;
+}
+.btn.btn-link.btn-default {
+	color: #b8b8b8;
+}
+.btn-link {
+	border: 0;
+	padding: 0.5rem 0.7rem;
+	background: none;
+	color: $brand-primary;
+
+	&:hover, &:focus{
+		background: none;
+		color: #014c8c;
+	}
+
+	&.btn-primary{
+		color: $brand-primary;
+
+		&:hover, &:focus{
+			color: lighten($brand-primary, 5%);
+		}
+	}
+
+	&.btn-secondary{
+		color: $brand-secondary;
+
+		&:hover, &:focus{
+			color: lighten($brand-secondary, 5%);
+		}
+	}
+
+	&.btn-success{
+		color: $brand-success;
+
+		&:hover, &:focus{
+			color: lighten($brand-success, 5%);
+		}
+	}
+
+	&.btn-info{
+		color: $brand-info;
+
+		&:hover, &:focus{
+			color: lighten($brand-info, 5%);
+		}
+	}
+
+	&.btn-warning{
+		color: $brand-warning;
+
+		&:hover, &:focus{
+			color: lighten($brand-warning, 5%);
+		}
+	}
+
+	&.btn-danger{
+		color: $brand-danger;
+
+		&:hover, &:focus{
+			color: lighten($brand-danger, 5%);
+		}
+	}
+
+	&.btn-light{
+		color: #f8f8f8;
+
+		&:hover, &:focus{
+			color: lighten(#f8f8f8, 5%);
+		}
+	}
+
+	&.btn-dark{
+		color: $gray-dark;
+
+		&:hover, &:focus{
+			color: lighten($gray-dark, 5%);
+		}
+	}
+}

@@ -1,0 +1,82 @@
+footer{
+	background-color: #f8f8f8;
+	padding: 50px 0;
+	padding-bottom: 0;
+	border-top: 1px solid #eee;
+
+	h5{
+		font-size: 1rem;
+		font-weight: 400;
+	}
+
+	ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		margin-bottom: 1rem;
+		position: relative;
+		overflow: hidden;
+
+		li{
+			display: block;
+			margin: 0.5rem 0;
+
+			a{
+				color: $gray-dark;
+
+				&:hover, &:focus{
+					color: $primary-color;
+				}
+
+			}
+
+			&.download-app{
+				width: 150px;
+				overflow: hidden;
+				border-radius: 4px;
+				background-color: #333;
+
+				img{
+					width: 152px;
+					height: auto;
+				}
+
+				&:hover, &:focus{
+					background-color: $primary-color;
+				}
+			}
+
+			.mockup{
+				position: absolute;
+
+				img{
+					width: 100%;
+				}
+			}
+		}
+
+		&.social{
+			li{
+				display: inline-block;
+				margin: 0.5rem 1rem;
+				margin-top: 0;
+
+				a{
+					font-size: 1.5rem;
+				}
+
+				&:first-child{
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	.copyright{
+		margin: 0;
+		/* margin-top: 40px; */
+		padding: 10px;
+		text-align: center;
+		border-top: 1px solid #eee;
+	}
+}
