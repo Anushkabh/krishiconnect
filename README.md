@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>KrishiConnect: Revolutionizing Agriculture Consumer Industry</title>
 </head>
 <body>
     <div class="container">
