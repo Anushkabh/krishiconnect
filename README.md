@@ -2,30 +2,6 @@
 <html lang="en">
 <head>
     <title>KrishiConnect: Revolutionizing Agriculture Consumer Industry</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 5px;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
