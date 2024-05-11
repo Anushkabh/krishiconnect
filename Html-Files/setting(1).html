@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
     <link href="assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/o2system-ui/o2system-ui.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/owl-carousel/owl-carousel.css">
@@ -24,7 +24,7 @@
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
-                <a href="index.html" class="navbar-brand">
+                <a href="index(1).html" class="navbar-brand">
                     <img src="assets/img/logo/krishiconnect-high-resolution-logo-black-on-white-background.png" alt="">
                 </a>
 
@@ -37,13 +37,13 @@
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="shop(1).html" class="nav-link">Shop</a>
+                            <a href="/Html-Files/shop(1).html" class="nav-link">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a href="transaction.html" class="nav-link">Transactions</a>
+                            <a href="/Html-Files/transaction.html" class="nav-link">Transactions</a>
                         </li>
                         <li class="nav-item">
-                            <a href="cart(1).html" class="nav-link">My Cart</a>
+                            <a href="/Html-Files/cart(1).html" class="nav-link">My Cart</a>
                         </li>
                        
                     </ul>
@@ -57,31 +57,68 @@
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg.jpg');">
                 <div class="container">
                     <h1 class="pt-5">
-                        Your Transactions
+                        Settings
                     </h1>
                     <p class="lead">
-                        Save time and leave the groceries to us.
+                        Update Your Account Info
                     </p>
                 </div>
             </div>
         </div>
-        <div class="cart">
-        <h1 class="carttext">Transaction Page</h1>
-        <div id="buyer-details" style="color:white;text-align:center;font-size:20px ;"></div>
-            <div id="transaction-items" style="color:white;text-align:center;font-size:20px ;" class="carttext"></div>
-        
-        
-        </section>
 
-        <!-- Modal -->
-                                          
-        <div class="modal-footer">
-                        <button onclick="window.location.href='success.html'" class="cartbtn" data-dismiss="modal">Confirm Order</button>
-        </div>
-    </div>
+        <section id="checkout">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xs-12 col-sm-6">
+                        <h5 class="mb-3">ACCOUNT DETAILS</h5>
+                        <!-- Bill Detail of the Page -->
+                        <form action="#" class="bill-detail">
+                            <fieldset>
+                                <div class="form-group row">
+                                    <div class="col">
+                                        <input class="form-control" placeholder="Name" type="text">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control" placeholder="Last Name" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Company Name" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Address"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Town / City" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="State / Country" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Postcode / Zip" type="text">
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col">
+                                        <input class="form-control" placeholder="Email Address" type="email">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control" placeholder="Phone Number" type="tel">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Password" type="password">
+                                </div>
+                                <div class="form-group text-right">
+                                    <a href="#" class="btn btn-primary">UPDATE</a>
+                                    <div class="clearfix">
+                                </div>
+                            </fieldset>
+                        </form>
+                        <!-- Bill Detail of the Page end -->
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
     <footer>
         <div class="container">
@@ -94,13 +131,13 @@
                     <h5>Links</h5>
                     <ul>
                         <li>
-                            <a href="about(1).html">About</a>
+                            <a href="/Html-Files/about(1).html">About</a>
                         </li>
                         <li>
-                            <a href="contact(1).html">Contact Us</a>
+                            <a href="/Html-Files/contact(1).html">Contact Us</a>
                         </li>
                         <li>
-                            <a href="faq(1).html">FAQ</a>
+                            <a href="/Html-Files/faq(1).html">FAQ</a>
                         </li>
                     </ul>
                 </div>
@@ -147,6 +184,5 @@
     <script type="text/javascript" src="assets/packages/thumbelina/thumbelina.js"></script>
     <script type="text/javascript" src="assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
     <script type="text/javascript" src="assets/js/theme.js"></script>
-    <script src="transaction.js"></script>
 </body>
 </html>
