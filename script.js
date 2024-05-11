@@ -79,7 +79,7 @@ window.login = (e) => {
     .then(function (userCredential) {
       // Signed in 
       alert("login successful");
-      window.location.href = "/Html-Files/home.html"
+      window.location.href = "home.html"
       console.log(obj2);
       username = obj2.email;
     })
@@ -89,7 +89,7 @@ window.login = (e) => {
 }
 window.logout=(e)=>{
   signOut(auth).then(() => {
-     window.location.href="/Html-Files/login.html"// Sign-out successful.
+     window.location.href="login.html"// Sign-out successful.
   }).catch((error) => {
     // An error happened.
   });
