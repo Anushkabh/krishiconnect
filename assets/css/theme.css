@@ -5,6 +5,10 @@
  =========================================================
 
  */
+ html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #333333;
   font-size: 14px;
@@ -15,6 +19,34 @@ body {
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase !important;
   font-weight: 700 !important;
+}
+
+.back-to-top {
+
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #39a24e;
+  color: #fff;
+  width: 60px;
+  height:60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  transition: all .4s;
+}
+
+.back-to-top.active{
+  opacity: 1;
+}
+
+.back-to-top:hover{
+  background-color: #1cc2c2;
+  color: white;
 }
 
 .badge {
