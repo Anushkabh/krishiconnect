@@ -64,16 +64,36 @@
                 </div>
             </div>
         </div>
-    <div class="cart" style="background-color: rgba(218, 223, 226, 0.811);">
-        <h1 class="carttext" style="color: black;">Enter Your Details</h1>
-        <div class="cartfield carttext">
+    <div class="cart" style="background-color: rgb(30, 29, 29);">
+        <h1 class="carttext" style="color: white;">Enter Your Details</h1>
+        <div class="cart-form">
+            <div class="cartfield carttext">
+                <input type="text" placeholder="Enter your name" id="buyer-name" required>
+            </div>
+            <div class="cartfield carttext">
+                <input type="email" placeholder="Email" id="buyer-email" required>
+                <input type="text" placeholder="Phone Number">
+            </div>
+            <div class="adress">
+                <input type="text" placeholder="Address">
+            </div>
+            <div class="add">
+                <input type="text" placeholder="Postal Code">
+                <input type="text" placeholder="City">
+            </div>
+            <div class="add2">
+                <input type="text" placeholder="State">
+                <input type="text" placeholder="Country">
+            </div>
+        </div>
+        <!-- <div class="cartfield carttext">
             
             <input type="text" placeholder="Your Name" id="buyer-name" required>
         </div>
         <div class="cartfield carttext">
             
             <input type="email" placeholder="Email" id="buyer-email" required>
-        </div>
+        </div> -->
         <div id="cart-items" style="width: 50%; padding: 30px;" class="carttext"></div>
         <div id="subtotal" class="carttext"></div>
         <div class="cartfield"><button class="cartbtn" onclick="emptyCart()" style="border-radius: 3px; color: aliceblue;">Empty Cart</button>
