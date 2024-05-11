@@ -83,7 +83,7 @@ var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         localStorage.setItem('order', JSON.stringify(order));
 
     
-         window.location.href = 'transaction.html';
+         window.location.href = '/Html-Files/transaction.html';
 
   
         
