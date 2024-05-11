@@ -22,6 +22,15 @@ Contributors can enhance the project by implementing new features or improvement
 - Create a Pull Request
 - **IMPORTANT: Don't make any type of `Pull Request` until & unless you get assigned to an `Issue`**
 - Add screenshots or screen captures to your `Pull Request` to help us understand the effects of the changes that are included in your commits.
+  
+# Task Levels and Durations
+
+| Level | Duration to Complete (Days) |
+|-------|-----------------------------|
+| Level 1 | 1 day |
+| Level 2 | 2-3 days |
+| Level 3 | 4-5 days |
+
 
 
 ![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
