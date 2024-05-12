@@ -473,5 +473,4 @@ footer .copyright {
   color: #E91E63;
   transform: scale(1.05);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  animation: pulse 1s infinite alternate; /* Pulse effect */
 }
