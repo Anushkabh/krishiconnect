@@ -195,6 +195,10 @@ section .card-title {
 
 .page-header .navbar .navbar-brand img {
   height: 60px;
+  margin-left: -160px;
+  object-fit: cover;
+  border-radius: 50%;
+  
 }
 .page-header .navbar .navbar-nav .nav-link {
   color: #FFF;
