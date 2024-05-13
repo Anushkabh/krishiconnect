@@ -18,12 +18,16 @@
 ## 📌 Tech Stack
 [![linkedin](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://www.linkedin.com/in/yashpreeth-nijalinge-aa8a36214/)[![portfolio](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://linkedin.com/)![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)[![twitter](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://twitter.com/)![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34)
 # 📸Screenshots
-![Home Page](https://photos.app.goo.gl/PF6nTxrAWw4k6zA78)
+![1](1.png)  ![2](2.png) ![3](3.png) ![4](4.png)  ![5](5.png) ![6](6.png)
+
+
+
+<!-- ![Home Page](https://photos.app.goo.gl/PF6nTxrAWw4k6zA78)
 ![Why KrishiConnect?](https://photos.app.goo.gl/DqMnZU2BiBRwvaBG6)
 ![Categories](https://photos.app.goo.gl/8eiNj5ZN9Ny19oiw8)
 ![Farmer's Login Page](https://photos.app.goo.gl/L5fvMkUTJSXcJHvf6)
 ![Shopping Cart](https://photos.app.goo.gl/qrGeCL49SZK2Cpmh7)
-![Transaction Page](https://photos.app.goo.gl/Ey1qkdQZh7y6mzGz7)
+![Transaction Page](https://photos.app.goo.gl/Ey1qkdQZh7y6mzGz7) -->
 
 # 💻How to run the webpage on your local system
 
