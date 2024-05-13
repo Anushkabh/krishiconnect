@@ -11,20 +11,30 @@ var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
       itemElement.classList.add('cartlist');
       itemElement.innerHTML =  "<span>"+item.name+"</span>  <span>"+item.price+"</span><span>"+item.quantity+"</span>";
 
-      
+      var decreaseQuantityButton = document.createElement('button');
       var increaseQuantityButton = document.createElement('button');
+      decreaseQuantityButton.innerText = '-';
       increaseQuantityButton.innerText = '+';
+      decreaseQuantityButton.onclick = function() {
+        item.quantity--;
+        if (item.quantity <= 0) {
+            cartItems = cartItems.filter(cartItem => cartItem !== item);
+        }
+        updateCartDisplay();
+    };
       increaseQuantityButton.onclick = function() {
         item.quantity++;
         updateCartDisplay();
       };
+      itemElement.appendChild(decreaseQuantityButton);
       itemElement.appendChild(increaseQuantityButton);
 
       cartItemsContainer.appendChild(itemElement);
     });
+
     function updateCartDisplay() {
         
-        cartItemsContainer.innerHTML = '';
+        cartItemsContainer.innerHTML ='';
   
         
         cartItems.forEach(function(item) {
@@ -32,14 +42,24 @@ var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
           itemElement.classList.add('cartlist');
           itemElement.innerHTML =  "<span>"+item.name+"</span>  <span>"+item.price+"</span><span>"+item.quantity+"</span>";
   
-          
+          var decreaseQuantityButton = document.createElement('button')
           var increaseQuantityButton = document.createElement('button');
+          decreaseQuantityButton.innerText = '-';
           increaseQuantityButton.innerText = '+';
+          decreaseQuantityButton.onclick = function() {
+            item.quantity--;
+            if (item.quantity <= 0) {
+                cartItems = cartItems.filter(cartItem => cartItem !== item);
+            }
+            updateCartDisplay();
+        };
           increaseQuantityButton.onclick = function() {
             item.quantity++;
             updateCartDisplay();
           };
+          itemElement.appendChild(decreaseQuantityButton);
           itemElement.appendChild(increaseQuantityButton);
+
   
           cartItemsContainer.appendChild(itemElement);
         });
@@ -57,7 +77,11 @@ var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
   
         
         var subtotalElement = document.getElementById('subtotal');
+    if (cartItems.length === 0) {
+        emptyCart()
+    } else {
         subtotalElement.innerHTML = 'Subtotal: Rp ' + subtotal.toFixed(2);
+    }
       }
   
       
