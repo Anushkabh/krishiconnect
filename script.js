@@ -103,22 +103,11 @@ onAuthStateChanged(auth, (user) => {
     username = user.email;
     getAllData(username);
     console.log(uid, username, user.fname);
-    // ...
+    
   } else {
-    // if(window.location.href="login.html"){
-      // Changepage(user);
-    // }
-    // User is signed out
-    // ...
+
   }
 });
-// Changepage((users) => {
-//   if(users){
-
-//   }else{
-//     window.location.href="login.html";
-//   }
-// });
 
 // Initialize Cloud Firestore and get a reference to the service
 var pNo = 0;

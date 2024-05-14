@@ -402,13 +402,6 @@ section .card-title {
   min-height: 119px;
   margin-top: 5px;
   margin-bottom: 15px;
-  	/* .thumbelina-but.horiz.left{
-  		left: 0;
-  	}
-  
-  	.thumbelina-but.horiz.right{
-  		right: 0;
-  	} */
 }
 .slider-thumbnail li {
   cursor: pointer;
