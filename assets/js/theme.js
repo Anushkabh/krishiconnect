@@ -103,3 +103,15 @@ $(document).ready(function(){
     });
 
 });
+
+$(window).scroll(function(){
+    const backtoTop= document.querySelector(".back-to-top");
+  
+  window.addEventListener("scroll",()=>{
+      if(window.scrollY>100 ){
+          backtoTop.classList.add("active");
+      }else{
+          backtoTop.classList.remove("active");
+      }
+  })
+  });
