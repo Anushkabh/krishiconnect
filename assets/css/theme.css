@@ -486,11 +486,11 @@ footer ul.social li:first-child {
   margin-left: 0;
 }
 footer .copyright {
-  margin: 0;
+  margin-top: 40px;
   /* margin-top: 40px; */
   padding: 10px;
-  text-align: center;
-  border-top: 1px solid #eee;
+  text-align: right;
+
 }
 
 /*# sourceMappingURL=theme.css.map */
@@ -509,4 +509,14 @@ footer .copyright {
   color: #E91E63;
   transform: scale(1.05);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+footer .foot{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  
+}
+footer .footimg{
+  mix-blend-mode: multiply;
+  margin-top: 10px;
 }
