@@ -457,4 +457,23 @@ footer .copyright {
   border-top: 1px solid #eee;
 }
 
+.col-md-3{
+  margin-right: 50px;
+}
+
+.col-md{
+  margin-right: 50px;
+}
+
+.col-md-3l{
+  margin-right: 80px;
+  margin-left: 15px;
+}
+.col-md-3m{
+  margin-right: 10px;
+  
+}
+.mirrored-icon {
+  transform: scaleX(-1);
+}
 /*# sourceMappingURL=theme.css.map */
