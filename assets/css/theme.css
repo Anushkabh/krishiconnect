@@ -368,6 +368,28 @@ section .card-title {
   font-size: 0.8rem;
 }
 
+
+.card-box{
+  border: 1px solid  #4A9304; 
+  height:217.84px;
+  transition: transform 0.2s ease-in-out;
+}
+.card-box:hover{
+  transform: scale(1.05);
+  color: #4A9304;
+  box-shadow: 0 0 10px #4A9304;
+}
+
+.cart-icon:hover{
+transform: scale(1.05);
+  text-shadow: 2px 2px 4px #b9beb4;
+
+}
+.title:hover{
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+
+}
+
 .product-detail {
   padding-top: 5rem;
 }
