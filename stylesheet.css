@@ -10,7 +10,7 @@ div{
 .container {
     width: 100%;
     padding-right: 15px;
-    padding-left: 15px;
+    padding-left: 5px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -333,4 +333,51 @@ input{
 }
 #subtotal{
     color: black;
+}
+.cartfield #buyer-name{
+    width: 460px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+.cartfield input{
+    margin-right:20px ;
+    margin-top: 20px;
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+.adress input{
+    width: 460px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.add input{
+    margin-left: 10px;
+    margin-right:10px ;
+    margin-top: 20px;
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+.add2 input{
+    margin-left: 10px;
+    margin-right:10px ;
+    margin-top: 20px;
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
 }
