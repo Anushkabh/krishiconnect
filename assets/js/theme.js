@@ -8,9 +8,13 @@ $(document).ready(function(){
         if (scroll > 200) {
             $('#page-navigation').addClass('bg-white').removeClass('bg-transparent');
             $('#page-navigation').addClass('navbar-light').removeClass('navbar-dark');
+            $('#your-image').attr('src', 'assets/img/logo/krishiconnect-high-resolution-logo.png'); 
+        
         }else{
             $('#page-navigation').addClass('bg-transparent').removeClass('bg-white');
             $('#page-navigation').addClass('navbar-dark').removeClass('navbar-light');
+            $('#your-image').attr('src', 'assets/img/logo/krishiconnect-high-resolution-logo_black.png'); 
+            
         }
     });
 
