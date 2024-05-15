@@ -18,6 +18,68 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
 
 </head>
+<style>
+.wishlist-container {
+    display: flex;
+    justify-content: center;
+}
+
+.wishlist {
+    background-color: rgb(30, 29, 29);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+
+.wishlist-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.wishlist-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.wishlist-item {
+    margin-bottom: 10px;
+}
+
+.item-name {
+    font-weight: bold;
+    width: 200px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #ffffff;
+    width: 100px; 
+    display: inline-block;
+    text-align: right;
+}
+
+
+.wishlist-btn {
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #E91E63; 
+    color: white;
+}
+
+
+.wishlist-btn:hover {
+    background-color: #cd1653; 
+}
+</style>
 <body>
     <div class="page-header">
         <!--=============== Navbar ===============-->
@@ -48,11 +110,10 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
                                 <!-- Wishlist items will be dynamically added here -->
-                            
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="cart(1).html" class="nav-link">My Cart</a>
+                            <a href="cart(1).html" class="nav-link" onclick="toggleCart()">My Cart</a>
                         </li>
                     </ul>
                 </div>
@@ -67,7 +128,7 @@
                     <img src="assets/img/logo/log.png" alt="" height="300">
                 </a>
                     <h1 class="pt-5">
-                        Your Cart
+                        Your Wishlist
                     </h1>
                     <p class="lead">
                         Save time and leave the groceries to us.
@@ -76,44 +137,14 @@
             </div>
         </div>
 
-        <div class="cart" style="background-color: rgb(30, 29, 29);">
-            <h1 class="carttext" style="color: white;">Enter Your Details</h1>
-            <div class="cart-form">
-                <div class="cartfield carttext">
-                    <input type="text" placeholder="Enter your name" id="buyer-name" required>
-                </div>
-                <div class="cartfield carttext">
-                    <input type="email" placeholder="Email" id="buyer-email" required>
-                    <input type="text" placeholder="Phone Number">
-                </div>
-                <div class="adress">
-                    <input type="text" placeholder="Address">
-                </div>
-                <div class="add">
-                    <input type="text" placeholder="Postal Code">
-                    <input type="text" placeholder="City">
-                </div>
-                <div class="add2">
-                    <input type="text" placeholder="State">
-                    <input type="text" placeholder="Country">
-                </div>
-            </div>
-            <!-- <div class="cartfield carttext">
-                
-                <input type="text" placeholder="Your Name" id="buyer-name" required>
-            </div>
-            <div class="cartfield carttext">
-                
-                <input type="email" placeholder="Email" id="buyer-email" required>
-            </div> -->
-
-        <div id="cart-items" style="width: 50%; padding: 30px;" class="carttext"></div>
-        <div id="subtotal" class="carttext"></div>
-        <div class="cartfield"><button class="cartbtn" onclick="emptyCart()" style="border-radius: 3px; color: aliceblue;">Empty Cart</button>
-        <button class="cartbtn" onclick="checkout()">Checkout</button>
-        <button onclick="window.location.href='shop(1).html'" class="cartbtn" style="border-radius: 3px; color: aliceblue;">Continue Shopping</a></button>
+        <div class="wishlist-container">
+        <div class="wishlist" style="background-color: rgb(30, 29, 29);">
+            <h1 class="wishlist-text" style="color: white;">Wishlist</h1>
+            <div id="wishlist-items" class="wishlist-items"></div>
+            <button class="wishlist-btn" onclick="emptyWishlist()" style="border-radius: 3px; color: rgb(255, 255, 255);">Empty Wishlist</button>
+            <button onclick="window.location.href='cart(1).html'" class="wishlist-btn" style="border-radius: 3px; color: rgb(255, 255, 255);">Go to Cart</button>
         </div>
-    </div>
+        </div>
     <footer>
         <div class="container">
             <div class="row">
@@ -179,6 +210,7 @@
     <script type="text/javascript" src="assets/packages/thumbelina/thumbelina.js"></script>
     <script type="text/javascript" src="assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
     <script type="text/javascript" src="assets/js/theme.js"></script>
+    <script src="wishlist.js"></script>
     <script src="cart.js"></script>
     <script src="shop.js"></script>
 </body>

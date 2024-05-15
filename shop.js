@@ -57,6 +57,12 @@ function updateDropdownWishlist(items) {
     dropdownContent.appendChild(listItem);
   });
 
+  var viewWishlistLink = document.createElement('a');
+  viewWishlistLink.textContent = 'View Wishlist';
+  viewWishlistLink.href = 'wishlist.html'; 
+  viewWishlistLink.classList.add('view-wishlist-link');
+  dropdownContent.appendChild(viewWishlistLink);
+
   var wishlistCount = items.length;
   var wishlistCountElement = document.getElementById('wishlistCount');
   wishlistCountElement.textContent = wishlistCount;
@@ -74,10 +80,13 @@ function removeFromWishlist(name) {
   updateDropdownWishlist(wishlistItems);
 }
 
+
 // Add to Cart 
 
 function addToCart(name, price) {
+
   var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
 
   var existingItem = cartItems.find(function(item) {
     return item.name === name;

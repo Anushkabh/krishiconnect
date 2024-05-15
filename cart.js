@@ -1,6 +1,7 @@
 
 var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
+
     
     var cartItemsContainer = document.getElementById('cart-items');
     var buyerNameInput = document.getElementById('buyer-name');
@@ -114,7 +115,7 @@ var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         
         emptyCart();
   
-        
-    
       }
+
+    
   
