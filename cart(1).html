@@ -26,8 +26,7 @@
             <div class="container">
                 <!-- Navbar Brand -->
                 <a href="index.html" class="navbar-brand">
-                    <img src="assets/img/logo/krishiconnect-high-resolution-logo-black-on-white-background.png" alt="">
-                </a>
+                    
 
                 <!-- Toggle Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,6 +55,8 @@
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg.jpg');">
                 <div class="container">
+                    <img src="assets/img/logo/log.png" alt="" height="300">
+                </a>
                     <h1 class="pt-5">
                         Your Cart
                     </h1>
@@ -65,16 +66,38 @@
                 </div>
             </div>
         </div>
-    <div class="cart" style="background-color: rgba(218, 223, 226, 0.811);">
-        <h1 class="carttext" style="color: black;">Enter Your Details</h1>
-        <div class="cartfield carttext">
-            
-            <input type="text" placeholder="Your Name" id="buyer-name" required>
-        </div>
-        <div class="cartfield carttext">
-            
-            <input type="email" placeholder="Email" id="buyer-email" required>
-        </div>
+
+        <div class="cart" style="background-color: rgb(30, 29, 29);">
+            <h1 class="carttext" style="color: white;">Enter Your Details</h1>
+            <div class="cart-form">
+                <div class="cartfield carttext">
+                    <input type="text" placeholder="Enter your name" id="buyer-name" required>
+                </div>
+                <div class="cartfield carttext">
+                    <input type="email" placeholder="Email" id="buyer-email" required>
+                    <input type="text" placeholder="Phone Number">
+                </div>
+                <div class="adress">
+                    <input type="text" placeholder="Address">
+                </div>
+                <div class="add">
+                    <input type="text" placeholder="Postal Code">
+                    <input type="text" placeholder="City">
+                </div>
+                <div class="add2">
+                    <input type="text" placeholder="State">
+                    <input type="text" placeholder="Country">
+                </div>
+            </div>
+            <!-- <div class="cartfield carttext">
+                
+                <input type="text" placeholder="Your Name" id="buyer-name" required>
+            </div>
+            <div class="cartfield carttext">
+                
+                <input type="email" placeholder="Email" id="buyer-email" required>
+            </div> -->
+
         <div id="cart-items" style="width: 50%; padding: 30px;" class="carttext"></div>
         <div id="subtotal" class="carttext"></div>
         <div class="cartfield"><button class="cartbtn" onclick="emptyCart()" style="border-radius: 3px; color: aliceblue;">Empty Cart</button>
@@ -87,11 +110,12 @@
             <div class="row">
                 <div class="col-md-3">
                     <h5>About</h5>
+                    
                     <p>कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3l">
                     <h5>Links</h5>
-                    <ul>
+                    <ul>    
                         <li>
                             <a href="about(1).html">About</a>
                         </li>
@@ -101,19 +125,18 @@
                         <li>
                             <a href="faq(1).html">FAQ</a>
                         </li>
-                        
                     </ul>
                 </div>
-                <div class="col-md-3">
-                    <h5>Contact</h5>
-                    <ul>
-                        <li>
-                           <a href="tel:+620892738334"><i class="fa fa-phone"></i> 08272367238</a>
-                       </li>
-                       <li>
-                           <a href="mailto:krishiconnect@gmail.com"><i class="fa fa-envelope"></i>krishiconnect@gmail.com</a>
+                <div class="col-md">
+                     <h5>Contact</h5>
+                     <ul>
+                         <li>
+                            <a href="tel:+620892738334"><i  class="fa fa-phone mirrored-icon"></i> 08272367238</a>
                         </li>
-                    </ul>
+                        <li>
+                            <a href="mailto:hello@domain.com"><i class="fa fa-envelope"></i> krishiconnect@gmail.com</a>
+                         </li>
+                     </ul>
 
                      <h5>Follow Us</h5>
                      <ul class="social">
@@ -128,7 +151,7 @@
                          </li>
                      </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3m">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     
                </div>

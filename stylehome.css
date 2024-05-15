@@ -7,14 +7,14 @@ body{
 }
 h1{
     font-size: 72px;
-    color: antiquewhite;
+    color: rgb(44, 49, 216);
     text-align: center;
     font-weight: bold;
 }
 h2{
     font-size: 48px;
     width: 100%;
-    color: antiquewhite;
+    color: rgb(229, 31, 71);
     text-align: center;
     
 }
@@ -40,7 +40,7 @@ h2{
     background: linear-gradient(to bottom right,#E91E63 0%, #f8a1a1 100%);
     border: none;
     border-radius: 8px;
-    color: aliceblue;
+    color: rgb(19, 74, 122);
 
 }
 input{
