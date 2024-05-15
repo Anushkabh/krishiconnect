@@ -19,6 +19,80 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
 
 </head>
+<style>
+   .wishlist-button {
+    display: inline-block;
+    padding: 2px 57px; /* Adjusted padding to make it wider */
+    border: 1px solid #ffdbac;
+    border-radius: 2px; /* Increased border-radius for a slimmer appearance */
+    color: #007bff;
+    background-color: #ffdbac;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s; /* Added transform to the transition */
+}
+
+.wishlist-button:hover {
+    background-color: #ffffff;
+    border: 1px solid #ffbf00;
+    border-radius: 2px; 
+    color: #fff;
+    transform: scale(1.1); 
+}
+/* Style for wishlist dropdown */
+#wishlistDropdownContent {
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Style for each wishlist item */
+.wishlist-item {
+    margin-bottom: 10px;
+}
+
+/* Style for item name */
+.item-name {
+    font-weight: bold;
+}
+
+/* Style for add to cart button */
+.add-to-cart-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #539655;
+}
+
+/* Style for remove button */
+.remove-button {
+    background-color: #E91E63;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #cd1653;
+    color: white;
+    border-radius: 3px;
+}
+
+            </style>
+</style>
 <body>
     <div class="page-header">
         <!--=============== Navbar ===============-->
@@ -37,12 +111,23 @@
                 <div class="collapse navbar-collapse" id="navbarcollapse">
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
+                        
                         <li class="nav-item">
                             <a href="shop(1).html" class="nav-link active">Shop</a>
                         </li>
                         <li class="nav-item">
                             <a href="transaction.html" class="nav-link">Transactions</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                                <!-- Wishlist items will be dynamically added here -->
+                            
+                            </div>
+                        </li>
+                        
                         <li class="nav-item">
                             <a href="cart(1).html" class="nav-link">My Cart</a>
                         </li>
@@ -54,6 +139,7 @@
             </div>
         </nav>
     </div>
+    
     <div id="page-content" class="page-content">
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg.jpg');">
@@ -175,9 +261,12 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Potatoes',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Potatoes',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
+                                        
 
                                     </div>
                                 </div>
@@ -208,6 +297,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Moong Dhuli',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Moong Dhuli',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -241,6 +332,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Mustard Oil',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Musturd Oil',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -274,6 +367,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Mangoes',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Mangoes',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -307,6 +402,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Cucumber',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Cucumber',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -352,6 +449,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Potatoes',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Potatoes',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -385,6 +484,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Cucumber',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Cucumber', 200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -418,6 +519,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Cabbage',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Cabbage',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -451,6 +554,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Spinach',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Spinach',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -484,6 +589,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Tomatoes',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Tomatoes',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -529,6 +636,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Mustard Oil',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Musturd Oil',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -562,6 +671,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Groundnut',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Groundnut',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -595,6 +706,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Mint Leaves',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Mint Leaves',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -628,6 +741,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Coriander Leaves',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Coriander Leaves',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -661,6 +776,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Castor seeds',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Castor seeds',200)"  class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -706,6 +823,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Moong Dhuli',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Moong Dhuli',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -739,6 +858,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Masoor Dhuli',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Masoor Dhuli',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -772,6 +893,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('cumin Powder',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('cumin Powder',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -805,6 +928,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Turmeric Powder',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Turmeric Powder',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -838,6 +963,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Handmade Pots',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Handmade Pots',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -883,6 +1010,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Mangoes',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Mangoes',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -916,6 +1045,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Oranges',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Oranges',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -949,6 +1080,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Watermelon',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Watermelon',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -982,6 +1115,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Grapes',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Grapes',200)" class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
@@ -1015,6 +1150,8 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
+                                        <a onclick="addToWishlist('Guavas',200)" class="wishlist-button">
+                                            Add to Wishlist </a>
                                         <a onclick="addToCart('Guavas',200)"  class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
