@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> krishiconnect</title>
-    <link rel="icon" type="image/png" href="/assets/img/logo/log.png">
+    <title>krishiconnect</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
     <link href="assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
-
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/o2system-ui/o2system-ui.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/owl-carousel/owl-carousel.css">
@@ -19,19 +18,76 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
 
 </head>
+<style>
+.wishlist-container {
+    display: flex;
+    justify-content: center;
+}
+
+.wishlist {
+    background-color: rgb(30, 29, 29);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+
+.wishlist-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.wishlist-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.wishlist-item {
+    margin-bottom: 10px;
+}
+
+.item-name {
+    font-weight: bold;
+    width: 200px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #ffffff;
+    width: 100px; 
+    display: inline-block;
+    text-align: right;
+}
+
+
+.wishlist-btn {
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #E91E63; 
+    color: white;
+}
+
+
+.wishlist-btn:hover {
+    background-color: #cd1653; 
+}
+</style>
 <body>
     <div class="page-header">
         <!--=============== Navbar ===============-->
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
-
                 <a href="index.html" class="navbar-brand">
-                    <div style="flex-direction: row; display: flex; align-items: center;">
-                        <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" >
-                    <h3 >कृषिCONNECT</h3>
-                    </div>
-                </a>
+                    
 
                 <!-- Toggle Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,17 +97,24 @@
                 <div class="collapse navbar-collapse" id="navbarcollapse">
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
+                        
                         <li class="nav-item">
                             <a href="shop(1).html" class="nav-link">Shop</a>
                         </li>
                         <li class="nav-item">
                             <a href="transaction.html" class="nav-link">Transactions</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="cart(1).html" class="nav-link">My Cart</a>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                                <!-- Wishlist items will be dynamically added here -->
+                            </div>
                         </li>
-                        
-                                                   
+                        <li class="nav-item">
+                            <a href="cart(1).html" class="nav-link" onclick="toggleCart()">My Cart</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -60,73 +123,28 @@
     </div>
     <div id="page-content" class="page-content">
         <div class="banner">
-            <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/logo/nn.png');">
+            <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg.jpg');">
                 <div class="container">
-                    <centre><img src="assets/img/logo/log.png" alt="" width="350" height="300"></centre>
+                    <img src="assets/img/logo/log.png" alt="" height="300">
+                </a>
                     <h1 class="pt-5">
-                        FAQ
+                        Your Wishlist
                     </h1>
                     <p class="lead">
-                        Frequently Asked Questions.
+                        Save time and leave the groceries to us.
                     </p>
                 </div>
             </div>
         </div>
 
-        <section id="faq">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <ol>
-                            <li><strong>What is कृषिCONNECT?</strong>
-                                <p>कृषिCONNECT delivers groceries from the farms you to your doorstep in as little as few hours! We empower you to shop at your trusted stores using our own trained and experienced Personal Shoppers, and then ensure a safe delivery to you.</p>
-                            </li>
-                            <li><strong>Do you serve my area?</strong>
-                                <p>Currently we serve only in Jamshedpur.Check if we deliver to your area using our Website.</p>
-                            </li>
-                            <li><strong>How fast do you deliver?</strong>
-                                <p>We deliver to you in the next hour, or at any other one-hour time-slot today and in the next 6 days.</p>
-                            </li>
-                            <li><strong>How much does delivery cost?</strong>
-                                <p>It costs INR 20,000 for the delivery on all delivery slots. And FREE DELIVERY for order placed above INR 500,000 in May 2024 only</p>
-                            </li>
-                            <li><strong>What are the delivery hours?</strong>
-                                <p> Usually between 10am and 10pm. You can place your orders at any time of the day.</p>
-                            </li>
-                            <li><strong>Can you assure the quality of the products that I bought?</strong>
-                                <p>Of course! We can assure the quality of the items for you, our beloved customer. If you found any bad quality items, you can contact our Customer Service and we will replace it.</p>
-                            </li>
-                            <li><strong>How do I edit or cancel my order?</strong>
-                                <p>You can edit your order until the shopper starts picking your items. Go to “My Orders” section in the app and select the order you want to edit. Click on “Edit Order” to:</p>
-                                <ul type="disc">
-                                    <li>Add or remove items</li>
-                                    <li>Change delivery slot</li>
-                                    <li>Change payment method</li>
-                                    <li>Change address</li>
-                                    <li>Cancel order</li>
-                                </ul>
-                            </li>
-                            <li><strong>How do I report a problem with my order?</strong>
-                                <p>You can contact us following the “Help” button in the app and selecting “Contact Us”. We respond very quickly!</p>
-                            </li>
-                            <li><strong>When will I receive my refund?</strong>
-                                <p>Payment will be made within 14 days by crediting your credit card.</p>
-                            </li>
-                            <li><strong>How do I return items?</strong>
-                                <p>If something seems to be wrong with your order, such as a missing item or an incorrect item, you can reject the items when our rider arrives at your doorstep. We will charge you only for the delivered items. Once an item is accepted by you, it cannot be returned. We do not currently support a return process for any items you may have accidentally purchased via Freshchery. You are more than welcome to coordinate returns directly with your store. Keep in mind that we do keep the in-store receipts for accounting purposes.</p>
-                            </li>
-                            <li><strong>Who will deliver my order?</strong>
-                                <p>Your orders will be delivered by our professional delivery boys.</p>
-                            </li>
-                            <li><strong>I have many more questions for you!</strong>
-                                <p>Contact us! We will be there for support at <a href="mailto:krishiconnect@gmail.com">krishiconnect@gmail.com</a>.</p>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </section>        
-    </div>
+        <div class="wishlist-container">
+        <div class="wishlist" style="background-color: rgb(30, 29, 29);">
+            <h1 class="wishlist-text" style="color: white;">Wishlist</h1>
+            <div id="wishlist-items" class="wishlist-items"></div>
+            <button class="wishlist-btn" onclick="emptyWishlist()" style="border-radius: 3px; color: rgb(255, 255, 255);">Empty Wishlist</button>
+            <button onclick="window.location.href='cart(1).html'" class="wishlist-btn" style="border-radius: 3px; color: rgb(255, 255, 255);">Go to Cart</button>
+        </div>
+        </div>
     <footer>
         <div class="container">
             <div class="row">
@@ -192,5 +210,8 @@
     <script type="text/javascript" src="assets/packages/thumbelina/thumbelina.js"></script>
     <script type="text/javascript" src="assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
     <script type="text/javascript" src="assets/js/theme.js"></script>
+    <script src="wishlist.js"></script>
+    <script src="cart.js"></script>
+    <script src="shop.js"></script>
 </body>
 </html>

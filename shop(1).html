@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>krishiconnect</title>
+    <link rel="icon" type="image/png" href="/assets/img/logo/log.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -17,35 +18,133 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
-    
-<style>
-    .card-product {
-        position: relative;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-    }
-    
-    .card-product:hover {
-        transform: scale(1.05); 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    }
-    
-    .card-product .card-body {
-        padding: 20px;
-    }
-    
-    .card-product .card-title a {
-        color: #333;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-    
-    .card-product .card-title a:hover {
-        color: #007bff; 
-    }
-    
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
+<style>
+   /*.wishlist-button {
+    display: inline-block;
+    padding: 2px 57px; 
+    border: 1px solid #ffdbac;
+    border-radius: 2px; 
+    color: #007bff;
+    background-color: #ffdbac;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s; /* Added transform to the transition 
+}
+
+.wishlist-button:hover {
+    background-color: #ffffff;
+    border: 1px solid #ffbf00;
+    border-radius: 2px; 
+    color: #fff;
+    transform: scale(1.1); 
+}*/
+.buttons {
+    display: flex;
+    gap: 12px; 
+}
+
+.wishlist-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #464646;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s; 
+}
+
+.wishlist-button:hover {
+    background-color: #74cf77;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.wishlist-button .fas {
+    margin-right: 5px; 
+}
+
+.btn.btn-block.btn-primary {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #E91E63;
+    color: #fff;
+    text-decoration: none;
+}
+
+#wishlistDropdownContent {
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.wishlist-item {
+    margin-bottom: 10px;
+}
+
+
+.item-name {
+    font-weight: bold;
+}
+
+/* within wishlist */
+
+.add-to-cart-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #539655;
+}
+
+
+.remove-button {
+    background-color: #E91E63;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #cd1653;
+    color: white;
+    border-radius: 3px;
+}
+
+.view-wishlist-link {
+    display: block;
+    padding: 10px;
+    color: #333; 
+    text-decoration: none;
+    font-weight: bold;
+    border-top: 1px solid #ccc; 
+  }
+  
+  .view-wishlist-link:hover {
+    background-color: #f5f5f5; 
+  }
+
+</style>
 <body>
     <div class="page-header">
         <!--=============== Navbar ===============-->
@@ -53,7 +152,10 @@
             <div class="container">
                 <!-- Navbar Brand -->
                 <a href="index.html" class="navbar-brand">
-                    
+                    <div style="flex-direction: row; display: flex; align-items: center;">
+                        <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" >
+                    <h3 >कृषिCONNECT</h3>
+                    </div>
                 </a>
 
                 <!-- Toggle Button -->
@@ -64,12 +166,23 @@
                 <div class="collapse navbar-collapse" id="navbarcollapse">
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
+                        
                         <li class="nav-item">
                             <a href="shop(1).html" class="nav-link active">Shop</a>
                         </li>
                         <li class="nav-item">
                             <a href="transaction.html" class="nav-link">Transactions</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                                <!-- Wishlist items will be dynamically added here -->
+                            
+                            </div>
+                        </li>
+                        
                         <li class="nav-item">
                             <a href="cart(1).html" class="nav-link">My Cart</a>
                         </li>
@@ -81,6 +194,8 @@
             </div>
         </nav>
     </div>
+    
+    
     <div id="page-content" class="page-content">
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/shop.png');">
@@ -208,9 +323,15 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Potatoes',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Potatoes',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Potatoes',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+                                        
 
                                     </div>
                                 </div>
@@ -241,10 +362,15 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Moong Dhuli',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
-
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Moong Dhuli',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Moong Dhuli',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -274,10 +400,15 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Musturd Oil',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
-
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Mustard Oil',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Mustard Oil',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -307,9 +438,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Mangoes',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Mangoes',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Mangoes',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -340,9 +476,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Cucumber',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Cucumber',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Cucumber',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -385,10 +526,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Potatoes',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
-
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Potatoes',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Potatoes',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -418,9 +563,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Cucumber', 200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Cucumber',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Cucumber',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -451,9 +601,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Cabbage',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Cabbage',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Cabbage',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -484,9 +639,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Spinach',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Spinach',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Spinach',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -517,9 +677,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Tomatoes',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Tomatoes',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Tomatoes',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -562,9 +727,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Musturd Oil',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Mustard Oil',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Mustard Oil',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -595,9 +765,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Groundnut',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Groundnut',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Groundnut',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -628,9 +803,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Mint Leaves',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Mint Leaves',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Mint Leaves',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -661,9 +841,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Coriander Leaves',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Coriander Leaves',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Coriander Leaves',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -694,9 +879,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Castor seeds',200)"  class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Castor seeds',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Castor seeds',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -739,9 +929,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Moong Dhuli',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Moong Dhuli',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Moong Dhuli',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -772,9 +967,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Masoor Dhuli',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Masoor Dhuli',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Masoor Dhuli',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -805,9 +1005,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('cumin Powder',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('cumin Powder',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('cumin Powder',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -838,9 +1043,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Turmeric Powder',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Turmeric Powder',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Turmeric Powder',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -871,9 +1081,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Handmade Pots',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Handmade Pots',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Handmade Pots',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -916,9 +1131,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Mangoes',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Mangoes',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Mangoes',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -949,9 +1169,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Oranges',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Oranges',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Oranges',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -982,9 +1207,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Watermelon',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Watermelon',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Watermelon',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -1015,9 +1245,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Grapes',200)" class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Grapes',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Grapes',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -1048,9 +1283,14 @@
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
-                                        <a onclick="addToCart('Guavas',200)"  class="btn btn-block btn-primary">
-                                            Add to Cart
-                                        </a>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Guavas',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i> 
+                                            </a>
+                                            <a onclick="addToCart('Guavas',200)" class="btn btn-block btn-primary">
+                                                Add to Cart
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -1132,5 +1372,6 @@
     <script type="text/javascript" src="assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
     <script type="text/javascript" src="assets/js/theme.js"></script>
     <script src="shop.js"></script>
+    <script src="wishlist.js"></script>
 </body>
 </html>
