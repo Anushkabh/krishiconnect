@@ -8,6 +8,12 @@
  html {
   scroll-behavior: smooth;
 }
+.heading-color{
+  color:black;
+}
+.move-up{
+  margin-top: -21px;
+}
 
 body {
   color: #333333;
@@ -19,6 +25,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase !important;
   font-weight: 700 !important;
+}
+.pt-5{
+  color:black;
+}
+.lead{
+  color:black;
+  font-weight: bolder;
 }
 
 .back-to-top {
@@ -201,7 +214,8 @@ section .card-title {
   
 }
 .page-header .navbar .navbar-nav .nav-link {
-  color: #FFF;
+  color:black;
+  font-weight: bolder;
   font-size: 1rem;
   padding-right: 1rem;
   padding-left: 1rem;
