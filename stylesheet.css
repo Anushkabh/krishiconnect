@@ -420,10 +420,10 @@ input{
 .cartlist{
     display: flex;
     text-align: left;
-    color: #E91E63;
+    color: #c0f0f0;
     justify-content: flex-end;
     width: 100%;
-    border: 3px solid #E91E63;
+    border: 2px solid #905e6e;
 }
 .cartlist span{
     padding-right: 30px;
@@ -431,6 +431,8 @@ input{
 }
 #subtotal{
     color: black;
+    font-weight: bold;
+    font-size: 15px;
 }
 .cartfield #buyer-name{
     width: 460px;
@@ -441,6 +443,11 @@ input{
   margin-right: 20px;
   margin-top: 30px;
 }
+
+ input:hover {
+    background-color: rgb(236, 236, 173);
+  }
+
 .cartfield input{
     margin-right:20px ;
     margin-top: 20px;
@@ -478,4 +485,11 @@ input{
     border-radius: 5px;
     border: none;
     padding: 10px;
+}
+
+.cartbtn:hover{
+    scale: 1.1;
+    opacity: 1.5;
+    border: 2px solid white;
+    transition-duration: 0.2s;
 }
