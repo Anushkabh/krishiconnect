@@ -187,7 +187,7 @@ function removeFromCart(name) {
   localStorage.setItem('cartItems', JSON.stringify(cartItems));
   updateDropdownCart(cartItems);
 }
-// Initial update of wishlist on page load
+// Initial update of wishlist and cart on page load
 var initialWishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
 updateDropdownWishlist(initialWishlistItems);
 
