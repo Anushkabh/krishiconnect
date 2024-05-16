@@ -117,3 +117,5 @@ var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         emptyCart();
   
       }
+
+      
