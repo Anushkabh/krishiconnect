@@ -5,6 +5,10 @@
  =========================================================
 
  */
+ html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #333333;
   font-size: 14px;
@@ -15,6 +19,34 @@ body {
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase !important;
   font-weight: 700 !important;
+}
+
+.back-to-top {
+
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #39a24e;
+  color: #fff;
+  width: 60px;
+  height:60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  transition: all .4s;
+}
+
+.back-to-top.active{
+  opacity: 1;
+}
+
+.back-to-top:hover{
+  background-color: #1cc2c2;
+  color: white;
 }
 
 .badge {
@@ -163,6 +195,10 @@ section .card-title {
 
 .page-header .navbar .navbar-brand img {
   height: 60px;
+  margin-left: -160px;
+  object-fit: cover;
+  border-radius: 50%;
+  
 }
 .page-header .navbar .navbar-nav .nav-link {
   color: #FFF;
@@ -332,6 +368,28 @@ section .card-title {
   font-size: 0.8rem;
 }
 
+
+.card-box{
+  border: 1px solid  #4A9304; 
+  height:217.84px;
+  transition: transform 0.2s ease-in-out;
+}
+.card-box:hover{
+  transform: scale(1.05);
+  color: #4A9304;
+  box-shadow: 0 0 10px #4A9304;
+}
+
+.cart-icon:hover{
+transform: scale(1.05);
+  text-shadow: 2px 2px 4px #b9beb4;
+
+}
+.title:hover{
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+
+}
+
 .product-detail {
   padding-top: 5rem;
 }
@@ -366,13 +424,6 @@ section .card-title {
   min-height: 119px;
   margin-top: 5px;
   margin-bottom: 15px;
-  	/* .thumbelina-but.horiz.left{
-  		left: 0;
-  	}
-  
-  	.thumbelina-but.horiz.right{
-  		right: 0;
-  	} */
 }
 .slider-thumbnail li {
   cursor: pointer;
@@ -457,4 +508,39 @@ footer .copyright {
   border-top: 1px solid #eee;
 }
 
+.col-md-3{
+  margin-right: 50px;
+}
+
+.col-md{
+  margin-right: 50px;
+}
+
+.col-md-3l{
+  margin-right: 80px;
+  margin-left: 15px;
+}
+.col-md-3m{
+  margin-right: 10px;
+  
+}
+.mirrored-icon {
+  transform: scaleX(-1);
+}
 /*# sourceMappingURL=theme.css.map */
+
+
+/* Button Animation */
+.btn-primary {
+  background: #E91E63;
+  border-color: #E91E63;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #FFFFFF;
+  color: #E91E63;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
