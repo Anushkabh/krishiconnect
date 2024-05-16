@@ -2,14 +2,13 @@
 <html>
 <head>
     <title>krishiconnect</title>
-    <link rel="icon" type="image/png" href="/assets/img/logo/log.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
     <link href="assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
-
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/o2system-ui/o2system-ui.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/owl-carousel/owl-carousel.css">
@@ -19,15 +18,76 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
 
 </head>
+<style>
+.wishlist-container {
+    display: flex;
+    justify-content: center;
+}
+
+.wishlist {
+    background-color: rgb(30, 29, 29);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+
+.wishlist-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.wishlist-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.wishlist-item {
+    margin-bottom: 10px;
+}
+
+.item-name {
+    font-weight: bold;
+    width: 200px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #ffffff;
+    width: 100px; 
+    display: inline-block;
+    text-align: right;
+}
+
+
+.wishlist-btn {
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #E91E63; 
+    color: white;
+}
+
+
+.wishlist-btn:hover {
+    background-color: #cd1653; 
+}
+</style>
 <body>
     <div class="page-header">
         <!--=============== Navbar ===============-->
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
-           <div class="container">
+            <div class="container">
                 <!-- Navbar Brand -->
-                <a href="index(1).html" class="navbar-brand">
-                    <img src="assets/img/logo/krishiconnect-high-resolution-logo-black-on-white-background.png" alt="">
-                </a>
+                <a href="index.html" class="navbar-brand">
+                    
 
                 <!-- Toggle Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,24 +97,24 @@
                 <div class="collapse navbar-collapse" id="navbarcollapse">
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
+                        
                         <li class="nav-item">
                             <a href="shop(1).html" class="nav-link">Shop</a>
                         </li>
                         <li class="nav-item">
                             <a href="transaction.html" class="nav-link">Transactions</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="wishlist.html" class="nav-link"><i class="ri-heart-fill"></i> Wishlist</a>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                                <!-- Wishlist items will be dynamically added here -->
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a href="cart(1).html" class="nav-link">My Cart</a>
+                            <a href="cart(1).html" class="nav-link" onclick="toggleCart()">My Cart</a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a href="setting(1).html" class="nav-link">Settings</a>
-                        </li> -->
-                    
-                                                
-                                
                     </ul>
                 </div>
 
@@ -66,8 +126,9 @@
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg.jpg');">
                 <div class="container">
                     <img src="assets/img/logo/log.png" alt="" height="300">
+                </a>
                     <h1 class="pt-5">
-                        About Us
+                        Your Wishlist
                     </h1>
                     <p class="lead">
                         Save time and leave the groceries to us.
@@ -76,72 +137,14 @@
             </div>
         </div>
 
-        <section class="bg-leaf">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 text-center mb-3">
-                        <h1 class="title text-uppercase mb-2">कृषिCONNECT</h1>
-                        <h5>
-                            Groceries Organic Store
-                        </h5>
-                    </div>
-                    <div class="col-md-10">
-                        <p class="text-justify">
-                            
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center align-items-center mt-3">
-                    <div class="col-md-4">
-                        <img src="assets/img/fruitsorg.jpg" class="img-fluid">
-                    </div>
-                    <div class="col-md-6">
-                        <h5>
-                            Straight from the Farm, We bring to you the freshest, healthiest produce...
-                        </h5>
-                        <p>
-                            Our farm-to-table concept emphasizes on getting the fresh produce directly from local farms to your tables within one day, hence you know you get the freshest produce straight from harvest.
-                        </p>
-                        <p>
-                            All the produce is cultivated locally by organic farmers with whom we maintain a loyal and cordial relationship. We aim to serve our consumers and our farmer friends with utmost professionalism.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center align-items-center text-right mt-3">
-                    <div class="col-md-6">
-                        <h5>
-                            Know Your Farmers
-                        </h5>
-                        <p>
-                            We want you to know exactly who is growing your food by having the farmers profile on each item and farmers page. You’re welcome to visit the farms and see the love they put into growing your food.
-                        </p>
-                        <p>
-                            By helping our farmer friends out, we ensure that their efforts yield "fruitful" results(no pun intended). All our farmers are given due instructions regarding the standard of produce we aim to maintain for our consumers.   
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="assets/img/vegetables.jpg" class="img-fluid">
-                    </div>
-                </div>
-
-                <div class="row justify-content-center align-items-center mt-3">
-                    <div class="col-md-4">
-                        <img src="assets/img/herborg.jpg" class="img-fluid">
-                    </div>
-                    <div class="col-md-6">
-                        <h5>
-                            Improving Farmers’ Livelihood
-                        </h5>
-                        <p>
-                            Slowly but sure, by cutting the complex supply chain and food system, we hope to improve the welfare of farmers by giving them the returns they deserve for their hard work. By removing middlemen, we ensure that our farmer friends get the rewards that they deserve for the hardwork they put in.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+        <div class="wishlist-container">
+        <div class="wishlist" style="background-color: rgb(30, 29, 29);">
+            <h1 class="wishlist-text" style="color: white;">Wishlist</h1>
+            <div id="wishlist-items" class="wishlist-items"></div>
+            <button class="wishlist-btn" onclick="emptyWishlist()" style="border-radius: 3px; color: rgb(255, 255, 255);">Empty Wishlist</button>
+            <button onclick="window.location.href='cart(1).html'" class="wishlist-btn" style="border-radius: 3px; color: rgb(255, 255, 255);">Go to Cart</button>
+        </div>
+        </div>
     <footer>
         <div class="container">
             <div class="row">
@@ -168,7 +171,7 @@
                      <h5>Contact</h5>
                      <ul>
                          <li>
-                            <a href="tel:+620892738334"><i  class="fa fa-phone"></i> 08272367238</a>
+                            <a href="tel:+620892738334"><i  class="fa fa-phone mirrored-icon"></i> 08272367238</a>
                         </li>
                         <li>
                             <a href="mailto:hello@domain.com"><i class="fa fa-envelope"></i> krishiconnect@gmail.com</a>
@@ -207,5 +210,8 @@
     <script type="text/javascript" src="assets/packages/thumbelina/thumbelina.js"></script>
     <script type="text/javascript" src="assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
     <script type="text/javascript" src="assets/js/theme.js"></script>
+    <script src="wishlist.js"></script>
+    <script src="cart.js"></script>
+    <script src="shop.js"></script>
 </body>
 </html>
