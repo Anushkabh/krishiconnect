@@ -1,3 +1,4 @@
+
 var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
     
@@ -5,8 +6,10 @@ var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     var buyerNameInput = document.getElementById('buyer-name');
     var buyerEmailInput = document.getElementById('buyer-email');
 
+    
+  
 
-    cartItems.forEach(function(item) {
+     cartItems.forEach(function(item) {
       var itemElement = document.createElement('div');
       itemElement.classList.add('cartlist');
       itemElement.innerHTML =  "<span>"+item.name+"</span>  <span>"+item.price+"</span><span>"+item.quantity+"</span>";
@@ -113,7 +116,6 @@ var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         
         emptyCart();
   
-        
-    
       }
-  
+
+      

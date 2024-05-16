@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>KrishiConnect</title>
+    <title>krishiconnect</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
     <link href="assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="stylesheet.css" type="text/css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/o2system-ui/o2system-ui.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/owl-carousel/owl-carousel.css">
@@ -18,6 +18,68 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
 
 </head>
+<style>
+.wishlist-container {
+    display: flex;
+    justify-content: center;
+}
+
+.wishlist {
+    background-color: rgb(30, 29, 29);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+
+.wishlist-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.wishlist-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.wishlist-item {
+    margin-bottom: 10px;
+}
+
+.item-name {
+    font-weight: bold;
+    width: 200px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #ffffff;
+    width: 100px; 
+    display: inline-block;
+    text-align: right;
+}
+
+
+.wishlist-btn {
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #E91E63; 
+    color: white;
+}
+
+
+.wishlist-btn:hover {
+    background-color: #cd1653; 
+}
+</style>
 <body>
     <div class="page-header">
         <!--=============== Navbar ===============-->
@@ -26,7 +88,6 @@
                 <!-- Navbar Brand -->
                 <a href="index.html" class="navbar-brand">
                     
-                </a>
 
                 <!-- Toggle Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +120,6 @@
                                
                             </div>
                         </li>
-                       
                     </ul>
                 </div>
 
@@ -70,9 +130,10 @@
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg.jpg');">
                 <div class="container">
-                    <img src="assets/img/logo/log.png" alt="" height="300" >
+                    <img src="assets/img/logo/log.png" alt="" height="300">
+                </a>
                     <h1 class="pt-5">
-                        Your Transactions
+                        Your Wishlist
                     </h1>
                     <p class="lead">
                         Save time and leave the groceries to us.
@@ -80,24 +141,15 @@
                 </div>
             </div>
         </div>
-        <div class="cart">
-        <h1 class="carttext">Transaction Page</h1>
-        <div id="buyer-details" style="color:white;text-align:center;font-size:20px ;"></div>
-            <div id="transaction-items" style="color:white;text-align:center;font-size:20px ;" class="carttext"></div>
-        
-        
-        </section>
 
-        <!-- Modal -->
-                                          
-        <div class="modal-footer">
-                        <button onclick="window.location.href='success.html'" class="cartbtn" data-dismiss="modal">Confirm Order</button>
+        <div class="wishlist-container">
+        <div class="wishlist" style="background-color: rgb(30, 29, 29);">
+            <h1 class="wishlist-text" style="color: white;">Wishlist</h1>
+            <div id="wishlist-items" class="wishlist-items"></div>
+            <button class="wishlist-btn" onclick="emptyWishlist()" style="border-radius: 3px; color: rgb(255, 255, 255);">Empty Wishlist</button>
+            <button onclick="window.location.href='cart(1).html'" class="wishlist-btn" style="border-radius: 3px; color: rgb(255, 255, 255);">Go to Cart</button>
         </div>
-    </div>
-                </div>
-            </div>
         </div>
-    </div>
     <footer>
         <div class="container">
             <div class="row">
@@ -163,7 +215,8 @@
     <script type="text/javascript" src="assets/packages/thumbelina/thumbelina.js"></script>
     <script type="text/javascript" src="assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
     <script type="text/javascript" src="assets/js/theme.js"></script>
-    <script src="transaction.js"></script>
+    <script src="wishlist.js"></script>
+    <script src="cart.js"></script>
     <script src="shop.js"></script>
 </body>
 </html>

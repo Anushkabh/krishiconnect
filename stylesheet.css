@@ -196,7 +196,7 @@ h1 {
     width: 100%;
     justify-content: center;
     align-items: center;
-    opacity:;
+    opacity:1;
     margin: 0px ;
 }
 .out{
@@ -233,6 +233,8 @@ h1 {
 .ffielf.fld{
     color:#E91E63
 } */
+
+  
 .cart{
     display: flex;
     flex-direction: column;
@@ -244,6 +246,7 @@ h1 {
     border-radius: 20px;
 
 }
+
 .cartfield{
     display: flex;
     flex-direction: row;
@@ -268,6 +271,174 @@ h1 {
     font-family: "Montserrat", "Helvetica Neue", "Arial", "sans-serif";
     color:#FFF;
 }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.wishlist-button {
+    display: inline-block;
+    padding: 2px 57px; 
+    border: 1px solid #ffdbac;
+    border-radius: 2px; 
+    color: #007bff;
+    background-color: #ffdbac;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s; 
+}
+
+.wishlist-button:hover {
+    background-color: #ffffff;
+    border: 1px solid #ffbf00;
+    border-radius: 2px; 
+    color: #fff;
+    transform: scale(1.1); 
+}
+
+/* for dropdown wishlist */
+
+#wishlistDropdownContent {
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.wishlist-item {
+    margin-bottom: 10px;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.add-to-cart-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #539655;
+}
+
+.remove-button {
+    background-color: #E91E63;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #cd1653;
+    color: white;
+    border-radius: 3px;
+}
+
+.view-wishlist-link {
+    display: block;
+    padding: 10px;
+    color: #333; 
+    text-decoration: none;
+    font-weight: bold;
+    border-top: 1px solid #ccc; 
+  }
+  
+  .view-wishlist-link:hover {
+    background-color: #f5f5f5; 
+  }
+
+/* for dropdown Cart */
+
+.cart-dropdown {
+    position: relative;
+}
+
+.cart-dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.cart-item {
+    margin-bottom: 10px;
+}
+
+
+.item-name {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.remove-btn {
+    background-color: #E91E63;
+    color: white;
+    padding: 5px 5px; 
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 10px; 
+}
+
+.remove-btn:hover {
+    background-color: #cd1653;
+    color: white;
+    border-radius: 3px;
+}
+
+.go-to-cart-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 5px; 
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.go-to-cart-btn:hover {
+    background-color: #539655;
+}
+
+
+.view-cart-link {
+    display: block;
+    padding: 10px;
+    color: #333; 
+    text-decoration: none;
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+}
+
+.view-cart-link:hover {
+    text-decoration: underline;
+    background-color: #f5f5f5;
+}
+
+/* --- */
+
 #login{
     display:none;
     position: absolute;
