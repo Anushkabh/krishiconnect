@@ -75,7 +75,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-primary{
-    background-color: $primary-color !important;
+    background-color:  $primary-color; 
+}
+.bg-green{
+    color: #4A9304;
 }
 
 .vertical-center {
@@ -100,7 +103,7 @@ section{
 
 .title{
     text-align: center;
-    color: $primary-color;
+    color: #25b28e !important;
     margin-bottom: 3rem;
 }
 

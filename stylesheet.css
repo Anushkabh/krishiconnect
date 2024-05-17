@@ -9,29 +9,36 @@ div{
 }
 .container {
     width: 100%;
-    padding-right: 15px;
+    padding-right: 10px;
     padding-left: 5px;
     margin-right: auto;
     margin-left: auto;
+    
 }
 .title {
     text-align: center;
-    color: #E91E63;
+
     margin-bottom: 3rem;
+    
 }
 i {
     font-style: italic;
 }
-.banner{
+.banner {
     display: block;
     width:100%;
+    
 }
+
+
 .banner .jumbotron {
     margin-bottom: 0;
+
 }
 .jumbotron.jumbotron-bg {
     background-size: cover;
-    color: #FFF;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .jumbotron {
     padding: 4rem;
@@ -493,4 +500,5 @@ input{
     border: 2px solid white;
     transition-duration: 0.2s;
 }
+
 

@@ -54,12 +54,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-  background: #E91E63;
-  border-color: #E91E63;
+  background: #25b28e !important;
+  border-color:#25b28e !important;
 }
 .btn-primary:hover, .btn-primary:focus {
-  background: #E91E63;
-  border-color: #E91E63;
+  background: #19060c;
+  border-color: #11060a;
 }
 
 .btn.focus, .btn:focus {
@@ -99,7 +99,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-primary {
-  background-color: #E91E63 !important;
+  background-color: #25b28e !important;
+}
+.green{
+  color: #25b28e;
 }
 
 .vertical-center {
@@ -291,10 +294,12 @@ section .card-title {
 
 .banner .jumbotron {
   margin-bottom: 0;
+
 }
 .banner .jumbotron .container {
   position: relative;
   z-index: 5;
+  
 }
 .banner .jumbotron .container .card {
   margin-top: 2.3rem;
@@ -532,15 +537,15 @@ footer .copyright {
 
 /* Button Animation */
 .btn-primary {
-  background: #E91E63;
-  border-color: #E91E63;
+  background: #25b28e;
+  border-color: black;
   color: #FFFFFF;
   transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
   background: #FFFFFF;
-  color: #E91E63;
+  color: #1ee9ba;
   transform: scale(1.05);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
