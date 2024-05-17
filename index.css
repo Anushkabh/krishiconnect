@@ -3,7 +3,7 @@
     width: 100%;
     position: fixed;
     top: 0;
-    background-color: black;
+    /* background-color: black; */
     z-index: 99;
     display: flex;
     align-items: center;
