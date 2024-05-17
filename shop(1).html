@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <style>
@@ -207,11 +208,11 @@
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/shop.png');">
                 <div class="container">
-                    <img src="assets/img/logo/log.png" alt="" height="300" width="400">
-                    <h1 class="pt-5">
+                    <img src="assets/img/logo/log.png" alt="" height="300" width="400" id="image">
+                    <h1 class="pt-5" id="s">
                         Shopping Page
                     </h1>
-                    <p class="lead">
+                    <p class="lead" id="s">
                         Save time and leave the groceries to us.
                     </p>
                 </div>
@@ -222,7 +223,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="shop-categories owl-carousel mt-5">
-                        <div class="item">
+                        <div class="item" id="item">
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
@@ -234,7 +235,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="item">
+                        <div class="item" id="item">
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
@@ -246,7 +247,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="item">
+                        <div class="item" id="item">
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
@@ -258,7 +259,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="item">
+                        <div class="item" id="item">
                             <a href="shop(1).html">
                                 <div class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><i class="sb-bistro-fish-1"></i></span>
@@ -269,7 +270,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="item">
+                        <div class="item" id="item">
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
@@ -281,7 +282,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="item">
+                        <div class="item" id="item">
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
@@ -302,9 +303,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="title">Most Wanted</h2>
+                        <h2 class="title" id="title">Most Wanted</h2>
                         <div class="product-carousel owl-carousel">
-                            <div class="item">
+                            <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -343,7 +344,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -381,7 +382,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -419,7 +420,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -457,7 +458,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -505,9 +506,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="title">Vegetables</h2>
+                        <h2 class="title" id="title">Vegetables</h2>
                         <div class="product-carousel owl-carousel">
-                            <div class="item">
+                            <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -544,7 +545,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -582,7 +583,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -620,7 +621,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -658,7 +659,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -706,9 +707,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="title">Oil Seeds And Herbs</h2>
+                        <h2 class="title" id="title">Oil Seeds And Herbs</h2>
                         <div class="product-carousel owl-carousel">
-                            <div class="item">
+                            <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -746,7 +747,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -784,7 +785,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -822,7 +823,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -908,7 +909,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="title">Miscellaneous</h2>
+                        <h2 class="title" id="title">Miscellaneous</h2>
                         <div class="product-carousel owl-carousel">
                             <div class="item">
                                 <div class="card card-product">
@@ -1062,7 +1063,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" >
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -1110,7 +1111,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="title">Fruits</h2>
+                        <h2 class="title" id="title">Fruits</h2>
                         <div class="product-carousel owl-carousel">
                             <div class="item">
                                 <div class="card card-product">
@@ -1150,7 +1151,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" >
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -1312,14 +1313,14 @@
                         
                 <footer>
                     <a href="#" class="back-to-top d-flex align-items-center justify-content-center" id="back-to-top"><i class="fa fa-solid fa-arrow-up" ></i></a>
-                    <div class="container">
+                    <div class="container" id="container">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3" id="col-md-3">
                                 <h5>About</h5>
                                 
                                 <p>कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.</p>
                             </div>
-                            <div class="col-md-3l">
+                            <div class="col-md-3l" id="col-md-3l">
                                 <h5>Links</h5>
                                 <ul>    
                                     <li>
@@ -1333,7 +1334,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-md">
+                            <div class="col-md" id="col-md">
                                  <h5>Contact</h5>
                                  <ul>
                                      <li>
@@ -1357,13 +1358,13 @@
                                      </li>
                                  </ul>
                             </div>
-                            <div class="col-md-3m">
+                            <div class="col-md-3m" id="col-md-3m">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 
                            </div>
                         </div>
                     </div>
-                    <p class="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
+                    <p class="copyright" id="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
                 </footer>
             </div>
       
@@ -1380,5 +1381,19 @@
     <script type="text/javascript" src="assets/js/theme.js"></script>
     <script src="shop.js"></script>
     <script src="wishlist.js"></script>
+    <script>
+        ScrollReveal({ 
+            //reset: true ,
+            distance : '60px' ,
+            duration:2500,
+            delay:400
+        });
+        ScrollReveal().reveal('#image,#s,#s', { delay: 500 , origin:'top' });
+        ScrollReveal().reveal('#title', { delay: 600 , origin:'top' });
+        ScrollReveal().reveal('#container', { delay: 700 , origin:'bottom' });
+        ScrollReveal().reveal('#col-md-3,#col-md-3l', { delay: 500 , origin:'left'});
+        ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500 , origin:'right'});
+        ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
+    </script>
 </body>
 </html>
