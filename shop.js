@@ -23,6 +23,14 @@ function addToWishlist(name, price) {
   updateDropdownWishlist(wishlistItems);
 
   alert("Item added to wishlist successfully!");
+  Toastify({
+    text: "Product added to wishlist!",
+    duration: 5000,
+    gravity: "top",
+    innerHeight: 50,
+    position: "right",
+    backgroundColor: "rgba(0,128,0,0.8)",
+  }).showToast();
 }
 
 function updateDropdownWishlist(items) {
