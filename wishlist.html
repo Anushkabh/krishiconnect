@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>KrishiConnect | Contact Us</title>
-    <link rel="icon" type="image/png" href="/assets/img/logo/log.png">
+    <title>KrishiConnect | Wishlist</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
     <link href="assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
-
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/o2system-ui/o2system-ui.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/owl-carousel/owl-carousel.css">
@@ -19,6 +18,68 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
 
 </head>
+<style>
+.wishlist-container {
+    display: flex;
+    justify-content: center;
+}
+
+.wishlist {
+    background-color: rgb(30, 29, 29);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+
+.wishlist-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.wishlist-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.wishlist-item {
+    margin-bottom: 10px;
+}
+
+.item-name {
+    font-weight: bold;
+    width: 200px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #ffffff;
+    width: 100px; 
+    display: inline-block;
+    text-align: right;
+}
+
+
+.wishlist-btn {
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #E91E63; 
+    color: white;
+}
+
+
+.wishlist-btn:hover {
+    background-color: #cd1653; 
+}
+</style>
 <body>
     <div class="page-header">
         <!--=============== Navbar ===============-->
@@ -26,11 +87,7 @@
             <div class="container">
                 <!-- Navbar Brand -->
                 <a href="index.html" class="navbar-brand">
-                    <div style="flex-direction: row; display: flex; align-items: center;">
-                        <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" >
-                    <h3 >कृषिCONNECT</h3>
-                    </div>
-                </a>
+                    
 
                 <!-- Toggle Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,16 +97,24 @@
                 <div class="collapse navbar-collapse" id="navbarcollapse">
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
+                        
                         <li class="nav-item">
                             <a href="shop(1).html" class="nav-link">Shop</a>
                         </li>
                         <li class="nav-item">
                             <a href="transaction.html" class="nav-link">Transactions</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="cart(1).html" class="nav-link">My Cart</a>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                                <!-- Wishlist items will be dynamically added here -->
+                            </div>
                         </li>
-                      
+                        <li class="nav-item">
+                            <a href="cart(1).html" class="nav-link" onclick="toggleCart()">My Cart</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -60,72 +125,26 @@
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg.jpg');">
                 <div class="container">
+                    <img src="assets/img/logo/log.png" alt="" height="300">
+                </a>
                     <h1 class="pt-5">
-                        Contact
+                        Your Wishlist
                     </h1>
                     <p class="lead">
-                        Don't Hesitate to Contact Us.
+                        Save time and leave the groceries to us.
                     </p>
                 </div>
             </div>
         </div>
 
-        <section class="pb-0">
-            <div class="contact1 mb-5">
-                <div class="container">
-                    <div class="row mt-3">
-                        <div class="col-lg-7">
-                            <div class="contact-wrapper">
-                                <h3 class="title font-weight-normal mt-0 text-left">Send Us a Message</h3>
-                                <form data-aos="fade-left" data-aos-duration="1200">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <input class="form-control" type="text" placeholder="Full Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <input class="form-control" type="email" placeholder="Email">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="form-group">
-                                                <textarea class="form-control" rows="3" placeholder="Message"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 text-right">
-                                            <button type="submit" class="btn btn-lg btn-primary mb-5">Send</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="detail-wrapper p-5 bg-primary">
-                                <h3 class="font-weight-normal mb-3 text-light">
-                                    कृषिCONNECT Headquarter
-                                </h3>
-
-                                <p class="text-light">
-                                    Jamshedpur,Jharkhand<br>
-                                    800 034<br>
-                                    East Singhbum Region<br>
-                                </p>
-
-                                <p class="text-light">
-                                    <i class="fas fa-phone"></i> 0898986362<br>
-                                    <i class="fas fa-envelope"></i>krishiconnect@gmail.com
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-    </div>
+        <div class="wishlist-container">
+        <div class="wishlist" style="background-color: rgb(30, 29, 29);">
+            <h1 class="wishlist-text" style="color: white;">Wishlist</h1>
+            <div id="wishlist-items" class="wishlist-items"></div>
+            <button class="wishlist-btn" onclick="emptyWishlist()" style="border-radius: 3px; color: rgb(255, 255, 255);">Empty Wishlist</button>
+            <button onclick="window.location.href='cart(1).html'" class="wishlist-btn" style="border-radius: 3px; color: rgb(255, 255, 255);">Go to Cart</button>
+        </div>
+        </div>
     <footer>
         <div class="container">
             <div class="row">
@@ -191,5 +210,8 @@
     <script type="text/javascript" src="assets/packages/thumbelina/thumbelina.js"></script>
     <script type="text/javascript" src="assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
     <script type="text/javascript" src="assets/js/theme.js"></script>
+    <script src="wishlist.js"></script>
+    <script src="cart.js"></script>
+    <script src="shop.js"></script>
 </body>
 </html>
