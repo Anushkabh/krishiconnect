@@ -78,6 +78,16 @@
 
 .wishlist-btn:hover {
     background-color: #cd1653; 
+
+.navbar-brand {
+    padding: 0; /* Remove any padding */
+    margin: 0;  /* Remove any margin */
+}
+
+.navbar-nav .nav-item .nav-link {
+    padding: 0.5rem 1rem; /* Ensure consistent padding */
+    line-height: 1.5; /* Align text vertically */
+}
 }
 </style>
 <body>
@@ -87,17 +97,20 @@
             <div class="container">
                 <!-- Navbar Brand -->
                 <a href="index.html" class="navbar-brand">
-                    
-
+                    <img src="assets/img/logo/log.png" alt="Logo" height="40"> <!-- Adjust logo size if necessary -->
+                </a>
+        
                 <!-- Toggle Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+        
                 <div class="collapse navbar-collapse" id="navbarcollapse">
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
-                        
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
                         <li class="nav-item">
                             <a href="shop(1).html" class="nav-link">Shop</a>
                         </li>
@@ -113,11 +126,10 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="cart(1).html" class="nav-link" onclick="toggleCart()">My Cart</a>
+                            <a href="cart(1).html" class="nav-link">My Cart</a>
                         </li>
                     </ul>
                 </div>
-
             </div>
         </nav>
     </div>

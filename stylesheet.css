@@ -117,6 +117,14 @@ h4 {
     text-align: center;
     padding: 20px 0;
 }
+.col-md-4{
+    transition: transform 1s ease;
+    border-radius: 12px;
+}
+.col-md-4:hover{
+box-shadow: 0 0 22px rgb(151, 251, 151);
+transform:scale(1.075);
+}
 .card .card-icon .card-icon-i {
     margin: 0 auto;
     width: 100px;
@@ -430,6 +438,7 @@ input{
     padding-left: 80px;
 }
 #subtotal{
+
     color: black;
     font-weight: bold;
     font-size: 15px;
