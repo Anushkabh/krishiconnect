@@ -65,6 +65,7 @@ function updateSubtotal() {
     subtotalElement.innerHTML = 'Subtotal: Rp ' + subtotal.toFixed(2);
   }
 }
+updateSubtotal();
 
 function emptyCart() {
   localStorage.removeItem('cartItems');
