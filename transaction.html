@@ -21,9 +21,14 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
+    
+    <!-- BoxIcons v2.1.2 -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./darkmode.css">
+
 
 </head>
-<body>
+<body class="light">
     <div class="page-header">
         <!--=============== Navbar ===============-->
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
@@ -53,7 +58,7 @@
                             <a href="index.html"class="nav-link"><i class="ri-home-fill"></i> Home </a>
                         </li>
                         <li class="nav-item">
-                            <a href="shop(1).html" class="nav-link">Shop</a>
+                            <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-line"></i> Shop</a>
 
                         </li>
                         <li class="nav-item">
@@ -72,6 +77,13 @@
                         </li>
                        
                     </ul>
+                    <input type="checkbox" id="toggle">
+                    
+                    <label class="toggle" for="toggle">
+                        <i class="bx bxs-sun"></i>
+                        <i class="bx bx-moon"></i>
+                        <span class="ball"></span>
+                    </label>
                 </div>
 
             </div>
@@ -164,6 +176,7 @@
         <p class="copyright" id="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
     </footer>
 
+    <script src="./darkmode.js"></script>
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/js/jquery-migrate.js"></script>
     <script type="text/javascript" src="assets/packages/bootstrap/libraries/popper.js"></script>
