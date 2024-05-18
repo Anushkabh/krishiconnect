@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="darkmode.css">
 </head>
 
 
@@ -173,7 +175,7 @@
 }
 
 </style>
-<body>
+<body class="light">
     <div class="page-header">
         <!--=============== Navbar ===============-->
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
@@ -229,6 +231,13 @@
 
                     
                     </ul>
+                    <input type="checkbox" id="toggle">
+                    
+                    <label class="toggle" for="toggle">
+                        <i class="bx bxs-sun"></i>
+                        <i class="bx bx-moon"></i>
+                        <span class="ball"></span>
+                    </label>
                 </div>
 
             </div>
@@ -1433,6 +1442,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="toast.js"></script>
+    <script src="./darkmode.js"></script>
 
 </body>
 </html>
