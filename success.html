@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 
 </head>
 <body>
@@ -61,16 +62,16 @@
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg.jpg');">
                 <div class="container">
-                    <h1 class="pt-5">
+                    <h1 class="pt-5" id="s">
                         Shopping Page
                     </h1>
-                    <p class="lead">
+                    <p class="lead" id="s">
                         Save time and leave the groceries to us.
                     </p>
                 </div>
             </div>
         </div>
-        <div class="cart"><h1 class="cartfield carttext"> your order has been placed!!!</h1></div></div>
+        <div class="cart" id="c"><h1 class="cartfield carttext"> your order has been placed!!!</h1></div></div>
         
 
         <footer>
@@ -140,6 +141,19 @@
 <script type="text/javascript" src="assets/packages/thumbelina/thumbelina.js"></script>
 <script type="text/javascript" src="assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
 <script type="text/javascript" src="assets/js/theme.js"></script>
-
+<script>
+    ScrollReveal({ 
+        //reset: true ,
+        distance : '60px' ,
+        duration:2500,
+        delay:400
+    });
+    ScrollReveal().reveal('#s,#s', { delay: 500 , origin:'top' });
+    ScrollReveal().reveal('#c', { delay: 600 , origin:'top' });
+    ScrollReveal().reveal('.container', { delay: 700 , origin:'bottom' });
+    ScrollReveal().reveal('.col-md-3,.col-md-3l', { delay: 500 , origin:'left'});
+    ScrollReveal().reveal('.col-md,.col-md-3m', { delay: 500 , origin:'right'});
+    ScrollReveal().reveal('.copyright', { delay: 500 , origin:'bottom'});
+</script>
 </body>
 </html>
