@@ -172,6 +172,25 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.search-bar-container {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.search-form {
+    margin-bottom: 0;
+}
+
+#search-input {
+    border-radius: 20px;
+    border: 1px solid #ced4da;
+}
+
+#button-search {
+   margin-left: 20px;
+    border-radius: 20px;
+}
+
 </style>
 <body>
     <div class="page-header">
@@ -230,7 +249,6 @@
             </div>
         </nav>
     </div>
-    
     
     <div id="page-content" class="page-content">
         <div class="banner">
@@ -326,7 +344,34 @@
                 </div>
             </div>
         </div>
-
+        
+        <!--Search bar -->
+        <div class="search-bar-container">
+            <div class="container">
+                <form class="search-form">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="search-input" placeholder="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="button-search">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            // JavaScript code
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('button-search').addEventListener('click', function (event) {
+                    event.preventDefault();
+                    var searchTerm = document.getElementById('search-input').value.trim();
+                    if (searchTerm !== '') {
+                        // Perform search functionality here
+                        console.log('Search term:', searchTerm);
+                    }
+                });
+            });
+        </script>
         <section id="most-wanted">
             <div class="container">
                 <div class="row">
@@ -1338,7 +1383,8 @@
         </section>
     </div>
     
-                        
+   
+                   
                 <footer>
                     <a href="#" class="back-to-top d-flex align-items-center justify-content-center" id="back-to-top"><i class="fa fa-solid fa-arrow-up" ></i></a>
                     <div class="container" id="container">
