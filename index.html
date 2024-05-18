@@ -21,11 +21,18 @@
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- BoxIcons v2.1.2 -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./darkmode.css">
 </head>
-<body>
+
+<body class="light">
     <div id="loader">
         <h3>कृषिCONNECT,</h3>
         <h3>WE SERVE</h3>
@@ -70,6 +77,13 @@
                             <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
                         </li>
                     </ul>
+                    <input type="checkbox" id="toggle">
+                    
+                    <label class="toggle" for="toggle">
+                        <i class="bx bxs-sun"></i>
+                        <i class="bx bx-moon"></i>
+                        <span class="ball"></span>
+                    </label>
                 </div>
             </div>
         </nav>
@@ -314,6 +328,7 @@
         </footer>
     </div>
 
+    <script src="./darkmode.js"></script>
     <!-- Scroll to Top Button -->
     <a href="#" class="scroll-to-top" style="display: inline;">
         <i class="fa fa-angle-up" aria-hidden="true"></i>
