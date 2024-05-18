@@ -19,7 +19,6 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
@@ -177,13 +176,15 @@
 <body>
     <div class="page-header">
         <!--=============== Navbar ===============-->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
 
                 <a href="index.html" class="navbar-brand">
                     <div style="flex-direction: row; display: flex; align-items: center;">
-                        <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" >
+
+                        <!-- <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" > -->
+
                     <h3 >कृषिCONNECT</h3>
                     </div>
                 </a>
@@ -200,20 +201,20 @@
                         
                         <li class="nav-item">
 
-                            
+                            <!-- <a href="shop(1).html" class="nav-link active"><i class="ri-shopping-bag-fill"></i> Shop</a> -->
 
-                            <a href="index.html" class="nav-link"><i class="ri-home-fill"></i> Home
-                            </a>
+
+                            <a href="index.html"class="nav-link"><i class="ri-home-fill"></i> Home </a>
                         </li>
                         <li class="nav-item">
-                            <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
+                            <a href="shop(1).html" class="nav-link active">Shop</a>
 
                         </li>
                         <li class="nav-item">
-                            <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i>Transactions</a>
+                            <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i> 
+                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
                                 Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
@@ -221,6 +222,7 @@
                             
                             </div>
                         </li>
+                        
                         <li class="nav-item">
                             <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
                         </li>
@@ -238,8 +240,10 @@
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/shop.png');">
                 <div class="container">
-                    <img src="assets/img/logo/log.png" alt="" height="300" width="400" id="image">
-                    <h1 class="pt-5" id="s">
+
+                    <img src="assets/img/logo/log.png" alt="" height="300">
+                    <h1 class="pt-5">
+
                         Shopping Page
                     </h1>
                     <p class="lead" id="s">
@@ -257,7 +261,7 @@
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><i class="sb-bistro-carrot"></i></span>
+                                    <span class="d-flex mr-2"><img src="./assets/img/logo/carrot.png"></span>
                                     <div class="media-body">
                                         <h5>Vegetables</h5>
                                         <p>Freshly Harvested Veggies From Local Growers</p>
@@ -269,7 +273,7 @@
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><i class="sb-bistro-apple"></i></span>
+                                    <span class="d-flex mr-2"><img src="./assets/img/logo/apple.png"></span>
                                     <div class="media-body">
                                         <h5>Fruits</h5>
                                         <p>Variety of Fruits From Local Growers</p>
@@ -281,7 +285,7 @@
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><i class="sb-bistro-roast-leg"></i></span>
+                                    <span class="d-flex mr-2"><img src="./assets/img/logo/flax-seed.png"></span>
                                     <div class="media-body">
                                         <h5>Oil Seeds</h5>
                                         <p>Nourish your body and soul with the goodness of organic oil seeds</p>
@@ -291,8 +295,8 @@
                         </div>
                         <div class="item" id="item">
                             <a href="shop(1).html">
-                                <div class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><i class="sb-bistro-fish-1"></i></span>
+                                <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;" class="media d-flex align-items-center justify-content-center">
+                                    <span class="d-flex mr-2"><img src="./assets/img/logo/tea.png"></span>
                                     <div class="media-body">
                                         <h5>Herbs</h5>
                                         <p>Add a touch of nature's finest flavors to your meals with organic herbs.</p>
@@ -304,7 +308,7 @@
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><i class="sb-bistro-french-fries"></i></span>
+                                    <span class="d-flex mr-2"><img src="./assets/img/logo/seed.png"></span>
                                     <div class="media-body">
                                         <h5>Pulses</h5>
                                         <p>Protein Rich Ingridients From Local Farmers</p>
@@ -316,7 +320,7 @@
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><i class="sb-bistro-appetizer"></i></span>
+                                    <span class="d-flex mr-2"><img src="./assets/img/logo/nutrition.png"></span>
                                     <div class="media-body">
                                         <h5>Miscellanous</h5>
                                         <p></p>
@@ -365,7 +369,7 @@
                                             <a onclick="addToWishlist('Potatoes',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Potatoes',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Potatoes',200); alert('Potatoes added to cart successfully!');" class="btn btn-block btn-primary" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -404,7 +408,7 @@
                                             <a onclick="addToWishlist('Moong Dhuli',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('Moong Dhuli',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Moong Dhuli',200); alert('Moong Dhuli added to cart successfully!');" class="btn btn-block btn-primary" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -442,7 +446,7 @@
                                             <a onclick="addToWishlist('Mustard Oil',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('Mustard Oil',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Mustard Oil',200); alert('Mustard Oil added to cart successfully!');" class="btn btn-block btn-primary" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -480,7 +484,7 @@
                                             <a onclick="addToWishlist('Mangoes',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Mangoes',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Mangoes',200); alert('Mangoes added to cart successfully!');" class="btn btn-block btn-primary" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -518,7 +522,7 @@
                                             <a onclick="addToWishlist('Cucumber',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Cucumber',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Cucumber',200); alert('Cucumber added to cart successfully!');" class="btn btn-block btn-primary" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
