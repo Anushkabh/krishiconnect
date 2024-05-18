@@ -182,7 +182,7 @@
 
                 <a href="index.html" class="navbar-brand">
                     <div style="flex-direction: row; display: flex; align-items: center;">
-                        <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" >
+                        <img class="ml-1" id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" >
                     <h3 >कृषिCONNECT</h3>
                     </div>
                 </a>
@@ -199,7 +199,6 @@
                         
                         <li class="nav-item">
 
-                            <a href="shop(1).html" class="nav-link active"><i class="ri-shopping-bag-fill"></i> Shop</a>
 
                             <a href="index.html"class="nav-link"><i class="ri-home-fill"></i> Home </a>
                         </li>
@@ -256,7 +255,7 @@
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><i class="sb-bistro-carrot"></i></span>
+                                    <span class="d-flex mr-2"><img src="./assets/img/logo/carrot.png"></span>
                                     <div class="media-body">
                                         <h5>Vegetables</h5>
                                         <p>Freshly Harvested Veggies From Local Growers</p>
@@ -268,7 +267,7 @@
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><i class="sb-bistro-apple"></i></span>
+                                    <span class="d-flex mr-2"><img src="./assets/img/logo/apple.png"></span>
                                     <div class="media-body">
                                         <h5>Fruits</h5>
                                         <p>Variety of Fruits From Local Growers</p>
@@ -280,7 +279,7 @@
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><i class="sb-bistro-roast-leg"></i></span>
+                                    <span class="d-flex mr-2"><img src="./assets/img/logo/flax-seed.png"></span>
                                     <div class="media-body">
                                         <h5>Oil Seeds</h5>
                                         <p>Nourish your body and soul with the goodness of organic oil seeds</p>
@@ -290,8 +289,8 @@
                         </div>
                         <div class="item" id="item">
                             <a href="shop(1).html">
-                                <div class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><i class="sb-bistro-fish-1"></i></span>
+                                <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;" class="media d-flex align-items-center justify-content-center">
+                                    <span class="d-flex mr-2"><img src="./assets/img/logo/tea.png"></span>
                                     <div class="media-body">
                                         <h5>Herbs</h5>
                                         <p>Add a touch of nature's finest flavors to your meals with organic herbs.</p>
@@ -303,7 +302,7 @@
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><i class="sb-bistro-french-fries"></i></span>
+                                    <span class="d-flex mr-2"><img src="./assets/img/logo/seed.png"></span>
                                     <div class="media-body">
                                         <h5>Pulses</h5>
                                         <p>Protein Rich Ingridients From Local Farmers</p>
@@ -315,7 +314,7 @@
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><i class="sb-bistro-appetizer"></i></span>
+                                    <span class="d-flex mr-2"><img src="./assets/img/logo/nutrition.png"></span>
                                     <div class="media-body">
                                         <h5>Miscellanous</h5>
                                         <p></p>
@@ -364,7 +363,7 @@
                                             <a onclick="addToWishlist('Potatoes',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Potatoes',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Potatoes',200); alert('Potatoes added to cart successfully!');" class="btn btn-block btn-primary" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -403,7 +402,7 @@
                                             <a onclick="addToWishlist('Moong Dhuli',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('Moong Dhuli',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Moong Dhuli',200); alert('Moong Dhuli added to cart successfully!');" class="btn btn-block btn-primary" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -441,7 +440,7 @@
                                             <a onclick="addToWishlist('Mustard Oil',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('Mustard Oil',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Mustard Oil',200); alert('Mustard Oil added to cart successfully!');" class="btn btn-block btn-primary" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -479,7 +478,7 @@
                                             <a onclick="addToWishlist('Mangoes',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Mangoes',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Mangoes',200); alert('Mangoes added to cart successfully!');" class="btn btn-block btn-primary" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -517,7 +516,7 @@
                                             <a onclick="addToWishlist('Cucumber',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Cucumber',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Cucumber',200); alert('Cucumber added to cart successfully!');" class="btn btn-block btn-primary" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
