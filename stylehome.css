@@ -186,3 +186,6 @@ svg {
 .headline{
 padding: 10px;
 }
+.nav-item a:hover{
+    background-color: aqua;
+}
