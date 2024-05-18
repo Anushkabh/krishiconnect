@@ -1,5 +1,6 @@
 *{
     font-family: sans-serif;
+    
 }
 section {
     padding: 80px 0;
@@ -197,36 +198,34 @@ h1 {
 }
 .main{
     display: flex;
-    /*background: url("R.jpg");
-    background-size: cover;*/
+    background: url("https://img.freepik.com/premium-photo/young-farmer-hands-holding-green-plant-with-young-man-soil-planting-garden-growing-ground_449849-6036.jpg");
+    background-size: cover;
     background-color: white;
     height:120vh;
     width: 100%;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     opacity:1;
     margin: 0px ;
+    
+}
+.register_head{
+    /* color: rgb(199, 81, 22); */
+    font-size: 35px;
+    margin-bottom: 25px;
+    font-weight: bold;
 }
 .out{
     display: flex;
     flex-direction: column;
-    height: 500px;
-    width: 380px;
-    background-color: rgba(164, 164, 164, 0.7);
-    border-radius: 20px;
-    opacity: .75;
-    padding: 20px;
-    align-items: center;
-    color: rgb(17, 155, 5);
     font-size: 24px;
-    box-shadow: inset;
-    border-radius: 10px;
     margin: 20px;
-    justify-content: center;
     padding: 20px;
     align-items: center;
-    box-shadow: 6px 6px 10px -1px rgb(0, 0, 0),
-        -6px -6px 20px -1px rgba(144, 141, 141, 0.7);
+    text-align: center;
+    margin-left: 150px;
+    margin-top: 80px;
+    /* background-color: red; */
 }
 
 /* .ffield{
@@ -376,9 +375,20 @@ h1 {
 
 #login{
     display:none;
-    position: absolute;
+    /* position: absolute; */
 }
-#submit{
+.form-group button{
+    background-color: rgb(87, 157, 18);
+    color: white;
+    width: 340px;
+    height: 55px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+/* #submit{
     align-items: center;
     height: 30px;
     width:300px;
@@ -394,8 +404,8 @@ h1 {
     opacity: 1.5;
     border: 2px solid white;
     transition-duration: 0.2s;
-}
-#submit1{
+} */
+/* #submit1{
     height: 30px;
     width:300px;
     background-color:  #E91E63;
@@ -410,20 +420,35 @@ h1 {
     opacity: 1.5;
     border: 2px solid white;
     transition-duration: 0.2s;
-}
+} */
  #signup{
     font-size: 14px;
+    color: white;
+    cursor: pointer;
  }
  #logswitch{
     font-size: 14px;
+    color: white;
+    cursor: pointer;
  }
-input{
+/* input{
   width: 300px;
   height: 30px;
   border-radius: 5px;
   border: none;
-}
+} */
 
+.form-group input{
+    /* background-color: red; */
+    width: 340px;
+    height: 58px;
+    border-radius: 50px;
+    padding-left: 15px;
+    /* margin-bottom: 15px; */
+    font-size: 16px;
+    border: none;
+    /* margin-top: 50px; */
+}
 
 .cartlist{
     display: flex;
