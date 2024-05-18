@@ -25,6 +25,8 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
 </head>
 
 <body>
@@ -68,7 +70,7 @@
             <a href="index.html" class="navbar-brand">
               <div style="flex-direction: row; display: flex; align-items: center;">
                   <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" >
-              <h3 >कृषिCONNECT</h3>
+              <h3 id="h3">कृषिCONNECT</h3>
               </div>
           </a>
 
@@ -81,13 +83,13 @@
                 <!-- Navbar Menu -->
                 <ul class="navbar-nav ml-auto" >
               
-                  <li class="nav-item">
+                  <li class="nav-item" id="h">
                       <a href="home.html" class="nav-link active">HOME</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item" id="s">
                       <a href="schemes.html" class="nav-link active">SCHEMES</a>
                   </li>
-                  <li class="navbar-item">
+                  <li class="navbar-item" id="l">
                     <button class="nav-link" id="logout"
                       style="background-color: rgba(224, 0, 0, 0.7); border-radius: 3px; color: aliceblue;"
                       onclick="logout(event)">LogOut</button>
@@ -104,7 +106,7 @@
   <div class="banner">
     <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/farmer.png');">
         <div class="container">
-          <img src="assets/img/logo/log.png" alt="" height="300">
+          <img src="assets/img/logo/log.png" alt="" height="300" id="image">
             <h1 class="pt-5" style="text-shadow: #2572b9;">
                 Welcome
             </h1>
@@ -149,7 +151,7 @@
 
       <!-- Weaather -->
 
-      <div class="card mb-4 rounded-3 shadow-sm" >
+      <div class="card mb-4 rounded-3 shadow-sm" id="card">
         <div class="card-header py-3" style="background-color: #E91E63; color: aliceblue;">
           <h4 class="my-0 fw-normal"><strong>Jamshedpur</strong></h4>
         </div>
@@ -383,5 +385,20 @@
 <script src="//code.tidio.co/6lhn3kmjiszzas6xkcf7ubffrutssad7.js" async></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+<script>
+  ScrollReveal({ 
+      //reset: true ,
+      distance : '60px' ,
+      duration:2500,
+      delay:400
+  });
+  ScrollReveal().reveal('#h3,#h,#s,#l,#image,.pt-5,.lead', { delay: 500 , origin:'top' ,interval:'200'});
+  ScrollReveal().reveal('#card,#newssection,#sales', { delay: 600 , origin:'top' });
+  ScrollReveal().reveal('.tablediv,.upper', { delay: 600 , origin:'top' });
+  ScrollReveal().reveal('#container', { delay: 700 , origin:'bottom' });
+  ScrollReveal().reveal('#col-md-3,#col-md-3l', { delay: 500 , origin:'left'});
+  ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500 , origin:'right'});
+  ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
+</script>
 
 </html>
