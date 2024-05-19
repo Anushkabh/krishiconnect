@@ -452,10 +452,15 @@ footer {
   padding: 50px 0;
   padding-bottom: 0;
   border-top: 1px solid #eee;
+  border: 2px solid crimson;
+  background-image: url(https://t3.ftcdn.net/jpg/06/73/59/22/360_F_673592233_GRdQaHtfPN3t9NvLEn4V7jscQlIQLiUi.jpg);
+  background-size: cover;
+  background-position-y:-43px;
+  background-repeat: no-repeat;
 }
 footer h5 {
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 footer ul {
   padding: 0;
@@ -468,9 +473,11 @@ footer ul {
 footer ul li {
   display: block;
   margin: 0.5rem 0;
+  font-size: 16px;
+  font-weight: bold;
 }
 footer ul li a {
-  color: #333333;
+  color: #0b0b0b;
 }
 footer ul li a:hover, footer ul li a:focus {
   color: #E91E63;
@@ -501,6 +508,14 @@ footer ul.social li {
 }
 footer ul.social li a {
   font-size: 1.5rem;
+  border:2px solid black;
+  border-radius: 30%;
+  padding:3px;
+  width:auto;
+}
+footer ul.social li a:hover{
+  color:rgb(245, 86, 33);
+  background-color: rgb(253, 255, 251);
 }
 footer ul.social li:first-child {
   margin-left: 0;
@@ -509,16 +524,20 @@ footer .copyright {
   margin: 0;
   /* margin-top: 40px; */
   padding: 10px;
+  font-weight: bolder;
   text-align: center;
   border-top: 1px solid #eee;
 }
-
 .col-md-3{
   margin-right: 50px;
+}
+.col-md-3 p{
+  font-weight: bold;
 }
 
 .col-md{
   margin-right: 50px;
+
 }
 
 .col-md-3l{
@@ -527,7 +546,6 @@ footer .copyright {
 }
 .col-md-3m{
   margin-right: 10px;
-  
 }
 .mirrored-icon {
   transform: scaleX(-1);
