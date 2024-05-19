@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>KrishiConnect | Shop</title>
+    <title>KrishiConnect | Cart</title>
     <link rel="icon" type="image/png" href="/assets/img/logo/log.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
     <link href="assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
-
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/o2system-ui/o2system-ui.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/owl-carousel/owl-carousel.css">
@@ -18,9 +17,8 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <script src="https://unpkg.com/scrollreveal"></script>
+
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="darkmode.css">
 </head>
@@ -177,20 +175,155 @@
 </style>
 <body class="light">
     <div class="page-header">
+=======
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+
+        .navbar {
+            background-color: #000;
+            position: static;
+            width: 100%;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            max-height: 50px;
+            margin-right: 10px;
+        }
+
+        .jumbotron {
+            padding: 2rem 1rem;
+        }
+
+        .jumbotron h1 {
+            font-size: 2.5rem;
+        }
+
+        .cart {
+            background-color: #28a745;
+            color: white;
+            padding: 4rem;
+        }
+
+        .cart h1 {
+            font-size: 2rem;
+        }
+
+        .cart .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .cart .form-group input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cart .cartbtn {
+            margin: 0.5rem;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+        }
+
+        footer h5 {
+            font-size: 1.25rem;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        footer ul.social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        footer ul.social li a {
+            font-size: 1.5rem;
+        }
+        .pt-5 {
+            color: rgb(4, 4, 4);
+            font-family:'Times New Roman', Times, serif;
+            font-size:40px; 
+            
+        }
+        .lead{
+
+            color: black;
+        }
+        @media (max-width: 768px) {
+            .cart {
+                padding: 2rem;
+            }
+
+            .jumbotron h1 {
+                font-size: 2rem;
+            }
+
+            .navbar-brand h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .cart {
+                padding: 1rem;
+            }
+
+            .jumbotron h1 {
+                font-size: 1.5rem;
+            }
+
+            .navbar-brand h3 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-header" id="page-header">
+
         <!--=============== Navbar ===============-->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
+        <nav class="navbar navbar-expand-md navbar-dark bg-black" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
-
                 <a href="index.html" class="navbar-brand">
                     <div style="flex-direction: row; display: flex; align-items: center;">
-
-                        <!-- <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" > -->
-
-                    <h3 >कृषिCONNECT</h3>
+                        <img class="ml-1" id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" alt="Logo">
+                        <h3>कृषिCONNECT</h3>
                     </div>
                 </a>
-
 
                 <!-- Toggle Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -200,36 +333,24 @@
                 <div class="collapse navbar-collapse" id="navbarcollapse">
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
-                        
                         <li class="nav-item">
-
-                            <!-- <a href="shop(1).html" class="nav-link active"><i class="ri-shopping-bag-fill"></i> Shop</a> -->
-
-
-                            <a href="index.html"class="nav-link"><i class="ri-home-fill"></i> Home </a>
+                            <a href="index.html" class="nav-link"><i class="ri-home-fill"></i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="shop(1).html" class="nav-link active">Shop</a>
-
+                            <a href="shop(1).html" class="nav-link">Shop</a>
                         </li>
                         <li class="nav-item">
                             <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
-                                Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
-                            </a>
+                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i> Wishlist <span id="wishlistCount" class="wishlist-count">0</span></a>
                             <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
                                 <!-- Wishlist items will be dynamically added here -->
-                            
                             </div>
                         </li>
-                        
                         <li class="nav-item">
                             <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
                         </li>
-
-                    
                     </ul>
                     <input type="checkbox" id="toggle">
                     
@@ -239,25 +360,16 @@
                         <span class="ball"></span>
                     </label>
                 </div>
-
             </div>
         </nav>
     </div>
-    
-    
     <div id="page-content" class="page-content">
-        <div class="banner">
+        <div class="banner" >
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/shop.png');">
                 <div class="container">
-
-                    <img src="assets/img/logo/log.png" alt="" height="300">
-                    <h1 class="pt-5">
-
-                        Shopping Page
-                    </h1>
-                    <p class="lead" id="s">
-                        Save time and leave the groceries to us.
-                    </p>
+                    <img src="assets/img/logo/log.png" alt="Logo" width="300px" height="300px" class="responsive-img"> 
+                    <p class="pt-5">SHOPPING PAGE</p>
+                    <b><p class="lead">Save time and leave the groceries to us.</p></b>
                 </div>
             </div>
         </div>
@@ -266,11 +378,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="shop-categories owl-carousel mt-5">
-                        <div class="item" id="item">
+                        <div class="item">
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><img src="./assets/img/logo/carrot.png"></span>
+                                    <span class="d-flex mr-2"><i class="sb-bistro-carrot"></i></span>
                                     <div class="media-body">
                                         <h5>Vegetables</h5>
                                         <p>Freshly Harvested Veggies From Local Growers</p>
@@ -278,11 +390,11 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="item" id="item">
+                        <div class="item">
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><img src="./assets/img/logo/apple.png"></span>
+                                    <span class="d-flex mr-2"><i class="sb-bistro-apple"></i></span>
                                     <div class="media-body">
                                         <h5>Fruits</h5>
                                         <p>Variety of Fruits From Local Growers</p>
@@ -290,11 +402,11 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="item" id="item">
+                        <div class="item">
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><img src="./assets/img/logo/flax-seed.png"></span>
+                                    <span class="d-flex mr-2"><i class="sb-bistro-roast-leg"></i></span>
                                     <div class="media-body">
                                         <h5>Oil Seeds</h5>
                                         <p>Nourish your body and soul with the goodness of organic oil seeds</p>
@@ -302,10 +414,10 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="item" id="item">
+                        <div class="item">
                             <a href="shop(1).html">
-                                <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;" class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><img src="./assets/img/logo/tea.png"></span>
+                                <div class="media d-flex align-items-center justify-content-center">
+                                    <span class="d-flex mr-2"><i class="sb-bistro-fish-1"></i></span>
                                     <div class="media-body">
                                         <h5>Herbs</h5>
                                         <p>Add a touch of nature's finest flavors to your meals with organic herbs.</p>
@@ -313,11 +425,11 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="item" id="item">
+                        <div class="item">
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><img src="./assets/img/logo/seed.png"></span>
+                                    <span class="d-flex mr-2"><i class="sb-bistro-french-fries"></i></span>
                                     <div class="media-body">
                                         <h5>Pulses</h5>
                                         <p>Protein Rich Ingridients From Local Farmers</p>
@@ -325,11 +437,11 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="item" id="item">
+                        <div class="item">
                             <a href="shop(1).html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
-                                    <span class="d-flex mr-2"><img src="./assets/img/logo/nutrition.png"></span>
+                                    <span class="d-flex mr-2"><i class="sb-bistro-appetizer"></i></span>
                                     <div class="media-body">
                                         <h5>Miscellanous</h5>
                                         <p></p>
@@ -346,9 +458,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="title" id="title">Most Wanted</h2>
+                        <h2 class="title">Most Wanted</h2>
                         <div class="product-carousel owl-carousel">
-                            <div class="item" id="item">
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -378,7 +490,7 @@
                                             <a onclick="addToWishlist('Potatoes',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Potatoes',200); alert('Potatoes added to cart successfully!');" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Potatoes',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -387,7 +499,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item" id="item">
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -417,7 +529,7 @@
                                             <a onclick="addToWishlist('Moong Dhuli',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('Moong Dhuli',200); alert('Moong Dhuli added to cart successfully!');" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Moong Dhuli',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -425,7 +537,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item" id="item">
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -455,7 +567,7 @@
                                             <a onclick="addToWishlist('Mustard Oil',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('Mustard Oil',200); alert('Mustard Oil added to cart successfully!');" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Mustard Oil',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -463,7 +575,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item" id="item">
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -493,7 +605,7 @@
                                             <a onclick="addToWishlist('Mangoes',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Mangoes',200); alert('Mangoes added to cart successfully!');" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Mangoes',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -501,7 +613,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item" id="item">
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -531,7 +643,7 @@
                                             <a onclick="addToWishlist('Cucumber',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Cucumber',200); alert('Cucumber added to cart successfully!');" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Cucumber',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -549,9 +661,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="title" id="title">Vegetables</h2>
+                        <h2 class="title">Vegetables</h2>
                         <div class="product-carousel owl-carousel">
-                            <div class="item" id="item">
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -581,14 +693,14 @@
                                             <a onclick="addToWishlist('Potatoes',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Potatoes',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Potatoes',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item" id="item">
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -618,7 +730,7 @@
                                             <a onclick="addToWishlist('Cucumber',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Cucumber',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Cucumber',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -626,7 +738,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item" id="item">
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -656,7 +768,7 @@
                                             <a onclick="addToWishlist('Cabbage',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Cabbage',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Cabbage',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -664,7 +776,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item" id="item">
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -694,7 +806,7 @@
                                             <a onclick="addToWishlist('Spinach',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Spinach',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Spinach',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -702,7 +814,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item" id="item">
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -732,7 +844,7 @@
                                             <a onclick="addToWishlist('Tomatoes',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Tomatoes',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Tomatoes',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -750,9 +862,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="title" id="title">Oil Seeds And Herbs</h2>
+                        <h2 class="title">Oil Seeds And Herbs</h2>
                         <div class="product-carousel owl-carousel">
-                            <div class="item" id="item">
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -782,7 +894,7 @@
                                             <a onclick="addToWishlist('Mustard Oil',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Mustard Oil',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Mustard Oil',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -790,7 +902,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item" id="item">
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -820,7 +932,7 @@
                                             <a onclick="addToWishlist('Groundnut',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Groundnut',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Groundnut',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -828,7 +940,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item" id="item">
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -858,7 +970,7 @@
                                             <a onclick="addToWishlist('Mint Leaves',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('Mint Leaves',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Mint Leaves',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -866,7 +978,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item" id="item">
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -896,7 +1008,7 @@
                                             <a onclick="addToWishlist('Coriander Leaves',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Coriander Leaves',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Coriander Leaves',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -934,7 +1046,7 @@
                                             <a onclick="addToWishlist('Castor seeds',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Castor seeds',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Castor seeds',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -952,7 +1064,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="title" id="title">Miscellaneous</h2>
+                        <h2 class="title">Miscellaneous</h2>
                         <div class="product-carousel owl-carousel">
                             <div class="item">
                                 <div class="card card-product">
@@ -984,7 +1096,7 @@
                                             <a onclick="addToWishlist('Moong Dhuli',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('Moong Dhuli',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Moong Dhuli',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1022,7 +1134,7 @@
                                             <a onclick="addToWishlist('Masoor Dhuli',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Masoor Dhuli',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Masoor Dhuli',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1060,7 +1172,7 @@
                                             <a onclick="addToWishlist('cumin Powder',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('cumin Powder',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('cumin Powder',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1098,7 +1210,7 @@
                                             <a onclick="addToWishlist('Turmeric Powder',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Turmeric Powder',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Turmeric Powder',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1106,7 +1218,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item" >
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -1136,7 +1248,7 @@
                                             <a onclick="addToWishlist('Handmade Pots',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('Handmade Pots',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Handmade Pots',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1154,7 +1266,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="title" id="title">Fruits</h2>
+                        <h2 class="title">Fruits</h2>
                         <div class="product-carousel owl-carousel">
                             <div class="item">
                                 <div class="card card-product">
@@ -1186,7 +1298,7 @@
                                             <a onclick="addToWishlist('Mangoes',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('Mangoes',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Mangoes',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1194,7 +1306,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item" >
+                            <div class="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
@@ -1224,7 +1336,7 @@
                                             <a onclick="addToWishlist('Oranges',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('Oranges',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Oranges',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1262,7 +1374,7 @@
                                             <a onclick="addToWishlist('Watermelon',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Watermelon',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Watermelon',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1300,7 +1412,7 @@
                                             <a onclick="addToWishlist('Grapes',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Grapes',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Grapes',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1338,7 +1450,7 @@
                                             <a onclick="addToWishlist('Guavas',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Guavas',200)" class="btn btn-block btn-primary" id="toast-btn">
+                                            <a onclick="addToCart('Guavas',200)" class="btn btn-block btn-primary">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1356,14 +1468,14 @@
                         
                 <footer>
                     <a href="#" class="back-to-top d-flex align-items-center justify-content-center" id="back-to-top"><i class="fa fa-solid fa-arrow-up" ></i></a>
-                    <div class="container" id="container">
+                    <div class="container">
                         <div class="row">
-                            <div class="col-md-3" id="col-md-3">
+                            <div class="col-md-3">
                                 <h5>About</h5>
                                 
                                 <p>कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.</p>
                             </div>
-                            <div class="col-md-3l" id="col-md-3l">
+                            <div class="col-md-3l">
                                 <h5>Links</h5>
                                 <ul>    
                                     <li>
@@ -1377,7 +1489,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-md" id="col-md">
+                            <div class="col-md">
                                  <h5>Contact</h5>
                                  <ul>
                                      <li>
@@ -1401,13 +1513,13 @@
                                      </li>
                                  </ul>
                             </div>
-                            <div class="col-md-3m" id="col-md-3m">
+                            <div class="col-md-3m">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 
                            </div>
                         </div>
                     </div>
-                    <p class="copyright" id="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
+                    <p class="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
                 </footer>
             </div>
       
@@ -1424,6 +1536,7 @@
     <script type="text/javascript" src="assets/js/theme.js"></script>
     <script src="shop.js"></script>
     <script src="wishlist.js"></script>
+
 
     <script>
         ScrollReveal({ 
@@ -1443,6 +1556,7 @@
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="toast.js"></script>
     <script src="./darkmode.js"></script>
+
 
 </body>
 </html>
