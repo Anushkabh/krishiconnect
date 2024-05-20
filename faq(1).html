@@ -17,18 +17,21 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 
 </head>
 <body>
     <div class="page-header">
         <!--=============== Navbar ===============-->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
 
                 <a href="index.html" class="navbar-brand">
                     <div style="flex-direction: row; display: flex; align-items: center;">
-                        <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" >
+
+                        <!-- <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" > -->
+
                     <h3 >कृषिCONNECT</h3>
                     </div>
                 </a>
@@ -83,27 +86,27 @@
                 <div class="row">
                     <div class="col-md-12">
                         <ol>
-                            <li><strong>What is कृषिCONNECT?</strong>
-                                <p>कृषिCONNECT delivers groceries from the farms you to your doorstep in as little as few hours! We empower you to shop at your trusted stores using our own trained and experienced Personal Shoppers, and then ensure a safe delivery to you.</p>
+                            <li id="q1"><strong>What is कृषिCONNECT?</strong>
+                                <p id="q1">कृषिCONNECT delivers groceries from the farms you to your doorstep in as little as few hours! We empower you to shop at your trusted stores using our own trained and experienced Personal Shoppers, and then ensure a safe delivery to you.</p>
                             </li>
-                            <li><strong>Do you serve my area?</strong>
-                                <p>Currently we serve only in Jamshedpur.Check if we deliver to your area using our Website.</p>
+                            <li id="q2"><strong>Do you serve my area?</strong>
+                                <p id="q2">Currently we serve only in Jamshedpur.Check if we deliver to your area using our Website.</p>
                             </li>
-                            <li><strong>How fast do you deliver?</strong>
-                                <p>We deliver to you in the next hour, or at any other one-hour time-slot today and in the next 6 days.</p>
+                            <li id="q3"><strong>How fast do you deliver?</strong>
+                                <p id="q3">We deliver to you in the next hour, or at any other one-hour time-slot today and in the next 6 days.</p>
                             </li>
-                            <li><strong>How much does delivery cost?</strong>
-                                <p>It costs INR 20,000 for the delivery on all delivery slots. And FREE DELIVERY for order placed above INR 500,000 in May 2024 only</p>
+                            <li id="q4"><strong>How much does delivery cost?</strong>
+                                <p id="q4">It costs INR 20,000 for the delivery on all delivery slots. And FREE DELIVERY for order placed above INR 500,000 in May 2024 only</p>
                             </li>
-                            <li><strong>What are the delivery hours?</strong>
-                                <p> Usually between 10am and 10pm. You can place your orders at any time of the day.</p>
+                            <li id="q5"><strong>What are the delivery hours?</strong>
+                                <p id="q5"> Usually between 10am and 10pm. You can place your orders at any time of the day.</p>
                             </li>
-                            <li><strong>Can you assure the quality of the products that I bought?</strong>
-                                <p>Of course! We can assure the quality of the items for you, our beloved customer. If you found any bad quality items, you can contact our Customer Service and we will replace it.</p>
+                            <li id="q6"><strong>Can you assure the quality of the products that I bought?</strong>
+                                <p id="q6">Of course! We can assure the quality of the items for you, our beloved customer. If you found any bad quality items, you can contact our Customer Service and we will replace it.</p>
                             </li>
-                            <li><strong>How do I edit or cancel my order?</strong>
-                                <p>You can edit your order until the shopper starts picking your items. Go to “My Orders” section in the app and select the order you want to edit. Click on “Edit Order” to:</p>
-                                <ul type="disc">
+                            <li id="q7"><strong>How do I edit or cancel my order?</strong>
+                                <p id="q7">You can edit your order until the shopper starts picking your items. Go to “My Orders” section in the app and select the order you want to edit. Click on “Edit Order” to:</p>
+                                <ul type="disc" id="q7">
                                     <li>Add or remove items</li>
                                     <li>Change delivery slot</li>
                                     <li>Change payment method</li>
@@ -111,20 +114,20 @@
                                     <li>Cancel order</li>
                                 </ul>
                             </li>
-                            <li><strong>How do I report a problem with my order?</strong>
-                                <p>You can contact us following the “Help” button in the app and selecting “Contact Us”. We respond very quickly!</p>
+                            <li id="q8"><strong>How do I report a problem with my order?</strong>
+                                <p id="q8">You can contact us following the “Help” button in the app and selecting “Contact Us”. We respond very quickly!</p>
                             </li>
-                            <li><strong>When will I receive my refund?</strong>
-                                <p>Payment will be made within 14 days by crediting your credit card.</p>
+                            <li id="q9"><strong>When will I receive my refund?</strong>
+                                <p id="q9">Payment will be made within 14 days by crediting your credit card.</p>
                             </li>
-                            <li><strong>How do I return items?</strong>
-                                <p>If something seems to be wrong with your order, such as a missing item or an incorrect item, you can reject the items when our rider arrives at your doorstep. We will charge you only for the delivered items. Once an item is accepted by you, it cannot be returned. We do not currently support a return process for any items you may have accidentally purchased via Freshchery. You are more than welcome to coordinate returns directly with your store. Keep in mind that we do keep the in-store receipts for accounting purposes.</p>
+                            <li id="q10"><strong>How do I return items?</strong>
+                                <p id="q10">If something seems to be wrong with your order, such as a missing item or an incorrect item, you can reject the items when our rider arrives at your doorstep. We will charge you only for the delivered items. Once an item is accepted by you, it cannot be returned. We do not currently support a return process for any items you may have accidentally purchased via Freshchery. You are more than welcome to coordinate returns directly with your store. Keep in mind that we do keep the in-store receipts for accounting purposes.</p>
                             </li>
-                            <li><strong>Who will deliver my order?</strong>
-                                <p>Your orders will be delivered by our professional delivery boys.</p>
+                            <li id="q11"><strong>Who will deliver my order?</strong>
+                                <p id="q11">Your orders will be delivered by our professional delivery boys.</p>
                             </li>
-                            <li><strong>I have many more questions for you!</strong>
-                                <p>Contact us! We will be there for support at <a href="mailto:krishiconnect@gmail.com">krishiconnect@gmail.com</a>.</p>
+                            <li id="q12"><strong>I have many more questions for you!</strong>
+                                <p id="q12">Contact us! We will be there for support at <a href="mailto:krishiconnect@gmail.com">krishiconnect@gmail.com</a>.</p>
                             </li>
                         </ol>
                     </div>
@@ -197,5 +200,14 @@
     <script type="text/javascript" src="assets/packages/thumbelina/thumbelina.js"></script>
     <script type="text/javascript" src="assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
     <script type="text/javascript" src="assets/js/theme.js"></script>
+    <script>
+        ScrollReveal({ 
+            //reset: true ,
+            distance : '60px' ,
+            duration:2500,
+            delay:400
+        });
+        ScrollReveal().reveal('#q1,#q2,#q3,#q4,#q5,#q6,#q7,#q8,#q9,#q10,#q11,#q12', { delay: 500 , origin:'left' , interval:'300' });
+    </script>
 </body>
 </html>

@@ -16,6 +16,13 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="darkmode.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
 
 </head>
 <style>
@@ -78,46 +85,80 @@
 
 .wishlist-btn:hover {
     background-color: #cd1653; 
+
+.navbar-brand {
+    padding: 0; /* Remove any padding */
+    margin: 0;  /* Remove any margin */
+}
+
+.navbar-nav .nav-item .nav-link {
+    padding: 0.5rem 1rem; /* Ensure consistent padding */
+    line-height: 1.5; /* Align text vertically */
+}
 }
 </style>
-<body>
+<body class="light">
     <div class="page-header">
         <!--=============== Navbar ===============-->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
+                
                 <a href="index.html" class="navbar-brand">
-                    
+                    <img src="assets/img/logo/log.png" alt="Logo" height="45" style="margin-left: 2rem;"> <!-- Adjust logo size if necessary -->
+                </a>
+                <a href="index.html" class="navbar-brand">
+                    <div style="flex-direction: row; display: flex; align-items: center;">
+                        <!-- <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" > -->
+                    <h3 >कृषिCONNECT</h3>
+                    </div>
+                </a>
 
+              
+        
                 <!-- Toggle Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+        
                 <div class="collapse navbar-collapse" id="navbarcollapse">
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
-                        
                         <li class="nav-item">
-                            <a href="shop(1).html" class="nav-link">Shop</a>
+
+                            
+
+                            <a href="index.html" class="nav-link"><i class="ri-home-fill"></i> Home
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a href="transaction.html" class="nav-link">Transactions</a>
+                            <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i>Transactions</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i> 
                                 Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
                                 <!-- Wishlist items will be dynamically added here -->
+                            
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="cart(1).html" class="nav-link" onclick="toggleCart()">My Cart</a>
+                            <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
                         </li>
                     </ul>
+                    <input type="checkbox" id="toggle">
+                    
+                    <label class="toggle" for="toggle">
+                        <i class="bx bxs-sun"></i>
+                        <i class="bx bx-moon"></i>
+                        <span class="ball"></span>
+                    </label>
                 </div>
-
             </div>
         </nav>
     </div>
@@ -125,19 +166,19 @@
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg.jpg');">
                 <div class="container">
-                    <img src="assets/img/logo/log.png" alt="" height="300">
+                    <img src="assets/img/logo/log.png" alt="" height="300" id="image">
                 </a>
-                    <h1 class="pt-5">
+                    <h1 class="pt-5" id="y">
                         Your Wishlist
                     </h1>
-                    <p class="lead">
+                    <p class="lead" id="s">
                         Save time and leave the groceries to us.
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="wishlist-container">
+        <div class="wishlist-container" id="wishlist-container">
         <div class="wishlist" style="background-color: rgb(30, 29, 29);">
             <h1 class="wishlist-text" style="color: white;">Wishlist</h1>
             <div id="wishlist-items" class="wishlist-items"></div>
@@ -146,14 +187,14 @@
         </div>
         </div>
     <footer>
-        <div class="container">
+        <div class="container" id="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3" id="col-md-3">
                     <h5>About</h5>
                     
                     <p>कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.</p>
                 </div>
-                <div class="col-md-3l">
+                <div class="col-md-3l" id="col-md-3l">
                     <h5>Links</h5>
                     <ul>    
                         <li>
@@ -167,7 +208,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md">
+                <div class="col-md" id="col-md">
                      <h5>Contact</h5>
                      <ul>
                          <li>
@@ -191,13 +232,13 @@
                          </li>
                      </ul>
                 </div>
-                <div class="col-md-3m">
+                <div class="col-md-3m" id="col-md-3m">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     
                </div>
             </div>
         </div>
-        <p class="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
+        <p class="copyright" id="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
     </footer>
 
     <script type="text/javascript" src="assets/js/jquery.js"></script>
@@ -213,5 +254,20 @@
     <script src="wishlist.js"></script>
     <script src="cart.js"></script>
     <script src="shop.js"></script>
+    <script>
+        ScrollReveal({ 
+            //reset: true ,
+            distance : '60px' ,
+            duration:2500,
+            delay:400
+        });
+        ScrollReveal().reveal('#image,#y,#s', { delay: 500 , origin:'top' });
+        ScrollReveal().reveal('#wishlist-container', { delay: 600 , origin:'top' });
+        ScrollReveal().reveal('#container', { delay: 700 , origin:'bottom' });
+        ScrollReveal().reveal('#col-md-3,#col-md-3l', { delay: 500 , origin:'left'});
+        ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500 , origin:'right'});
+        ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
+    </script>
+    <script src="./darkmode.js"></script>
 </body>
 </html>

@@ -21,17 +21,29 @@
         href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="darkmode.css">
+
 </head>
 
-<body>
-    <div class="page-header">
+<body class="light">
+    <div class="page-header" id="page-header">
         <!--=============== Navbar ===============-->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
       <a href="index.html" class="navbar-brand">
                     <div style="flex-direction: row; display: flex; align-items: center;">
-                        <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" >
+
+                        <!-- <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" > -->
+
+                      
+
                     <h3 >कृषिCONNECT</h3>
                     </div>
                 </a>
@@ -48,18 +60,23 @@
                     <ul class="navbar-nav ml-auto">
                         
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link">
-                                Home
+
+
+                            <!-- <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a> -->
+
+
+                            <a href="index.html" class="nav-link"><i class="ri-home-fill"></i> Home
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="shop(1).html" class="nav-link">Shop</a>
+
                         </li>
                         <li class="nav-item">
-                            <a href="transaction.html" class="nav-link">Transactions</a>
+                            <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i>Transactions</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i> 
                                 Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
@@ -68,18 +85,29 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="cart(1).html" class="nav-link">My Cart</a>
+                            <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
                         </li>
                     </ul>
+                    <input type="checkbox" id="toggle">
+                    
+                    <label class="toggle" for="toggle">
+                        <i class="bx bxs-sun"></i>
+                        <i class="bx bx-moon"></i>
+                        <span class="ball"></span>
+                    </label>
                 </div>
 
             </div>
         </nav>
     </div>
     <div id="page-content" class="page-content">
+
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0"
                 style="background-image: url('assets/img/cart.jpg');">
+
+        <div class="banner" id="banner">
+
                 <div class="container">
                     <img src="assets/img/logo/log.png" alt="" height="300">
                     </a>
@@ -93,7 +121,7 @@
             </div>
         </div>
 
-        <div class="cart" style="background-color: #4A9304;;">
+        <div class="cart" style="background-color: #4A9304;;" id="cart">
             <h1 class="carttext" style="color: white;">Enter Your Details</h1>
             <div class="cart-form">
                 <div class="cartfield carttext">
@@ -124,6 +152,7 @@
                 <input type="email" placeholder="Email" id="buyer-email" required>
             </div> -->
 
+
             <div id="cart-items" style="width: 50%; padding: 30px; min-width: 300px;" class="carttext">
             </div>
             <div id="subtotal" class="carttext"></div>
@@ -134,7 +163,7 @@
                     style="border-radius: 3px; color: aliceblue;">Continue Shopping</a></button>
             </div>
         </div>
-        <footer>
+        <!-- <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
@@ -193,22 +222,64 @@
                 </div>
             </div>
             <p class="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
-        </footer>
+        </footer> -->
 
+<!--footer-->
 
-        <script type="text/javascript" src="assets/js/jquery.js"></script>
-        <script type="text/javascript" src="assets/js/jquery-migrate.js"></script>
-        <script type="text/javascript" src="assets/packages/bootstrap/libraries/popper.js"></script>
-        <script type="text/javascript" src="assets/packages/bootstrap/bootstrap.js"></script>
-        <script type="text/javascript" src="assets/packages/o2system-ui/o2system-ui.js"></script>
-        <script type="text/javascript" src="assets/packages/owl-carousel/owl-carousel.js"></script>
-        <script type="text/javascript" src="assets/packages/cloudzoom/cloudzoom.js"></script>
-        <script type="text/javascript" src="assets/packages/thumbelina/thumbelina.js"></script>
-        <script type="text/javascript" src="assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
-        <script type="text/javascript" src="assets/js/theme.js"></script>
-        <script src="cart.js"></script>
-</body>
+    <footer>
+        <div class="container" id="container">
+            <div class="row">
+                <div class="col-md-3" id="col-md-3">
+                    <h5>About</h5>
+                    
+                    <p>कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.</p>
+                </div>
+                <div class="col-md-3l" id="col-md-3l">
+                    <h5>Links</h5>
+                    <ul>    
+                        <li>
+                            <a href="about(1).html">About</a>
+                        </li>
+                        <li>
+                            <a href="contact(1).html">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="faq(1).html">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md" id="col-md">
+                     <h5>Contact</h5>
+                     <ul>
+                         <li>
+                            <a href="tel:+620892738334"><i  class="fa fa-phone mirrored-icon"></i> 08272367238</a>
+                        </li>
+                        <li>
+                            <a href="mailto:hello@domain.com"><i class="fa fa-envelope"></i> krishiconnect@gmail.com</a>
+                         </li>
+                     </ul>
 
+                     <h5>Follow Us</h5>
+                     <ul class="social">
+                         <li>
+                            <a href="javascript:void(0)" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                         </li>
+                         <li>
+                            <a href="javascript:void(0)" target="_blank"><i class="fab fa-instagram"></i></a>
+                         </li>
+                         <li>
+                            <a href="javascript:void(0)" target="_blank"><i class="fab fa-youtube"></i></a>
+                         </li>
+                     </ul>
+                </div>
+                <div class="col-md-3m" id="col-md-3m">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+               </div>
+            </div>
+        </div>
+        <p class="copyright" id="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
+    </footer>
 
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/js/jquery-migrate.js"></script>
@@ -222,6 +293,21 @@
     <script type="text/javascript" src="assets/js/theme.js"></script>
     <script src="cart.js"></script>
     <script src="shop.js"></script>
+    <script>
+        ScrollReveal({ 
+            //reset: true ,
+            distance : '60px' ,
+            duration:2500,
+            delay:400
+        });
+        ScrollReveal().reveal('#banner', { delay: 500 , origin:'top' });
+        ScrollReveal().reveal('#cart', { delay: 600 , origin:'top' });
+        ScrollReveal().reveal('#container', { delay: 700 , origin:'bottom' });
+        ScrollReveal().reveal('#col-md-3,#col-md-3l', { delay: 500 , origin:'left'});
+        ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500 , origin:'right'});
+        ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
+    </script>
+    <script src="./darkmode.js"></script>
 </body>
 
 </html>
