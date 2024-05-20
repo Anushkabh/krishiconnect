@@ -16,6 +16,11 @@
   #loader h3{
     font-size: 2vw;
     font-weight: 100;
+
+  }
+
+  
+
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 0.5s, transform 0.5s;
@@ -39,3 +44,4 @@
   align-items: center;
   padding: 0.5rem 1rem;
 }
+
