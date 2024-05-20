@@ -7,13 +7,18 @@ var buyerEmailInput = document.getElementById('buyer-email');
 function createItemElement(item) {
   const itemElement = document.createElement('div');
   itemElement.classList.add('cartlist');
-  itemElement.innerHTML = "<span>" + item.name + "</span>  <span>" + item.price + "</span><span>" + item.quantity + "</span>";
+  itemElement.innerHTML = "<span class='item-detail'><span>" + item.name + "</span>  <span>" + item.price + "</span></span>";
 
   const decreaseQuantityButton = document.createElement('button');
   const increaseQuantityButton = document.createElement('button');
   decreaseQuantityButton.textContent = '-';
   increaseQuantityButton.textContent = '+';
-
+  const itemquantity = document.createElement('span');
+  itemquantity.classList.add('item-quantity');
+  itemquantity.appendChild(decreaseQuantityButton);
+const quantityText = document.createTextNode(item.quantity);
+itemquantity.appendChild(quantityText);
+itemquantity.appendChild(increaseQuantityButton);
   decreaseQuantityButton.onclick = function () {
     item.quantity--;
     cartItems = cartItems.map(cartItem => cartItem.name === item.name ? item : cartItem);
@@ -31,16 +36,11 @@ function createItemElement(item) {
     updateCartDisplay();
   };
 
-  itemElement.appendChild(decreaseQuantityButton);
-  itemElement.appendChild(increaseQuantityButton);
+  itemElement.appendChild(itemquantity);
+
 
   return itemElement;
 }
-
-cartItems.forEach(function (item) {
-  const itemElement = createItemElement(item);
-  cartItemsContainer.appendChild(itemElement);
-});
 
 function updateCartDisplay() {
   cartItemsContainer.innerHTML = '';
@@ -50,6 +50,8 @@ function updateCartDisplay() {
   });
   updateSubtotal();
 }
+
+updateCartDisplay();
 
 function updateSubtotal() {
   var subtotal = 0;
