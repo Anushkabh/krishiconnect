@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
@@ -120,13 +121,13 @@
             <div class="container">
                 <!-- Navbar Brand -->
                 
-                <a href="index.html" class="navbar-brand">
-                    <img src="assets/img/logo/log.png" alt="Logo" height="45" style="margin-left: 2rem;"> <!-- Adjust logo size if necessary -->
+                <a href="index.html">
+                    <img src="assets/img/logo/logo3.png" alt="Logo" height="80px" style="margin-left: 2rem;"> <!-- Adjust logo size if necessary -->
                 </a>
                 <a href="index.html" class="navbar-brand">
                     <div style="flex-direction: row; display: flex; align-items: center;">
                         <!-- <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" > -->
-                    <h3 >कृषिCONNECT</h3>
+                    <!-- <h3 >कृषिCONNECT</h3> -->
                     </div>
                 </a>
 
@@ -141,6 +142,19 @@
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
+
+                            <a href="index.html" class="nav-link"><i class="ri-home-fill"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="ri-seedling-fill"></i>  Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+
 
                             
 
@@ -157,6 +171,7 @@
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i> 
                                 Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+
                             </a>
                             <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
                                 <!-- Wishlist items will be dynamically added here -->
