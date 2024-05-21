@@ -573,6 +573,11 @@ h1 {
     margin-right: 10px;
 }
 
+
+.nav-item {
+    padding: 10px;}
+
+
 /* Mobile Responsiveness */
 /* For landscape phones, 576px and up */
 @media (max-width: 576px) {
