@@ -30,7 +30,33 @@
     <link rel="stylesheet" href="darkmode.css">
 
 </head>
+<style>
+    /* For static navbar */
 
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.navbar {
+    background-color: transparent;
+    position: static;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+</style>
 <body class="light">
     <div class="page-header" id="page-header">
         <!--=============== Navbar ===============-->
@@ -69,11 +95,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="shop(1).html" class="nav-link">Shop</a>
+                            <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
 
                         </li>
                         <li class="nav-item">
-                            <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i>Transactions</a>
+                            <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i> 

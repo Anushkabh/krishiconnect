@@ -85,17 +85,33 @@
 
 .wishlist-btn:hover {
     background-color: #cd1653; 
+}
+/* For static navbar */
+
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.navbar {
+    background-color: transparent;
+    position: static;
+    width: 100%;
+}
 
 .navbar-brand {
-    padding: 0; /* Remove any padding */
-    margin: 0;  /* Remove any margin */
+    display: flex;
+    align-items: center;
 }
 
-.navbar-nav .nav-item .nav-link {
-    padding: 0.5rem 1rem; /* Ensure consistent padding */
-    line-height: 1.5; /* Align text vertically */
+.navbar-brand img {
+    max-height: 50px;
+    margin-right: 10px;
 }
-}
+
+
 </style>
 <body class="light">
     <div class="page-header">
