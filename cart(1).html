@@ -25,27 +25,54 @@
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/logo/log.png" type="image/x-icon">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="darkmode.css">
     <link rel="stylesheet" href="cart.css">
 
 </head>
+<style>
+    /* For static navbar */
 
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.navbar {
+    background-color: transparent;
+    position: static;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+</style>
 <body class="light">
     <div class="page-header" id="page-header">
         <!--=============== Navbar ===============-->
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
-      <a href="index.html" class="navbar-brand">
-                    <div style="flex-direction: row; display: flex; align-items: center;">
+      <a href="index.html" >
+        <img src="assets/img/logo/logo3.png" width="80px">
+                    <!-- <div style="flex-direction: row; display: flex; align-items: center;">
 
-                        <!-- <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" > -->
+                         <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" > 
 
                       
 
-                    <h3 >कृषिCONNECT</h3>
+                    <h3 >कृषिCONNECT</h3> -->
                     </div>
                 </a>
 
@@ -70,11 +97,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="shop(1).html" class="nav-link">Shop</a>
+                            <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
 
                         </li>
                         <li class="nav-item">
-                            <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i>Transactions</a>
+                            <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i> 
