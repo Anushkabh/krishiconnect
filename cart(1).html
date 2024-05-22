@@ -25,21 +25,53 @@
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
-
+    <link rel="shortcut icon" href="assets/img/logo/log.png" type="image/x-icon">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="darkmode.css">
 
 </head>
+<style>
+    /* For static navbar */
 
-<body>
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.navbar {
+    background-color: transparent;
+    position: static;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+</style>
+<body class="light">
     <div class="page-header" id="page-header">
         <!--=============== Navbar ===============-->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
-      <a href="index.html" class="navbar-brand">
-                    <div style="flex-direction: row; display: flex; align-items: center;">
-                        <img class="ml-1" id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" >
-                    <h3 >कृषिCONNECT</h3>
+      <a href="index.html" >
+        <img src="assets/img/logo/logo3.png" width="80px">
+                    <!-- <div style="flex-direction: row; display: flex; align-items: center;">
+
+                         <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" > 
+
+                      
+
+                    <h3 >कृषिCONNECT</h3> -->
                     </div>
                 </a>
 
@@ -57,15 +89,18 @@
                         <li class="nav-item">
 
 
+                            <!-- <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a> -->
+
+
                             <a href="index.html" class="nav-link"><i class="ri-home-fill"></i> Home
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="shop(1).html" class="nav-link">Shop</a>
+                            <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
 
                         </li>
                         <li class="nav-item">
-                            <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i>Transactions</a>
+                            <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i> 
@@ -80,6 +115,13 @@
                             <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
                         </li>
                     </ul>
+                    <input type="checkbox" id="toggle">
+                    
+                    <label class="toggle" for="toggle">
+                        <i class="bx bxs-sun"></i>
+                        <i class="bx bx-moon"></i>
+                        <span class="ball"></span>
+                    </label>
                 </div>
 
             </div>
@@ -147,7 +189,7 @@
                     style="border-radius: 3px; color: aliceblue;">Continue Shopping</a></button>
             </div>
         </div>
-        <footer>
+        <!-- <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
@@ -206,29 +248,10 @@
                 </div>
             </div>
             <p class="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
-        </footer>
+        </footer> -->
 
+<!--footer-->
 
-        <script type="text/javascript" src="assets/js/jquery.js"></script>
-        <script type="text/javascript" src="assets/js/jquery-migrate.js"></script>
-        <script type="text/javascript" src="assets/packages/bootstrap/libraries/popper.js"></script>
-        <script type="text/javascript" src="assets/packages/bootstrap/bootstrap.js"></script>
-        <script type="text/javascript" src="assets/packages/o2system-ui/o2system-ui.js"></script>
-        <script type="text/javascript" src="assets/packages/owl-carousel/owl-carousel.js"></script>
-        <script type="text/javascript" src="assets/packages/cloudzoom/cloudzoom.js"></script>
-        <script type="text/javascript" src="assets/packages/thumbelina/thumbelina.js"></script>
-        <script type="text/javascript" src="assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
-        <script type="text/javascript" src="assets/js/theme.js"></script>
-        <script src="cart.js"></script>
-</body>
-
-        <div id="cart-items" style="width: 50%; padding: 30px;" class="carttext"></div>
-        <div id="subtotal" class="carttext"></div>
-        <div class="cartfield"><button class="cartbtn" onclick="emptyCart()" style="border-radius: 3px; color: aliceblue;">Empty Cart</button>
-        <button class="cartbtn" onclick="checkout()">Checkout</button>
-        <button onclick="window.location.href='shop(1).html'" class="cartbtn" style="border-radius: 3px; color: aliceblue;">Continue Shopping</a></button>
-        </div>
-    </div>
     <footer>
         <div class="container" id="container">
             <div class="row">
@@ -311,6 +334,7 @@
         ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500 , origin:'right'});
         ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
     </script>
+    <script src="./darkmode.js"></script>
 </body>
 
 </html>

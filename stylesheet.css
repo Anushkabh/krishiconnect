@@ -1,5 +1,7 @@
 *{
     font-family: sans-serif;
+  
+    
 }
 section {
     padding: 80px 0;
@@ -9,29 +11,35 @@ div{
 }
 .container {
     width: 100%;
-    padding-right: 15px;
+    padding-right: 10px;
     padding-left: 5px;
     margin-right: auto;
     margin-left: auto;
+    
 }
 .title {
     text-align: center;
-    color: #E91E63;
+
     margin-bottom: 3rem;
+    
 }
 i {
     font-style: italic;
 }
-.banner{
+.banner {
     display: block;
     width:100%;
 }
+
 .banner .jumbotron {
     margin-bottom: 0;
+
 }
 .jumbotron.jumbotron-bg {
     background-size: cover;
-    color: #FFF;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 .jumbotron {
     padding: 4rem;
@@ -112,7 +120,9 @@ h4 {
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 0.25rem;
+    transition: transform 1s ease;
 }
+
 .card .card-icon {
     text-align: center;
     padding: 20px 0;
@@ -122,8 +132,7 @@ h4 {
     border-radius: 12px;
 }
 .col-md-4:hover{
-box-shadow: 0 0 22px rgb(151, 251, 151);
-transform:scale(1.075);
+box-shadow: 0 0 32px rgb(151, 251, 151);
 }
 .card .card-icon .card-icon-i {
     margin: 0 auto;
@@ -197,36 +206,34 @@ h1 {
 }
 .main{
     display: flex;
-    /*background: url("R.jpg");
-    background-size: cover;*/
+    background: url("https://img.freepik.com/premium-photo/young-farmer-hands-holding-green-plant-with-young-man-soil-planting-garden-growing-ground_449849-6036.jpg");
+    background-size: cover;
     background-color: white;
     height:120vh;
     width: 100%;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     opacity:1;
     margin: 0px ;
+    
+}
+.register_head{
+    /* color: rgb(199, 81, 22); */
+    font-size: 35px;
+    margin-bottom: 25px;
+    font-weight: bold;
 }
 .out{
     display: flex;
     flex-direction: column;
-    height: 500px;
-    width: 380px;
-    background-color: rgba(164, 164, 164, 0.7);
-    border-radius: 20px;
-    opacity: .75;
-    padding: 20px;
-    align-items: center;
-    color: rgb(17, 155, 5);
     font-size: 24px;
-    box-shadow: inset;
-    border-radius: 10px;
     margin: 20px;
-    justify-content: center;
     padding: 20px;
     align-items: center;
-    box-shadow: 6px 6px 10px -1px rgb(0, 0, 0),
-        -6px -6px 20px -1px rgba(144, 141, 141, 0.7);
+    text-align: center;
+    margin-left: 150px;
+    margin-top: 80px;
+    /* background-color: red; */
 }
 
 /* .ffield{
@@ -291,23 +298,36 @@ h1 {
     display: block;
 }
 .wishlist-button {
-    display: inline-block;
-    padding: 2px 57px; 
-    border: 1px solid #ffdbac;
-    border-radius: 2px; 
-    color: #007bff;
-    background-color: #ffdbac;
+    display: flex;
+    align-items: center;
     cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #464646;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s; 
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s; 
 }
 
 .wishlist-button:hover {
-    background-color: #ffffff;
-    border: 1px solid #ffbf00;
-    border-radius: 2px; 
+    background-color: #ffb89c;
     color: #fff;
-    transform: scale(1.1); 
+    transform: scale(1.1);
+}
+
+.wishlist-button .fas {
+    margin-right: 5px; 
+}
+
+.btn.btn-block.btn-primary {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #E91E63;
+    color: #fff;
+    text-decoration: none;
 }
 
 /* for dropdown wishlist */
@@ -376,9 +396,20 @@ h1 {
 
 #login{
     display:none;
-    position: absolute;
+    /* position: absolute; */
 }
-#submit{
+.form-group button{
+    background-color: rgb(87, 157, 18);
+    color: white;
+    width: 340px;
+    height: 55px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+/* #submit{
     align-items: center;
     height: 30px;
     width:300px;
@@ -394,8 +425,8 @@ h1 {
     opacity: 1.5;
     border: 2px solid white;
     transition-duration: 0.2s;
-}
-#submit1{
+} */
+/* #submit1{
     height: 30px;
     width:300px;
     background-color:  #E91E63;
@@ -410,20 +441,35 @@ h1 {
     opacity: 1.5;
     border: 2px solid white;
     transition-duration: 0.2s;
-}
+} */
  #signup{
     font-size: 14px;
+    color: white;
+    cursor: pointer;
  }
  #logswitch{
     font-size: 14px;
+    color: white;
+    cursor: pointer;
  }
-input{
+/* input{
   width: 300px;
   height: 30px;
   border-radius: 5px;
   border: none;
-}
+} */
 
+.form-group input{
+    /* background-color: red; */
+    width: 340px;
+    height: 58px;
+    border-radius: 50px;
+    padding-left: 15px;
+    /* margin-bottom: 15px; */
+    font-size: 16px;
+    border: none;
+    /* margin-top: 50px; */
+}
 
 .cartlist{
     display: flex;
@@ -503,3 +549,110 @@ input{
     transition-duration: 0.2s;
 }
 
+/* Navbar */
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.navbar {
+    background-color: transparent;
+    position: static;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+
+.nav-item {
+    padding: 10px;}
+
+
+/* Mobile Responsiveness */
+/* For landscape phones, 576px and up */
+@media (max-width: 576px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        background-color: transparent;
+    }
+}
+
+/* For tablets, 768px and up */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        background-color: transparent;
+    }
+}
+
+/* For desktops, 992px and up */
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-left: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        width: auto;
+    }
+}
+
+/* For large desktops, 1200px and up */
+@media (max-width: 1200px) {
+    .navbar-nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-left: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        width: auto;
+    }
+}

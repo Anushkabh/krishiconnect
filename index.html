@@ -20,12 +20,17 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
+    <!-- BoxIcons v2.1.2 -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="darkmode.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
-<body>
+<body class="light">
     <div id="loader">
         <h3>कृषिCONNECT,</h3>
         <h3>WE SERVE</h3>
@@ -34,14 +39,13 @@
 
     <div class="page-header">
         <!--=============== Navbar ===============-->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
-                <a href="index.html" class="navbar-brand">
-                    <div style="flex-direction: row; display: flex; align-items: center;">
-                        <img class="ml-1" id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" >
-                        <h3 id="co">कृषिCONNECT</h3>
-                    </div>
+                <a href="index.html">
+                    <img  src="assets/img/logo/logo3.png" width="70px" >
+                    <!-- <div style="flex-direction: row; display: flex; align-items: center;">
+                    <h3 id="co">कृषिCONNECT</h3> --><!-- </div> -->
                 </a>
 
                 <!-- Toggle Button -->
@@ -67,14 +71,25 @@
                         <li class="nav-item"  id="nav-link5">
                             <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
                         </li>
+                         
+                        <li class="nav-item">
+                            <a href="contact(1).html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
+                        </li>
                     </ul>
+                    <input type="checkbox" id="toggle">
+                    
+                    <label class="toggle" for="toggle">
+                        <i class="bx bxs-sun"></i>
+                        <i class="bx bx-moon"></i>
+                        <span class="ball"></span>
+                    </label>
                 </div>
             </div>
         </nav>
     </div>
 
     <div id="page-content" class="page-content">
-        <div class="banner">
+        <div class="banner ">
             <div class="jumbotron jumbotron-video text-center bg-dark mb-0 rounded-0">
                 <video width="100%" preload="auto" loop autoplay muted>
                     <source src='assets/media/explore.mp4' type='video/mp4' />
@@ -219,30 +234,10 @@
         <section id="products">
             <h2 class="title">Products</h2>
             <div class="container">
-                <div class="row">
+                <div class="row1">
                     <div class="col-md-3 col-sm-6">
-                        <div class="card text-center">
-                            <img src="assets/img/vegetable-tomato.jpg" class="card-img-top" alt="Tomato">
-                            <div class="card-body">
-                                <h5 class="card-title">Tomato</h5>
-                                <p class="card-text">Fresh organic tomatoes directly from our farms.</p>
-                                <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="card text-center">
-                            <img src="assets/img/vegetable-carrot.jpg" class="card-img-top" alt="Carrot">
-                            <div class="card-body">
-                                <h5 class="card-title">Carrot</h5>
-                                <p class="card-text">Crunchy and sweet carrots.</p>
-                                <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="card text-center">
-                            <img src="assets/img/vegetable-spinach.jpg" class="card-img-top" alt="Spinach">
+                        <div class="card text-center card1">
+                            <img src="assets/img/spinach.jpg" class="card-img-top" alt="Spinach">
                             <div class="card-body">
                                 <h5 class="card-title">Spinach</h5>
                                 <p class="card-text">Healthy and fresh spinach leaves.</p>
@@ -251,8 +246,29 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
+                        <div class="card text-center card1">
+                            <img src="assets/img/tomato.jpg" class="card-img-top" alt="Tomato">
+                            <div class="card-body">
+                                <h5 class="card-title">Tomato</h5>
+                                <p class="card-text">Fresh organic tomatoes directly from our farms.</p>
+                                <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-3 col-sm-6">
                         <div class="card text-center">
-                            <img src="assets/img/vegetable-broccoli.jpg" class="card-img-top" alt="Broccoli">
+                            <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2Fycm90c3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="Carrot">
+                            <div class="card-body">
+                                <h5 class="card-title">Carrot</h5>
+                                <p class="card-text">Crunchy and sweet carrots.</p>
+                                <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card text-center card1">
+                            <img src="https://t3.ftcdn.net/jpg/04/68/10/86/360_F_468108626_wpL1hcDkE4g12mPPnbVxx8rCnWpHYKmV.jpg" class="card-img-top" alt="Broccoli">
                             <div class="card-body">
                                 <h5 class="card-title">Broccoli</h5>
                                 <p class="card-text">Green and fresh broccoli heads.</p>
@@ -264,6 +280,76 @@
             </div>
         </section>
 
+
+        <!-- What our clients say Section -->
+        <div class="reviews_box">
+            <div class="main-review">What Client Say</div>
+            <div class="explain-review">Explore on the world's best & largest Bidding marketplace with our beautiful
+                Bidding</div>
+            <div class="explain-review" style="margin-bottom: 30px;">products. We want to be a part of your smile,
+                success and future growth.</div>
+            <div class="review-box2">
+                <div class="splide" id="reviews">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="splide__slide">
+                                <div class="splide-review">
+                                    <div class="review_head">
+                                        <div class="profile"><img
+                                                src="https://pbs.twimg.com/media/DzeLmXZU0AA1OtZ?format=jpg&name=360x360">
+                                        </div>
+                                        <div><img src="assets/img/review_icon.png"></div>
+                                    </div>
+                                    <div class="review-name">Johan Martin R</div>
+                                    <div class="review-designation">CEO founder</div>
+                                    <br>
+                                    <div class="actual-review">
+                                        The Pacific Grove Chamber of Commerce would like to thank eLab Communications
+                                        and Mr. Will Elkadi for all the efforts that assisted me nicely manners.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="splide__slide">
+                                <div class="splide-review">
+                                    <div class="review_head">
+                                        <div class="profile"><img
+                                                src="https://i.pinimg.com/280x280_RS/be/70/fe/be70fe7ebde5c89c08e49e34ba5f6cc4.jpg">
+                                        </div>
+                                        <div><img src="assets/img/review_icon.png"></div>
+                                    </div>
+                                    <div class="review-name">Johan Dou RO</div>
+                                    <div class="review-designation">Marketing Officer</div>
+                                    <br>
+                                    <div class="actual-review">
+                                        The Pacific Grove Chamber of Commerce would like to thank eLab Communications
+                                        and Mr. Will Elkadi for all the efforts that assisted me nicely manners.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="splide__slide">
+                                <div class="splide-review">
+                                    <div class="review_head">
+                                        <div class="profile"><img
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREi99oalo6ZF3Gaz56o2vjAg7qF_qZl4X0kQ&usqp=CAU">
+                                        </div>
+                                        <div><img src="assets/img/review_icon.png"></div>
+                                    </div>
+                                    <div class="review-name">Martin Luther</div>
+                                    <div class="review-designation">CTO</div>
+                                    <br>
+                                    <div class="actual-review">
+                                        The Pacific Grove Chamber of Commerce would like to thank eLab Communications
+                                        and Mr. Will Elkadi for all the efforts that assisted me nicely manners.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section Ends -->
         <!-- Footer Section -->
         <footer class="footer">
             <div class="container">
@@ -323,6 +409,29 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- Custom Script -->
     <script src="assets/js/scripts.js"></script>
-    
+    <script src="./darkmode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+        var splide = new Splide('#reviews', {
+    perPage: 3,
+    perMove: 1,
+    type:'loop',
+    pagination: false,
+    arrows: false,
+    autoplay: true,
+    breakpoints: {
+        640: {
+            perPage: 2,
+            gap: '.7rem',
+        },
+        480: {
+            perPage: 1,
+            gap: '.7rem',
+        },
+    },
+});
+
+splide.mount();
+    </script>
 </body>
 </html>
