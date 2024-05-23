@@ -71,28 +71,24 @@ cd krishiconnect
 
 ```
 git remote add upstream https://github.com/Anushkabh/krishiconnect.git
-
 ```
 
 8.  Check the remotes for this repository.
 
 ```
 git remote -v
-
 ```
 
 9.  Always take a pull from the upstream repository to your main branch to keep it updated as per the main project repository.
 
 ```
 git pull upstream main
-
 ```
 
 10.  Create a new branch(prefer a branch name that relates to your assigned issue).
 
 ```
 git checkout -b <YOUR_BRANCH_NAME>
-
 ```
 
 11.  Perform your desired changes to the code base.
@@ -102,33 +98,28 @@ git checkout -b <YOUR_BRANCH_NAME>
 
 ```
 git status
-
 ```
 
 ```
 git  diff
-
 ```
 
 13.  Stage your changes.
 
 ```
 git add . <\files_that_you_made_changes>
-
 ```
 
 14.  Commit your changes.
 
 ```
 git commit -m "relavant message"
-
 ```
 
 15.  Push the committed changes in your feature branch to your remote repository.
 
 ```
 git push -u origin <your_branch_name>
-
 ```
 
 16.  To create a pull request, click on  `compare and pull requests`.

@@ -18,12 +18,12 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
-    <link rel="stylesheet" href="index.css">
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div id="loader">
@@ -35,13 +35,15 @@
 
     <div class="page-header">
         <!--=============== Navbar ===============-->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
                 <a href="index.html" class="navbar-brand">
                     <div style="flex-direction: row; display: flex; align-items: center;">
-                        <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" >
-                        <h3>कृषिCONNECT</h3>
+
+                        <!-- <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" > -->
+
+                        <h3 id="co">कृषिCONNECT</h3>
                     </div>
                 </a>
 
@@ -53,19 +55,19 @@
                 <div class="collapse navbar-collapse" id="navbarcollapse">
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item" style="border: 2px solid white">
+                        <li class="nav-item" style="border: 2px solid white"  id="nav-link1">
                             <a href="login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="nav-link2">
                             <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="nav-link3">
                             <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="nav-link4">
                             <a href="shop(1).html" class="nav-link"><i class="ri-seedling-fill"></i> Wishlist</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item"  id="nav-link5">
                             <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
                         </li>
                          
@@ -231,7 +233,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tomato</h5>
                                 <p class="card-text">Fresh organic tomatoes directly from our farms.</p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                                <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -241,7 +243,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Carrot</h5>
                                 <p class="card-text">Crunchy and sweet carrots.</p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                                <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -251,7 +253,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Spinach</h5>
                                 <p class="card-text">Healthy and fresh spinach leaves.</p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                                <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -261,7 +263,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Broccoli</h5>
                                 <p class="card-text">Green and fresh broccoli heads.</p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                                <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -328,5 +330,6 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- Custom Script -->
     <script src="assets/js/scripts.js"></script>
+    
 </body>
 </html>

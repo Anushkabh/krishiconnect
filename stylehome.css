@@ -158,7 +158,7 @@ circle {
     stroke-dasharray: 400;
     fill: none;
     stroke: url(#GradientColor);
-    r: 45px;
+    /* r: 45px; */
 }
 
 svg {
