@@ -4,6 +4,8 @@
     display: flex;
     justify-content: space-between;
     width: 60px;
+    height: 30px;
+    border:2px solid white;
     /* Further adjusted width to make the toggle box smaller */
     border-radius: 25px;
     /* Adjusted for smaller height */
@@ -37,6 +39,7 @@ input {
 }
 
 /* -- Light Mode -- */
+
 .light {
     background: #fafafa;
 }
@@ -52,13 +55,12 @@ input {
 }
 
 .light .toggle .bx-moon {
-    color: #151d2a;
+    color: #198754;
 }
 
 .light .toggle .ball {
-    background: #151d2a;
+    background: #198754;
 }
-
 /* -- Dark Mode -- */
 .dark {
     background: #151d2a;
