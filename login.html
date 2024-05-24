@@ -23,6 +23,26 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>KrishiConnect | Login</title>
     <link rel="icon" type="image/png" href="/assets/img/logo/log.png">
+    <style>
+        .password-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .password-container input[type="password"],
+        .password-container input[type="text"] {
+            width: 100%;
+            padding-right: 40px; /* space for the eye icon */
+        }
+
+        .password-container .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -165,8 +185,11 @@
                 <div class="form-group">
                     <input type="email" name="email" placeholder="Email" id="email" required>
                 </div>
-                <div class="form-group">
-                    <input type="password" id="pass" name="password" placeholder="Password" required>
+                <div class="form-group password-container">
+                    <input type="
+
+                   password" id="pass" name="password" placeholder="Password" required>
+                    <i class="fa fa-eye eye-icon" id="togglePassword"></i>
                 </div>
                 <div class="form-group">
                     <button type="submit" value="Submit" id="submit">SIGN UP</button>
@@ -180,8 +203,9 @@
                 <div class="form-group">
                     <input type="email" name="User1" id="User1" placeholder="Email" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group password-container">
                     <input type="password" id="pass1" name="pass1" placeholder="Password" required>
+                    <i class="fa fa-eye eye-icon" id="togglePassword1"></i>
                 </div>
                 <div class="form-group">
                     <button type="submit" value="Submit" id="submit1">LOG IN</button>
@@ -249,27 +273,47 @@
     </footer>
   
 </body>
-<script src="script.js" type="module">
-      
-  </script>
-  <script src="script1.js" type="module"></script>
+<script src="script.js" type="module"></script>
+<script src="script1.js" type="module"></script>
 
-  <script type="text/javascript" src="assets/js/jquery.js"></script>
-    
-  
-    <script type="text/javascript" src="assets/js/theme.js"></script>
-    <script>
-        ScrollReveal({ 
-            //reset: true ,
-            distance : '60px' ,
-            duration:2500,
-            delay:400
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/theme.js"></script>
+
+<script>
+    ScrollReveal({ 
+        //reset: true ,
+        distance : '60px' ,
+        duration:2500,
+        delay:400
+    });
+    ScrollReveal().reveal('#col-md-4', { delay: 600 , origin:'bottom' });
+</script>
+
+<script>
+    // Toggle password visibility
+    document.addEventListener('DOMContentLoaded', function () {
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#pass');
+        
+        togglePassword.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // toggle the eye icon
+            this.classList.toggle('fa-eye-slash');
         });
-        ScrollReveal().reveal('#title ,#pt-5,#lead', { delay: 400 , origin:'top' });
-        ScrollReveal().reveal('#col-md-4', { delay: 900 , origin:'top' });
-        ScrollReveal().reveal('#main', { delay: 1000 , origin:'top'});
-        ScrollReveal().reveal('#col-md-3,#col-md-3l', { delay: 500 , origin:'left'});
-        ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500 , origin:'right'});
-        ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
-    </script>
+
+        const togglePassword1 = document.querySelector('#togglePassword1');
+        const password1 = document.querySelector('#pass1');
+        
+        togglePassword1.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password1.getAttribute('type') === 'password' ? 'text' : 'password';
+            password1.setAttribute('type', type);
+            // toggle the eye icon
+            this.classList.toggle('fa-eye-slash');
+        });
+    });
+</script>
+
 </html>
