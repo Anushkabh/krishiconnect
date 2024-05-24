@@ -577,6 +577,8 @@ h1 {
     opacity: 1.5;
     border: 2px solid white;
     transition-duration: 0.2s;
+
+
 }
 
 /* Navbar */
@@ -686,3 +688,4 @@ h1 {
         width: auto;
     }
 }
+
