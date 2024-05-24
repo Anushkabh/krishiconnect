@@ -502,25 +502,30 @@ footer ul li .mockup img {
 footer ul.social li {
   display: inline-block;
   margin: 0.5rem 1rem;
-  margin-top: 0;
+  margin-top:8px;
 }
 footer ul.social li a {
-  font-size: 1.5rem;
-  border:2px solid black;
-  border-radius: 30%;
-  padding:3px;
+  font-size:20px;
+  background:linear-gradient(45deg,#18a33d,#3cd931) ;
+  border-radius:15px;
+  padding:8px;
   width:auto;
+  color: #fff;
 }
 footer ul.social li a:hover{
-  color:rgb(245, 86, 33);
-  background-color: rgb(253, 255, 251);
+  color:rgb(43, 180, 146);
+  background: rgb(253, 255, 251);
 }
 footer ul.social li:first-child {
-  margin-left: 0;
+  margin-left:0;
 }
+.footer .footer-social .icons{
+  list-style: none;
+}
+
 footer .copyright {
   margin: 0;
-  /* margin-top: 40px; */
+   margin-top: 40px;
   padding: 10px;
   font-weight: bolder;
   text-align: center;

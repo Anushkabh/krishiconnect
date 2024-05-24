@@ -23,6 +23,41 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>KrishiConnect | Login</title>
     <link rel="icon" type="image/png" href="/assets/img/logo/log.png">
+    <style>
+        /* Ensure navbar has higher z-index */
+.navbar {
+    z-index: 1000;
+}
+
+/* Add padding to the top of the hero section to avoid collision */
+.jumbotron-bg {
+    padding-top: 100px; /* Adjust this value to the height of your navbar */
+}
+
+/* Set the navbar text color */
+.navbar .nav-link {
+    color: white !important;
+}
+
+/* Navbar link styles */
+.navbar .nav-link {
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for navbar links */
+.navbar .nav-link:hover {
+    color:  #E91E63 !important; /* Change this to your preferred hover color */
+    text-decoration: underline;
+}
+
+/* Remove outline on click */
+.navbar .nav-link:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+    </style>
 </head>
 
 <body>
@@ -259,17 +294,17 @@
   
     <script type="text/javascript" src="assets/js/theme.js"></script>
     <script>
-        ScrollReveal({ 
-            //reset: true ,
-            distance : '60px' ,
-            duration:2500,
-            delay:400
+        ScrollReveal({
+            //reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 400
         });
-        ScrollReveal().reveal('#title ,#pt-5,#lead', { delay: 400 , origin:'top' });
-        ScrollReveal().reveal('#col-md-4', { delay: 900 , origin:'top' });
-        ScrollReveal().reveal('#main', { delay: 1000 , origin:'top'});
-        ScrollReveal().reveal('#col-md-3,#col-md-3l', { delay: 500 , origin:'left'});
-        ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500 , origin:'right'});
-        ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
+        ScrollReveal().reveal('#title ,#pt-5,#lead', { delay: 400, origin: 'top' });
+        ScrollReveal().reveal('#col-md-4', { delay: 900, origin: 'top' });
+        ScrollReveal().reveal('#main', { delay: 1000, origin: 'top' });
+        ScrollReveal().reveal('#col-md-3,#col-md-3l', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500, origin: 'right' });
+        ScrollReveal().reveal('#copyright', { delay: 500, origin: 'bottom' });
     </script>
 </html>
