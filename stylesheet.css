@@ -656,3 +656,86 @@ h1 {
         width: auto;
     }
 }
+
+/* toogle */
+
+    /* Scroll to Top Button */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        display: none;
+        /* Initially hide the button */
+        background-color: #198754;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+      }
+  
+      .scroll-to-top:hover {
+        opacity: 0.8;
+      }
+
+.toggle {
+    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    
+  }
+
+  .toggle-checkbox {
+    display: none;
+  }
+
+  .ball {
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    /* Light theme background color */
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+
+  .toggle-checkbox:checked+.toggle .ball {
+    transform: translateX(20px);
+    background-color: #000;
+    
+    /* Dark theme background color */
+  }
+
+  .toggle i {
+    position: relative;
+    z-index: 1;
+    color: #000;
+    /* Dark theme icon color */
+  }
+
+  .toggle-checkbox:checked+.toggle i:nth-child(1) {
+    color: #ffd700;
+
+    /* Light theme icon color */
+  }
+
+
+  .toggle-checkbox:checked+.toggle i:nth-child(2) {
+    color: #fff;
+    /* Dark theme icon color */
+  }
+  .title{
+   font-family: cursive;
+    padding: 10px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,.125) ;
+    border-radius: 10px;
+  }
