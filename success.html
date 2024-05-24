@@ -26,16 +26,14 @@
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
-                <a href="index.html">
-                    <img src="assets/img/logo/logo3.png" width="80px">
-                    <!-- <div style="flex-direction: row; display: flex; align-items: center;">
-                         <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" > -->
-                    <!-- <h3 >कृषिCONNECT</h3> -->
-                    </div> 
+                <a href="index.html" class="navbar-brand mr-auto">
+                    <img src="assets/img/logo/logo3.png" width="55px"
+                        style="display: inline-block; vertical-align: middle;margin-left: 0px; ">
                 </a>
 
                 <!-- Toggle Button -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -43,19 +41,20 @@
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="shop(1).html" class="nav-link active">Shop</a>
+                            <a href="index.html" class="nav-link"><i class="ri-home-fill"></i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="transaction.html" class="nav-link">Transactions</a>
+                            <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a href="cart(1).html" class="nav-link">My Cart</a>
+                            <a href="transaction.html" class="nav-link active"><i class="ri-bank-card-fill"></i>
+                                Transactions</a>
                         </li>
-
-                    
+                        <li class="nav-item">
+                            <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
+                        </li>
                     </ul>
                 </div>
-
             </div>
         </nav>
     </div>
@@ -76,16 +75,21 @@
         
 
         <footer>
-            <div class="container">
+            <a href="#" class="back-to-top d-flex align-items-center justify-content-center" id="back-to-top"><i
+                    class="fa fa-solid fa-arrow-up"></i></a>
+            <div class="container" id="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 mx-4" id="col-md-3">
                         <h5>About</h5>
-                        
-                        <p>कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.</p>
+    
+                        <p class="fw-normal">कृषिCONNECT is an online B2C platform to bring fresh organic produce from
+                            farmers, straight to
+                            your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting
+                            them the pay they truly deserve.</p>
                     </div>
-                    <div class="col-md-3l">
+                    <div class="col-md-3l" id="col-md-3l">
                         <h5>Links</h5>
-                        <ul>    
+                        <ul>
                             <li>
                                 <a href="about(1).html">About</a>
                             </li>
@@ -97,38 +101,40 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md">
-                         <h5>Contact</h5>
-                         <ul>
-                             <li>
-                                <a href="tel:+620892738334"><i  class="fa fa-phone mirrored-icon"></i> 08272367238</a>
+                    <div class="col-md" id="col-md">
+                        <h5>Contact</h5>
+                        <ul>
+                            <li>
+                                <a href="tel:+620892738334"><i class="fa fa-phone mirrored-icon"></i> <span
+                                        class="fw-normal">08272367238</span></a>
                             </li>
                             <li>
-                                <a href="mailto:hello@domain.com"><i class="fa fa-envelope"></i> krishiconnect@gmail.com</a>
-                             </li>
-                         </ul>
-    
-                         <h5>Follow Us</h5>
-                         <ul class="social">
-                             <li>
-                                <a href="javascript:void(0)" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                             </li>
-                             <li>
-                                <a href="javascript:void(0)" target="_blank"><i class="fab fa-instagram"></i></a>
-                             </li>
-                             <li>
-                                <a href="javascript:void(0)" target="_blank"><i class="fab fa-youtube"></i></a>
-                             </li>
-                         </ul>
+                                <a href="mailto:hello@domain.com"><i class="fa fa-envelope"></i> <span
+                                        class="fw-normal">krishiconnect@gmail.com</span></a>
+                            </li>
+                        </ul>
+                        <!--  -->
+                        <!-- <div class="col-md-7 col-lg-4"> -->
+                        <h5 class="footer-title">Follow Us</h5>
+                        <div class="footer-social mb-3" style="font-size:x-large;">
+                            <a href="#" target="_blank" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank" class="mx-2"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank" class="mx-2"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <!-- </div> -->
                     </div>
-                    <div class="col-md-3m">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        
-                   </div>
+                    <div class="col-md-3m" id="col-md-3m">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+                    </div>
                 </div>
             </div>
-              <p class="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
+            <p class="copyright" id="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
         </footer>
+    
     </div>
 
 
