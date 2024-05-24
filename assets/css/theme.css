@@ -9,7 +9,7 @@
   scroll-behavior: smooth;
 }
 
-body {
+body {zz
   color: #333333;
   font-size: 14px;
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
@@ -453,8 +453,6 @@ footer {
   padding-bottom: 0;
   border-top: 1px solid #eee;
   border: 2px solid crimson;
-  background-image: url(https://t3.ftcdn.net/jpg/06/73/59/22/360_F_673592233_GRdQaHtfPN3t9NvLEn4V7jscQlIQLiUi.jpg);
-  background-size: cover;
   background-position-y:-43px;
   background-repeat: no-repeat;
 }
@@ -566,4 +564,379 @@ footer .copyright {
   color: #1ee9ba;
   transform: scale(1.05);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* For small screens (mobile devices) */
+@media (max-width: 767px) {
+  /* Styles for small screens go here */
+  .container {
+    padding: 0 15px;
+  }
+  .navbar-brand img {
+    height: 40px;
+    margin-left: 0;
+  }
+  .page-header .navbar .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  .card-product {
+    margin-bottom: 20px;
+  }
+  .card-box {
+    height: auto;
+  }
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    margin-bottom: 20px;
+  }
+}
+
+/* For medium screens (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Styles for medium screens go here */
+  .container {
+    max-width: 720px;
+  }
+  .card-box {
+    height: 250px;
+  }
+}
+
+/* For large screens (desktops) */
+@media (min-width: 992px) {
+  /* Styles for large screens go here */
+  .container {
+    max-width: 960px;
+  }
+  .card-box {
+    height: 217.84px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Styles for small screens go here */
+  h1 {
+    font-size: 1.5rem;
+  }
+  .col-md-4 {
+    margin-bottom: 20px;
+  }
+  .card-body {
+    padding: 1rem;
+  }
+  .footer-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+    html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #333333;
+  font-size: 14px;
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+}
+.page-header .navbar{
+    color: white;
+}
+    .page-header .navbar .navbar-brand img {
+      height: 60px;
+      margin-left: -160px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .page-header .navbar .navbar-nav .nav-link {
+      color: #FFF;
+      font-size: 1rem;
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+    .page-header .navbar .navbar-nav .nav-link:focus, .page-header .navbar .navbar-nav .nav-link:hover, .page-header .navbar .navbar-nav .nav-link.active {
+      color: #E91E63;
+    }
+    .page-header .navbar.bg-white {
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    }
+    .page-header .navbar.bg-white .navbar-nav .nav-link {
+      color: #333333;
+    }
+    .page-header .navbar.bg-white .navbar-nav .nav-link:focus, .page-header .navbar.bg-white .navbar-nav .nav-link:hover, .page-header .navbar.bg-white .navbar-nav .nav-link.active {
+      color: #E91E63;
+    }
+    .navbar-brand img{
+        margin-left: 30%;
+    }
+
+
+    .banner .jumbotron {
+      margin-bottom: 0;
+      padding: 0;
+      position: relative;
+     
+      overflow: hidden;
+      height: auto;
+    }
+
+    .banner .jumbotron video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .banner .jumbotron .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
+
+    .banner .jumbotron .container {
+      position: relative;
+      z-index: 3;
+      padding-top: 200px; /* Adjust padding as needed to position the text correctly */
+      text-align: center;
+      
+    }
+
+    .banner .jumbotron .container h1,
+    .banner .jumbotron .container p {
+      color: #FFF;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      color: #FFF;
+    }
+
+    .banner .jumbotron .container .card {
+      margin-top: 2.3rem;
+      background-color: transparent;
+      border: none;
+    }
+
+    .banner .jumbotron .container .card .card-icon {
+      border: none;
+      color: #FFF;
+    }
+
+    .banner .jumbotron .container .card .card-body .card-title {
+      color: #FFF;
+      text-transform: uppercase;
+    }
+    .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.gray-bg {
+        background-color: #f8f9fa;
+    }
+    .card {
+        padding: 20px;
+        margin: 10px;
+        overflow: hidden;
+        box-sizing: border-box;
+        height: 100%;
+    }
+    .card-body {
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    .card-text {
+        font-size: 1rem;
+        word-wrap: break-word;
+    }
+    .cart-icon {
+        margin-bottom: 20px;
+    }
+    .card-icon-i {
+        font-size: 2rem;
+    }
+    .text-success {
+        color: #28a745;
+    }
+    @media (max-width: 1200px) and (min-width:995px){
+        .card-title {
+            font-size: 1.25rem;
+        }
+        .card-text {
+            font-size: 0.875rem;
+        }
+    }
+    @media (max-width: 995px) and (min-width:760px) {
+        .card-title {
+            font-size: 1rem;
+        }
+        .card-text {
+            font-size: 0.6rem;
+        }
+    }
+
+    #products .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0;
+    }
+    #products .card {
+        flex: 1 0 30%; /* Adjust the value as needed to fit your design */
+        margin: 10px;
+        box-sizing: border-box;
+    }
+    #products .card img {
+        width: 100%;
+        height: 200px; /* Set a fixed height */
+        object-fit: cover;
+    }
+    #products .card-body {
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    #products .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    #products .card-text {
+        font-size: 1rem;
+    }
+    @media (max-width: 767px) {
+        #products .card {
+            flex: 1 0 48%; /* Two cards per row on smaller screens */
+        }
+    }
+    @media (max-width: 480px) {
+        #products .card {
+            flex: 1 0 100%; /* One card per row on very small screens */
+        }
+    }
+
+    .footer-logo img {
+            max-height: 100px; /* Limit the height of the logo */
+        }
+    
+    /* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none; /* Initially hide the button */
+    background-color: #198754;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    opacity: 0.8;
+}
+
+/* For small screens (mobile devices) */
+@media (max-width: 767px) {
+  body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+}
+/* For small screens (mobile devices) */
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px; /* Add some padding to avoid content sticking to the edges */
+  }
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .col-xs-12 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/* Reset default styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure full-width containers */
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Adjust rows and columns */
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-xs-12 {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* For small screens (mobile devices) */
+@media (max-width: 767px) {
+  /* Additional styles for small screens */
+  .container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .col-xs-12 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.invert{
+  filter: invert();
 }
