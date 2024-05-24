@@ -187,7 +187,8 @@
 .explain-review,
 .trust_explain {
   text-align: center;
-  color: rgb(79, 79, 79);
+  color: rgb(0, 0, 0);
+  font-weight:600;
 }
 
 .splide-review {
