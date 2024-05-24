@@ -28,6 +28,7 @@
     <link rel="shortcut icon" href="assets/img/logo/log.png" type="image/x-icon">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="darkmode.css">
+    <link rel="stylesheet" href="cart.css">
 
 </head>
 <style>
@@ -148,47 +149,96 @@
             </div>
         </div>
 
-        <div class="cart" style="background-color: #4A9304;;" id="cart">
-            <h1 class="carttext" style="color: white;">Enter Your Details</h1>
-            <div class="cart-form">
-                <div class="cartfield carttext">
-                    <input type="text" placeholder="Enter your name" id="buyer-name" required>
-                </div>
-                <div class="cartfield carttext">
-                    <input type="email" placeholder="Email" id="buyer-email" required>
-                    <input type="text" placeholder="Phone Number">
-                </div>
-                <div class="adress">
-                    <input type="text" placeholder="Address">
-                </div>
-                <div class="add">
-                    <input type="text" placeholder="Postal Code">
-                    <input type="text" placeholder="City">
-                </div>
-                <div class="add2">
-                    <input type="text" placeholder="State">
-                    <input type="text" placeholder="Country">
-                </div>
+        <div class="main-container">
+            
+            <div class="image">
+            <div class="background">
+                <div class="cube"></div>
+                <div class="cube"></div>
+                <div class="cube"></div>
+                <div class="cube"></div>
+                <div class="cube"></div>
             </div>
+                <div class="sign-up-overlay">
+                    <span class="enter-details">Enter your Details</span>
+                    <div class="text-field">
+                        <div class="frame"><span class="label">Name</span></div>
+                        <div class="text-field-1"></div>
+                    </div>
+                    <div class="text-field-2">
+                        <div class="frame-3">
+                            <span class="address-label">Address</span>
+                        </div>
+                        <div class="text-field-4"></div>
+                    </div>
+                    <div class="flex-row-aefd">
+                        <div class="text">
+                            <span class="email-label">Email</span>
+                            <div class="text-field-5"></div>
+                        </div>
+                        <div class="text-6">
+                            <span class="phone-no-label">Phone No.</span>
+                            <div class="text-field-7"></div>
+                        </div>
+                    </div>
+                    <div class="flex-row-f">
+                        <div class="text-8">
+                            <span class="label-9">Postal Code</span>
+                            <div class="text-field-a"></div>
+                        </div>
+                        <div class="text-b">
+                            <span class="label-c">City</span>
+                            <div class="text-field-d"></div>
+                        </div>
+                    </div>
+                    <div class="flex-row-e">
+                        <div class="text-e">
+                            <span class="label-f">State</span>
+                            <div class="text-field-10"></div>
+                        </div>
+                        <div class="text-11">
+                            <span class="label-12">Country</span>
+                            <div class="text-field-13"></div>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="button">
+                            <button class="cartbtn-1" onclick="emptyCart()"></button>
+                            <div class="vector"></div>
+                            <span class="empty-cart">Empty Cart</span>
+                            <div class="rectangle-14"></div>
+                        </div>
+                        <div class="button-15">
+                            <button class="cartbtn-2" onclick="checkout()"></button>
+                            <div class="vector-16"></div>
+                            <span class="checkout">Checkout</span>
+                            <div class="rectangle-17"></div>
+                        </div>
+                        <div class="button-div">
+                            <a onclick="window.location.href='shop(1).html'" class="cartbtn-3"></a></button>
+                            <div class="vector-19"></div>
+                            <span class="continue-span">Continue</span>
+                            <div class="rectangle-1a"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rectangle-1b"></div>
+            </div>
+        </div>
             <!-- <div class="cartfield carttext">
                 
                 <input type="text" placeholder="Your Name" id="buyer-name" required>
             </div>
             <div class="cartfield carttext">
                 
-                <input type="email" placeholder="Email" id="buyer-email" required>
+                <input type="email" placeholder="Emassil" id="buyer-email" required>
             </div> -->
 
 
             <div id="cart-items" style="width: 50%; padding: 30px;" class="carttext"></div>
             <div id="subtotal" class="carttext"></div>
-            <div class="cartfield"><button class="cartbtn" onclick="emptyCart()"
-                    style="border-radius: 3px; color: aliceblue;">Empty Cart</button>
-                <button class="cartbtn" onclick="checkout()">Checkout</button>
-                <button onclick="window.location.href='shop(1).html'" class="cartbtn"
-                    style="border-radius: 3px; color: aliceblue;">Continue Shopping</a></button>
-            </div>
-        </div>
+            
+        
         <!-- <footer>
             <div class="container">
                 <div class="row">
@@ -319,6 +369,7 @@
     <script type="text/javascript" src="assets/js/theme.js"></script>
     <script src="cart.js"></script>
     <script src="shop.js"></script>
+    
     <script>
         ScrollReveal({ 
             //reset: true ,
