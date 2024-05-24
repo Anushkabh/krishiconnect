@@ -1,5 +1,6 @@
 *{
     font-family: sans-serif;
+  
     
 }
 section {
@@ -28,9 +29,7 @@ i {
 .banner {
     display: block;
     width:100%;
-    
 }
-
 
 .banner .jumbotron {
     margin-bottom: 0;
@@ -40,6 +39,7 @@ i {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
 }
 .jumbotron {
     padding: 4rem;
@@ -122,9 +122,7 @@ h4 {
     border-radius: 0.25rem;
     transition: transform 1s ease;
 }
-.card:hover{
-    transform:scale(1.1);
-}
+
 .card .card-icon {
     text-align: center;
     padding: 20px 0;
@@ -300,23 +298,36 @@ h1 {
     display: block;
 }
 .wishlist-button {
-    display: inline-block;
-    padding: 2px 57px; 
-    border: 1px solid #ffdbac;
-    border-radius: 2px; 
-    color: #007bff;
-    background-color: #ffdbac;
+    display: flex;
+    align-items: center;
     cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #464646;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s; 
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s; 
 }
 
 .wishlist-button:hover {
-    background-color: #ffffff;
-    border: 1px solid #ffbf00;
-    border-radius: 2px; 
+    background-color: #ffb89c;
     color: #fff;
-    transform: scale(1.1); 
+    transform: scale(1.1);
+}
+
+.wishlist-button .fas {
+    margin-right: 5px; 
+}
+
+.btn.btn-block.btn-primary {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #E91E63;
+    color: #fff;
+    text-decoration: none;
 }
 
 /* for dropdown wishlist */
@@ -536,4 +547,115 @@ h1 {
     opacity: 1.5;
     border: 2px solid white;
     transition-duration: 0.2s;
+
+
 }
+
+/* Navbar */
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.navbar {
+    background-color: transparent;
+    position: static;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+
+.nav-item {
+    padding: 10px;}
+
+
+/* Mobile Responsiveness */
+/* For landscape phones, 576px and up */
+@media (max-width: 576px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        background-color: transparent;
+    }
+}
+
+/* For tablets, 768px and up */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        background-color: transparent;
+    }
+}
+
+/* For desktops, 992px and up */
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-left: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        width: auto;
+    }
+}
+
+/* For large desktops, 1200px and up */
+@media (max-width: 1200px) {
+    .navbar-nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-left: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        width: auto;
+    }
+}
+
