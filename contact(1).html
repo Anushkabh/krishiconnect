@@ -17,18 +17,33 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+<style>
+    .container h1{
+    color:black;
+}
+.container p{
+    color:black;font-weight: 900;
+}
+.col-lg-6{background-color:black;padding:12px;}
 
+.col-lg-12{background-color:black;}
+
+
+
+</style>
 </head>
 <body>
     <div class="page-header">
         <!--=============== Navbar ===============-->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
                 <a href="index.html" class="navbar-brand">
                     <div style="flex-direction: row; display: flex; align-items: center;">
                         <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" >
-                    <h3 >कृषिCONNECT</h3>
+                    <h3 id="k">कृषिCONNECT</h3>
+
                     </div>
                 </a>
 
@@ -40,18 +55,18 @@
                 <div class="collapse navbar-collapse" id="navbarcollapse">
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
+                        <li class="nav-item" id="h">
                             <a href="index.html"class="nav-link">
                                 Home
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="s">
                             <a href="shop(1).html" class="nav-link">Shop</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="t">
                             <a href="transaction.html" class="nav-link">Transactions</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="m">
                             <a href="cart(1).html" class="nav-link">My Cart</a>
                         </li>
                       
@@ -63,12 +78,12 @@
     </div>
     <div id="page-content" class="page-content">
         <div class="banner">
-            <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg.jpg');">
+            <div class="jumbotron jumbotron-bg text-center rounded-0 " style="background-image: url('https://cdn.pixabay.com/photo/2016/12/15/12/26/contact-us-1908763_1280.png');">
                 <div class="container">
-                    <h1 class="pt-5">
+                    <h1 class="pt-5" id="c">
                         Contact
                     </h1>
-                    <p class="lead">
+                    <p class="lead" id="d">
                         Don't Hesitate to Contact Us.
                     </p>
                 </div>
@@ -81,34 +96,37 @@
                     <div class="row mt-3">
                         <div class="col-lg-7">
                             <div class="contact-wrapper">
-                                <h3 class="title font-weight-normal mt-0 text-left">Send Us a Message</h3>
+                                <h3 class="title font-weight-normal mt-0 text-left  ">Send Us a Message</h3>
                                 <form data-aos="fade-left" data-aos-duration="1200">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input class="form-control" type="text" placeholder="Full Name">
+                                                <input class="form-control" type="text" placeholder="Full Name" id="full" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input class="form-control" type="email" placeholder="Email">
+
+                                                <input class="form-control" type="email" placeholder="Email" id="email" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
-                                            <div class="form-group">
+                                            <div class="form-group" id="msg">
                                                 <textarea class="form-control" rows="3" placeholder="Message"></textarea>
                                             </div>
                                         </div>
+
                                         <div class="col-lg-12 text-right">
-                                            <button type="submit" class="btn btn-lg btn-primary mb-5">Send</button>
+                                            <button type="submit" class="btn btn-lg  mb-5">Send</button>                                 
+
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-lg-5" id="bk">
                             <div class="detail-wrapper p-5 bg-primary">
-                                <h3 class="font-weight-normal mb-3 text-light">
+                                <h3 class="font-weight-normal mb-3 text-light ">
                                     कृषिCONNECT Headquarter
                                 </h3>
 
@@ -132,14 +150,14 @@
         </section>
     </div>
     <footer>
-        <div class="container">
+        <div class="container" id="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3" id="col-md-3">
                     <h5>About</h5>
                     
                     <p>कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.</p>
                 </div>
-                <div class="col-md-3l">
+                <div class="col-md-3l" id="col-md-3l">
                     <h5>Links</h5>
                     <ul>    
                         <li>
@@ -153,7 +171,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md">
+                <div class="col-md" id="col-md">
                      <h5>Contact</h5>
                      <ul>
                          <li>
@@ -177,13 +195,13 @@
                          </li>
                      </ul>
                 </div>
-                <div class="col-md-3m">
+                <div class="col-md-3m" id="col-md-3m">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     
                </div>
             </div>
         </div>
-        <p class="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
+        <p class="copyright" id="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
     </footer>
 
     <script type="text/javascript" src="assets/js/jquery.js"></script>
@@ -196,5 +214,23 @@
     <script type="text/javascript" src="assets/packages/thumbelina/thumbelina.js"></script>
     <script type="text/javascript" src="assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
     <script type="text/javascript" src="assets/js/theme.js"></script>
+    <script>
+        ScrollReveal({ 
+            //reset: true ,
+            distance : '60px' ,
+            duration:2500,
+            delay:400
+        });
+        ScrollReveal().reveal('#k,#h,#s,#t,#m', { delay: 500 , origin:'top' });
+        ScrollReveal().reveal('#c,#d', { delay: 600 , origin:'top' });
+        ScrollReveal().reveal('#send,#full', { delay: 600 , origin:'left' });
+        ScrollReveal().reveal('#email,#button', { delay: 600 , origin:'right' });
+        ScrollReveal().reveal('#msg', { delay: 600 , origin:'left' });
+        ScrollReveal().reveal('#bk', { delay: 600 , origin:'right' });
+        ScrollReveal().reveal('#container', { delay: 700 , origin:'bottom' });
+        ScrollReveal().reveal('#col-md-3,#col-md-3l', { delay: 500 , origin:'left'});
+        ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500 , origin:'right'});
+        ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
+    </script>
 </body>
 </html>

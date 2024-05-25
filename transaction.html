@@ -21,19 +21,57 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
-
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="darkmode.css">
 </head>
-<body>
+<style>
+    /* For static navbar */
+
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.navbar {
+    background-color: transparent;
+    position: static;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+    margin-right: 10px;
+}
+.container h1{
+    color:black;
+}
+.container p{
+    color:black;
+    font-size: bold;
+}
+ 
+</style>
+<body class="light">
     <div class="page-header">
         <!--=============== Navbar ===============-->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
 
-                <a href="index.html" class="navbar-brand">
-                    <div style="flex-direction: row; display: flex; align-items: center;">
-                        <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" >
-                    <h3 >कृषिCONNECT</h3>
+                <a href="index.html">
+                    <img src="assets/img/logo/logo3.png" width="80">
+                    <!-- <div style="flex-direction: row; display: flex; align-items: center;">
+
+                         <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" > 
+
+                    <h3 >कृषिCONNECT</h3> -->
                     </div>
                 </a>
 
@@ -49,12 +87,16 @@
                         
                         <li class="nav-item">
 
-                            <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
+
+                            <!-- <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a> -->
+
 
                             <a href="index.html"class="nav-link"><i class="ri-home-fill"></i> Home </a>
                         </li>
+                        
                         <li class="nav-item">
-                            <a href="shop(1).html" class="nav-link">Shop</a>
+
+                            <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
 
                         </li>
                         <li class="nav-item">
@@ -73,6 +115,13 @@
                         </li>
                        
                     </ul>
+                    <input type="checkbox" id="toggle">
+                    
+                    <label class="toggle" for="toggle">
+                        <i class="bx bxs-sun"></i>
+                        <i class="bx bx-moon"></i>
+                        <span class="ball"></span>
+                    </label>
                 </div>
 
             </div>
@@ -80,7 +129,7 @@
     </div>
     <div id="page-content" class="page-content">
         <div class="banner">
-            <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg.jpg');">
+            <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('https://cdn.aarp.net/content/dam/aarp/home-and-family/family-and-friends/2017/04/1140-cashless.jpg');">
                 <div class="container">
                     <img src="assets/img/logo/log.png" alt="" height="300" id="image">
                     <h1 class="pt-5" id="y">
@@ -191,6 +240,8 @@
         ScrollReveal().reveal('#col-md-3,#col-md-3l', { delay: 500 , origin:'left'});
         ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500 , origin:'right'});
         ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
+        
     </script>
+    <script src="./darkmode.js"></script>
 </body>
 </html>
