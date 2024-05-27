@@ -85,3 +85,11 @@ input {
     transform: translateX(30px);
     /* Adjusted for smaller toggle width */
 }
+
+.dark{
+    .media-body{
+        p{
+            color: white;
+        }
+    }
+}
