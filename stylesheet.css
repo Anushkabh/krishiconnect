@@ -448,11 +448,11 @@ input{
 .cartlist{
     display: flex;
     text-align: center;
-   margin-top: 10px;
+    padding: 10px;
     color: black;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    
     gap: 6rem;
     border-bottom: 2px solid #00490d;
 }
@@ -467,11 +467,13 @@ input{
 .cart-items-container{
     margin-top: 30px;
     z-index: 4;
-    width: 70%;
+    width: 70vw;
+   
     height: auto;
     max-height: 40vh;
     position: relative;
-    overflow-y: scroll;
+    overflow: auto;
+   
     border: 2px solid #00490d;
 }
 .cartlist span{
@@ -538,9 +540,10 @@ input{
     border: none;
     padding: 10px;
 }
-.emptycart{
+.empty-cart{
     font-size: 24px;
     text-align: center;
+    color: black;
 }
 
 .cartbtn:hover{
@@ -554,10 +557,11 @@ input{
     display: flex;
    text-align: right;
     font-size: 1.5rem;
+    
     color: white;
     background-color: #00490d;
     gap: 6rem;
-    padding-right: 15px;
+    padding: 15px;
 }
 .cart-item-heading span{
     width: 400px;
@@ -575,7 +579,7 @@ input{
 
 }
 .price-head{
-    transform: translatex(30px);
+    transform: translatex(25px);
 }
 /* Scrollbar */
 /* width */

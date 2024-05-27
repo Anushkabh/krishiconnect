@@ -92,24 +92,7 @@
                 </div>
             </div>
         </div>
-        <!-- Items in Cart -->
-        <div class="cart-new">
-            <h1>YOUR CART</h1>
-            <div class="cart-items-container">
-               <div  class="cart-item-heading"> <span>Product</span>
-                <span>Name</span>
-                <span class="price-head">Price</span>
-                <span>Quantity</span></div>
-            <div id="cart-items"  class="carttext"></div></div>
-            <div id="subtotal" class="carttotal"></div>
-            <div class="cartfield">
-                <button class="cartbtn" onclick="emptyCart()"
-                    style="border-radius: 3px; color: aliceblue;">Empty Cart</button>
-                <button class="cartbtn" onclick="checkout()">Checkout</button>
-                <button onclick="window.location.href='shop(1).html'" class="cartbtn"
-                    style="border-radius: 3px; color: aliceblue;">Continue Shopping</a></button>
-            </div>
-        </div>
+       
 
         <div class="cart" style="background-color: #4A9304;;">
             <h1 class="carttext" style="color: white;">Enter Your Details</h1>
@@ -133,6 +116,7 @@
                     <input type="text" placeholder="Country">
                 </div>
             </div>
+            
             <!-- <div class="cartfield carttext">
                 
                 <input type="text" placeholder="Your Name" id="buyer-name" required>
@@ -141,8 +125,27 @@
                 
                 <input type="email" placeholder="Email" id="buyer-email" required>
             </div> -->
-         
         </div>
+     <!-- Items in Cart -->
+     <div class="cart-new">
+        <h1>YOUR CART</h1>
+        <div class="cart-items-container">
+           <div  class="cart-item-heading"> 
+            <span>Product</span>
+            <span>Name</span>
+            <span class="price-head">Price</span>
+            <span>Quantity</span>
+        </div>
+        <div id="cart-items"  class="carttext"></div></div>
+        <div id="subtotal" class="carttotal"></div>
+        <div class="cartfield">
+            <button class="cartbtn" onclick="emptyCart()"
+                style="border-radius: 3px; color: aliceblue;">Empty Cart</button>
+            <button class="cartbtn" onclick="checkout()">Checkout</button>
+            <button onclick="window.location.href='shop(1).html'" class="cartbtn"
+                style="border-radius: 3px; color: aliceblue;">Continue Shopping</a></button>
+        </div>
+    </div>
         <footer>
             <div class="container">
                 <div class="row">

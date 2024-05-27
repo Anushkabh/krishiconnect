@@ -80,7 +80,7 @@ updateSubtotal();
 
 function emptyCart() {
   localStorage.removeItem('cartItems');
-  cartItemsContainer.innerHTML = '<p>Your cart is empty</p>';
+  cartItemsContainer.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
   var subtotalElement = document.getElementById('subtotal');
   subtotalElement.innerHTML = '';
 }
