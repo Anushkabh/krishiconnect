@@ -83,10 +83,8 @@ function removeFromWishlist(name) {
 
 // Add to Cart 
 
-function addToCart(name, price) {
-
+function addToCart(name, imageUrl, price) {
   var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-
 
   var existingItem = cartItems.find(function(item) {
     return item.name === name;
@@ -97,6 +95,7 @@ function addToCart(name, price) {
   } else {
     cartItems.push({
       name: name,
+      imageUrl: imageUrl, // Include image URL
       price: price,
       quantity: 1
     });
