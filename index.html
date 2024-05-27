@@ -263,6 +263,73 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.8;
 }
 
+/* Animations */
+.fromTop{
+  animation: slideTop 1s ease forwards;
+}
+.fromLeft{
+  animation: slideLeft 1s ease forwards;
+}
+.fromRight{
+  animation: slideRight 1s ease forwards;
+}
+.fromBottom{
+  animation: slideBottom 1s ease forwards;
+}
+.zoomIn{
+  animation: zoomIn 1s ease forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideBottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 
   </style>
@@ -282,19 +349,19 @@ h1, h2, h3, h4, h5, h6 {
         <!-- Navbar Brand -->
     
             
-            <a href="index.html" class="navbar-brand mr-auto">
+            <a href="index.html" class="navbar-brand mr-auto fromLeft">
                 <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px; " >
               </a>
         
 
         <!-- Toggle Button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon "></span>
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
           <!-- Navbar Menu -->
-          <ul class="navbar-nav">
+          <ul class="navbar-nav  fromTop">
             <li class="nav-item" style="border: 2px solid white" id="nav-link1">
               <a href="login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
             </li>
@@ -316,7 +383,7 @@ h1, h2, h3, h4, h5, h6 {
           </ul>
           <input type="checkbox" id="toggle">
 
-                    <label class="toggle" for="toggle">
+                    <label class="toggle fromRight" for="toggle">
                         <i class="bx bxs-sun"></i>
                         <i class="bx bx-moon"></i>
                         <span class="ball"></span>
@@ -335,10 +402,12 @@ h1, h2, h3, h4, h5, h6 {
         </video>
         <div class="overlay"></div>
         <div class="container">
+          <div class="zoomIn">
           <h1 class="pt-5">FRESH FROM THE FARM TO YOUR DINING TABLE</h1>
           <p class="lead">WE SERVE FRESH.</p>
+        </div>
 
-          <div class="row">
+          <div class="row fromBottom">
             <div class="col-md-4">
               <div class="card border-0 text-center bg-transparent">
                 <div class="card-icon">
@@ -378,7 +447,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
   </div>
 
-  <section id="why">
+  <section class="zoomIn"  id="why">
     <h2 class="title">Why कृषिCONNECT</h2>
     <div class="container">
         <div class="row">
@@ -450,9 +519,9 @@ h1, h2, h3, h4, h5, h6 {
 </section>
 
 <section id="products" class="products">
-    <h2 class="title">Products</h2>
+    <h2 class="title zoomIn">Products</h2>
     <div class="container">
-        <div class="card text-center card1">
+        <div class="card text-center card1 fromLeft">
             <img src="assets/img/spinach.jpg" class="card-img-top" alt="Spinach">
             <div class="card-body">
                 <h5 class="card-title">Spinach</h5>
@@ -460,7 +529,7 @@ h1, h2, h3, h4, h5, h6 {
                 <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
             </div>
         </div>
-        <div class="card text-center card1">
+        <div class="card text-center card1 zoomIn">
             <img src="assets/img/tomato.jpg" class="card-img-top" alt="Tomato">
             <div class="card-body">
                 <h5 class="card-title">Tomato</h5>
@@ -468,7 +537,7 @@ h1, h2, h3, h4, h5, h6 {
                 <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
             </div>
         </div>
-        <div class="card text-center card1">
+        <div class="card text-center card1 fromRight">
             <img src="https://t3.ftcdn.net/jpg/04/68/10/86/360_F_468108626_wpL1hcDkE4g12mPPnbVxx8rCnWpHYKmV.jpg" class="card-img-top" alt="Broccoli">
             <div class="card-body">
                 <h5 class="card-title">Broccoli</h5>
