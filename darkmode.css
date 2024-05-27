@@ -3,13 +3,14 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 60px;
+    width: 62px;
     height: 30px;
     border:2px solid white;
     /* Further adjusted width to make the toggle box smaller */
     border-radius: 25px;
     /* Adjusted for smaller height */
     transition: .2s;
+    align-items: center;
 }
 
 .toggle i {
@@ -72,17 +73,23 @@ input {
         -3px -3px 3px #1c2739;
 }
 
-.dark .toggle .bx-sun {
+.dark .toggle .bx {
     color: #fafafa;
 }
 
 .dark .toggle .bxs-moon {
-    color: #151d2a;
+    color: #080cc3;
 }
-
+.bxs-sun{
+    color: #ff8f00;
+}
+.toggle .ball{
+    background: #fafafa;
+    transform: translateX(0%);
+}
 .dark .toggle .ball {
     background: #fafafa;
-    transform: translateX(30px);
+    transform: translateX(115%);
     /* Adjusted for smaller toggle width */
 }
 
