@@ -205,7 +205,7 @@ h1, h2, h3, h4, h5, h6 {
     #products .container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         padding: 0;
     }
     #products .card {
@@ -453,83 +453,38 @@ h1, h2, h3, h4, h5, h6 {
         </section>
 
         <!-- Footer Section -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <!-- Footer Brand Section -->
-                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                        <div class="footer-logo">
-                            <img src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" alt="KrishiConnect Logo" style="height: 50px;">
-                            <p>कृषिCONNECT, WE SERVE FRESH!</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Footer Links Section -->
-                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                        <h5 class="footer-title">Quick Links</h5>
-                        <ul class="footer-links">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Footer Contact Section -->
-                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                        <h5 class="footer-title">Contact Us</h5>
-                        <ul class="footer-contact">
-                            <li><i class="fas fa-phone"></i> +91 12345 67890</li>
-                            <li><i class="fas fa-envelope"></i> support@krishiconnect.com</li>
-                            <li><i class="fas fa-map-marker-alt"></i> 123, Agriculture Street, Farmer City, India</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Footer Social Section -->
-                    <div class="col-md-6 col-lg-3">
-                        <h5 class="footer-title">Follow Us</h5>
-                        <div class="footer-social">
-                         <ul class="social">
-                           <li> <a href="#"><i class='bx bxl-facebook' ></i></a></li>
-                           <li><a href="#"><i class='bx bxl-instagram' ></i></a></li>
-                           <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
-                        </ul> 
-                        </div>
-                    </div>
-
-        </div>
-    </div>
 </section>
 
 <section id="products" class="products">
-    <h2 class="title">Products</h2>
-    <div class="container">
-        <div class="card text-center card1">
-            <img src="assets/img/spinach.jpg" class="card-img-top" alt="Spinach">
-            <div class="card-body">
-                <h5 class="card-title">Spinach</h5>
-                <p class="card-text">Healthy and fresh spinach leaves.</p>
-                <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
-            </div>
-        </div>
-        <div class="card text-center card1">
-            <img src="assets/img/tomato.jpg" class="card-img-top" alt="Tomato">
-            <div class="card-body">
-                <h5 class="card-title">Tomato</h5>
-                <p class="card-text">Fresh organic tomatoes directly from our farms.</p>
-                <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
-            </div>
-        </div>
-        <div class="card text-center card1">
-            <img src="https://t3.ftcdn.net/jpg/04/68/10/86/360_F_468108626_wpL1hcDkE4g12mPPnbVxx8rCnWpHYKmV.jpg" class="card-img-top" alt="Broccoli">
-            <div class="card-body">
-                <h5 class="card-title">Broccoli</h5>
-                <p class="card-text">Green and fresh broccoli heads.</p>
-                <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
-            </div>
-        </div>
-    </div>
+  <h2 class="title">Products</h2>
+  <div class="container" style="display: flex; flex-wrap: wrap; ">
+      <div class="card text-center card1" style="flex: 1 1 calc(33.333% - 1rem); max-width: calc(33.333% - 1rem); height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px;">
+          <img src="assets/img/spinach.jpg" class="card-img-top" alt="Spinach" style="width: 100%; height: 70%; object-fit: cover;">
+          <div class="card-body" style="height: 30%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+              <h5 class="card-title" style="padding-top: 50px;">Spinach</h5>
+              <p class="card-text">Healthy and fresh spinach leaves.</p>
+              <a href="#" class="btn btn-primary" id="toast-btn"style="margin-bottom: 50px;">Add to Cart</a>
+          </div>
+      </div>
+      <div class="card text-center card1" style="flex: 1 1 calc(33.333% - 1rem); max-width: calc(33.333% - 1rem); height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px;">
+          <img src="assets/img/tomato.jpg" class="card-img-top" alt="Tomato" style="width: 100%; height: 70%; object-fit: cover;">
+          <div class="card-body" style="height: 30%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+              <h5 class="card-title" style="padding-top: 67px;">Tomato</h5>
+              <p class="card-text">Fresh organic tomatoes directly from our farms.</p>
+              <a href="#" class="btn btn-primary" id="toast-btn"style="margin-bottom: 50px;">Add to Cart</a>
+          </div>
+      </div>
+      <div class="card text-center card1" style=" max-width: calc(33.333% - 1rem); height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px;">
+          <img src="https://t3.ftcdn.net/jpg/04/68/10/86/360_F_468108626_wpL1hcDkE4g12mPPnbVxx8rCnWpHYKmV.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 70%; object-fit: cover;">
+          <div class="card-body" style="height: 30%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+              <h5 class="card-title" style="padding-top: 50px;">Broccoli</h5>
+              <p class="card-text">Green and fresh broccoli heads.</p>
+              <a href="#" class="btn btn-primary" id="toast-btn" style="margin-bottom: 50px;">Add to Cart</a>
+          </div>
+      </div>
+  </div>
 </section>
+
 
 <!-- --Testimonials -->
 <section id="test">
@@ -638,53 +593,200 @@ h1, h2, h3, h4, h5, h6 {
 
 <!-- Testimonials -->
 
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <!-- Footer Brand Section -->
-            <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                <div class="footer-logo">
-                    <!-- Add img-fluid class for responsive image -->
-                    <img src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" alt="KrishiConnect Logo" class="img-fluid">
-                    <p>कृषिCONNECT, WE SERVE FRESH!</p>
-                </div>
-            </div>
-            
-            <!-- Footer Links Section -->
-            <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                <h5 class="footer-title">Quick Links</h5>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about(1).html">About Us</a></li>
-                    <li><a href="shop(1).html">Shop</a></li>
-                    <li><a href="contact(1).html">Contact Us</a></li>
-                </ul>
-            </div>
-            
-            <!-- Footer Contact Section -->
-            <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                <h5 class="footer-title">Contact Us</h5>
-                <ul class="footer-contact">
-                    <li><i class="fas fa-phone"></i> +91 12345 67890</li>
-                    <li><i class="fas fa-envelope"></i> support@krishiconnect.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i> 123, Agriculture Street, Farmer City, India</li>
-                </ul>
-            </div>
-            
-            <!-- Footer Social Section -->
-            <div class="col-md-6 col-lg-3">
-                <h5 class="footer-title">Follow Us</h5>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted" style="font-size: 1.2em; padding: 20px;">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block font" style="font-size: 1.5em; font-weight: bold;">
+      <span>Get connected with us on social networks:</span>
     </div>
-</footer>
+    <!-- Left -->
 
+    <!-- Right -->
+    <div class="">
+      <!-- Facebook -->
+      <a
+        data-mdb-ripple-init
+        class="btn text-white btn-floating m-1"
+        style="background-color: #3b5998; font-size: 1.5em;"
+        href="#!"
+        role="button"
+        onmouseover="this.style.opacity='0.8';"
+        onmouseout="this.style.opacity='1';"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        data-mdb-ripple-init
+        class="btn text-white btn-floating m-1"
+        style="background-color: #55acee; font-size: 1.5em;"
+        href="#!"
+        role="button"
+        onmouseover="this.style.opacity='0.8';"
+        onmouseout="this.style.opacity='1';"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a
+        data-mdb-ripple-init
+        class="btn text-white btn-floating m-1"
+        style="background-color: #dd4b39; font-size: 1.5em;"
+        href="#!"
+        role="button"
+        onmouseover="this.style.opacity='0.8';"
+        onmouseout="this.style.opacity='1';"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        data-mdb-ripple-init
+        class="btn text-white btn-floating m-1"
+        style="background-color: #ac2bac; font-size: 1.5em;"
+        href="#!"
+        role="button"
+        onmouseover="this.style.opacity='0.8';"
+        onmouseout="this.style.opacity='1';"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        data-mdb-ripple-init
+        class="btn text-white btn-floating m-1"
+        style="background-color: #0082ca; font-size: 1.5em;"
+        href="#!"
+        role="button"
+        onmouseover="this.style.opacity='0.8';"
+        onmouseout="this.style.opacity='1';"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+      <!-- Github -->
+      <a
+        data-mdb-ripple-init
+        class="btn text-white btn-floating m-1"
+        style="background-color: #333333; font-size: 1.5em;"
+        href="#!"
+        role="button"
+        onmouseover="this.style.opacity='0.8';"
+        onmouseout="this.style.opacity='1';"
+        ><i class="fab fa-github"></i
+      ></a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <a href="index.html" class="nav-item"
+               style="text-decoration: none; color: inherit;"
+               onmouseover="this.style.color='#0056b3'; ;"
+               onmouseout="this.style.color='inherit'; ">
+              <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle; margin-left: 0px;">
+              कृषिCONNECT
+            </a>
+          </h6>
+          <p>
+            कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p style="font-weight: bold;">
+            <a href="shop(1).html" class="text-reset"
+               style="text-decoration: none; color: inherit;"
+               onmouseover="this.style.color='#0056b3'; ;"
+               onmouseout="this.style.color='inherit'; ">VEGETABLES</a>
+          </p>
+          <p style="font-weight: bold;">
+            <a href="shop(1).html" class="text-reset"
+               style="text-decoration: none; color: inherit;"
+               onmouseover="this.style.color='#0056b3'; ;"
+               onmouseout="this.style.color='inherit'; ">FRUITS</a>
+          </p>
+          <p style="font-weight: bold;">
+            <a href="shop(1).html" class="text-reset"
+               style="text-decoration: none; color: inherit;"
+               onmouseover="this.style.color='#0056b3'; ;"
+               onmouseout="this.style.color='inherit'; ">OIL SEEDS</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+         <p>
+  <a href="shop(1).html" class="text-reset"
+     style="text-decoration: none; color: inherit;"
+     onmouseover="this.style.color='#0056b3';"
+     onmouseout="this.style.color='inherit';">HERBS</a>
+</p>
+
+          <p>
+            <a href="shop(1).html" class="text-reset"
+               style="text-decoration: none; color: inherit;"
+               onmouseover="this.style.color='#0056b3'; "
+               onmouseout="this.style.color='inherit';">PULSES</a>
+          </p>
+          <p>
+            <a href="shop(1).html" class="text-reset"
+               style="text-decoration: none; color: inherit;"
+               onmouseover="this.style.color='#0056b3'; "
+               onmouseout="this.style.color='inherit';">MISCELLANOUS</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p style="font-weight: bold;"><i class="fas fa-home me-3" ></i> New York, NY 10012, US</p>
+          <p style="font-weight: bold;">
+            <i class="fas fa-envelope me-3"></i>
+            krishiconnect@gmail.com
+          </p>
+          <p style="font-weight: bold;"><i class="fas fa-phone me-3"></i> 082723 67238</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05); font-size: 1.2em;">
+    © 2024 Copyright:
+    <a class="text-reset fw-bold"
+       href="https://mdbootstrap.com/"
+       style="text-decoration: none; color: inherit;"
+       onmouseover="this.style.color='#0056b3'; ;"
+       onmouseout="this.style.color='inherit'; "> कृषिCONNECT | Fresh From Farm. All rights reserved.</a>
+  </div>
+  <!-- Copyright -->
+</footer>
 
 <!-- Scroll to Top Button -->
 <a href="#" class="scroll-to-top" style="display: inline;">
