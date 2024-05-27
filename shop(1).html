@@ -108,6 +108,7 @@
      
      .buttons .btn.btn-block.btn-primary {
          display: flex;
+         justify-content: center;
          align-items: center;
          padding: 10px 20px;
          border-radius: 5px;
@@ -133,11 +134,11 @@
     }
 
     .container h1 {
-        color: black;
+        color: white;
     }
 
     .container p {
-        color: rgb(9, 10, 9);
+        color: white;
         font-weight: bold;
     }
     .wishlist-item {
@@ -228,6 +229,27 @@
      .navbar-brand img {
          max-height: 50px;
          margin-right: 10px;
+     }
+     .navbar-toggler{
+        position: absolute;
+        right: 45px;
+     }
+     @media screen and (max-width:768px){
+        .navbar-collapse{
+            position: absolute;
+            right: 0;
+            top: 95px;
+            text-align: right;
+            background-color: #132e40 ;
+            width: 186px;
+        }
+        .navbar-nav li{
+            color: black;
+        }
+        .toggle{
+            position: relative;
+            left: 101px;
+        }
      }
 </style>
 <body class="light">
@@ -323,7 +345,7 @@
                     <div class="shop-categories owl-carousel mt-5">
                         <div class="item" id="item">
                             <a href="vegetables.html">
-                            <a href="vegetables.html">
+                            <a href=#vegetables>
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><img src="./assets/img/logo/carrot.png"></span>
@@ -336,7 +358,7 @@
                         </div>
                         <div class="item" id="item">
                             <a href="common.html">
-                            <a href="common.html">
+                            <a href=#fruits>
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><img src="./assets/img/logo/apple.png"></span>
@@ -349,7 +371,7 @@
                         </div>
                         <div class="item" id="item">
                             <a href="common.html">
-                            <a href="common.html">
+                            <a href=#oilseedsandherbs>
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><img src="./assets/img/logo/flax-seed.png"></span>
@@ -362,7 +384,7 @@
                         </div>
                         <div class="item" id="item">
                             <a href="common.html">
-                            <a href="common.html">
+                            <a href=#oilseedsandherbs>
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;" class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><img src="./assets/img/logo/tea.png"></span>
                                     <div class="media-body">
@@ -374,7 +396,7 @@
                         </div>
                         <div class="item" id="item">
                             <a href="common.html">
-                            <a href="common.html">
+                            <a href=#Miscellenous>
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><img src="./assets/img/logo/seed.png"></span>
@@ -387,7 +409,7 @@
                         </div>
                         <div class="item" id="item">
                             <a href="common.html">
-                            <a href="common.html">
+                            <a href=#Miscellenous>
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><img src="./assets/img/logo/nutrition.png"></span>
@@ -812,7 +834,7 @@
             </div>
         </section>
 
-        <section id="oil seeds and herbs">
+        <section id="oilseedsandherbs">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
