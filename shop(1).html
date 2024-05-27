@@ -133,11 +133,11 @@
     }
 
     .container h1 {
-        color: black;
+        color: white;
     }
 
     .container p {
-        color: rgb(9, 10, 9);
+        color: white;
         font-weight: bold;
     }
     .wishlist-item {
@@ -228,6 +228,27 @@
      .navbar-brand img {
          max-height: 50px;
          margin-right: 10px;
+     }
+     .navbar-toggler{
+        position: absolute;
+        right: 45px;
+     }
+     @media screen and (max-width:768px){
+        .navbar-collapse{
+            position: absolute;
+            right: 0;
+            top: 95px;
+            text-align: right;
+            background-color: #132e40 ;
+            width: 186px;
+        }
+        .navbar-nav li{
+            color: black;
+        }
+        .toggle{
+            position: relative;
+            left: 101px;
+        }
      }
 </style>
 <body class="light">
