@@ -43,189 +43,192 @@
     
 
 
-<style>
-   /*.wishlist-button {
-    display: inline-block;
-    padding: 2px 57px; 
-    border: 1px solid #ffdbac;
-    border-radius: 2px; 
-    color: #007bff;
-    background-color: #ffdbac;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s; /* Added transform to the transition 
-}
 
-.wishlist-button:hover {
-    background-color: #ffffff;
-    border: 1px solid #ffbf00;
-    border-radius: 2px; 
-    color: #fff;
-    transform: scale(1.1); 
-}*/
-.banner-logo{
-    height: 300;
-    width:300;
-}
+    <style>
+        /*.wishlist-button {
+         display: inline-block;
+         padding: 2px 57px; 
+         border: 1px solid #ffdbac;
+         border-radius: 2px; 
+         color: #007bff;
+         background-color: #ffdbac;
+         cursor: pointer;
+         text-decoration: none;
+         transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s; /* Added transform to the transition 
+     }
+     
+     .wishlist-button:hover {
+         background-color: #ffffff;
+         border: 1px solid #ffbf00;
+         border-radius: 2px; 
+         color: #fff;
+         transform: scale(1.1); 
+     }*/
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.buttons {
-    display: flex;
-    gap: 12px;
-}
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
 
-.wishlist-button {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 10px 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #464646;
-    text-decoration: none;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s; 
-}
+    .banner-logo {
+        height: 300px; 
+        width: 300px; 
+    }
 
-.wishlist-button:hover {
-    background-color: #f9b793;
-    color: #fff;
-    transform: scale(1.1);
-}
+     .buttons {
+         display: flex;
+         gap: 12px;
+     }
+     
+     .wishlist-button {
+         display: flex;
+         align-items: center;
+         cursor: pointer;
+         padding: 10px 20px;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         background-color: #fff;
+         color: #464646;
+         text-decoration: none;
+         transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s; 
+     }
+     
+     .wishlist-button:hover {
+         background-color: #f9b793;
+         color: #fff;
+         transform: scale(1.1);
+     }
+     
+     .wishlist-button .fas {
+         margin-right: 5px; 
+     }
+     
+     .buttons .btn.btn-block.btn-primary {
+         display: flex;
+         align-items: center;
+         padding: 10px 20px;
+         border-radius: 5px;
+         background-color: #e61f61;
+         color: #fff;
+         text-decoration: none;
+     }
+     
+     #wishlistDropdownContent {
+         position: absolute;
+         background-color: #f9f9f9;
+         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+         z-index: 1;
+         width: 200px;
+         padding: 10px;
+         border-radius: 5px;
+     }
+    .page-header {
+        width: 100%;
+        height: 110px;
+        display: flex;
+        justify-content: space-around;
+    }
 
-.wishlist-button .fas {
-    margin-right: 5px; 
-}
+    .container h1 {
+        color: black;
+    }
 
-.buttons .btn.btn-block.btn-primary {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #e61f61;
-    color: #fff;
-    text-decoration: none;
-}
- 
-#wishlistDropdownContent {
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    width: 200px;
-    padding: 10px;
-    border-radius: 5px;
-}
-.page-header{
-    width:100%;
-    height:110px;
-    display: flex;
-    justify-content: space-around;
-    
-}
-.container h1 {
-    color:black;
-}
-.container p {
-    color:rgb(9, 10, 9);
-    font-weight: bold;
-}
-.wishlist-item {
-    margin-bottom: 10px;
-}
-
-
-.item-name {
-    font-weight: bold;
-}
-
-/* within wishlist */
-
-.add-to-cart-button,
-.remove-button {
-    background-color: #4caf50; 
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.add-to-cart-button:hover {
-    background-color: #539655;
-}
-
-.remove-button {
-    background-color: #e91e63;
-    margin-left: 1px; 
-    cursor: pointer;
-}
-
-.remove-button:hover {
-    background-color: #cd1653;
-    color: white;
-    border-radius: 3px;
-}
-
-
-.view-wishlist-link {
-    display: block;
-    padding: 10px;
-    color: #333; 
-    text-decoration: none;
-    font-weight: bold;
-    border-top: 1px solid #ccc; 
-  }
-  
-  .view-wishlist-link:hover {
-    background-color: #f5f5f5; 
-  }
-  
-  .Toastify {
-    font-family: Arial, sans-serif;
-}
-
-.Toastify__toast-container {
-    position: fixed;
-    z-index: 9999;
-    bottom: 20px;
-    right: 20px;
-}
-
-.Toastify__toast {
-    background-color: rgba(0, 128, 0, 0.8);
-    color: #fff;
-    border-radius: 5px;
-    padding: 15px 20px;
-    font-size: 16px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* For static navbar */
-
-.container {
-    max-width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-    align-items: center;
-}
-
-.navbar {
-    background-color: transparent;
-    position: static;
-    width: 100%;
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-brand img {
-    max-height: 50px;
-    margin-right: 10px;
-}
-
-
+    .container p {
+        color: rgb(9, 10, 9);
+        font-weight: bold;
+    }
+    .wishlist-item {
+         margin-bottom: 10px;
+     }
+     
+     .item-name {
+         font-weight: bold;
+     }
+     
+     .add-to-cart-button,
+     .remove-button {
+         background-color: #4caf50; 
+         color: white;
+         padding: 5px 10px;
+         border: none;
+         border-radius: 3px;
+         cursor: pointer;
+     }
+     
+     .add-to-cart-button:hover {
+         background-color: #539655;
+     }
+     
+     .remove-button {
+         background-color: #e91e63;
+         margin-left: 1px; 
+         cursor: pointer;
+     }
+     
+     .remove-button:hover {
+         background-color: #cd1653;
+         color: white;
+         border-radius: 3px;
+     }
+     
+     .view-wishlist-link {
+         display: block;
+         padding: 10px;
+         color: #333; 
+         text-decoration: none;
+         font-weight: bold;
+         border-top: 1px solid #ccc; 
+     }
+     
+     .view-wishlist-link:hover {
+         background-color: #f5f5f5; 
+     }
+     
+     .Toastify {
+         font-family: Arial, sans-serif;
+     }
+     
+     .Toastify__toast-container {
+         position: fixed;
+         z-index: 9999;
+         bottom: 20px;
+         right: 20px;
+     }
+     
+     .Toastify__toast {
+         background-color: rgba(0, 128, 0, 0.8);
+         color: #fff;
+         border-radius: 5px;
+         padding: 15px 20px;
+         font-size: 16px;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+     }
+     
+     .container {
+         max-width: 100%;
+         padding: 0 15px;
+         margin: 0 auto;
+         align-items: center;
+     }
+     
+     .navbar {
+         background-color: transparent;
+         position: static;
+         width: 100%;
+     }
+     
+     .navbar-brand {
+         display: flex;
+         align-items: center;
+     }
+     
+     .navbar-brand img {
+         max-height: 50px;
+         margin-right: 10px;
+     }
 </style>
 <body class="light">
     <div class="page-header">
@@ -302,7 +305,7 @@
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('https://scx2.b-cdn.net/gfx/news/2023/uk-food-shortages-how.jpg');">
                 <div class="container">
 
-                    <img src="assets/img/logo/log.png" class="banner-logo" alt="" height="300">
+                    <img src="assets/img/logo/log.png" class="banner-logo" class="banner-logo" alt="" height="300">
                     <h1 class="pt-5">
 
                         Shopping Page
@@ -320,6 +323,7 @@
                     <div class="shop-categories owl-carousel mt-5">
                         <div class="item" id="item">
                             <a href="vegetables.html">
+                            <a href="vegetables.html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><img src="./assets/img/logo/carrot.png"></span>
@@ -331,6 +335,7 @@
                             </a>
                         </div>
                         <div class="item" id="item">
+                            <a href="common.html">
                             <a href="common.html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
@@ -344,6 +349,7 @@
                         </div>
                         <div class="item" id="item">
                             <a href="common.html">
+                            <a href="common.html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><img src="./assets/img/logo/flax-seed.png"></span>
@@ -356,6 +362,7 @@
                         </div>
                         <div class="item" id="item">
                             <a href="common.html">
+                            <a href="common.html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;" class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><img src="./assets/img/logo/tea.png"></span>
                                     <div class="media-body">
@@ -366,6 +373,7 @@
                             </a>
                         </div>
                         <div class="item" id="item">
+                            <a href="common.html">
                             <a href="common.html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
@@ -378,6 +386,7 @@
                             </a>
                         </div>
                         <div class="item" id="item">
+                            <a href="common.html">
                             <a href="common.html">
                                 <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
                                     class="media d-flex align-items-center justify-content-center">
@@ -427,9 +436,10 @@
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
                                         <div class="buttons">
-                                            <a onclick="addToWishlist('Potatoes1',200)" class="wishlist-button">
+                                            <a onclick="addToWishlist('Potatoes11',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
+                                            <a onclick="addToCart('Potatoes1',200); " class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Potatoes" data-product-price="200" id="toast-btn">
                                             <a onclick="addToCart('Potatoes1',200); " class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Potatoes" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
@@ -470,6 +480,7 @@
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
                                             <a onclick="addToCart('Moong Dhuli',200);" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Moong Dhuli" data-product-price="200 " id="toast-btn">
+                                            <a onclick="addToCart('Moong Dhuli',200);" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Moong Dhuli" data-product-price="200 " id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -507,6 +518,7 @@
                                             <a onclick="addToWishlist('Mustard Oil',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
+                                            <a onclick="addToCart('Mustard Oil',200); " class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Mustard Oil" data-product-price="200"  id="toast-btn">
                                             <a onclick="addToCart('Mustard Oil',200); " class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Mustard Oil" data-product-price="200"  id="toast-btn">
                                                 Add to Cart
                                             </a>
@@ -546,6 +558,7 @@
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
                                             <a onclick="addToCart('Mangoes',200); " class="btn btn-block btn-primary   add-to-cart-btn" data-product-name="Mangoes" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Mangoes',200); " class="btn btn-block btn-primary   add-to-cart-btn" data-product-name="Mangoes" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -583,6 +596,7 @@
                                             <a onclick="addToWishlist('Cucumber',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
+                                            <a onclick="addToCart('Cucumber',200);" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Cucumber" data-product-price="200" id="toast-btn">
                                             <a onclick="addToCart('Cucumber',200);" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Cucumber" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
@@ -633,7 +647,7 @@
                                             <a onclick="addToWishlist('Potatoes',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Potatoes',200); " class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Potatoes" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Potatoes',200); ; " class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Potatoes" data-product-price="200  add-to-cart-btn" data-product-name="Potatoes" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -667,10 +681,10 @@
                                             <span class="reguler">Rp. 200.000</span>
                                         </div>
                                         <div class="buttons">
-                                            <a onclick="addToWishlist('Cucumber',200);" class="wishlist-button">
+                                            <a onclick="addToWishlist('Cucumber',200);;" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Cucumber',200)" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Cucumber" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Cucumber',200)" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Cucumber" data-product-price="200  add-to-cart-btn" data-product-name="Cucumber" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -708,7 +722,7 @@
                                             <a onclick="addToWishlist('Cabbage',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Cabbage',200)" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Cabbage" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Cabbage',200)" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Cabbage" data-product-price="200  add-to-cart-btn" data-product-name="Cabbage" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -746,7 +760,7 @@
                                             <a onclick="addToWishlist('Spinach',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Spinach',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Spinach" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Spinach',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Spinach" data-product-price="200 add-to-cart-btn" data-product-name="Spinach" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -784,7 +798,7 @@
                                             <a onclick="addToWishlist('Tomatoes',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Tomatoes',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Tomatoes" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Tomatoes',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Tomatoes" data-product-price="200 add-to-cart-btn" data-product-name="Tomatoes" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -835,6 +849,7 @@
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
                                             <a onclick="addToCart('Mustard Oil',200)" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Musturd Oil" data-product-price="200"id="toast-btn">
+                                            <a onclick="addToCart('Mustard Oil',200)" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Musturd Oil" data-product-price="200"id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -872,6 +887,7 @@
                                             <a onclick="addToWishlist('Groundnut',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
+                                            <a onclick="addToCart('Groundnut',200)" class="btn btn-block btn-primary   add-to-cart-btn" data-product-name="Groundnut" data-product-price="200"id="toast-btn">
                                             <a onclick="addToCart('Groundnut',200)" class="btn btn-block btn-primary   add-to-cart-btn" data-product-name="Groundnut" data-product-price="200"id="toast-btn">
                                                 Add to Cart
                                             </a>
@@ -911,6 +927,7 @@
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
                                             <a onclick="addToCart('Mint Leaves',200)" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Mint Leaves" data-product-price="200"id="toast-btn">
+                                            <a onclick="addToCart('Mint Leaves',200)" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Mint Leaves" data-product-price="200"id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -948,7 +965,7 @@
                                             <a onclick="addToWishlist('Coriander Leaves',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Coriander Leaves',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Coriander Leaves" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Coriander Leaves',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Coriander Leaves" data-product-price="200 add-to-cart-btn" data-product-name="Coriander Leaves" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -986,7 +1003,7 @@
                                             <a onclick="addToWishlist('Castor seeds',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Castor seeds',200)" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Castor Seeds" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Castor seeds',200)" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Castor Seeds" data-product-price="200  add-to-cart-btn" data-product-name="Castor Seeds" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1036,7 +1053,7 @@
                                             <a onclick="addToWishlist('Moong Dhuli',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('Moong Dhuli',200)" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Moong Dhuli" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Moong Dhuli',200)" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Moong Dhuli" data-product-price="200  add-to-cart-btn" data-product-name="Moong Dhuli" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1074,7 +1091,7 @@
                                             <a onclick="addToWishlist('Masoor Dhuli',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Masoor Dhuli',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Masoor Dhuli" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Masoor Dhuli',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Masoor Dhuli" data-product-price="200 add-to-cart-btn" data-product-name="Masoor Dhuli" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1112,7 +1129,7 @@
                                             <a onclick="addToWishlist('cumin Powder',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('cumin Powder',200)" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Cumin Powder" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('cumin Powder',200)" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Cumin Powder" data-product-price="200  add-to-cart-btn" data-product-name="Cumin Powder" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1150,7 +1167,7 @@
                                             <a onclick="addToWishlist('Turmeric Powder',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Turmeric Powder',200)" class="btn btn-block btn-primary   add-to-cart-btn"  data-product-name="Turmeric Powder" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Turmeric Powder',200)" class="btn btn-block btn-primary   add-to-cart-btn"  data-product-name="Turmeric Powder" data-product-price="200   add-to-cart-btn"  data-product-name="Turmeric Powder" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1188,7 +1205,7 @@
                                             <a onclick="addToWishlist('Handmade Pots',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('Handmade Pots',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Handmade Pots" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Handmade Pots',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Handmade Pots" data-product-price="200 add-to-cart-btn" data-product-name="Handmade Pots" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1238,7 +1255,7 @@
                                             <a onclick="addToWishlist('Mangoes',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('Mangoes',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Mangoes" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Mangoes',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Mangoes" data-product-price="200 add-to-cart-btn" data-product-name="Mangoes" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1276,7 +1293,7 @@
                                             <a onclick="addToWishlist('Oranges',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i>
                                             </a>
-                                            <a onclick="addToCart('Oranges',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Oranges" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Oranges',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Oranges" data-product-price="200 add-to-cart-btn" data-product-name="Oranges" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1314,7 +1331,7 @@
                                             <a onclick="addToWishlist('Watermelon',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Watermelon',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Watermelon" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Watermelon',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Watermelon" data-product-price="200 add-to-cart-btn" data-product-name="Watermelon" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1352,7 +1369,7 @@
                                             <a onclick="addToWishlist('Grapes',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Grapes',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Grapes" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Grapes',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Grapes" data-product-price="200 add-to-cart-btn" data-product-name="Grapes" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1390,7 +1407,7 @@
                                             <a onclick="addToWishlist('Guavas',200)" class="wishlist-button">
                                                 <i class="fas fa-seedling" style='font-size:18px'></i> 
                                             </a>
-                                            <a onclick="addToCart('Guavas',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Guavas" data-product-price="200" id="toast-btn">
+                                            <a onclick="addToCart('Guavas',200)" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Guavas" data-product-price="200 add-to-cart-btn" data-product-name="Guavas" data-product-price="200" id="toast-btn">
                                                 Add to Cart
                                             </a>
                                         </div>
@@ -1406,62 +1423,165 @@
     </div>
     
                         
-                <footer>
-                    <a href="#" class="back-to-top d-flex align-items-center justify-content-center" id="back-to-top"><i class="fa fa-solid fa-arrow-up" ></i></a>
-                    <div class="container" id="container">
-                        <div class="row">
-                            <div class="col-md-3" id="col-md-3">
-                                <h5>About</h5>
-                                
-                                <p>कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.</p>
-                            </div>
-                            <div class="col-md-3l" id="col-md-3l">
-                                <h5>Links</h5>
-                                <ul>    
-                                    <li>
-                                        <a href="about(1).html">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact(1).html">Contact Us</a>
-                                    </li>
-                                    <li>
-                                        <a href="faq(1).html">FAQ</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md" id="col-md">
-                                 <h5>Contact</h5>
-                                 <ul>
-                                     <li>
-                                        <a href="tel:+620892738334"><i  class="fa fa-phone mirrored-icon"></i> 08272367238</a>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:hello@domain.com"><i class="fa fa-envelope"></i> krishiconnect@gmail.com</a>
-                                     </li>
-                                 </ul>
-            
-                                 <h5>Follow Us</h5>
-                                 <ul class="social">
-                                     <li>
-                                        <a href="javascript:void(0)" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                     </li>
-                                     <li>
-                                        <a href="javascript:void(0)" target="_blank"><i class="fab fa-instagram"></i></a>
-                                     </li>
-                                     <li>
-                                        <a href="javascript:void(0)" target="_blank"><i class="fab fa-youtube"></i></a>
-                                     </li>
-                                 </ul>
-                            </div>
-                            <div class="col-md-3m" id="col-md-3m">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                
-                           </div>
-                        </div>
-                    </div>
-                    <p class="copyright" id="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
-                </footer>
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+          <!-- Left -->
+          <div class="me-5 d-none d-lg-block font">
+            <span style="font-weight: bold;">Get connected with us on social networks:</span>
+          </div>
+          <!-- Left -->
+      
+          <!-- Right -->
+          <div class="">
+            <!-- Facebook -->
+            <a
+            data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #3b5998;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #55acee;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #dd4b39;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #ac2bac;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #0082ca;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <!-- Github -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #333333;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+          <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+      
+        <!-- Section: Links  -->
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold mb-4" >
+                  <a href="index.html" class=" mr-auto" >
+                    <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px; " >
+                  </a>कृषिCONNECT
+                </h6>
+                <p>
+                  कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.
+                </p>
+              </div>
+              <!-- Grid column -->
+      
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Products
+                </h6>
+                <p style="font-weight: bold;">
+                  <a href="shop(1).html" class="text-reset">VEGETABLES</a>
+                </p>
+                <p style="font-weight: bold;">
+                  <a href="shop(1).html" class="text-reset">FRUITS</a>
+                </p>
+                <p style="font-weight: bold;">
+                  <a href="shop(1).html" class="text-reset">OIL SEEDS</a>
+                </p>
+              
+              </div>
+              <!-- Grid column -->
+      
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Useful links
+                </h6>
+                <p>
+                  <a href="shop(1).html" class="text-reset">HERBS</a>
+                </p>
+                <p>
+                  <a href="shop(1).html" class="text-reset">PULSES</a>
+                </p>
+                <p>
+                  <a href="shop(1).html" class="text-reset">MISCELLANOUS</a>
+                </p>
+               
+              </div>
+              <!-- Grid column -->
+      
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                <p>
+                  <i class="fas fa-envelope me-3"></i>
+                  krishiconnect@gmail.com
+                </p>
+                <p><i class="fas fa-phone me-3"></i> 082723 67238</p>
+                
+              </div>
+              <!-- Grid column -->
             </div>
+            <!-- Grid row -->
+          </div>
+        </section>
+        <!-- Section: Links  -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+          © 2024 Copyright:
+          <a class="text-reset fw-bold" href="https://mdbootstrap.com/"> कृषिCONNECT | Fresh From Farm. All rights reserved.</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+            </div>
+      
       
 
     <script type="text/javascript" src="assets/js/jquery.js"></script>
@@ -1492,6 +1612,8 @@
         ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
     </script>
 
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="toast.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script src="toast.js"></script>
     <script src="darkmode.js"></script>

@@ -194,6 +194,22 @@ section .card-title {
   padding: .75rem;
   border: 2px solid rgba(120, 130, 140, 0.13);
   font-size: 1rem;
+  border-bottom: 2px solid #25b28e;
+}
+
+.contact1 .form-control:hover {
+  border-bottom: 2px solid #E91E63 ;
+}
+
+.contact1 .contact-btn{
+  background-color: #25b28e; 
+  color: white;
+}
+
+.contact1 .contact-btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #E91E63;
 }
 
 .page-header .navbar .navbar-brand img {
