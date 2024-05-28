@@ -35,16 +35,16 @@
                 <!-- <h3 >कृषिCONNECT</h3> -->
                 </div>
             </a>
-  
+
               <!-- Toggle Button -->
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
-  
+
               <div class="collapse navbar-collapse" id="navbarcollapse">
                   <!-- Navbar Menu -->
                   <ul class="navbar-nav ml-auto" >
-                
+
                     <li class="nav-item">
                         <a href="home.html" class="nav-link active">HOME</a>
                     </li>
@@ -57,9 +57,9 @@
                         onclick="logout(event)">LogOut</button>
                     </li>
                 </ul>
-                
+
               </div>
-  
+
           </div>
       </nav>
   </div>
@@ -77,7 +77,7 @@
       </div>
   </div>
   <section id="why">
-      <h2 class="title" id="title">Why 
+      <h2 class="title" id="title">Why
           कृषिCONNECT</h2>
       <div class="container">
           <div class="row">
@@ -174,7 +174,7 @@
               </div>
               <div class="card-body">
                   <h4 class="card-title">
-                    PM-Kisan Samman Nidhi Yojana 
+                    PM-Kisan Samman Nidhi Yojana
                   </h4>
                   <p class="card-text">
                     Pradhan Mantri Kisan Samman Nidhi Yojana is an initiative of the Government of India with 100% central sponsored scheme. As per this scheme aprox 120 million small and marginal farmers of India with less than two hectares of landholding will get up to Rs. 6,000/- per year in three installment of Rs. 2,000/- as a minimum income support. PM-Kisan scheme or PM Kisan Samman Nidhi Yojana has become operational since 1st December 2018.  </p>
@@ -211,7 +211,7 @@
               <a href="http://pmfby.gov.in/" class="btn btn-primary">More</a>
           </div>
       </div>
-  </div>    
+  </div>
     <div class="col-md-4">
       <div class="card border-0 text-center gray-bg">
           <div class="card-icon">
@@ -308,12 +308,12 @@
         <div class="row">
             <div class="col-md-3" id="col-md-3">
                 <h5>About</h5>
-                
+
                 <p>कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.</p>
             </div>
             <div class="col-md-3l" id="col-md-3l">
                 <h5>Links</h5>
-                <ul>    
+                <ul>
                     <li>
                         <a href="about(1).html">About</a>
                     </li>
@@ -351,15 +351,15 @@
             </div>
             <div class="col-md-3m" id="col-md-3m">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                
+
            </div>
         </div>
     </div>
-    <p class="copyright" id="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
+    <p class="copyright" id="copyright">&copy; <span id="copyright-year"></span> कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
   </footer>
 
+  <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
 
-  
 <script src="script.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/js/jquery.js"></script>
@@ -373,7 +373,7 @@
     <script type="text/javascript" src="assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
     <script type="text/javascript" src="assets/js/theme.js"></script>
     <script>
-      ScrollReveal({ 
+      ScrollReveal({
           //reset: true ,
           distance : '60px' ,
           duration:2500,

@@ -67,7 +67,7 @@
 .item-price {
     font-weight: bold;
     color: #ffffff;
-    width: 100px; 
+    width: 100px;
     display: inline-block;
     text-align: right;
 }
@@ -79,13 +79,13 @@
     margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #E91E63; 
+    background-color: #E91E63;
     color: white;
 }
 
 
 .wishlist-btn:hover {
-    background-color: #cd1653; 
+    background-color: #cd1653;
 }
 /* For static navbar */
 
@@ -125,7 +125,7 @@
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
-                
+
                 <a href="index.html">
                     <img src="assets/img/logo/logo3.png" alt="Logo" height="80px" style="margin-left: 2rem;"> <!-- Adjust logo size if necessary -->
                 </a>
@@ -136,13 +136,13 @@
                     </div>
                 </a>
 
-              
-        
+
+
                 <!-- Toggle Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-        
+
                 <div class="collapse navbar-collapse" id="navbarcollapse">
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
@@ -161,7 +161,7 @@
                             <i class="ri-seedling-fill"></i>  Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
 
 
-                            
+
 
                             <a href="index.html" class="nav-link"><i class="ri-home-fill"></i> Home
                             </a>
@@ -174,13 +174,13 @@
                             <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i>Transactions</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i> 
+                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
                                 Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
 
                             </a>
                             <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
                                 <!-- Wishlist items will be dynamically added here -->
-                            
+
                             </div>
                         </li>
                         <li class="nav-item">
@@ -188,7 +188,7 @@
                         </li>
                     </ul>
                     <input type="checkbox" id="toggle">
-                    
+
                     <label class="toggle" for="toggle">
                         <i class="bx bxs-sun"></i>
                         <i class="bx bx-moon"></i>
@@ -230,7 +230,7 @@
                 <span style="font-weight: bold;">Get connected with us on social networks:</span>
               </div>
               <!-- Left -->
-          
+
               <!-- Right -->
               <div class="">
                 <!-- Facebook -->
@@ -242,7 +242,7 @@
                   role="button"
                   ><i class="fab fa-facebook-f"></i
                 ></a>
-          
+
                 <!-- Twitter -->
                 <a
                   data-mdb-ripple-init
@@ -252,7 +252,7 @@
                   role="button"
                   ><i class="fab fa-twitter"></i
                 ></a>
-          
+
                 <!-- Google -->
                 <a
                   data-mdb-ripple-init
@@ -262,7 +262,7 @@
                   role="button"
                   ><i class="fab fa-google"></i
                 ></a>
-          
+
                 <!-- Instagram -->
                 <a
                   data-mdb-ripple-init
@@ -272,7 +272,7 @@
                   role="button"
                   ><i class="fab fa-instagram"></i
                 ></a>
-          
+
                 <!-- Linkedin -->
                 <a
                   data-mdb-ripple-init
@@ -295,7 +295,7 @@
               <!-- Right -->
             </section>
             <!-- Section: Social media -->
-          
+
             <!-- Section: Links  -->
             <section class="">
               <div class="container text-center text-md-start mt-5">
@@ -314,7 +314,7 @@
                     </p>
                   </div>
                   <!-- Grid column -->
-          
+
                   <!-- Grid column -->
                   <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
                     <!-- Links -->
@@ -330,10 +330,10 @@
                     <p style="font-weight: bold;">
                       <a href="shop(1).html" class="text-reset">OIL SEEDS</a>
                     </p>
-                  
+
                   </div>
                   <!-- Grid column -->
-          
+
                   <!-- Grid column -->
                   <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
@@ -349,10 +349,10 @@
                     <p>
                       <a href="shop(1).html" class="text-reset">MISCELLANOUS</a>
                     </p>
-                   
+
                   </div>
                   <!-- Grid column -->
-          
+
                   <!-- Grid column -->
                   <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
@@ -363,7 +363,7 @@
                       krishiconnect@gmail.com
                     </p>
                     <p><i class="fas fa-phone me-3"></i> 082723 67238</p>
-                    
+
                   </div>
                   <!-- Grid column -->
                 </div>
@@ -371,15 +371,16 @@
               </div>
             </section>
             <!-- Section: Links  -->
-          
+
             <!-- Copyright -->
             <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-              © 2024 Copyright:
+              © <span id="copyright-year"></span> Copyright:
               <a class="text-reset fw-bold" href="https://mdbootstrap.com/"> कृषिCONNECT | Fresh From Farm. All rights reserved.</a>
             </div>
             <!-- Copyright -->
           </footer>
-
+          
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/js/jquery-migrate.js"></script>
     <script type="text/javascript" src="assets/packages/bootstrap/libraries/popper.js"></script>
@@ -394,7 +395,7 @@
     <script src="cart.js"></script>
     <script src="shop.js"></script>
     <script>
-        ScrollReveal({ 
+        ScrollReveal({
             //reset: true ,
             distance : '60px' ,
             duration:2500,
@@ -406,7 +407,7 @@
         ScrollReveal().reveal('#col-md-3,#col-md-3l', { delay: 500 , origin:'left'});
         ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500 , origin:'right'});
         ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
-        
+
     </script>
     <script src="./darkmode.js"></script>
 </body>
