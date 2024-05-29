@@ -471,54 +471,6 @@ h1 {
     /* margin-top: 50px; */
 }
 
-.cartlist{
-    display: flex;
-    text-align: left;
-    color: #c0f0f0;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    border: 2px solid #905e6e;
-    height: 40px;
-    padding: 10px;
-}
-.cartlist span{
-    /* margin-left: 20px; */
-}
-.cartlist button:focus {
-    outline: none;
-}
-.item-detail{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    margin: 10px;
-}
-.cartlist button{
-    background-color: transparent;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin: 10px;
-    cursor: pointer;
-    width: 30%;
-
-}
-.item-quantity{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 2px solid #905e6e;
-    border-radius: 30px;
-    height: 30px;
-}
-#subtotal{
-
-    color: black;
-    font-weight: bold;
-    font-size: 15px;
-}
 .cartfield #buyer-name{
     width: 460px;
   height: 40px;
