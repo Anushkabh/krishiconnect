@@ -90,10 +90,10 @@ function removeFromWishlist(name) {
 
 // Add to Cart
 
-function addToCart(name, price) {
-  var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+function addToCart(name, imageUrl, price) {
+  var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
-  var existingItem = cartItems.find(function (item) {
+  var existingItem = cartItems.find(function(item) {
     return item.name === name;
   });
 
@@ -102,15 +102,15 @@ function addToCart(name, price) {
   } else {
     cartItems.push({
       name: name,
+      imageUrl: imageUrl,
       price: price,
-      quantity: 1,
+      quantity: 1
     });
   }
 
-  localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-  // Show success toast
-  Toastify({
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+   // Show success toast
+   Toastify({
     text: "Product added to cart!",
     duration: 5000,
     gravity: "top",
