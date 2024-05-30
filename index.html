@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
       margin-bottom: 0;
       padding: 0;
       position: relative;
-     
+
       overflow: hidden;
       height: auto;
     }
@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
       z-index: 3;
       padding-top: 200px; /* Adjust padding as needed to position the text correctly */
       text-align: center;
-      
+
     }
 
     .banner .jumbotron .container h1,
@@ -243,7 +243,7 @@ h1, h2, h3, h4, h5, h6 {
     .footer-logo img {
             max-height: 50px; /* Limit the height of the logo */
         }
-    
+
     /* Scroll to Top Button */
 .scroll-to-top {
     position: fixed;
@@ -305,12 +305,12 @@ h1, h2, h3, h4, h5, h6 {
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
       <div class="container">
         <!-- Navbar Brand -->
-    
-            
+
+
             <a href="index.html" class="navbar-brand mr-auto">
                 <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px; " >
               </a>
-        
+
 
         <!-- Toggle Button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -534,16 +534,16 @@ h1, h2, h3, h4, h5, h6 {
 <div class="card-wrapper swiper-wrapper">
     <div class="card swiper-slide">
         <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-          
+
         <div class="image-content" >
-        
-          
+
+
             <div class="card-image">
                 <img src="assets/images/testimonials-1.jpg" alt="" class="card-img">
             </div>
             <h2 style="font-size: 20px;">B.Sharmila</h2>
         </div>
-        
+
         <div class="rating" >
             <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -551,16 +551,16 @@ h1, h2, h3, h4, h5, h6 {
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
         </div>
-        </div>               
+        </div>
         <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color:black;">
-         
+
             The Pacific Grove Chamber of Commerce would like to thank eLab Communications
             and Mr. Will Elkadi for all the efforts that assisted me nicely manners. </div>
-          
+
     </div>
     <div class="card swiper-slide">
         <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-          
+
           <div class="image-content" >
                 <div class="card-image">
                     <img src="assets/images/testimonials-2.jpg" alt="" class="card-img">
@@ -594,8 +594,8 @@ h1, h2, h3, h4, h5, h6 {
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
             </div>
-            </div>                   
-            <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color:black">SwapReads is a bookworm's paradise! With its user-friendly interface, welcoming community, and vast variety of books for swapping, I've embarked on countless new literary adventures. It's like an ever-active book club where I've connected with fellow literature lovers. I'm completely hooked!</div>                
+            </div>
+            <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color:black">SwapReads is a bookworm's paradise! With its user-friendly interface, welcoming community, and vast variety of books for swapping, I've embarked on countless new literary adventures. It's like an ever-active book club where I've connected with fellow literature lovers. I'm completely hooked!</div>
     </div>
     <div class="card swiper-slide">
         <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
@@ -612,7 +612,7 @@ h1, h2, h3, h4, h5, h6 {
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
             </div>
-            </div>                   
+            </div>
             <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color: black;">The Pacific Grove Chamber of Commerce would like to thank eLab Communications
                 and Mr. Will Elkadi for all the efforts that assisted me nicely manners. </div>
     </div>
@@ -813,7 +813,7 @@ h1, h2, h3, h4, h5, h6 {
 
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05); font-size: 1.2em;">
-    © 2024 Copyright:
+    © <span id="copyright-year"></span> Copyright:
     <a class="text-reset fw-bold"
        href="https://mdbootstrap.com/"
        style="text-decoration: none; color: inherit;"
@@ -822,6 +822,9 @@ h1, h2, h3, h4, h5, h6 {
   </div>
   <!-- Copyright -->
 </footer>
+
+<!-- copyright-year -->
+<script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
 
 <!-- Scroll to Top Button -->
 <a href="#" class="scroll-to-top" style="display: inline;">
