@@ -193,6 +193,16 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 0.875rem;
         }
     }
+
+    @media (max-width: 995px){
+      #products .container{
+        display: grid !important;
+        grid-template-columns: 1fr;
+      }
+      #procucts .container .card{
+        max-width: none !important;
+      }
+    }
     @media (max-width: 995px) and (min-width:760px) {
         .card-title {
             font-size: 1rem;
@@ -202,12 +212,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 
-    #products .container {
-        display: flex;
-        flex-wrap: wrap;
-        /* justify-content: space-between; */
-        padding: 0;
-    }
+   
     #products .card {
         flex: 1 0 30%; /* Adjust the value as needed to fit your design */
         margin: 10px;
@@ -481,7 +486,7 @@ h1, h2, h3, h4, h5, h6 {
   <h2 class="title">Products</h2>
   <div class="container" style="display: flex; flex-wrap: wrap; ">
       
-      <div class="card text-center card1" style="max-width: calc(33.333% - 1rem); height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
+      <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
         <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
             <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
                 <img src="assets/img/spinach.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
@@ -493,7 +498,7 @@ h1, h2, h3, h4, h5, h6 {
             </div>
         </div>
     </div>
-      <div class="card text-center card1" style="max-width: calc(33.333% - 1rem); height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
+      <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
         <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
             <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
                 <img src="assets/img/tomato.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
@@ -505,7 +510,7 @@ h1, h2, h3, h4, h5, h6 {
             </div>
         </div>
     </div>
-      <div class="card text-center card1" style="max-width: calc(33.333% - 1rem); height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
+      <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
         <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
             <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
                 <img src="https://t3.ftcdn.net/jpg/04/68/10/86/360_F_468108626_wpL1hcDkE4g12mPPnbVxx8rCnWpHYKmV.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
