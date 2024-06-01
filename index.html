@@ -35,6 +35,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="index.js"></script>
   <style>
 .circle {
   height: 24px;
@@ -114,6 +115,12 @@ h1, h2, h3, h4, h5, h6 {
       object-fit: cover;
       z-index: 1;
     }
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
 
     .banner .jumbotron .overlay {
       position: absolute;
@@ -284,6 +291,40 @@ h1, h2, h3, h4, h5, h6 {
 .scroll-to-top:hover {
     opacity: 0.8;
 }
+#loader{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  gap: 10px;
+  z-index: 9999;
+}
+#loader h3{
+  font-size: 2vw;
+  font-weight: 100;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+#loader.h3-hide h3 {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1s, transform 1s;
+}
+
+#loader.fade-out {
+  opacity: 0;
+ 
+  transition: opacity 1s;
+}
+#loader.hidden {
+  display: none;
+}
 
 .card1:hover .card-inner {
         transform: rotateY(180deg);
@@ -314,8 +355,9 @@ h1, h2, h3, h4, h5, h6 {
 
 <!-- Custom CSS -->
 <link rel="stylesheet" href="test-style.css">
-<body>
+
 </head>
+
 
 <body>
   <div class="circle"></div>
@@ -338,6 +380,14 @@ h1, h2, h3, h4, h5, h6 {
   <div class="circle"></div>
   <div class="circle"></div>
   <div class="circle"></div>
+
+<body class="light">
+<div id="loader">
+  <h3>कृषिCONNECT,</h3>
+  <h3>WE SERVE</h3>
+  <h3>FRESH !</h3>
+</div>
+
   <div class="page-header">
     <!--=============== Navbar ===============-->
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
