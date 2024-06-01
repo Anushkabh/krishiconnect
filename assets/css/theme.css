@@ -238,7 +238,7 @@ section .card-title {
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
 }
 .page-header .navbar.bg-white .navbar-nav .nav-link {
-  color: #333333;
+  color: #E91E63;
 }
 .page-header .navbar.bg-white .navbar-nav .nav-link:focus, .page-header .navbar.bg-white .navbar-nav .nav-link:hover, .page-header .navbar.bg-white .navbar-nav .nav-link.active {
   color: #E91E63;
@@ -409,6 +409,37 @@ transform: scale(1.05);
 .title:hover{
   text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
 
+}
+
+.Testimonials {
+  text-align: center;
+}
+
+.testimonial-card {
+  background-color: white;
+}
+
+.card-body h6 {
+  color: #E91E63;
+}
+
+.testimonial-card:hover {
+  background-image: radial-gradient(white, rgb(209, 242, 253) , rgb(186, 236, 253));
+}
+
+.testimonial-card .card-up {
+  height: 100px;
+  background-color: navy;
+  overflow: hidden;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.testimonial-card .avatar {
+  width: 110px;
+  margin-top: -60px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  border-radius: 50%;
 }
 
 .product-detail {
