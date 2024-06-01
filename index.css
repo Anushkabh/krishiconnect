@@ -7,7 +7,9 @@
 /* .page-header {
   margin-bottom: 1rem;
 } */
-
+a{
+  text-decoration: none;
+}
 .navbar-brand h3 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
