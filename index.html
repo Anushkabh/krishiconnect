@@ -21,9 +21,9 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
-    <link rel="stylesheet" type="text/css" href="whykrishiconnect.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -462,6 +462,21 @@
   vertical-align: middle;
 }
 
+/* Testimonals Section */
+
+.testimonals-item {
+  background-color: #ede6e6;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.testimonals-item img {
+  max-width: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
 .testimonals-item .info {
   display: flex;
   align-items: center;
@@ -473,6 +488,33 @@
   font-weight: 600;
   color: hsl(0, 0%, 0%);
   line-height: 1.2;
+}
+
+.testimonals-item .job {
+  text-transform: capitalize;
+  color: #333333;
+}
+
+.testimonals-item p {
+  margin-top: 20px;
+  color: #333333;
+}
+
+.testimonals-item .rating {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.testimonals .swiper-pagination {
+  position: relative;
+  margin-top: 40px;
+  bottom: auto;
+}
+
+.testimonals .swiper-pagination-bullet {
+  height: 12px;
+  width: 12px;
+  background-color: black;
 }
 
 .testimonals-item .job {
@@ -717,137 +759,134 @@
 <section id="products" class="products">
   <h2 class="title">Products</h2>
   <div class="container" style="display: flex; flex-wrap: wrap; ">
-      
-      <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
-        <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
-            <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                <img src="assets/img/spinach.jpg" class="card-img-top" alt="Spinach" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="content">
-                <h2>Straight from the Farm</h2>
-                <p>Our farm-to-table concept emphasizes on getting the fresh produce directly from local farms to your tables within one day, hence you know you get the freshest produce straight from harvest.</p>
-            </div>
-        </div>
-        <div class="cardd" style="--clr: #ff3e7f;">
-            <div class="imgbx">
-                <img src="OIP 3.jpg">
-
-    </div>
-      <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
-        <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
-            <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                <img src="assets/img/tomato.jpg" class="card-img-top" alt="Tomato" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="content">
-                <h2>Sustainable Practices</h2>
-                <p> We embrace sustainable farming practices to nurture the environment. Our methods include crop rotation, organic fertilizers, water conservation, and biodiversity promotion. These practices ensure healthy soil, reduce environmental impact,
-                    and produce nutritious, high-quality food.</p>
-            </div>
-        </div>
-        <div class="cardd" style="--clr: #03a9f4;">
-            <div class="imgbx">
-                <img src="OIP 2.jpg">
-            </div>
-            <div class="content">
-                <h2>Local and Convenient</h2>
-                <p>Our locally grown produce is harvested at peak freshness and delivered within 24 hours, ensuring you enjoy the highest quality and flavor. Experience the ease of supporting local agriculture while savoring delicious, nutritious food.</p>
-            </div>
-        </div>
-    </div>
-    <!-- Footer Section -->
-    =======
-    </div>
-    <!-- Footer Section -->
-
-
-    <section id="products" class="products">
-        <h2 class="title">Products</h2>
-        <div class="container" style="display: flex; flex-wrap: wrap; ">
-
-            <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
-                <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
-                    <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                        <img src="assets/img/spinach.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: green; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
-                        <h5 class="card-title">Spinach</h5>
-                        <p class="card-text">Healthy and fresh spinach leaves.</p>
-                        <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
-                <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
-                    <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                        <img src="assets/img/tomato.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: green; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
-                        <h5 class="card-title">Tomato</h5>
-                        <p class="card-text">Fresh organic tomatoes directly from our farms.</p>
-                        <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
-                <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
-                    <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                        <img src="https://t3.ftcdn.net/jpg/04/68/10/86/360_F_468108626_wpL1hcDkE4g12mPPnbVxx8rCnWpHYKmV.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: green; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
-                        <h5 class="card-title">Broccoli</h5>
-                        <p class="card-text">Green and fresh broccoli heads.</p>
-                        <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- --Testimonials -->
-    <section id="test" class="testimonals">
-        <h2 class="h2 section-title has-underline" style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
-            What Clients Say
-        </h2>
-        <p class="section-subtitle" style="align-items: center; justify-content: center; display: flex;color:#E91E63;font-size: 20px;">Explore on the world's best & largest Bidding marketplace with our beautiful Bidding
-        </p>
-
-        <div class="testimonals-content">
-          <div class="swiper testimonals-slider js-testimonals-slider">
-          <div class="swiper-wrapper">
-          <div class="swiper-slide testimonals-item">
-          <div class="info">
-          <img src="assets/images/testimonials-2.jpg" alt="">
-          <div class="text-box">
-          <h3 class="name">Dinesh Karthik</h3>
-          <span class="job">Bangalore</span>
+      <div class="card text-center card1" style="flex: 1 1 calc(33.333% - 1rem); max-width: calc(33.333% - 1rem); height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px;">
+          <img src="assets/img/spinach.jpg" class="card-img-top" alt="Spinach" style="width: 100%; height: 70%; object-fit: cover;">
+          <div class="card-body" style="height: 30%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+              <h5 class="card-title" style="padding-top: 50px;">Spinach</h5>
+              <p class="card-text">Healthy and fresh spinach leaves.</p>
+              <a href="#" class="btn btn-primary" id="toast-btn"style="margin-bottom: 50px;">Add to Cart</a>
           </div>
+      </div>
+      <div class="card text-center card1" style="flex: 1 1 calc(33.333% - 1rem); max-width: calc(33.333% - 1rem); height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px;">
+          <img src="assets/img/tomato.jpg" class="card-img-top" alt="Tomato" style="width: 100%; height: 70%; object-fit: cover;">
+          <div class="card-body" style="height: 30%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+              <h5 class="card-title" style="padding-top: 67px;">Tomato</h5>
+              <p class="card-text">Fresh organic tomatoes directly from our farms.</p>
+              <a href="#" class="btn btn-primary" id="toast-btn"style="margin-bottom: 50px;">Add to Cart</a>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
-          <div class="rating">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
+      </div>
+      <div class="card text-center card1" style=" max-width: calc(33.333% - 1rem); height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px;">
+          <img src="https://t3.ftcdn.net/jpg/04/68/10/86/360_F_468108626_wpL1hcDkE4g12mPPnbVxx8rCnWpHYKmV.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 70%; object-fit: cover;">
+          <div class="card-body" style="height: 30%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+              <h5 class="card-title" style="padding-top: 50px;">Broccoli</h5>
+              <p class="card-text">Green and fresh broccoli heads.</p>
+              <a href="#" class="btn btn-primary" id="toast-btn" style="margin-bottom: 50px;">Add to Cart</a>
           </div>
-                    </div>
-                    <div class="swiper-slide testimonals-item">
-                      <div class="info">
-                      <img src="assets/images/testimonials-2.jpg" alt="">
-                      <div class="text-box">
-                      <h3 class="name">Virat Kohli</h3>
-                      <span class="job">Delhi</span>
-                     </div>
-                    
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
+      </div>
+  </div>
+</section>
+
+
+<!-- --Testimonials -->
+<section id="test" class="testimonals">
+<h2 class="h2 section-title has-underline" style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
+    What Clients Say
+  </h2>
+  <p class="section-subtitle" style="align-items: center; justify-content: center; display: flex;color:#E91E63;font-size: 20px;">Explore on the world's best & largest Bidding marketplace with our beautiful
+    Bidding</p>
+
+    <div class="testimonals-content">
+    <div class="swiper testimonals-slider js-testimonals-slider">
+    <div class="swiper-wrapper">
+    <div class="swiper-slide testimonals-item">
+    <div class="info">
+    <img src="assets/images/testimonials-2.jpg" alt="">
+    <div class="text-box">
+    <h3 class="name">Dinesh Karthik</h3>
+    <span class="job">Bangalore</span>
+    </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
+    <div class="rating">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    </div>
+    </div>
+
+    <div class="swiper-slide testimonals-item">
+    <div class="info">
+    <img src="assets/images/testimonials-2.jpg" alt="">
+    <div class="text-box">
+    <h3 class="name">Virat Kohli</h3>
+    <span class="job">Delhi</span>
+    </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
     <div class="rating">
     <i class="fa fa-star"></i>
     <i class="fa fa-star"></i>
     <i class="fa fa-star"></i>
     <i class="fa fa-star"></i>
     </div>
+    </div>
+
+    <div class="swiper-slide testimonals-item">
+    <div class="info">
+    <img src="assets/images/testimonials-4.jpg" alt="">
+    <div class="text-box">
+    <h3 class="name">Smrithi Mandanna</h3>
+    <span class="job">Mumbai</span>
+    </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
+    <div class="rating">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    </div>
+    </div>
+
+    <div class="swiper-slide testimonals-item">
+    <div class="info">
+    <img src="assets/images/testimonials-2.jpg" alt="">
+    <div class="text-box">
+    <h3 class="name">John Doe</h3>
+    <span class="job">Chennai</span>
+    </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
+    <div class="rating">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    </div>
+    </div>
+
+    <div class="swiper-slide testimonals-item">
+    <div class="info">
+    <img src="assets/images/testimonials-4.jpg" alt="">
+    <div class="text-box">
+    <h3 class="name">Shikha Pandey</h3>
+    <span class="job">Kolkata</span>
+    </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
+    <div class="rating">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="swiper-pagination js-testimonals-pagination"></div>
     </div>
 
     <div class="swiper-slide testimonals-item">
