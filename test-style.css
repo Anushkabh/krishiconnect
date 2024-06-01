@@ -2,18 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 #test { 
-  .testimonials {
+
+  margin-left: 2rem;
+  margin-right: 2rem;
+  
+  .testimonals {
   min-height: 100vh;
+  max-width: 80% !important;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #198754;
-}
-
-.slide-container {
-  max-width: 1120px;
-  width: 100%;
-  padding: 40px 0;
 }
 
 .slide-content {
@@ -22,7 +21,8 @@
   border-radius: 25px;
 }
 .h2{
-  color:#E91E63
+  color:#E91E63;
+  text-align: center;
 }
 .card {
   position: relative;
@@ -77,12 +77,12 @@
 }
 
 .swiper-pagination-bullet {
-  background-color: #198754;
+  background-color: #e77e77;
   opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #198754;
+  background-color: #871919;
 }
 
 @media screen and (max-width: 768px) {

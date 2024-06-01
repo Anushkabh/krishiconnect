@@ -20,6 +20,9 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -267,7 +270,60 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.8;
 }
 
+/* Testimonals Section */
 
+.testimonals-item {
+  background-color: #ede6e6;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.testimonals-item img {
+  max-width: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+.testimonals-item .info {
+  display: flex;
+  align-items: center;
+}
+
+.testimonals-item .name {
+  font-size: 24px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: hsl(0, 0%, 0%);
+  line-height: 1.2;
+}
+
+.testimonals-item .job {
+  text-transform: capitalize;
+  color: #333333;
+}
+
+.testimonals-item p {
+  margin-top: 20px;
+  color: #333333;
+}
+
+.testimonals-item .rating {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.testimonals .swiper-pagination {
+  position: relative;
+  margin-top: 40px;
+  bottom: auto;
+}
+
+.testimonals .swiper-pagination-bullet {
+  height: 12px;
+  width: 12px;
+  background-color: black;
+}
 
   </style>
   <!-- Swiper CSS -->
@@ -487,109 +543,126 @@ h1, h2, h3, h4, h5, h6 {
 
 
 <!-- --Testimonials -->
-<section id="test">
+<section id="test" class="testimonals">
 <h2 class="h2 section-title has-underline" style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
     What Clients Say
   </h2>
   <p class="section-subtitle" style="align-items: center; justify-content: center; display: flex;color:#E91E63;font-size: 20px;">Explore on the world's best & largest Bidding marketplace with our beautiful
     Bidding</p>
 
-<div class="slide-container swiper" style="margin-bottom: 15px;">
-<div class="slide-content">
-<div class="card-wrapper swiper-wrapper">
-    <div class="card swiper-slide">
-        <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-          
-        <div class="image-content" >
-        
-          
-            <div class="card-image">
-                <img src="assets/images/testimonials-1.jpg" alt="" class="card-img">
-            </div>
-            <h2 style="font-size: 20px;">B.Sharmila</h2>
-        </div>
-        
-        <div class="rating" >
-            <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-        </div>
-        </div>               
-        <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color:black;">
-         
-            The Pacific Grove Chamber of Commerce would like to thank eLab Communications
-            and Mr. Will Elkadi for all the efforts that assisted me nicely manners. </div>
-          
+    <div class="testimonals-content">
+    <div class="swiper testimonals-slider js-testimonals-slider">
+    <div class="swiper-wrapper">
+    <div class="swiper-slide testimonals-item">
+    <div class="info">
+    <img src="assets/images/testimonials-2.jpg" alt="">
+    <div class="text-box">
+    <h3 class="name">Dinesh Karthik</h3>
+    <span class="job">Bangalore</span>
     </div>
-    <div class="card swiper-slide">
-        <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-          
-          <div class="image-content" >
-                <div class="card-image">
-                    <img src="assets/images/testimonials-2.jpg" alt="" class="card-img">
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
+    <div class="rating">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    </div>
+    </div>
 
-                </div>
-                <h2 style="font-size: 20px;">Prem Sampath</h2>
-            </div>
-            <div class="rating" >
-                <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-            </div>
-            </div>
-            <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color: black;">The Pacific Grove Chamber of Commerce would like to thank eLab Communications
-                and Mr. Will Elkadi for all the efforts that assisted me nicely manners. </div>
+    <div class="swiper-slide testimonals-item">
+    <div class="info">
+    <img src="assets/images/testimonials-2.jpg" alt="">
+    <div class="text-box">
+    <h3 class="name">Virat Kohli</h3>
+    <span class="job">Delhi</span>
     </div>
-    <div class="card swiper-slide">
-        <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-            <div class="image-content" >
-                <div class="card-image">
-                    <img src="assets/images/testimonials-3.jpg" alt="" class="card-img">
-                </div>
-                <h2 style="font-size: 20px;">Aron Loes</h2>
-            </div>
-            <div class="rating" >
-                <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-            </div>
-            </div>                   
-            <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color:black">SwapReads is a bookworm's paradise! With its user-friendly interface, welcoming community, and vast variety of books for swapping, I've embarked on countless new literary adventures. It's like an ever-active book club where I've connected with fellow literature lovers. I'm completely hooked!</div>                
     </div>
-    <div class="card swiper-slide">
-        <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-            <div class="image-content" >
-                <div class="card-image">
-                    <img src="assets/images/testimonials-4.jpg" alt="" class="card-img">
-                </div>
-                <h2 style="font-size: 20px;">Sonal K</h2>
-            </div>
-            <div class="rating" >
-                <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-            </div>
-            </div>                   
-            <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color: black;">The Pacific Grove Chamber of Commerce would like to thank eLab Communications
-                and Mr. Will Elkadi for all the efforts that assisted me nicely manners. </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
+    <div class="rating">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
     </div>
-</div>
-</div>
-<div class="swiper-button-next swiper-navBtn"></div>
-<div class="swiper-button-prev swiper-navBtn"></div>
-<div class="swiper-pagination"></div>
-</div>
+    </div>
+
+    <div class="swiper-slide testimonals-item">
+    <div class="info">
+    <img src="assets/images/testimonials-4.jpg" alt="">
+    <div class="text-box">
+    <h3 class="name">Smrithi Mandanna</h3>
+    <span class="job">Mumbai</span>
+    </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
+    <div class="rating">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    </div>
+    </div>
+
+    <div class="swiper-slide testimonals-item">
+    <div class="info">
+    <img src="assets/images/testimonials-2.jpg" alt="">
+    <div class="text-box">
+    <h3 class="name">John Doe</h3>
+    <span class="job">Chennai</span>
+    </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
+    <div class="rating">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    </div>
+    </div>
+
+    <div class="swiper-slide testimonals-item">
+    <div class="info">
+    <img src="assets/images/testimonials-4.jpg" alt="">
+    <div class="text-box">
+    <h3 class="name">Shikha Pandey</h3>
+    <span class="job">Kolkata</span>
+    </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
+    <div class="rating">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="swiper-pagination js-testimonals-pagination"></div>
+    </div>
 
 
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.js-testimonals-slider', {
+    grabCursor: true,
+    spaceBetween: 30,
+    pagination: {
+      el: '.js-testimonals-pagination',
+      clickable: true
+    },
+    breakpoints: {
+      767: {
+        slidesPerView: 2,
+      }
+    }
+  })
+</script>
 
 <!-- Testimonials -->
 
