@@ -138,8 +138,8 @@
   font-weight: bold;
   font-size: 4em;
   color: #198754;
-  top: -20px;
-  left: 0px;
+  top: 11px;
+  left: 3px;
   font-family: Georgia, Times, serif;
 }
 
@@ -149,14 +149,14 @@
   font-weight: bold;
   font-size: 4em;
   color: #198754;
-  bottom: -50px;
-  right: 0px;
+  bottom: -22px;
+  right: 7px;
   font-family: Georgia, Times, serif;
 }
 
 @media screen and (max-width: 700px) {
   .backs {
-    font-size: 15px;
+    font-size: 1px;
   }
 }
 

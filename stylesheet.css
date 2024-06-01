@@ -88,7 +88,7 @@ h4 {
 }
 *, ::after, ::before {
     box-sizing: border-box;
-}
+    }
 .row {
     display: -webkit-box;
     display: -ms-flexbox;

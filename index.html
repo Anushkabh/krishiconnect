@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
     .page-header .navbar .navbar-brand img {
-      height: 50px;
+      /* height: 50px; */
       margin-left: -160px;
       object-fit: cover;
       border-radius: 50%;
@@ -182,6 +182,28 @@ h1, h2, h3, h4, h5, h6 {
     .card-icon-i {
         font-size: 2rem;
     }
+    .custom-scroll{
+      overflow-y: scroll;
+      height: 200px;
+      /* padding: 10px; */
+      box-sizing: border-box;
+    }
+    .custom-scroll::-webkit-scrollbar{
+      width: 12px;
+    }
+    .custom-scroll::-webkit-scrollbar-track{
+      border-radius: 10px;
+      background: #e0e0e0;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb{
+      background-color:rgba(34, 139, 34, 0.7);
+      border-radius: 10px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 0 3px #198754;
+      }
+      .custom-scroll::-webkit-scrollbar-thumb:hover{
+        background-color: #555;
+      }
     .text-success {
         color: #28a745;
     }
@@ -213,6 +235,7 @@ h1, h2, h3, h4, h5, h6 {
         margin: 10px;
         box-sizing: border-box;
     }
+  
     #products .card img {
         width: 100%;
         height: 200px; /* Set a fixed height */
@@ -300,9 +323,9 @@ h1, h2, h3, h4, h5, h6 {
 </head>
 
 <body>
-  <div class="page-header">
+  <div class="page-header" >
     <!--=============== Navbar ===============-->
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation" style="height: 80px;">
       <div class="container">
         <!-- Navbar Brand -->
 
@@ -320,7 +343,7 @@ h1, h2, h3, h4, h5, h6 {
         <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
           <!-- Navbar Menu -->
           <ul class="navbar-nav">
-            <li class="nav-item" style="border: 2px solid white" id="nav-link1">
+            <li class="nav-item" style="border: 2px solid white; border-radius: 20px;" id="nav-link1">
               <a href="login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
             </li>
             <li class="nav-item" id="nav-link2">
@@ -418,7 +441,7 @@ h1, h2, h3, h4, h5, h6 {
                         </div>
                     </div>
                     <div class="card-box">
-                        <div class="card-body">
+                        <div class="card-body ">
                             <h4 class="card-title">
                                 Straight from the Farm
                             </h4>
@@ -439,7 +462,7 @@ h1, h2, h3, h4, h5, h6 {
                         </div>
                     </div>
                     <div class="card-box">
-                        <div class="card-body">
+                        <div class="card-body custom-scroll">
                             <h4 class="card-title">
                                 Sustainable Practices
                             </h4>
@@ -460,7 +483,7 @@ h1, h2, h3, h4, h5, h6 {
                         </div>
                     </div>
                     <div class="card-box">
-                        <div class="card-body">
+                        <div class="card-body custom-scroll">
                             <h4 class="card-title">
                                 Local and Convenient
                             </h4>

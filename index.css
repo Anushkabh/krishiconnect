@@ -226,3 +226,7 @@
   font-size: 18px;
   color: rgb(68, 68, 68);
 }
+.text_box{
+  overflow-y: scroll;
+  height: 200px;
+}
