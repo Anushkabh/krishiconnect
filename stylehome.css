@@ -100,6 +100,9 @@ table{
     scale:1.2;
   
 }
+.nav-item a:hover{
+    background-color: aqua;
+}
 
 .prog {
     display: flex;
@@ -187,7 +190,4 @@ svg {
 padding: 10px;
 }
 
-.col-lg-12{
-    background-color:  #25b28e ;
-}
 

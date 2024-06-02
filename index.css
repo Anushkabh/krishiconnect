@@ -1,42 +1,9 @@
-#loader{
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  /* background-color: black; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  gap: 10px;
-  
-}
-#loader h3{
-  font-size: 2vw;
-  font-weight: 100;
-}
-    /* opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.5s, transform 0.5s;
-  } */
-#loader.h3-hide h3 {
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: opacity 1s, transform 1s;
-}
 
-#loader.fade-out {
-  opacity: 0;
-  transition: opacity 1s;
-}
-#loader .hidden {
-  display: none;
-}
 .navbar-brand {
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
-
+}
 /* .page-header {
   margin-bottom: 1rem;
 } */

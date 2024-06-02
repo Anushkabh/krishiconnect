@@ -10,15 +10,27 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
     <link href="assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
+    
+    
+    <link href="assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
+    <link href="assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/o2system-ui/o2system-ui.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/owl-carousel/owl-carousel.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/cloudzoom/cloudzoom.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
+    <link rel="stylesheet" type="text/css" media="all"
+        href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap">  
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="darkmode.css">
+ <link rel="stylesheet" href="stylesheet.css">
+    
     <!--Scroll Elemnts JS-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>KrishiConnect | Login</title>
@@ -60,49 +72,63 @@
     </style>
 </head>
 
-<body>
+<body class="light">
     <div class="page-header">
-    <!--=============== Navbar ===============-->
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
-        <div class="container">
+        <!--=============== Navbar ===============-->
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
+          <div class="container">
             <!-- Navbar Brand -->
-            <a href="index.html">
-                <img src="assets/img/logo/logo3.png" width="80px">
-                <!-- <div style="flex-direction: row; display: flex; align-items: center;"> -->
-
-                    <!-- <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" > -->
-
-                <!-- <h3 >कृषिCONNECT</h3> -->
-                </div>
-            </a>
-
+    
+    
+                <a href="index.html" class="navbar-brand mr-auto">
+                    <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px; " >
+                  </a>
+    
+    
             <!-- Toggle Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarcollapse">
-                <!-- Navbar Menu -->
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item" style="border: 2px solid white">
-                        <a href="login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
-                    </li>
-                   
-                                
-                </ul>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
+              <!-- Navbar Menu -->
+              <ul class="navbar-nav">
+                <li class="nav-item" style="border: 2px solid white" id="nav-link1">
+                  <a href="login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
+                </li>
+                <li class="nav-item" id="nav-link2">
+                  <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
+                </li>
+                <li class="nav-item" id="nav-link3">
+                  <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
+                      Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                      <!-- Wishlist items will be dynamically added here -->
+                  </div>
+              </li>
+                <li class="nav-item" id="nav-link5">
+                  <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
+                </li>
+                <li class="nav-item">
+                  <a href="Contact(1).html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
+                </li>
+              </ul>
+              <input type="checkbox" id="toggle">
+    
+                        <label class="toggle" for="toggle">
+                            <i class="bx bxs-sun"></i>
+                            <i class="bx bx-moon"></i>
+                            <span class="ball"></span>
+                        </label>
             </div>
-
-        </div>
-    </nav>
+          </div>
+        </nav>
+      </div>
+    
 </div>
 
 <div class="banner">
@@ -118,7 +144,7 @@
     </div>
 </div>
 <section id="why">
-    <h2 class="title" id="title">Why 
+    <h2 class="title" id="title">Why
         कृषिCONNECT</h2>
     <div class="container">
         <div class="row">
@@ -234,12 +260,12 @@
             <div class="row">
                 <div class="col-md-3" id="col-md-3">
                     <h5>About</h5>
-                    
+
                     <p>कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.</p>
                 </div>
                 <div class="col-md-3l" id="col-md-3l">
                     <h5>Links</h5>
-                    <ul>    
+                    <ul>
                         <li>
                             <a href="about(1).html">About</a>
                         </li>
@@ -277,21 +303,24 @@
                 </div>
                 <div class="col-md-3m" id="col-md-3m">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    
+
                </div>
             </div>
-        </div><p class="copyright" id="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
+        </div><p class="copyright" id="copyright">&copy; <span id="copyright-year"></span> कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
     </footer>
-  
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
 </body>
 <script src="script.js" type="module">
-      
+
   </script>
   <script src="script1.js" type="module"></script>
 
+
+  <script src="./darkmode.js"></script>
+
   <script type="text/javascript" src="assets/js/jquery.js"></script>
-    
-  
+
+
     <script type="text/javascript" src="assets/js/theme.js"></script>
     <script>
         ScrollReveal({
@@ -306,5 +335,7 @@
         ScrollReveal().reveal('#col-md-3,#col-md-3l', { delay: 500, origin: 'left' });
         ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500, origin: 'right' });
         ScrollReveal().reveal('#copyright', { delay: 500, origin: 'bottom' });
+        
     </script>
+    <script src="shop.js"></script>
 </html>

@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="whykrishiconnect.css">
 
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -30,11 +31,13 @@
 
     <!-- BoxIcons v2.1.2 -->
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="darkmode.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="index.js"></script>
   <style>
     html {
   scroll-behavior: smooth;
@@ -87,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
       margin-bottom: 0;
       padding: 0;
       position: relative;
-     
+
       overflow: hidden;
       height: auto;
     }
@@ -101,6 +104,12 @@ h1, h2, h3, h4, h5, h6 {
       object-fit: cover;
       z-index: 1;
     }
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
 
     .banner .jumbotron .overlay {
       position: absolute;
@@ -117,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
       z-index: 3;
       padding-top: 200px; /* Adjust padding as needed to position the text correctly */
       text-align: center;
-      
+
     }
 
     .banner .jumbotron .container h1,
@@ -193,6 +202,16 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 0.875rem;
         }
     }
+
+    @media (max-width: 995px){
+      #products .container{
+        display: grid !important;
+        grid-template-columns: 1fr;
+      }
+      #procucts .container .card{
+        max-width: none !important;
+      }
+    }
     @media (max-width: 995px) and (min-width:760px) {
         .card-title {
             font-size: 1rem;
@@ -202,12 +221,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 
-    #products .container {
-        display: flex;
-        flex-wrap: wrap;
-        /* justify-content: space-between; */
-        padding: 0;
-    }
+   
     #products .card {
         flex: 1 0 30%; /* Adjust the value as needed to fit your design */
         margin: 10px;
@@ -229,6 +243,71 @@ h1, h2, h3, h4, h5, h6 {
     #products .card-text {
         font-size: 1rem;
     }
+    /* for dropdown wishlist */
+
+#wishlistDropdownContent {
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 200px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.wishlist-item {
+    margin-bottom: 10px;
+}
+
+.item-name {
+  
+    font-weight: bold;
+}
+
+.add-to-cart-button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #539655;
+}
+
+.remove-button {
+    background-color: #E91E63;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #cd1653;
+    color: white;
+    border-radius: 3px;
+}
+
+.view-wishlist-link {
+    display: block;
+    padding: 10px;
+    color: #333; 
+    text-decoration: none;
+    font-weight: bold;
+    border-top: 1px solid #ccc; 
+  }
+  
+  .view-wishlist-link:hover {
+    background-color: #f5f5f5; 
+  }
+
     @media (max-width: 767px) {
         #products .card {
             flex: 1 0 48%; /* Two cards per row on smaller screens */
@@ -243,7 +322,7 @@ h1, h2, h3, h4, h5, h6 {
     .footer-logo img {
             max-height: 50px; /* Limit the height of the logo */
         }
-    
+
     /* Scroll to Top Button */
 .scroll-to-top {
     position: fixed;
@@ -265,6 +344,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .scroll-to-top:hover {
     opacity: 0.8;
+}
+#loader{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  gap: 10px;
+  z-index: 9999;
+}
+#loader h3{
+  font-size: 2vw;
+  font-weight: 100;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+#loader.h3-hide h3 {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1s, transform 1s;
 }
 
 /* Animations */
@@ -334,29 +438,66 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
   }
 }
+#loader.fade-out {
+  opacity: 0;
+ 
+  transition: opacity 1s;
+}
+#loader.hidden {
+  display: none;
+}
 
+.card1:hover .card-inner {
+        transform: rotateY(180deg);
+    }
 
+    .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transform-style: preserve-3d;
+        transition: transform 0.8s;
+    }
+
+    .card-front, .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+    .card-back {
+        transform: rotateY(180deg);
+    }
   </style>
   <!-- Swiper CSS -->
 <link rel="stylesheet" href="swiper-bundle.min.css">
 
 <!-- Custom CSS -->
 <link rel="stylesheet" href="test-style.css">
-<body>
+
 </head>
 
-<body>
+<body class="light">
+<div id="loader">
+  <h3>कृषिCONNECT,</h3>
+  <h3>WE SERVE</h3>
+  <h3>FRESH !</h3>
+</div>
   <div class="page-header">
     <!--=============== Navbar ===============-->
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
       <div class="container">
         <!-- Navbar Brand -->
+
     
             
             <a href="index.html" class="navbar-brand mr-auto fromLeft">
+
                 <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px; " >
               </a>
-        
+
 
         <!-- Toggle Button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -375,9 +516,14 @@ h1, h2, h3, h4, h5, h6 {
             <li class="nav-item" id="nav-link3">
               <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
             </li>
-            <li class="nav-item" id="nav-link4">
-              <a href="shop(1).html" class="nav-link"><i class="ri-seedling-fill"></i> Wishlist</a>
-            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
+                  Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                  <!-- Wishlist items will be dynamically added here -->
+              </div>
+          </li>
             <li class="nav-item" id="nav-link5">
               <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
             </li>
@@ -450,7 +596,45 @@ h1, h2, h3, h4, h5, h6 {
         </div>
       </div>
     </div>
+  </div><br><br><br><br>
+
+  <!-- Why Krishi Connect-->
+  
+  <h2 class="title">Why कृषिCONNECT</h2>
+  <div class="containerrr">
+    <div class="cardd" style="--clr: #009688;">
+    <div class="imgbx">
+        <img src="OIP.jpg">
+    </div>
+    <div class="content">
+        <h2>Straight from the Farm</h2>
+        <p>Our farm-to-table concept emphasizes on getting the fresh produce directly from local farms to your tables within one day, hence you know you get the freshest produce straight from harvest.</p>
+    </div>
+    </div>
+    <div class="cardd" style="--clr: #ff3e7f;">
+    <div class="imgbx">
+        <img src="OIP 3.jpg">
+    </div>
+    <div class="content">
+        <h2>Sustainable Practices</h2>
+        <p> We embrace sustainable farming practices to nurture the environment. Our methods include crop rotation, organic fertilizers, water conservation, and biodiversity promotion. These practices ensure healthy soil, reduce environmental impact, and produce nutritious, high-quality food.</p>
+    </div>
+    </div>
+    <div class="cardd" style="--clr: #03a9f4;">
+    <div class="imgbx">
+        <img src="OIP 2.jpg">
+    </div>
+    <div class="content">
+        <h2>Local and Convenient</h2>
+        <p>Our locally grown produce is harvested at peak freshness and delivered within 24 hours, ensuring you enjoy the highest quality and flavor. Experience the ease of supporting local agriculture while savoring delicious, nutritious food.</p>
+    </div>
+    </div>
+</div>
+  <!-- Footer Section -->
+=======
   </div>
+ <!-- Footer Section -->
+
 
   <section class="zoomIn"  id="why">
     <h2 class="title">Why कृषिCONNECT</h2>
@@ -525,6 +709,7 @@ h1, h2, h3, h4, h5, h6 {
         <!-- Footer Section -->
 </section>
 
+
 <section id="products" class="products">
   <h2 class="title">Products</h2>
   <div class="container" style="display: flex; flex-wrap: wrap; ">
@@ -569,16 +754,16 @@ h1, h2, h3, h4, h5, h6 {
 <div class="card-wrapper swiper-wrapper">
     <div class="card swiper-slide">
         <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-          
+
         <div class="image-content" >
-        
-          
+
+
             <div class="card-image">
                 <img src="assets/images/testimonials-1.jpg" alt="" class="card-img">
             </div>
             <h2 style="font-size: 20px;">B.Sharmila</h2>
         </div>
-        
+
         <div class="rating" >
             <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -586,16 +771,16 @@ h1, h2, h3, h4, h5, h6 {
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
         </div>
-        </div>               
+        </div>
         <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color:black;">
-         
+
             The Pacific Grove Chamber of Commerce would like to thank eLab Communications
             and Mr. Will Elkadi for all the efforts that assisted me nicely manners. </div>
-          
+
     </div>
     <div class="card swiper-slide">
         <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-          
+
           <div class="image-content" >
                 <div class="card-image">
                     <img src="assets/images/testimonials-2.jpg" alt="" class="card-img">
@@ -629,8 +814,8 @@ h1, h2, h3, h4, h5, h6 {
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
             </div>
-            </div>                   
-            <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color:black">SwapReads is a bookworm's paradise! With its user-friendly interface, welcoming community, and vast variety of books for swapping, I've embarked on countless new literary adventures. It's like an ever-active book club where I've connected with fellow literature lovers. I'm completely hooked!</div>                
+            </div>
+            <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color:black">SwapReads is a bookworm's paradise! With its user-friendly interface, welcoming community, and vast variety of books for swapping, I've embarked on countless new literary adventures. It's like an ever-active book club where I've connected with fellow literature lovers. I'm completely hooked!</div>
     </div>
     <div class="card swiper-slide">
         <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
@@ -647,7 +832,7 @@ h1, h2, h3, h4, h5, h6 {
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
             </div>
-            </div>                   
+            </div>
             <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color: black;">The Pacific Grove Chamber of Commerce would like to thank eLab Communications
                 and Mr. Will Elkadi for all the efforts that assisted me nicely manners. </div>
     </div>
@@ -848,7 +1033,7 @@ h1, h2, h3, h4, h5, h6 {
 
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05); font-size: 1.2em;">
-    © 2024 Copyright:
+    © <span id="copyright-year"></span> Copyright:
     <a class="text-reset fw-bold"
        href="https://mdbootstrap.com/"
        style="text-decoration: none; color: inherit;"
@@ -857,6 +1042,9 @@ h1, h2, h3, h4, h5, h6 {
   </div>
   <!-- Copyright -->
 </footer>
+
+<!-- copyright-year -->
+<script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
 
 <!-- Scroll to Top Button -->
 <a href="#" class="scroll-to-top" style="display: inline;">
@@ -868,6 +1056,11 @@ h1, h2, h3, h4, h5, h6 {
 <!-- Bootstrap JS -->
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <!-- Custom Script -->
+<script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/packages/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="assets/js/theme.js"></script>
+<script src="shop.js"></script>
 <script src="assets/js/scripts.js"></script>
 <script src="./darkmode.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
