@@ -47,7 +47,7 @@ button {
     left: 0;
     background: #ffffff;
     overflow: hidden;
-    background: linear-gradient(132deg, #FC415A, #1cd98a, #014137);
+    background: linear-gradient(132deg,#ffffff,#001861,#132e40);
         background-size: 400% 400%;
         animation: Gradient 15s ease infinite;
 }
@@ -541,7 +541,7 @@ button {
     top: 0;
     left: 0;
     cursor: pointer;
-    background: #eb3581;
+    background-color: #132e40;
     border: none;
     z-index: 32;
     border-radius: 8px;
@@ -583,7 +583,7 @@ button {
     height: 44px;
     top: 28px;
     left: 24px;
-    background: rgba(233, 118, 187, 0.8);
+    background: #add8e6;
     filter: blur(12px);
     z-index: 31;
     border-radius: 8px;
@@ -604,7 +604,7 @@ button {
     top: 0;
     left: 0;
     cursor: pointer;
-    background: #eb3581;
+    background: #132e40;
     border: none;
     z-index: 37;
     border-radius: 8px;
@@ -646,7 +646,7 @@ button {
     height: 44px;
     top: 28px;
     left: 24px;
-    background: rgba(233, 118, 187, 0.8);
+    background: #add8e6;
     filter: blur(12px);
     z-index: 36;
     border-radius: 8px;
@@ -668,7 +668,7 @@ button {
     left: 0;
     text-align: center;
     cursor: pointer;
-    background: #eb3581;
+    background: #132e40;
     border: none;
     z-index: 42;
     border-radius: 8px;
@@ -710,7 +710,7 @@ button {
     height: 44px;
     top: 28px;
     left: 24px;
-    background: rgba(233, 118, 187, 0.8);
+    background: #add8e6;
     filter: blur(12px);
     z-index: 41;
     border-radius: 8px;
@@ -729,7 +729,7 @@ button {
 /* new cart css */
 .cart-background {
     position: relative;
-    background-color: #1cd98a;
+    background-color: #add8e6;
     border-radius: 10px;
     background: url("/assets/img/green-back.webp");
     text-align: center;
@@ -778,7 +778,7 @@ button {
    
 }
 .cartlist:first-child{
-    border-top:2px solid #baffac ;
+    border-top:2px solid #add8e6 ;
     margin-top: 50px;
     
 }
@@ -789,7 +789,7 @@ button {
     justify-content: space-around;
     align-items: center;
     width: 80%;
-    border-bottom:2px solid #baffac;
+    border-bottom:2px solid #add8e6;
     align-items: center;
     padding: 5px;
 }
@@ -820,13 +820,13 @@ button {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 2px solid #bfffa1;
+    border: 2px solid #add8e6;
     border-radius: 30px;
     height: 30px;
 }
 #subtotal{
     margin-top: 20px;
-    color: rgb(169, 255, 199);
+    color: #add8e6;
     font-weight: bold;
     font-size: 1.5rem;
     padding: 20px;

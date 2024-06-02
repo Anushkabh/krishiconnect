@@ -262,7 +262,7 @@ h1 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color:#4A9304;
+    background-color:#132e40;
     margin: 20px;
     padding: 20px;
     align-items: center;
@@ -274,7 +274,7 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     position: relative;
-    border-color: #E91E63;
+    border-color: #132e40;
     border-width: 2px;
     padding: 10px;
     font-weight: bold;
@@ -282,8 +282,8 @@ h1 {
 }
 .cartbtn{
         color:#FFF;
-        background: #E91E63;
-        border-color: #E91E63;
+        background: #132e40;
+        border-color: #132e40;
         border-width: 2px;
         margin:4px;
         padding: 10px;
