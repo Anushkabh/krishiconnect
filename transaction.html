@@ -56,6 +56,10 @@
     max-height: 50px;
     margin-right: 10px;
 }
+.navbar-toggler{
+        position: absolute;
+        right: 25px;
+     }
 .container h1{
     color:black;
 }
@@ -63,7 +67,44 @@
     color:black;
     font-size: bold;
 }
- 
+@media screen and (max-width:768px){
+        .navbar-collapse{
+            position: absolute;
+            right:0;
+            top: 95px;
+            text-align: center;
+            background-color: #132e40 ;
+            width: 186px;
+            z-index: 1000;
+        }
+        
+    /* .navbar-nav .nav-item {
+        margin: 0 auto;
+    } */
+        .navbar-nav li{
+            color: black;
+        }
+        .toggle{
+            position: relative;
+            left: 101px;
+        }
+     }
+     
+@media (max-width: 370px) {
+    .navbar-toggler {
+        right: 10px;
+    }
+
+    .toggle {
+        right: 10px;
+        top: 10px;
+    }
+
+    .navbar-collapse {
+        top: 50px;
+    }
+}
+
 </style>
 <body class="light">
     <div class="page-header">
@@ -129,9 +170,10 @@
                         <i class="bx bx-moon"></i>
                         <span class="ball"></span>
                     </label>
-                </div>
-
-            </div>
+        </div>
+      </div>
+    </nav>
+  </div>
         </nav>
     </div>
     <div id="page-content" class="page-content">
@@ -152,14 +194,14 @@
         <h1 class="carttext">Transaction Page</h1>
         <div id="buyer-details" style="color:white;text-align:center;font-size:20px ;"></div>
             <div id="transaction-items" style="color:white;text-align:center;font-size:20px ;" class="carttext"></div>
-        
-        
+
+
         </section>
 
         <!-- Modal -->
-                                          
+
         <div class="modal-footer">
-                        <button onclick="window.location.href='success.html'" class="cartbtn" data-dismiss="modal">Confirm Order</button>
+                        <button onclick="window.location.href='shop(1).html'" class="cartbtn" data-dismiss="modal">Shop Now</button>
         </div>
     </div>
                 </div>
@@ -174,7 +216,7 @@
             <span style="font-weight: bold;">Get connected with us on social networks:</span>
           </div>
           <!-- Left -->
-      
+
           <!-- Right -->
           <div class="">
             <!-- Facebook -->
@@ -186,7 +228,7 @@
               role="button"
               ><i class="fab fa-facebook-f"></i
             ></a>
-      
+
             <!-- Twitter -->
             <a
               data-mdb-ripple-init
@@ -196,7 +238,7 @@
               role="button"
               ><i class="fab fa-twitter"></i
             ></a>
-      
+
             <!-- Google -->
             <a
               data-mdb-ripple-init
@@ -206,7 +248,7 @@
               role="button"
               ><i class="fab fa-google"></i
             ></a>
-      
+
             <!-- Instagram -->
             <a
               data-mdb-ripple-init
@@ -216,7 +258,7 @@
               role="button"
               ><i class="fab fa-instagram"></i
             ></a>
-      
+
             <!-- Linkedin -->
             <a
               data-mdb-ripple-init
@@ -239,7 +281,7 @@
           <!-- Right -->
         </section>
         <!-- Section: Social media -->
-      
+
         <!-- Section: Links  -->
         <section class="">
           <div class="container text-center text-md-start mt-5">
@@ -258,7 +300,7 @@
                 </p>
               </div>
               <!-- Grid column -->
-      
+
               <!-- Grid column -->
               <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
                 <!-- Links -->
@@ -274,10 +316,10 @@
                 <p style="font-weight: bold;">
                   <a href="shop(1).html" class="text-reset">OIL SEEDS</a>
                 </p>
-              
+
               </div>
               <!-- Grid column -->
-      
+
               <!-- Grid column -->
               <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                 <!-- Links -->
@@ -293,10 +335,10 @@
                 <p>
                   <a href="shop(1).html" class="text-reset">MISCELLANOUS</a>
                 </p>
-               
+
               </div>
               <!-- Grid column -->
-      
+
               <!-- Grid column -->
               <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                 <!-- Links -->
@@ -307,7 +349,7 @@
                   krishiconnect@gmail.com
                 </p>
                 <p><i class="fas fa-phone me-3"></i> 082723 67238</p>
-                
+
               </div>
               <!-- Grid column -->
             </div>
@@ -315,15 +357,16 @@
           </div>
         </section>
         <!-- Section: Links  -->
-      
+
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-          © 2024 Copyright:
+          © <span id="copyright-year"></span> Copyright:
           <a class="text-reset fw-bold" href="https://mdbootstrap.com/"> कृषिCONNECT | Fresh From Farm. All rights reserved.</a>
         </div>
         <!-- Copyright -->
       </footer>
 
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/js/jquery-migrate.js"></script>
     <script type="text/javascript" src="assets/packages/bootstrap/libraries/popper.js"></script>
@@ -337,7 +380,7 @@
     <script src="transaction.js"></script>
     <script src="shop.js"></script>
     <script>
-        ScrollReveal({ 
+        ScrollReveal({
             //reset: true ,
             distance : '60px' ,
             duration:2500,
@@ -350,7 +393,7 @@
         ScrollReveal().reveal('#col-md-3,#col-md-3l', { delay: 500 , origin:'left'});
         ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500 , origin:'right'});
         ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
-        
+
     </script>
     <script src="./darkmode.js"></script>
 </body>

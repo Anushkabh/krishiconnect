@@ -24,32 +24,32 @@
 </head>
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="toast.js"></script>
-    
+
 
 
 <style>
    /*.wishlist-button {
     display: inline-block;
-    padding: 2px 57px; 
+    padding: 2px 57px;
     border: 1px solid #ffdbac;
-    border-radius: 2px; 
+    border-radius: 2px;
     color: #007bff;
     background-color: #ffdbac;
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s; /* Added transform to the transition 
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s; /* Added transform to the transition
 }
 
 .wishlist-button:hover {
     background-color: #ffffff;
     border: 1px solid #ffbf00;
-    border-radius: 2px; 
+    border-radius: 2px;
     color: #fff;
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }*/
 .buttons {
     display: flex;
-    gap: 12px; 
+    gap: 12px;
 }
 
 .wishlist-button {
@@ -62,7 +62,7 @@
     background-color: #fff;
     color: #464646;
     text-decoration: none;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s; 
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
 }
 
 .wishlist-button:hover {
@@ -72,7 +72,7 @@
 }
 
 .wishlist-button .fas {
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
 .btn.btn-block.btn-primary {
@@ -140,16 +140,16 @@
 .view-wishlist-link {
     display: block;
     padding: 10px;
-    color: #333; 
+    color: #333;
     text-decoration: none;
     font-weight: bold;
-    border-top: 1px solid #ccc; 
+    border-top: 1px solid #ccc;
   }
-  
+
   .view-wishlist-link:hover {
-    background-color: #f5f5f5; 
+    background-color: #f5f5f5;
   }
-  
+
   .Toastify {
     font-family: Arial, sans-serif;
 }
@@ -196,7 +196,7 @@
                 <div class="collapse navbar-collapse" id="navbarcollapse">
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
-                        
+
                         <li class="nav-item">
 
                             <!-- <a href="shop(1).html" class="nav-link active"><i class="ri-shopping-bag-fill"></i> Shop</a> -->
@@ -217,58 +217,58 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
                                 <!-- Wishlist items will be dynamically added here -->
-                            
+
                             </div>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
                         </li>
 
-                    
+
                     </ul>
                 </div>
 
             </div>
         </nav>
     </div>
-    
-    
+
+
     <div class="page-header">
         <!--=============== Navbar ===============-->
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
-    
+
                 <a href="index.html" class="navbar-brand">
                     <div style="flex-direction: row; display: flex; align-items: center;">
-    
+
                         <!-- <img id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" > -->
-    
+
                     <h3 >कृषिCONNECT</h3>
                     </div>
                 </a>
-    
-    
+
+
                 <!-- Toggle Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-    
+
                 <div class="collapse navbar-collapse" id="navbarcollapse">
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
-                        
+
                         <li class="nav-item">
-    
+
                             <!-- <a href="shop(1).html" class="nav-link active"><i class="ri-shopping-bag-fill"></i> Shop</a> -->
-    
-    
+
+
                             <a href="index.html"class="nav-link"><i class="ri-home-fill"></i> Home </a>
                         </li>
                         <li class="nav-item">
                             <a href="shop(1).html" class="nav-link active">Shop</a>
-    
+
                         </li>
                         <li class="nav-item">
                             <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
@@ -279,28 +279,28 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
                                 <!-- Wishlist items will be dynamically added here -->
-                            
+
                             </div>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
                         </li>
-    
-                    
+
+
                     </ul>
                 </div>
-    
+
             </div>
         </nav>
     </div>
-    
+
     <div class="container mt-5">
       <div class="row">
         <div class="col-10">HOME &GT SHOP &GT PRODUCTS</div>
       </div>
     </div>
-    
+
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -339,19 +339,19 @@
           </div>
           <div class="mt-4 d-flex align-items-center">
             <h4>Quantity: </h4>
-            <div class="dropdown show ml-2"> 
+            <div class="dropdown show ml-2">
               <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Quantity</a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> 
-                <a class="dropdown-item" href="#">1kg</a> 
-                <a class="dropdown-item" href="#">2kg</a> 
-                <a class="dropdown-item" href="#">5kg</a> 
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">1kg</a>
+                <a class="dropdown-item" href="#">2kg</a>
+                <a class="dropdown-item" href="#">5kg</a>
               </div>
             </div>
           </div>
           <div class="container mt-4">
             <div class="mt-4">
                 <div class="d-flex justify-content-left flex-wrap">
-                    <a class="btn text-light mr-2 mt-2 big-btn" onclick="addToCart('POTATOES', 200); alert('POTATOES added to cart successfully!');">ADD TO CART</a>  
+                    <a class="btn text-light mr-2 mt-2 big-btn" onclick="addToCart('POTATOES', 200); alert('POTATOES added to cart successfully!');">ADD TO CART</a>
                 </div>
             </div>
         </div>
@@ -362,7 +362,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="container mt-5 mb-5">
       <h2>Ratings & Reviews</h2>
       <div class="row mt-5 mb-5">
@@ -370,17 +370,17 @@
           <img class="mr-3" src="/assets/img/review.jpg" alt="Generic placeholder image">
           <div class="media-body">
             <h5 class="mt-0">Very nice product<span class="text-warning">
-              <i class="fa fa-star" aria-hidden="true"></i> 
-              <i class="fa fa-star" aria-hidden="true"></i> 
-              <i class="fa fa-star" aria-hidden="true"></i> 
-              <i class="fa fa-star-half-o" aria-hidden="true"></i> 
-              <i class="fa fa-star-o" aria-hidden="true"></i> 
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
             </span></h5>
-            Truely organic,must try. 
+            Truely organic,must try.
           </div>
         </div>
       </div>
-      
+
       <h2>Post Your Own Reviews</h2>
       <form>
         <div class="form-group">
@@ -399,20 +399,20 @@
         <button type="submit" class="btn btn-black">SUBMIT</button>
       </form>
     </div>
-    
-                        
+
+
                 <footer>
                     <a href="#" class="back-to-top d-flex align-items-center justify-content-center" id="back-to-top"><i class="fa fa-solid fa-arrow-up" ></i></a>
                     <div class="container" id="container">
                         <div class="row">
                             <div class="col-md-3" id="col-md-3">
                                 <h5>About</h5>
-                                
+
                                 <p>कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.</p>
                             </div>
                             <div class="col-md-3l" id="col-md-3l">
                                 <h5>Links</h5>
-                                <ul>    
+                                <ul>
                                     <li>
                                         <a href="about(1).html">About</a>
                                     </li>
@@ -434,7 +434,7 @@
                                         <a href="mailto:hello@domain.com"><i class="fa fa-envelope"></i> krishiconnect@gmail.com</a>
                                      </li>
                                  </ul>
-            
+
                                  <h5>Follow Us</h5>
                                  <ul class="social">
                                      <li>
@@ -450,15 +450,15 @@
                             </div>
                             <div class="col-md-3m" id="col-md-3m">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                
+
                            </div>
                         </div>
                     </div>
-                    <p class="copyright" id="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
+                    <p class="copyright" id="copyright">&copy; <span id="copyright-year"></span> कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
                 </footer>
             </div>
-      
 
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/js/jquery-migrate.js"></script>
     <script type="text/javascript" src="assets/packages/bootstrap/libraries/popper.js"></script>
@@ -473,7 +473,7 @@
     <script src="wishlist.js"></script>
 
     <script>
-        ScrollReveal({ 
+        ScrollReveal({
             //reset: true ,
             distance : '60px' ,
             duration:2500,

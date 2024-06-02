@@ -7,8 +7,7 @@ var buyerEmailInput = document.getElementById('buyer-email');
 function createItemElement(item) {
   const itemElement = document.createElement('div');
   itemElement.classList.add('cartlist');
-  itemElement.innerHTML = "<span class='item-detail'><span>" + item.name + "</span>  <span>" + item.price + "</span></span>";
-
+  itemElement.innerHTML = "<span class='item-detail'><img src='" + item.imageUrl + "'/>  <span>" + item.name + "</span>  <span>" + item.price + "</span></span>";
   const decreaseQuantityButton = document.createElement('button');
   const increaseQuantityButton = document.createElement('button');
   const image=document.createElement('img')
@@ -75,7 +74,7 @@ function updateSubtotal() {
   if (cartItems.length === 0) {
     emptyCart()
   } else {
-    subtotalElement.innerHTML = 'Subtotal: Rp ' + subtotal.toFixed(2);
+    subtotalElement.innerHTML = 'Subtotal: ' + subtotal.toFixed(2)+' RS';
   }
 }
 updateSubtotal();

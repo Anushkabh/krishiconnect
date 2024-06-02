@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="stylehome.css" type="text/css">
   <link rel="stylesheet" href="style2.css" type="text/css" media="screen and (max-width: 1060px" )>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    
+
     <link rel="stylesheet" href="stylesheet.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
     <script src="https://unpkg.com/scrollreveal"></script>
-    
+
 </head>
 
 <body>
@@ -82,7 +82,7 @@
             <div class="collapse navbar-collapse" id="navbarcollapse">
                 <!-- Navbar Menu -->
                 <ul class="navbar-nav ml-auto" >
-              
+
                   <li class="nav-item" id="h">
                       <a href="home.html" class="nav-link active">HOME</a>
                   </li>
@@ -95,14 +95,14 @@
                       onclick="logout(event)">LogOut</button>
                   </li>
               </ul>
-              
+
             </div>
 
         </div>
     </nav>
 </div>
   <!-- Nav link -->
-  
+
   <div class="banner">
     <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/farmer.png');">
         <div class="container">
@@ -127,7 +127,7 @@
       <!-- next circle -->
       <!-- <div class="outcircle c1"> -->
       <!-- <div class="incircle">
-  
+
                <span class="prod">Potato</span>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
@@ -139,10 +139,10 @@
               </defs>
               <circle cx="80" cy="80" r="70" stroke-linecap="round" />
             </svg>
-  
+
           </div>
-  
-  
+
+
           <section class="skillname">
             <h2>Frontend Devlopment</h2>
             <p>I am a frontend devloper with skills in HTML, CSS, Javascript.</p>
@@ -307,12 +307,12 @@
         <div class="row">
             <div class="col-md-3" id="col-md-3">
                 <h5>About</h5>
-                
+
                 <p>कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.</p>
             </div>
             <div class="col-md-3l" id="col-md-3l">
                 <h5>Links</h5>
-                <ul>    
+                <ul>
                     <li>
                         <a href="about(1).html">About</a>
                     </li>
@@ -346,20 +346,24 @@
                      <li>
                         <a href="javascript:void(0)" target="_blank"><i class="fab fa-youtube"></i></a>
                      </li>
+                     <li>
+                      <a href="javascript:void(0)" target="_blank"><i class="fab fa-google"></i></a>
+                     </li>
                  </ul>
             </div>
             <div class="col-md-3m" id="col-md-3m">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                
+
            </div>
         </div>
     </div>
-    <p class="copyright" id="copyright">&copy; कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
+    <p class="copyright" id="copyright">&copy; <span id="copyright-year"></span> कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
   </footer>
 
 
 
     </script>
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/js/jquery-migrate.js"></script>
     <script type="text/javascript" src="assets/packages/bootstrap/libraries/popper.js"></script>
@@ -386,7 +390,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 <script>
-  ScrollReveal({ 
+  ScrollReveal({
       //reset: true ,
       distance : '60px' ,
       duration:2500,
