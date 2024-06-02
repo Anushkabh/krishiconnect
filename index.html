@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="whykrishiconnect.css">
 
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -30,11 +31,13 @@
 
     <!-- BoxIcons v2.1.2 -->
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="darkmode.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="index.js"></script>
   <style>
     html {
   scroll-behavior: smooth;
@@ -101,6 +104,12 @@ h1, h2, h3, h4, h5, h6 {
       object-fit: cover;
       z-index: 1;
     }
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
 
     .banner .jumbotron .overlay {
       position: absolute;
@@ -215,6 +224,16 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 0.875rem;
         }
     }
+
+    @media (max-width: 995px){
+      #products .container{
+        display: grid !important;
+        grid-template-columns: 1fr;
+      }
+      #procucts .container .card{
+        max-width: none !important;
+      }
+    }
     @media (max-width: 995px) and (min-width:760px) {
         .card-title {
             font-size: 1rem;
@@ -224,12 +243,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 
-    #products .container {
-        display: flex;
-        flex-wrap: wrap;
-        /* justify-content: space-between; */
-        padding: 0;
-    }
+   
     #products .card {
         flex: 1 0 30%; /* Adjust the value as needed to fit your design */
         margin: 10px;
@@ -252,6 +266,71 @@ h1, h2, h3, h4, h5, h6 {
     #products .card-text {
         font-size: 1rem;
     }
+    /* for dropdown wishlist */
+
+#wishlistDropdownContent {
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 200px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.wishlist-item {
+    margin-bottom: 10px;
+}
+
+.item-name {
+  
+    font-weight: bold;
+}
+
+.add-to-cart-button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #539655;
+}
+
+.remove-button {
+    background-color: #E91E63;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #cd1653;
+    color: white;
+    border-radius: 3px;
+}
+
+.view-wishlist-link {
+    display: block;
+    padding: 10px;
+    color: #333; 
+    text-decoration: none;
+    font-weight: bold;
+    border-top: 1px solid #ccc; 
+  }
+  
+  .view-wishlist-link:hover {
+    background-color: #f5f5f5; 
+  }
+
     @media (max-width: 767px) {
         #products .card {
             flex: 1 0 48%; /* Two cards per row on smaller screens */
@@ -289,6 +368,40 @@ h1, h2, h3, h4, h5, h6 {
 .scroll-to-top:hover {
     opacity: 0.8;
 }
+#loader{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  gap: 10px;
+  z-index: 9999;
+}
+#loader h3{
+  font-size: 2vw;
+  font-weight: 100;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+#loader.h3-hide h3 {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1s, transform 1s;
+}
+
+#loader.fade-out {
+  opacity: 0;
+ 
+  transition: opacity 1s;
+}
+#loader.hidden {
+  display: none;
+}
 
 .card1:hover .card-inner {
         transform: rotateY(180deg);
@@ -319,10 +432,10 @@ h1, h2, h3, h4, h5, h6 {
 
 <!-- Custom CSS -->
 <link rel="stylesheet" href="test-style.css">
-<body>
+
 </head>
 
-<body>
+  <body>
   <div class="page-header" >
     <!--=============== Navbar ===============-->
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation" style="height: 80px;">
@@ -352,9 +465,14 @@ h1, h2, h3, h4, h5, h6 {
             <li class="nav-item" id="nav-link3">
               <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
             </li>
-            <li class="nav-item" id="nav-link4">
-              <a href="shop(1).html" class="nav-link"><i class="ri-seedling-fill"></i> Wishlist</a>
-            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
+                  Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                  <!-- Wishlist items will be dynamically added here -->
+              </div>
+          </li>
             <li class="nav-item" id="nav-link5">
               <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
             </li>
@@ -425,7 +543,44 @@ h1, h2, h3, h4, h5, h6 {
         </div>
       </div>
     </div>
+  </div><br><br><br><br>
+
+  <!-- Why Krishi Connect-->
+  
+  <h2 class="title">Why कृषिCONNECT</h2>
+  <div class="containerrr">
+    <div class="cardd" style="--clr: #009688;">
+    <div class="imgbx">
+        <img src="OIP.jpg">
+    </div>
+    <div class="content">
+        <h2>Straight from the Farm</h2>
+        <p>Our farm-to-table concept emphasizes on getting the fresh produce directly from local farms to your tables within one day, hence you know you get the freshest produce straight from harvest.</p>
+    </div>
+    </div>
+    <div class="cardd" style="--clr: #ff3e7f;">
+    <div class="imgbx">
+        <img src="OIP 3.jpg">
+    </div>
+    <div class="content">
+        <h2>Sustainable Practices</h2>
+        <p> We embrace sustainable farming practices to nurture the environment. Our methods include crop rotation, organic fertilizers, water conservation, and biodiversity promotion. These practices ensure healthy soil, reduce environmental impact, and produce nutritious, high-quality food.</p>
+    </div>
+    </div>
+    <div class="cardd" style="--clr: #03a9f4;">
+    <div class="imgbx">
+        <img src="OIP 2.jpg">
+    </div>
+    <div class="content">
+        <h2>Local and Convenient</h2>
+        <p>Our locally grown produce is harvested at peak freshness and delivered within 24 hours, ensuring you enjoy the highest quality and flavor. Experience the ease of supporting local agriculture while savoring delicious, nutritious food.</p>
+    </div>
+    </div>
+</div>
+  <!-- Footer Section -->
+=======
   </div>
+ <!-- Footer Section -->
 
   <section id="why">
     <h2 class="title">Why कृषिCONNECT</h2>
@@ -499,15 +654,14 @@ h1, h2, h3, h4, h5, h6 {
 
         <!-- Footer Section -->
 </section>
-
 <section id="products" class="products">
   <h2 class="title">Products</h2>
   <div class="container" style="display: flex; flex-wrap: wrap; ">
       
-      <div class="card text-center card1" style="max-width: calc(33.333% - 1rem); height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
+      <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
         <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
             <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                <img src="assets/img/spinach.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="assets/img/spinach.jpg" class="card-img-top" alt="Spinach" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: green; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
                 <h5 class="card-title">Spinach</h5>
@@ -516,10 +670,10 @@ h1, h2, h3, h4, h5, h6 {
             </div>
         </div>
     </div>
-      <div class="card text-center card1" style="max-width: calc(33.333% - 1rem); height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
+      <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
         <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
             <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                <img src="assets/img/tomato.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="assets/img/tomato.jpg" class="card-img-top" alt="Tomato" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: green; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
                 <h5 class="card-title">Tomato</h5>
@@ -528,7 +682,7 @@ h1, h2, h3, h4, h5, h6 {
             </div>
         </div>
     </div>
-      <div class="card text-center card1" style="max-width: calc(33.333% - 1rem); height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
+      <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
         <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
             <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
                 <img src="https://t3.ftcdn.net/jpg/04/68/10/86/360_F_468108626_wpL1hcDkE4g12mPPnbVxx8rCnWpHYKmV.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
@@ -859,6 +1013,11 @@ h1, h2, h3, h4, h5, h6 {
 <!-- Bootstrap JS -->
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <!-- Custom Script -->
+<script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/packages/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="assets/js/theme.js"></script>
+<script src="shop.js"></script>
 <script src="assets/js/scripts.js"></script>
 <script src="./darkmode.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
