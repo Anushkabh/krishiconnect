@@ -30,9 +30,18 @@ i {
     display: block;
     width:100%;
 }
-
 .banner .jumbotron {
     margin-bottom: 0;
+
+}
+.jumbotron-bg::before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); 
 
 }
 .jumbotron.jumbotron-bg {
@@ -41,6 +50,8 @@ i {
     background-repeat: no-repeat;
 
 }
+
+
 .jumbotron {
     padding: 4rem;
 }
@@ -130,9 +141,6 @@ h4 {
 .col-md-4{
     transition: transform 1s ease;
     border-radius: 12px;
-}
-.col-md-4:hover{
-box-shadow: 0 0 32px rgb(151, 251, 151);
 }
 .card .card-icon .card-icon-i {
     margin: 0 auto;
@@ -542,10 +550,10 @@ h1 {
 }
 
 .navbar {
-    background-color: transparent;
+   
     position: static;
     width: 100%;
-    height: 100px;
+
 }
 
 .navbar-brand {
@@ -559,8 +567,7 @@ h1 {
 }
 
 
-.nav-item {
-    padding: 10px;}
+
 
 
 /* Mobile Responsiveness */
