@@ -1,7 +1,8 @@
 *{
     font-family: sans-serif;
-  
-    
+}
+html{
+    width: fit-content;
 }
 section {
     padding: 80px 0;
@@ -213,17 +214,17 @@ h1 {
     font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
 .main{
-    display: flex;
-    background: url("https://img.freepik.com/premium-photo/young-farmer-hands-holding-green-plant-with-young-man-soil-planting-garden-growing-ground_449849-6036.jpg");
+    background: url("https://img.freepik.com/free-vector/hand-drawn-man-planting-tree-illustration_23-2149223829.jpg");
     background-size: cover;
     background-color: white;
-    height:120vh;
-    width: 100%;
-    /* justify-content: center; */
-    /* align-items: center; */
+    height:600px;
+    width: 600px;
     opacity:1;
-    margin: 0px ;
-    
+}
+@media (max-width: 1000px) {
+    .main{
+        display: none;
+    }
 }
 .register_head{
     /* color: rgb(199, 81, 22); */
