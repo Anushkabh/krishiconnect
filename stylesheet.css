@@ -34,16 +34,7 @@ i {
     margin-bottom: 0;
 
 }
-.jumbotron-bg::before {
-    content: '';
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); 
 
-}
 .jumbotron.jumbotron-bg {
     background-size: cover;
     background-position: center;

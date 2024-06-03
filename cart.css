@@ -785,7 +785,7 @@ button {
 .cartlist{
     display: flex;
     text-align: left;
-    color: #fafafa;
+    color:  #132e40;
     justify-content: space-around;
     align-items: center;
     width: 80%;
@@ -808,7 +808,7 @@ button {
 }
 .cartlist button{
     background-color: transparent;
-    color: white;
+    color: #132e40;
     border: none;
     border-radius: 5px;
     margin: 10px;
@@ -826,7 +826,7 @@ button {
 }
 #subtotal{
     margin-top: 20px;
-    color: #add8e6;
+    color:  #132e40;
     font-weight: bold;
     font-size: 1.5rem;
     padding: 20px;
