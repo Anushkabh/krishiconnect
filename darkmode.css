@@ -59,13 +59,13 @@ input {
 }
 /* -- Dark Mode -- */
 .dark {
-    background: #151d2a;
+    background: #132e40;
 }
 
 .dark .toggle {
-    background: #151d2a;
-    box-shadow: 3px 3px 3px #0e131b,
-        -3px -3px 3px #1c2739;
+    background: #132e40;
+    box-shadow: 3px 3px 3px #132e40,
+        -3px -3px 3px #132e40;
 }
 
 .dark .toggle .bx {
