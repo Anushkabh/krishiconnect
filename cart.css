@@ -731,7 +731,8 @@ button {
     position: relative;
     background-color: #1cd98a;
     border-radius: 10px;
-    background: url("/assets/img/green-back.webp");
+    background: url("https://marketplace.canva.com/EAFnfGcKtiM/1/0/800w/canva-green-illustrative-organic-plant-zoom-virtual-background-5jgOKxZFOf4.jpg");
+    background-size: cover;
     text-align: center;
     justify-content: center;
     margin: 30px;
@@ -872,4 +873,17 @@ button {
   .cart-table::-webkit-scrollbar-thumb:hover {
     border: 1px solid #004b08;
     background: #004b08;
+  }
+  .order_now_button{
+    padding:10px;
+    width:160px;
+    font-size: 20px;
+    background-color: #ececec;
+    color:#004b08;
+    font-weight: bold;
+    border-radius:6px;
+  }
+  .order_now_button:hover{
+    background-color:#047e10;
+    color:#cef9d4;
   }
