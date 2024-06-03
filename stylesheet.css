@@ -34,7 +34,16 @@ i {
     margin-bottom: 0;
 
 }
+.jumbotron-bg::before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); 
 
+}
 .jumbotron.jumbotron-bg {
     background-size: cover;
     background-position: center;
@@ -253,7 +262,7 @@ h1 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color:#132e40;
+    background-color:#4A9304;
     margin: 20px;
     padding: 20px;
     align-items: center;
@@ -265,7 +274,7 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     position: relative;
-    border-color: #132e40;
+    border-color: #E91E63;
     border-width: 2px;
     padding: 10px;
     font-weight: bold;
@@ -273,8 +282,8 @@ h1 {
 }
 .cartbtn{
         color:#FFF;
-        background: #132e40;
-        border-color: #132e40;
+        background: #E91E63;
+        border-color: #E91E63;
         border-width: 2px;
         margin:4px;
         padding: 10px;
