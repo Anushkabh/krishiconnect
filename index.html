@@ -220,6 +220,10 @@
         .text-success {
             color: #28a745;
         }
+        .chatbotui{
+            position: relative;
+            z-index: 100;
+        }
         
         @media (max-width: 1200px) and (min-width:995px) {
             .card-title {
@@ -345,6 +349,9 @@
                 flex: 1 0 48%;
                 /* Two cards per row on smaller screens */
             }
+            .section-subtitle{
+                padding-left: 50px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -364,7 +371,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            z-index: 1000;
+            z-index: 100;
             display: none;
             /* Initially hide the button */
             background-color: #198754;
@@ -376,12 +383,12 @@
             border-radius: 50%;
             font-size: 20px;
             cursor: pointer;
-            transition: opacity 0.3s ease;
+            /*transition: opacity 0.3s ease;*/
         }
         
-        .scroll-to-top:hover {
+        /*.scroll-to-top:hover {
             opacity: 0.8;
-        }
+        }*/
         
         #loader {
             height: 100vh;
@@ -508,13 +515,6 @@
               <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
                   <!-- Wishlist items will be dynamically added here -->
               </div>
-          </li>
-            <li class="nav-item" id="nav-link5">
-              <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
-            </li>
-            <li class="nav-item">
-              <a href="contact(1).html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
-            </li>
           </ul>
           <input type="checkbox" id="toggle">
 
@@ -528,27 +528,29 @@
         </nav>
     </div>
     <!--   Chat bot   -->
-    <button class="chatbot__button">
-    <span class="material-symbols-outlined">chatBot</span>
-    <span class="material-symbols-outlined">close</span>
-  </button>
-    <div class="chatbot">
-        <div class="chatbot__header">
-            <h3 class="chatbox__title">krishiconnect</h3>
-            <span class="material-symbols-outlined">close</span>
-        </div>
-        <ul class="chatbot__box">
-            <li class="chatbot__chat incoming">
-                <p>Welcome ! to krishiconnect </p><br>
-            </li>
-            <li class="chatbot__chat outgoing">
-                <!-- <p>...</p> -->
-            </li>
-        </ul>
-        <div class="chatbot__input-box">
-            <textarea class="chatbot__textarea" placeholder="Enter a message..." required></textarea>
-            <span id="send-btn" class="material-symbols-outlined">send</span>
-        </div>
+    <div class="chatbotui">
+        <button class="chatbot__button">
+            <span class="material-symbols-outlined">ChatBot</span>
+            <span class="material-symbols-outlined">Close</span>
+          </button>
+            <div class="chatbot">
+                <div class="chatbot__header">
+                    <h3 class="chatbox__title">krishiconnect</h3>
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+                <ul class="chatbot__box">
+                    <li class="chatbot__chat incoming">
+                        <p>Welcome to krishiconnect! How can I help you? </p><br>
+                    </li>
+                    <li class="chatbot__chat outgoing">
+                        <!-- <p>...</p> -->
+                    </li>
+                </ul>
+                <div class="chatbot__input-box">
+                    <textarea class="chatbot__textarea" placeholder="Enter a message..." required></textarea>
+                    <span id="send-btn" class="material-symbols-outlined">Send</span>
+                </div>
+            </div>
     </div>
     <!--  chat bot finish  -->
 
@@ -562,7 +564,7 @@
                 <div class="overlay"></div>
                 <div class="container">
                     <h1 class="pt-5">FRESH FROM THE FARM TO YOUR DINING TABLE</h1>
-                    <p class="lead">WE SERVE FRESH.</p>
+                    <p class="lead">WE SERVE FRESH!</p>
 
                     <div class="row">
                         <div class="col-md-4">
@@ -605,21 +607,6 @@
         </div>
 
     </div><br><br><br><br>
-
-
-    <!-- Why Krishi Connect-->
-
-    <h2 class="title">Why कृषिCONNECT</h2>
-    <div class="containerrr">
-        <div class="cardd" style="--clr: #009688;">
-            <div class="imgbx">
-                <img src="OIP.jpg">
-
-      </div>
-    </div>
-  </div><br><br><br><br>
-
-  <!-- Why Krishi Connect-->
   
   <h2 class="title">Why कृषिCONNECT</h2>
   <div class="containerrr">
@@ -651,56 +638,7 @@
     </div>
     </div>
 </div>
-  <!-- Footer Section -->
-
-  </div>
- <!-- Footer Section -->
-
-
-<section id="products" class="products">
-  <h2 class="title">Products</h2>
-  <div class="container" style="display: flex; flex-wrap: wrap; ">
-      
-      <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
-        <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
-            <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                <img src="assets/img/spinach.jpg" class="card-img-top" alt="Spinach" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="content">
-                <h2>Straight from the Farm</h2>
-                <p>Our farm-to-table concept emphasizes on getting the fresh produce directly from local farms to your tables within one day, hence you know you get the freshest produce straight from harvest.</p>
-            </div>
-        </div>
-        <div class="cardd" style="--clr: #ff3e7f;">
-            <div class="imgbx">
-                <img src="OIP 3.jpg">
-
-    </div>
-      <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
-        <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
-            <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                <img src="assets/img/tomato.jpg" class="card-img-top" alt="Tomato" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="content">
-                <h2>Sustainable Practices</h2>
-                <p> We embrace sustainable farming practices to nurture the environment. Our methods include crop rotation, organic fertilizers, water conservation, and biodiversity promotion. These practices ensure healthy soil, reduce environmental impact,
-                    and produce nutritious, high-quality food.</p>
-            </div>
-        </div>
-        <div class="cardd" style="--clr: #03a9f4;">
-            <div class="imgbx">
-                <img src="OIP 2.jpg">
-            </div>
-            <div class="content">
-                <h2>Local and Convenient</h2>
-                <p>Our locally grown produce is harvested at peak freshness and delivered within 24 hours, ensuring you enjoy the highest quality and flavor. Experience the ease of supporting local agriculture while savoring delicious, nutritious food.</p>
-            </div>
-        </div>
-    </div>
-    <!-- Footer Section -->
-    =======
-    </div>
-    <!-- Footer Section -->
+</div>
 
 
     <section id="products" class="products">
@@ -752,7 +690,7 @@
         <h2 class="h2 section-title has-underline" style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
             What Clients Say
         </h2>
-        <p class="section-subtitle" style="align-items: center; justify-content: center; display: flex;color:#E91E63;font-size: 20px;">Explore on the world's best & largest Bidding marketplace with our beautiful Bidding
+        <p class="section-subtitle" style="align-items:center; justify-content:center; display: flex;color:#E91E63;font-size: 20px;">Explore on the world's best & largest Bidding marketplace with our beautiful Bidding
         </p>
 
         <div class="slide-container swiper" style="margin-bottom: 15px;">
@@ -853,23 +791,11 @@
     <!-- Testimonials -->
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start bg-body-tertiary text-muted" style="font-size: 1.2em; padding: 20px;">
-        <!-- Section: Social media -->
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-            <!-- Left -->
-            <div class="me-5 d-none d-lg-block font" style="font-size: 1.5em; font-weight: bold;">
-                <span>Get connected with us on social networks:</span>
-            </div>
-            <!-- Left -->
 
-            <!-- Right -->
-            <div class="">
-                <!-- Facebook -->
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #3b5998; font-size: 1.5em;" href="#!" role="button" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';"><i class="fab fa-facebook-f"></i
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-body-tertiary text-muted" style="font-size: 1.2em; padding: 10px;">
+<footer class="text-center text-lg-start bg-body-tertiary text-muted border-0" style="font-size: 1.2em; padding: 10px;">
   <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-0 border-bottom">
+  <section class="d-flex justify-content-center justify-content-lg-between p-0">
     <!-- Left -->
     <div class="me-5 d-none d-lg-block font" style="font-size: 1.5em; font-weight: bold;">
       <span>Get connected with us on social networks:</span>
@@ -1000,7 +926,7 @@
     </script>
 
     <!-- Scroll to Top Button -->
-    <a href="#" class="scroll-to-top" style="display: inline;">
+    <a href="#" class="scroll-to-top">
         <i class="fa fa-angle-up" aria-hidden="true"></i>
     </a>
 
