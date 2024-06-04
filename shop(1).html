@@ -9,6 +9,7 @@
     <link href="assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
     <link href="assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/o2system-ui/o2system-ui.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/owl-carousel/owl-carousel.css">
@@ -16,7 +17,34 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
-
+    
+<style>
+    .card-product {
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+    
+    .card-product:hover {
+        transform: scale(1.05); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+    
+    .card-product .card-body {
+        padding: 20px;
+    }
+    
+    .card-product .card-title a {
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .card-product .card-title a:hover {
+        color: #007bff; 
+    }
+    
+    </style>
 </head>
 <body>
     <div class="page-header">
@@ -74,7 +102,8 @@
                     <div class="shop-categories owl-carousel mt-5">
                         <div class="item">
                             <a href="shop(1).html">
-                                <div class="media d-flex align-items-center justify-content-center">
+                                <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
+                                    class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><i class="sb-bistro-carrot"></i></span>
                                     <div class="media-body">
                                         <h5>Vegetables</h5>
@@ -85,7 +114,8 @@
                         </div>
                         <div class="item">
                             <a href="shop(1).html">
-                                <div class="media d-flex align-items-center justify-content-center">
+                                <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
+                                    class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><i class="sb-bistro-apple"></i></span>
                                     <div class="media-body">
                                         <h5>Fruits</h5>
@@ -96,7 +126,8 @@
                         </div>
                         <div class="item">
                             <a href="shop(1).html">
-                                <div class="media d-flex align-items-center justify-content-center">
+                                <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
+                                    class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><i class="sb-bistro-roast-leg"></i></span>
                                     <div class="media-body">
                                         <h5>Oil Seeds</h5>
@@ -118,7 +149,8 @@
                         </div>
                         <div class="item">
                             <a href="shop(1).html">
-                                <div class="media d-flex align-items-center justify-content-center">
+                                <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
+                                    class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><i class="sb-bistro-french-fries"></i></span>
                                     <div class="media-body">
                                         <h5>Pulses</h5>
@@ -129,10 +161,11 @@
                         </div>
                         <div class="item">
                             <a href="shop(1).html">
-                                <div class="media d-flex align-items-center justify-content-center">
+                                <div style="border-radius: 8px; margin: 0 5px; height: 8rem; width: auto;"
+                                    class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><i class="sb-bistro-appetizer"></i></span>
                                     <div class="media-body">
-                                        <h5>Miscellenous</h5>
+                                        <h5>Miscellanous</h5>
                                         <p></p>
                                     </div>
                                 </div>
@@ -678,7 +711,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="title">Miscellenous</h2>
+                        <h2 class="title">Miscellaneous</h2>
                         <div class="product-carousel owl-carousel">
                             <div class="item">
                                 <div class="card card-product">
@@ -1031,15 +1064,17 @@
     
                         
                 <footer>
+                    <a href="#" class="back-to-top d-flex align-items-center justify-content-center" id="back-to-top"><i class="fa fa-solid fa-arrow-up" ></i></a>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-3">
                                 <h5>About</h5>
+                                
                                 <p>कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.</p>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3l">
                                 <h5>Links</h5>
-                                <ul>
+                                <ul>    
                                     <li>
                                         <a href="about(1).html">About</a>
                                     </li>
@@ -1051,11 +1086,11 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md">
                                  <h5>Contact</h5>
                                  <ul>
                                      <li>
-                                        <a href="tel:+620892738334"><i class="fa fa-phone"></i> 08272367238</a>
+                                        <a href="tel:+620892738334"><i  class="fa fa-phone mirrored-icon"></i> 08272367238</a>
                                     </li>
                                     <li>
                                         <a href="mailto:hello@domain.com"><i class="fa fa-envelope"></i> krishiconnect@gmail.com</a>
@@ -1075,7 +1110,7 @@
                                      </li>
                                  </ul>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3m">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 
                            </div>
