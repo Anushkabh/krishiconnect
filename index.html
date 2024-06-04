@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KrishiConnect</title>
-  <link rel="icon" type="image/png" href="/assets/img/logo/log.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KrishiConnect</title>
+    <link rel="icon" type="image/png" href="/assets/img/logo/log.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -20,6 +21,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="whykrishiconnect.css">
 
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -30,10 +32,13 @@
 
     <!-- BoxIcons v2.1.2 -->
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="darkmode.css">
+    <link rel="stylesheet" href="./chatBot/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="index.js"></script>
   <style>
@@ -206,155 +211,420 @@ h1, h2, h3, h4, h5, h6 {
         color: #28a745;
     }
     @media (max-width: 1200px) and (min-width:995px){
-        .card-title {
-            font-size: 1.25rem;
-        }
-        .card-text {
-            font-size: 0.875rem;
-        }
-    }
 
-    @media (max-width: 995px){
-      #products .container{
-        display: grid !important;
-        grid-template-columns: 1fr;
-      }
-      #procucts .container .card{
-        max-width: none !important;
-      }
-    }
-    @media (max-width: 995px) and (min-width:760px) {
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="index.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            color: #333333;
+            font-size: 14px;
+            font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+            background: #fff;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-transform: uppercase !important;
+            font-weight: 700 !important;
+        }
+        
+        .page-header .navbar {
+            color: white;
+        }
+        
+        .page-header .navbar .navbar-brand img {
+            height: 50px;
+            margin-left: -160px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        .page-header .navbar .navbar-nav .nav-link {
+            color: #FFF;
+            font-size: 1rem;
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+        
+        .page-header .navbar .navbar-nav .nav-link:focus,
+        .page-header .navbar .navbar-nav .nav-link:hover,
+        .page-header .navbar .navbar-nav .nav-link.active {
+            color: #E91E63;
+        }
+        
+        .page-header .navbar.bg-white {
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+        }
+        
+        .page-header .navbar.bg-white .navbar-nav .nav-link {
+            color: #333333;
+        }
+        
+        .page-header .navbar.bg-white .navbar-nav .nav-link:focus,
+        .page-header .navbar.bg-white .navbar-nav .nav-link:hover,
+        .page-header .navbar.bg-white .navbar-nav .nav-link.active {
+            color: #E91E63;
+        }
+        
+        .navbar-brand img {
+            margin-left: 30%;
+        }
+        
+        .banner .jumbotron {
+            margin-bottom: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            height: auto;
+        }
+        
+        .banner .jumbotron video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+        }
+        
+        .banner .jumbotron .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+        
+        .banner .jumbotron .container {
+            position: relative;
+            z-index: 3;
+            padding-top: 200px;
+            /* Adjust padding as needed to position the text correctly */
+            text-align: center;
+        }
+        
+        .banner .jumbotron .container h1,
+        .banner .jumbotron .container p {
+            color: #FFF;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+        
+        .card-icon {
+            font-size: 2rem;
+            color: #FFF;
+        }
+        
+        .banner .jumbotron .container .card {
+            margin-top: 2.3rem;
+            background-color: transparent;
+            border: none;
+        }
+        
+        .banner .jumbotron .container .card .card-icon {
+            border: none;
+            color: #FFF;
+        }
+        
+        .banner .jumbotron .container .card .card-body .card-title {
+            color: #FFF;
+            text-transform: uppercase;
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gray-bg {
+            background-color: #f8f9fa;
+        }
+        
+        .card {
+            padding: 20px;
+            margin: 10px;
+            overflow: hidden;
+            box-sizing: border-box;
+            height: 100%;
+        }
+        
+        .card-body {
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        
+
         .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .card-text {
+            font-size: 1rem;
+            word-wrap: break-word;
+        }
+        
+        .cart-icon {
+            margin-bottom: 20px;
+        }
+        
+        .card-icon-i {
+            font-size: 2rem;
+        }
+        
+        .text-success {
+            color: #28a745;
+        }
+        
+        @media (max-width: 1200px) and (min-width:995px) {
+            .card-title {
+                font-size: 1.25rem;
+            }
+            .card-text {
+                font-size: 0.875rem;
+            }
+        }
+        
+        @media (max-width: 995px) {
+            #products .container {
+                display: grid !important;
+                grid-template-columns: 1fr;
+            }
+            #procucts .container .card {
+                max-width: none !important;
+            }
+        }
+        
+        @media (max-width: 995px) and (min-width:760px) {
+            .card-title {
+                font-size: 1rem;
+            }
+            .card-text {
+                font-size: 0.6rem;
+            }
+        }
+        
+        #products .card {
+            flex: 1 0 30%;
+            /* Adjust the value as needed to fit your design */
+            margin: 10px;
+            box-sizing: border-box;
+        }
+        
+        #products .card img {
+            width: 100%;
+            height: 200px;
+            /* Set a fixed height */
+            object-fit: cover;
+        }
+        
+        #products .card-body {
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        
+        #products .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        #products .card-text {
             font-size: 1rem;
         }
-        .card-text {
-            font-size: 0.6rem;
+        /* for dropdown wishlist */
+        
+        #wishlistDropdownContent {
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 200px;
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 5px;
         }
-    }
-
-   
-    #products .card {
-        flex: 1 0 30%; /* Adjust the value as needed to fit your design */
-        margin: 10px;
-        box-sizing: border-box;
-    }
-    #products .card img {
-        width: 100%;
-        height: 200px; /* Set a fixed height */
-        object-fit: cover;
-    }
-    #products .card-body {
-        padding: 15px;
-        box-sizing: border-box;
-    }
-    #products .card-title {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-    }
-    #products .card-text {
-        font-size: 1rem;
-    }
-    @media (max-width: 767px) {
-        #products .card {
-            flex: 1 0 48%; /* Two cards per row on smaller screens */
+        
+        .wishlist-item {
+            margin-bottom: 10px;
         }
-    }
-    @media (max-width: 480px) {
-        #products .card {
-            flex: 1 0 100%; /* One card per row on very small screens */
+        
+        .item-name {
+            font-weight: bold;
         }
-    }
-
-    .footer-logo img {
-            max-height: 50px; /* Limit the height of the logo */
+        
+        .add-to-cart-button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 14px;
+            padding: 5px 5px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-right: 5px;
         }
+        
+        .add-to-cart-button:hover {
+            background-color: #539655;
+        }
+        
+        .remove-button {
+            background-color: #E91E63;
+            color: white;
+            padding: 5px 5px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        .remove-button:hover {
+            background-color: #cd1653;
+            color: white;
+            border-radius: 3px;
+        }
+        
+        .view-wishlist-link {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            border-top: 1px solid #ccc;
+        }
+        
+        .view-wishlist-link:hover {
+            background-color: #f5f5f5;
+        }
+        
+        @media (max-width: 767px) {
+            #products .card {
+                flex: 1 0 48%;
+                /* Two cards per row on smaller screens */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #products .card {
+                flex: 1 0 100%;
+                /* One card per row on very small screens */
+            }
+        }
+        
+        .footer-logo img {
+            max-height: 50px;
+            /* Limit the height of the logo */
+        }
+        /* Scroll to Top Button */
+        
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
+            /* Initially hide the button */
+            background-color: #198754;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+        
+        .scroll-to-top:hover {
+            opacity: 0.8;
+        }
+        
+        #loader {
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            gap: 10px;
+            z-index: 9999;
+        }
+        
+        #loader h3 {
+            font-size: 2vw;
+            font-weight: 100;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        
+        #loader.h3-hide h3 {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 1s, transform 1s;
+        }
+        
+        #loader.fade-out {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        
+        #loader.hidden {
+            display: none;
+        }
+        
+        .card1:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+        
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        
+        .card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
 
-    /* Scroll to Top Button */
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: none; /* Initially hide the button */
-    background-color: #198754;
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-}
-
-.scroll-to-top:hover {
-    opacity: 0.8;
-}
-#loader{
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  gap: 10px;
-  z-index: 9999;
-}
-#loader h3{
-  font-size: 2vw;
-  font-weight: 100;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.5s, transform 0.5s;
-  }
-#loader.h3-hide h3 {
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: opacity 1s, transform 1s;
-}
-
-#loader.fade-out {
-  opacity: 0;
- 
-  transition: opacity 1s;
-}
-#loader.hidden {
-  display: none;
-}
-
-.card1:hover .card-inner {
-        transform: rotateY(180deg);
-    }
-
-    .card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transform-style: preserve-3d;
-        transition: transform 0.8s;
-    }
-
-    .card-front, .card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-    }
-
-    .card-back {
-        transform: rotateY(180deg);
-    }
-  </style>
-  <!-- Swiper CSS -->
-<link rel="stylesheet" href="swiper-bundle.min.css">
-
-<!-- Custom CSS -->
-<link rel="stylesheet" href="test-style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="test-style.css">
 
 </head>
 
@@ -382,6 +652,7 @@ h1, h2, h3, h4, h5, h6 {
   <div class="circle"></div>
 
 <body class="light">
+
 <div id="loader">
   <h3>कृषिCONNECT,</h3>
   <h3>WE SERVE</h3>
@@ -394,37 +665,65 @@ h1, h2, h3, h4, h5, h6 {
       <div class="container">
         <!-- Navbar Brand -->
 
+    <div id="loader">
+        <h3>कृषिCONNECT,</h3>
+        <h3>WE SERVE</h3>
+        <h3>FRESH !</h3>
+    </div>
+    <div class="page-header">
+        <!--=============== Navbar ===============-->
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
+            <div class="container">
 
-            <a href="index.html" class="navbar-brand mr-auto">
-                <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px; " >
-              </a>
+
+                <a href="index.html" class="navbar-brand mr-auto">
+                    <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px; ">
+                </a>
 
 
-        <!-- Toggle Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
-          <!-- Navbar Menu -->
-          <ul class="navbar-nav">
-            <li class="nav-item" style="border: 2px solid white" id="nav-link1">
-              <a href="login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
-            </li>
-            <li class="nav-item" id="nav-link2">
-              <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
-            </li>
-            <li class="nav-item" id="nav-link3">
-              <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
-            </li>
-            <li class="nav-item" id="nav-link4">
-              <a href="shop(1).html" class="nav-link"><i class="ri-seedling-fill"></i> Wishlist</a>
-            </li>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
+                    <!-- Navbar Menu -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item" style="border: 2px solid white" id="nav-link1">
+                            <a href="login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
+                        </li>
+                        <li class="nav-item" id="nav-link2">
+                            <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
+                        </li>
+                        <li class="nav-item" id="nav-link3">
+                            <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
+                  Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+              </a>
+
+                            <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                                <!-- Wishlist items will be dynamically added here -->
+                            </div>
+                        </li>
+                        <li class="nav-item" id="nav-link5">
+                            <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Contact(1).html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
+                        </li>
+                    </ul>
+                    <input type="checkbox" id="toggle">
+              <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                  <!-- Wishlist items will be dynamically added here -->
+              </div>
+          </li>
             <li class="nav-item" id="nav-link5">
               <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
             </li>
             <li class="nav-item">
-              <a href="Contact(1).html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
+              <a href="contact(1).html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
             </li>
           </ul>
           <input type="checkbox" id="toggle">
@@ -434,136 +733,139 @@ h1, h2, h3, h4, h5, h6 {
                         <i class="bx bx-moon"></i>
                         <span class="ball"></span>
                     </label>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--   Chat bot   -->
+    <button class="chatbot__button">
+    <span class="material-symbols-outlined">chatBot</span>
+    <span class="material-symbols-outlined">close</span>
+  </button>
+    <div class="chatbot">
+        <div class="chatbot__header">
+            <h3 class="chatbox__title">krishiconnect</h3>
+            <span class="material-symbols-outlined">close</span>
         </div>
-      </div>
-    </nav>
-  </div>
+        <ul class="chatbot__box">
+            <li class="chatbot__chat incoming">
+                <p>Welcome ! to krishiconnect </p><br>
+            </li>
+            <li class="chatbot__chat outgoing">
+                <!-- <p>...</p> -->
+            </li>
+        </ul>
+        <div class="chatbot__input-box">
+            <textarea class="chatbot__textarea" placeholder="Enter a message..." required></textarea>
+            <span id="send-btn" class="material-symbols-outlined">send</span>
+        </div>
+    </div>
+    <!--  chat bot finish  -->
 
-  <div id="page-content" class="page-content">
-    <div class="banner">
-      <div class="jumbotron jumbotron-video text-center bg-dark mb-0 rounded-0">
-        <video width="100%" preload="auto" loop autoplay muted>
+    <div id="page-content" class="page-content">
+        <div class="banner">
+            <div class="jumbotron jumbotron-video text-center bg-dark mb-0 rounded-0">
+                <video width="100%" preload="auto" loop autoplay muted>
           <source src='assets/media/explore.mp4' type='video/mp4' />
           <source src='assets/media/explore.webm' type='video/webm' />
         </video>
-        <div class="overlay"></div>
-        <div class="container">
-          <h1 class="pt-5">FRESH FROM THE FARM TO YOUR DINING TABLE</h1>
-          <p class="lead">WE SERVE FRESH.</p>
+                <div class="overlay"></div>
+                <div class="container">
+                    <h1 class="pt-5">FRESH FROM THE FARM TO YOUR DINING TABLE</h1>
+                    <p class="lead">WE SERVE FRESH.</p>
 
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card border-0 text-center bg-transparent">
-                <div class="card-icon">
-                  <i class="fa fa-shopping-basket"></i>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card border-0 text-center bg-transparent">
+                                <div class="card-icon">
+                                    <i class="fa fa-shopping-basket"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Buy</h4>
+                                    <p class="card-text">Choose your product with a click and finalize your order effortlessly. Enjoy seamless shopping for top-quality agricultural goods, making the process as convenient as it should be.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 text-center bg-transparent">
+                                <div class="card-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Farm-Fresh Quality</h4>
+                                    <p class="card-text">We're committed to delivering the freshest, premium-grade produce directly from our fields to your table. Count on us for top-quality goods, cultivated with care and bursting with natural goodness.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 text-center bg-transparent">
+                                <div class="card-icon">
+                                    <i class="fa fa-truck"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Delivery</h4>
+                                    <p class="card-text">
+                                        Experience prompt delivery of our farm-fresh products straight to your doorstep. With efficient logistics and careful handling, we ensure your order arrives swiftly, preserving the freshness and quality of our agricultural goods.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                  <h4 class="card-title">Buy</h4>
-                  <p class="card-text">Choose your product with a click and finalize your order effortlessly. Enjoy seamless shopping for top-quality agricultural goods, making the process as convenient as it should be.</p>
-                </div>
-              </div>
             </div>
-            <div class="col-md-4">
-              <div class="card border-0 text-center bg-transparent">
-                <div class="card-icon">
-                  <i class="fas fa-leaf"></i>
-                </div>
-                <div class="card-body">
-                  <h4 class="card-title">Farm-Fresh Quality</h4>
-                  <p class="card-text">We're committed to delivering the freshest, premium-grade produce directly from our fields to your table. Count on us for top-quality goods, cultivated with care and bursting with natural goodness.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card border-0 text-center bg-transparent">
-                <div class="card-icon">
-                  <i class="fa fa-truck"></i>
-                </div>
-                <div class="card-body">
-                  <h4 class="card-title">Delivery</h4>
-                  <p class="card-text">
-                    Experience prompt delivery of our farm-fresh products straight to your doorstep. With efficient logistics and careful handling, we ensure your order arrives swiftly, preserving the freshness and quality of our agricultural goods.</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+
+    </div><br><br><br><br>
+
+
+    <!-- Why Krishi Connect-->
+
+    <h2 class="title">Why कृषिCONNECT</h2>
+    <div class="containerrr">
+        <div class="cardd" style="--clr: #009688;">
+            <div class="imgbx">
+                <img src="OIP.jpg">
+
       </div>
     </div>
+  </div><br><br><br><br>
+
+  <!-- Why Krishi Connect-->
+  
+  <h2 class="title">Why कृषिCONNECT</h2>
+  <div class="containerrr">
+    <div class="cardd" style="--clr: #009688;">
+    <div class="imgbx">
+        <img src="OIP.jpg">
+    </div>
+    <div class="content">
+        <h2>Straight from the Farm</h2>
+        <p>Our farm-to-table concept emphasizes on getting the fresh produce directly from local farms to your tables within one day, hence you know you get the freshest produce straight from harvest.</p>
+    </div>
+    </div>
+    <div class="cardd" style="--clr: #ff3e7f;">
+    <div class="imgbx">
+        <img src="OIP 3.jpg">
+    </div>
+    <div class="content">
+        <h2>Sustainable Practices</h2>
+        <p> We embrace sustainable farming practices to nurture the environment. Our methods include crop rotation, organic fertilizers, water conservation, and biodiversity promotion. These practices ensure healthy soil, reduce environmental impact, and produce nutritious, high-quality food.</p>
+    </div>
+    </div>
+    <div class="cardd" style="--clr: #03a9f4;">
+    <div class="imgbx">
+        <img src="OIP 2.jpg">
+    </div>
+    <div class="content">
+        <h2>Local and Convenient</h2>
+        <p>Our locally grown produce is harvested at peak freshness and delivered within 24 hours, ensuring you enjoy the highest quality and flavor. Experience the ease of supporting local agriculture while savoring delicious, nutritious food.</p>
+    </div>
+    </div>
+</div>
+  <!-- Footer Section -->
+
   </div>
+ <!-- Footer Section -->
 
-  <section id="why">
-    <h2 class="title">Why कृषिCONNECT</h2>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card border-0 text-center gray-bg">
-                    <div class="cart-icon">
-                        <div class="card-icon">
-                            <div class="card-icon-i text-success">
-                                <i class="fas fa-leaf"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="card-box"> -->
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                Straight from the Farm
-                            </h4>
-                            <p class="card-text">
-                                Our farm-to-table concept emphasizes on getting the fresh produce directly from local farms to your tables within one day, hence you know you get the freshest produce straight from harvest.
-                            </p>
-                        </div>
-                    <!-- </div> -->
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card border-0 text-center gray-bg">
-                    <div class="cart-icon">
-                        <div class="card-icon">
-                            <div class="card-icon-i text-success">
-                                <i class="fa fa-question"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="card-box"> -->
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                Sustainable Practices
-                            </h4>
-                            <p class="card-text">
-                                We embrace sustainable farming practices to nurture the environment. Our methods include crop rotation, organic fertilizers, water conservation, and biodiversity promotion. These practices ensure healthy soil, reduce environmental impact, and produce nutritious, high-quality food.
-                            </p>
-                        </div>
-                    <!-- </div> -->
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card border-0 text-center gray-bg">
-                    <div class="cart-icon">
-                        <div class="card-icon">
-                            <div class="card-icon-i text-success">
-                                <i class="fas fa-smile"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="card-box"> -->
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                Local and Convenient
-                            </h4>
-                            <p class="card-text">
-                                Our locally grown produce is harvested at peak freshness and delivered within 24 hours, ensuring you enjoy the highest quality and flavor. Experience the ease of supporting local agriculture while savoring delicious, nutritious food.
-                            </p>
-                        </div>
-                    </div>
-                <!-- </div> -->
-            </div>
-
-        </section>
-
-        <!-- Footer Section -->
-</section>
 
 <section id="products" class="products">
   <h2 class="title">Products</h2>
@@ -572,154 +874,212 @@ h1, h2, h3, h4, h5, h6 {
       <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
         <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
             <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                <img src="assets/img/spinach.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="assets/img/spinach.jpg" class="card-img-top" alt="Spinach" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: green; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
-                <h5 class="card-title">Spinach</h5>
-                <p class="card-text">Healthy and fresh spinach leaves.</p>
-                <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
+            <div class="content">
+                <h2>Straight from the Farm</h2>
+                <p>Our farm-to-table concept emphasizes on getting the fresh produce directly from local farms to your tables within one day, hence you know you get the freshest produce straight from harvest.</p>
             </div>
         </div>
+        <div class="cardd" style="--clr: #ff3e7f;">
+            <div class="imgbx">
+                <img src="OIP 3.jpg">
+
     </div>
       <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
         <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
             <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                <img src="assets/img/tomato.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="assets/img/tomato.jpg" class="card-img-top" alt="Tomato" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: green; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
-                <h5 class="card-title">Tomato</h5>
-                <p class="card-text">Fresh organic tomatoes directly from our farms.</p>
-                <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
+            <div class="content">
+                <h2>Sustainable Practices</h2>
+                <p> We embrace sustainable farming practices to nurture the environment. Our methods include crop rotation, organic fertilizers, water conservation, and biodiversity promotion. These practices ensure healthy soil, reduce environmental impact,
+                    and produce nutritious, high-quality food.</p>
             </div>
         </div>
-    </div>
-      <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
-        <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
-            <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                <img src="https://t3.ftcdn.net/jpg/04/68/10/86/360_F_468108626_wpL1hcDkE4g12mPPnbVxx8rCnWpHYKmV.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="cardd" style="--clr: #03a9f4;">
+            <div class="imgbx">
+                <img src="OIP 2.jpg">
             </div>
-            <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: green; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
-                <h5 class="card-title">Broccoli</h5>
-                <p class="card-text">Green and fresh broccoli heads.</p>
-                <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
+            <div class="content">
+                <h2>Local and Convenient</h2>
+                <p>Our locally grown produce is harvested at peak freshness and delivered within 24 hours, ensuring you enjoy the highest quality and flavor. Experience the ease of supporting local agriculture while savoring delicious, nutritious food.</p>
             </div>
         </div>
     </div>
-  </div>
-</section>
-
-
-<!-- --Testimonials -->
-<section id="test">
-<h2 class="h2 section-title has-underline" style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
-    What Clients Say
-  </h2>
-  <p class="section-subtitle" style="align-items: center; justify-content: center; display: flex;color:#E91E63;font-size: 20px;">Explore on the world's best & largest Bidding marketplace with our beautiful
-    Bidding</p>
-
-<div class="slide-container swiper" style="margin-bottom: 15px;">
-<div class="slide-content">
-<div class="card-wrapper swiper-wrapper">
-    <div class="card swiper-slide">
-        <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-
-        <div class="image-content" >
-
-
-            <div class="card-image">
-                <img src="assets/images/testimonials-1.jpg" alt="" class="card-img">
-            </div>
-            <h2 style="font-size: 20px;">B.Sharmila</h2>
-        </div>
-
-        <div class="rating" >
-            <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-        </div>
-        </div>
-        <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color:black;">
-
-            The Pacific Grove Chamber of Commerce would like to thank eLab Communications
-            and Mr. Will Elkadi for all the efforts that assisted me nicely manners. </div>
-
+    <!-- Footer Section -->
+    =======
     </div>
-    <div class="card swiper-slide">
-        <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <!-- Footer Section -->
 
-          <div class="image-content" >
-                <div class="card-image">
-                    <img src="assets/images/testimonials-2.jpg" alt="" class="card-img">
 
+    <section id="products" class="products">
+        <h2 class="title">Products</h2>
+        <div class="container" style="display: flex; flex-wrap: wrap; ">
+
+            <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
+                <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
+                    <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+                        <img src="assets/img/spinach.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: green; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
+                        <h5 class="card-title">Spinach</h5>
+                        <p class="card-text">Healthy and fresh spinach leaves.</p>
+                        <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
+                    </div>
                 </div>
-                <h2 style="font-size: 20px;">Prem Sampath</h2>
             </div>
-            <div class="rating" >
-                <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-            </div>
-            </div>
-            <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color: black;">The Pacific Grove Chamber of Commerce would like to thank eLab Communications
-                and Mr. Will Elkadi for all the efforts that assisted me nicely manners. </div>
-    </div>
-    <div class="card swiper-slide">
-        <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-            <div class="image-content" >
-                <div class="card-image">
-                    <img src="assets/images/testimonials-3.jpg" alt="" class="card-img">
+            <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
+                <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
+                    <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+                        <img src="assets/img/tomato.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: green; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
+                        <h5 class="card-title">Tomato</h5>
+                        <p class="card-text">Fresh organic tomatoes directly from our farms.</p>
+                        <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
+                    </div>
                 </div>
-                <h2 style="font-size: 20px;">Aron Loes</h2>
             </div>
-            <div class="rating" >
-                <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-            </div>
-            </div>
-            <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color:black">SwapReads is a bookworm's paradise! With its user-friendly interface, welcoming community, and vast variety of books for swapping, I've embarked on countless new literary adventures. It's like an ever-active book club where I've connected with fellow literature lovers. I'm completely hooked!</div>
-    </div>
-    <div class="card swiper-slide">
-        <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-            <div class="image-content" >
-                <div class="card-image">
-                    <img src="assets/images/testimonials-4.jpg" alt="" class="card-img">
+            <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
+                <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
+                    <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+                        <img src="https://t3.ftcdn.net/jpg/04/68/10/86/360_F_468108626_wpL1hcDkE4g12mPPnbVxx8rCnWpHYKmV.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: green; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
+                        <h5 class="card-title">Broccoli</h5>
+                        <p class="card-text">Green and fresh broccoli heads.</p>
+                        <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
+                    </div>
                 </div>
-                <h2 style="font-size: 20px;">Sonal K</h2>
             </div>
-            <div class="rating" >
-                <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+        </div>
+    </section>
+
+
+    <!-- --Testimonials -->
+    <section id="test">
+        <h2 class="h2 section-title has-underline" style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
+            What Clients Say
+        </h2>
+        <p class="section-subtitle" style="align-items: center; justify-content: center; display: flex;color:#E91E63;font-size: 20px;">Explore on the world's best & largest Bidding marketplace with our beautiful Bidding
+        </p>
+
+        <div class="slide-container swiper" style="margin-bottom: 15px;">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+
+                            <div class="image-content">
+
+
+                                <div class="card-image">
+                                    <img src="assets/images/testimonials-1.jpg" alt="" class="card-img">
+                                </div>
+                                <h2 style="font-size: 20px;">B.Sharmila</h2>
+                            </div>
+
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color:black;">
+
+                            The Pacific Grove Chamber of Commerce would like to thank eLab Communications and Mr. Will Elkadi for all the efforts that assisted me nicely manners. </div>
+
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+
+                            <div class="image-content">
+                                <div class="card-image">
+                                    <img src="assets/images/testimonials-2.jpg" alt="" class="card-img">
+
+                                </div>
+                                <h2 style="font-size: 20px;">Prem Sampath</h2>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color: black;">The Pacific Grove Chamber of Commerce would like to thank eLab Communications and Mr. Will Elkadi for all the efforts that assisted me nicely manners. </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                            <div class="image-content">
+                                <div class="card-image">
+                                    <img src="assets/images/testimonials-3.jpg" alt="" class="card-img">
+                                </div>
+                                <h2 style="font-size: 20px;">Aron Loes</h2>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color:black">SwapReads is a bookworm's paradise! With its user-friendly interface, welcoming community, and vast variety of books for swapping, I've embarked on countless new literary adventures. It's like an ever-active book club where I've
+                            connected with fellow literature lovers. I'm completely hooked!</div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                            <div class="image-content">
+                                <div class="card-image">
+                                    <img src="assets/images/testimonials-4.jpg" alt="" class="card-img">
+                                </div>
+                                <h2 style="font-size: 20px;">Sonal K</h2>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color: black;">The Pacific Grove Chamber of Commerce would like to thank eLab Communications and Mr. Will Elkadi for all the efforts that assisted me nicely manners. </div>
+                    </div>
+                </div>
             </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+    </section>
+
+    <!-- Testimonials -->
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted" style="font-size: 1.2em; padding: 20px;">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block font" style="font-size: 1.5em; font-weight: bold;">
+                <span>Get connected with us on social networks:</span>
             </div>
-            <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color: black;">The Pacific Grove Chamber of Commerce would like to thank eLab Communications
-                and Mr. Will Elkadi for all the efforts that assisted me nicely manners. </div>
-    </div>
-</div>
-</div>
-<div class="swiper-button-next swiper-navBtn"></div>
-<div class="swiper-button-prev swiper-navBtn"></div>
-<div class="swiper-pagination"></div>
-</div>
+            <!-- Left -->
 
-
-</section>
-
-<!-- Testimonials -->
-
+            <!-- Right -->
+            <div class="">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #3b5998; font-size: 1.5em;" href="#!" role="button" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';"><i class="fab fa-facebook-f"></i
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-body-tertiary text-muted" style="font-size: 1.2em; padding: 20px;">
+<footer class="text-center text-lg-start bg-body-tertiary text-muted" style="font-size: 1.2em; padding: 10px;">
   <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+  <section class="d-flex justify-content-center justify-content-lg-between p-0 border-bottom">
     <!-- Left -->
     <div class="me-5 d-none d-lg-block font" style="font-size: 1.5em; font-weight: bold;">
       <span>Get connected with us on social networks:</span>
@@ -740,145 +1100,108 @@ h1, h2, h3, h4, h5, h6 {
         ><i class="fab fa-facebook-f"></i
       ></a>
 
-      <!-- Twitter -->
-      <a
-        data-mdb-ripple-init
-        class="btn text-white btn-floating m-1"
-        style="background-color: #55acee; font-size: 1.5em;"
-        href="#!"
-        role="button"
-        onmouseover="this.style.opacity='0.8';"
-        onmouseout="this.style.opacity='1';"
-        ><i class="fab fa-twitter"></i
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #55acee; font-size: 1.5em;" href="#!" role="button" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';"><i class="fab fa-twitter"></i
       ></a>
 
-      <!-- Google -->
-      <a
-        data-mdb-ripple-init
-        class="btn text-white btn-floating m-1"
-        style="background-color: #dd4b39; font-size: 1.5em;"
-        href="#!"
-        role="button"
-        onmouseover="this.style.opacity='0.8';"
-        onmouseout="this.style.opacity='1';"
-        ><i class="fab fa-google"></i
+                <!-- Google -->
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #dd4b39; font-size: 1.5em;" href="#!" role="button" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';"><i class="fab fa-google"></i
       ></a>
 
-      <!-- Instagram -->
-      <a
-        data-mdb-ripple-init
-        class="btn text-white btn-floating m-1"
-        style="background-color: #ac2bac; font-size: 1.5em;"
-        href="#!"
-        role="button"
-        onmouseover="this.style.opacity='0.8';"
-        onmouseout="this.style.opacity='1';"
-        ><i class="fab fa-instagram"></i
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #ac2bac; font-size: 1.5em;" href="#!" role="button" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';"><i class="fab fa-instagram"></i
       ></a>
 
-      <!-- Linkedin -->
-      <a
-        data-mdb-ripple-init
-        class="btn text-white btn-floating m-1"
-        style="background-color: #0082ca; font-size: 1.5em;"
-        href="#!"
-        role="button"
-        onmouseover="this.style.opacity='0.8';"
-        onmouseout="this.style.opacity='1';"
-        ><i class="fab fa-linkedin-in"></i
+                <!-- Linkedin -->
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #0082ca; font-size: 1.5em;" href="#!" role="button" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';"><i class="fab fa-linkedin-in"></i
       ></a>
-      <!-- Github -->
-      <a
-        data-mdb-ripple-init
-        class="btn text-white btn-floating m-1"
-        style="background-color: #333333; font-size: 1.5em;"
-        href="#!"
-        role="button"
-        onmouseover="this.style.opacity='0.8';"
-        onmouseout="this.style.opacity='1';"
-        ><i class="fab fa-github"></i
+                <!-- Github -->
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #333333; font-size: 1.5em;" href="#!" role="button" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';"><i class="fab fa-github"></i
       ></a>
-    </div>
-    <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
 
-  <!-- Section: Links  -->
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
-      <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <a href="index.html" class="nav-item"
-               style="text-decoration: none; color: inherit;"
-               onmouseover="this.style.color='#0056b3'; ;"
-               onmouseout="this.style.color='inherit'; ">
-              <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle; margin-left: 0px;">
-              कृषिCONNECT
-            </a>
-          </h6>
-          <p>
-            कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.
-          </p>
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <a href="index.html" class="nav-item" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; ">
+                                <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle; margin-left: 0px;"> कृषिCONNECT
+                            </a>
+                        </h6>
+                        <p>
+                            कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h6>
+                        <p style="font-weight: bold;">
+                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; ">VEGETABLES</a>
+                        </p>
+                        <p style="font-weight: bold;">
+                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; ">FRUITS</a>
+                        </p>
+                        <p style="font-weight: bold;">
+                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; ">OIL SEEDS</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3';" onmouseout="this.style.color='inherit';">HERBS</a>
+                        </p>
+
+                        <p>
+                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; " onmouseout="this.style.color='inherit';">PULSES</a>
+                        </p>
+                        <p>
+                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; " onmouseout="this.style.color='inherit';">MISCELLANOUS</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p style="font-weight: bold;"><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                        <p style="font-weight: bold;">
+                            <i class="fas fa-envelope me-3"></i> krishiconnect@gmail.com
+                        </p>
+                        <p style="font-weight: bold;"><i class="fas fa-phone me-3"></i> 082723 67238</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05); font-size: 1.2em;">
+            © <span id="copyright-year"></span> Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; "> कृषिCONNECT | Fresh From Farm. All rights reserved.</a>
         </div>
-        <!-- Grid column -->
 
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Products
-          </h6>
-          <p style="font-weight: bold;">
-            <a href="shop(1).html" class="text-reset"
-               style="text-decoration: none; color: inherit;"
-               onmouseover="this.style.color='#0056b3'; ;"
-               onmouseout="this.style.color='inherit'; ">VEGETABLES</a>
-          </p>
-          <p style="font-weight: bold;">
-            <a href="shop(1).html" class="text-reset"
-               style="text-decoration: none; color: inherit;"
-               onmouseover="this.style.color='#0056b3'; ;"
-               onmouseout="this.style.color='inherit'; ">FRUITS</a>
-          </p>
-          <p style="font-weight: bold;">
-            <a href="shop(1).html" class="text-reset"
-               style="text-decoration: none; color: inherit;"
-               onmouseover="this.style.color='#0056b3'; ;"
-               onmouseout="this.style.color='inherit'; ">OIL SEEDS</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
-          </h6>
-         <p>
-  <a href="shop(1).html" class="text-reset"
-     style="text-decoration: none; color: inherit;"
-     onmouseover="this.style.color='#0056b3';"
-     onmouseout="this.style.color='inherit';">HERBS</a>
-</p>
-
-          <p>
-            <a href="shop(1).html" class="text-reset"
-               style="text-decoration: none; color: inherit;"
-               onmouseover="this.style.color='#0056b3'; "
-               onmouseout="this.style.color='inherit';">PULSES</a>
-          </p>
-          <p>
-            <a href="shop(1).html" class="text-reset"
-               style="text-decoration: none; color: inherit;"
-               onmouseover="this.style.color='#0056b3'; "
-               onmouseout="this.style.color='inherit';">MISCELLANOUS</a>
-          </p>
-        </div>
         <!-- Grid column -->
 
         <!-- Grid column -->
@@ -1033,15 +1356,86 @@ splide.mount();
         return false;
     });
 });
+=======
+        <!-- Copyright -->
+    </footer>
 
+
+    <!-- copyright-year -->
+    <script>
+        document.getElementById("copyright-year").textContent = new Date().getFullYear();
     </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-to-top" style="display: inline;">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </a>
 
-  <!-- Swiper JS -->
-<script src="swiper-bundle.min.js"></script>
-<!-- Custom JavaScript -->
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script>
+        document.getElementById("copyright-year").textContent = new Date().getFullYear();
+    </script>
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/packages/bootstrap/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/theme.js"></script>
+    <script src="shop.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="./darkmode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+        var splide = new Splide('#reviews', {
+            perPage: 3,
+            perMove: 1,
+            type: 'loop',
+            pagination: false,
+            arrows: false,
+            autoplay: true,
+            breakpoints: {
+                640: {
+                    perPage: 2,
+                    gap: '.7rem',
+                },
+                480: {
+                    perPage: 1,
+                    gap: '.7rem',
+                },
+            },
+        });
 
-<script src="test-script.js"></script>
+        splide.mount();
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Show or hide the scroll to top button based on the scroll position
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 100) {
+                    $('.scroll-to-top').fadeIn();
+                } else {
+                    $('.scroll-to-top').fadeOut();
+                }
+            });
+
+            // Scroll to top when the button is clicked
+            $('.scroll-to-top').click(function() {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Swiper JS -->
+    <script src="swiper-bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="./chatBot/script.js"></script>
+    <script src="test-script.js"></script>
 </body>
+
 </html>

@@ -34,6 +34,8 @@
     <link rel="shortcut icon" href="assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="darkmode.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </head>
 
@@ -64,6 +66,14 @@
          color: #fff;
          transform: scale(1.1);
      }*/
+    
+    .page-header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: black;
+    }
+
     .card {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -128,17 +138,20 @@
      }
     .page-header {
         width: 100%;
-        height: 110px;
+        --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
         display: flex;
         justify-content: space-around;
     }
+
 
     .container h1 {
         color: white;
     }
 
     .container p {
-        color: white;
+/*         color: white; */
+        color:rgb(44, 43, 43);
         font-weight: bold;
     }
     .wishlist-item {
@@ -215,35 +228,36 @@
          align-items: center;
      }
 
-     .navbar {
-         background-color: transparent;
+     /*.navbar {
+         
          position: static;
          width: 100%;
      }
 
-     .navbar-brand {
-         display: flex;
-         align-items: center;
-     }
-
-     .navbar-brand img {
-         max-height: 50px;
-         margin-right: 10px;
-     }
+     .page-header .navbar .navbar-brand img {
+    height: 50px;
+    margin-left: -160px;
+    object-fit: cover;
+    border-radius: 50%;
+}
      .navbar-toggler{
         position: absolute;
-        right: 45px;
+        right: 25px;
      }
      @media screen and (max-width:768px){
         .navbar-collapse{
             position: absolute;
-            right: 0;
+            right:0;
             top: 95px;
-            text-align: right;
+            text-align: center;
             background-color: #132e40 ;
             width: 186px;
         }
-        .navbar-nav li{
+        
+    /* .navbar-nav .nav-item {
+        margin: 0 auto;
+    } */
+        /*.navbar-nav li{
             color: black;
         }
         .toggle{
@@ -251,74 +265,80 @@
             left: 101px;
         }
      }
+     
+@media (max-width: 370px) {
+    .navbar-toggler {
+        right: 10px;
+    }
+
+    .toggle {
+        right: 10px;
+        top: 10px;
+    }
+
+    .navbar-collapse {
+        top: 50px;
+    }
+}*/
+
 </style>
 <body class="light">
     <div class="page-header">
         <!--=============== Navbar ===============-->
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
-            <div class="container">
-                <!-- Navbar Brand -->
-                <a href="index.html">
-                    <img src="assets/img/logo/logo3.png" width="80px">
-                    <!-- <div style="flex-direction: row; display: flex; align-items: center;">
-                        <img class="ml-1" id="your-image" src="assets/img/logo/krishiconnect-high-resolution-logo_black.png" alt="Logo">
-                        <h3>कृषिCONNECT</h3> -->
-                    </div>
-                </a>
-
-
-                <!-- Toggle Button -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarcollapse">
-                    <!-- Navbar Menu -->
-                    <ul class="navbar-nav ml-auto">
-
-
-                            <!-- <a href="shop(1).html" class="nav-link active"><i class="ri-shopping-bag-fill"></i> Shop</a> -->
-
-                            <li class="nav-item">
-
-
-                                <!-- <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a> -->
-
-
-                                <a href="index.html" class="nav-link"><i class="ri-home-fill"></i> Home
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="shop(1).html" class="nav-link active"><i class="ri-shopping-bag-fill"></i> Shop</a>
-
-                            </li>
-                            <li class="nav-item">
-                                <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
-                                    Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
-                                    <!-- Wishlist items will be dynamically added here -->
-
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
-                            </li>
-                        </ul>
-                        <input type="checkbox" id="toggle">
-
+          <div class="container">
+            <!-- Navbar Brand -->
+    
+    
+                <a href="index.html" class="navbar-brand mr-auto">
+                    <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px; " >
+                  </a>
+    
+    
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
+              <!-- Navbar Menu -->
+              <ul class="navbar-nav">
+                <li class="nav-item" style="border: 2px solid white" id="nav-link1">
+                  <a href="login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
+                </li>
+                <li class="nav-item" id="nav-link2">
+                  <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
+                </li>
+                <li class="nav-item" id="nav-link3">
+                  <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
+                      Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                      <!-- Wishlist items will be dynamically added here -->
+                  </div>
+              </li>
+                <li class="nav-item" id="nav-link5">
+                  <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
+                </li>
+                <li class="nav-item">
+                  <a href="Contact(1).html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
+                </li>
+              </ul>
+              <input type="checkbox" id="toggle">
+    
                         <label class="toggle" for="toggle">
                             <i class="bx bxs-sun"></i>
                             <i class="bx bx-moon"></i>
                             <span class="ball"></span>
                         </label>
-                </div>
-
             </div>
+          </div>
         </nav>
+      </div>
+        
     </div>
 
 
@@ -522,7 +542,7 @@
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="detail-product(1).html">Musturd Oil</a>
+                                            <a href="detail-product(1).html">Mustard Oil</a>
                                         </h4>
                                         <div class="card-price">
                                             <span class="discount">Rp. 300.000</span>
@@ -849,7 +869,7 @@
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="detail-product(1).html">Musturd Oil</a>
+                                            <a href="detail-product(1).html">Mustard Oil</a>
                                         </h4>
                                         <div class="card-price">
                                             <span class="discount">Rp. 300.000</span>
