@@ -18,7 +18,9 @@
 ## 📌 Tech Stack
 [![linkedin](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://www.linkedin.com/in/yashpreeth-nijalinge-aa8a36214/)[![portfolio](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://linkedin.com/)![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)[![twitter](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://twitter.com/)![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34)
 # 📸Screenshots
-![1](1.png)  ![2](2.png) ![3](3.png) ![4](4.png)  ![5](5.png) ![6](6.png)
+<!--![1](1.png)  ![2](2.png) ![3](3.png) ![4](4.png)  ![5](5.png) ![6](6.png)-->
+
+![KrishiConnect](ss.png)
 
 
 
@@ -71,28 +73,24 @@ cd krishiconnect
 
 ```
 git remote add upstream https://github.com/Anushkabh/krishiconnect.git
-
 ```
 
 8.  Check the remotes for this repository.
 
 ```
 git remote -v
-
 ```
 
 9.  Always take a pull from the upstream repository to your main branch to keep it updated as per the main project repository.
 
 ```
 git pull upstream main
-
 ```
 
 10.  Create a new branch(prefer a branch name that relates to your assigned issue).
 
 ```
 git checkout -b <YOUR_BRANCH_NAME>
-
 ```
 
 11.  Perform your desired changes to the code base.
@@ -102,33 +100,28 @@ git checkout -b <YOUR_BRANCH_NAME>
 
 ```
 git status
-
 ```
 
 ```
 git  diff
-
 ```
 
 13.  Stage your changes.
 
 ```
 git add . <\files_that_you_made_changes>
-
 ```
 
 14.  Commit your changes.
 
 ```
 git commit -m "relavant message"
-
 ```
 
 15.  Push the committed changes in your feature branch to your remote repository.
 
 ```
 git push -u origin <your_branch_name>
-
 ```
 
 16.  To create a pull request, click on  `compare and pull requests`.
