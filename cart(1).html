@@ -29,6 +29,8 @@
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="darkmode.css">
     <link rel="stylesheet" href="cart.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </head>
 <style>
@@ -53,7 +55,7 @@
     position: static;
     width: 100%;
 }
-.navbar-toggler{
+/*.navbar-toggler{
         position: absolute;
         right: 25px;
      }
@@ -66,8 +68,8 @@
 .navbar-brand img {
     max-height: 58px;
     margin-right: 10px;
-}
-@media screen and (max-width:768px){
+}*/
+/*@media screen and (max-width:768px){
         .navbar-collapse{
             position: absolute;
             right:0;
@@ -81,14 +83,14 @@
     /* .navbar-nav .nav-item {
         margin: 0 auto;
     } */
-        .navbar-nav li{
+        /*.navbar-nav li{
             color: black;
         }
         .toggle{
             position: relative;
             left: 101px;
         }
-     }
+     }*/
      
 @media (max-width: 370px) {
     .navbar-toggler {
@@ -148,7 +150,7 @@
                   <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
                 </li>
                 <li class="nav-item">
-                  <a href="Contact(1).html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
+                  <a href="contact(1).html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
                 </li>
               </ul>
               <input type="checkbox" id="toggle">
@@ -174,11 +176,11 @@
 
                 <div class="container">
                     <img src="assets/img/logo/log.png" alt="" height="300">
-                    </a>
+                </div>
                     <h1 class="pt-5">
                         Your Cart
                     </h1>
-                    <p class="lead">
+                    <p class="lead ltext">
                         Save time and leave the groceries to us.
                     </p>
                 </div>
@@ -199,42 +201,42 @@
                     <span class="enter-details">Enter your Details</span>
                     <div class="text-field">
                         <div class="frame"><span class="label">Name</span></div>
-                        <div class="text-field-1"></div>
+                        <div class="text-field-1 tfield"></div>
                     </div>
                     <div class="text-field-2">
                         <div class="frame-3">
                             <span class="address-label">Address</span>
                         </div>
-                        <div class="text-field-4"></div>
+                        <div class="text-field-4 tfield"></div>
                     </div>
                     <div class="flex-row-aefd">
                         <div class="text">
                             <span class="email-label">Email</span>
-                            <div class="text-field-5"></div>
+                            <div class="text-field-5 tfield"></div>
                         </div>
                         <div class="text-6">
                             <span class="phone-no-label">Phone No.</span>
-                            <div class="text-field-7"></div>
+                            <div class="text-field-7 tfield"></div>
                         </div>
                     </div>
                     <div class="flex-row-f">
                         <div class="text-8">
                             <span class="label-9">Postal Code</span>
-                            <div class="text-field-a"></div>
+                            <div class="text-field-a tfield"></div>
                         </div>
                         <div class="text-b">
                             <span class="label-c">City</span>
-                            <div class="text-field-d"></div>
+                            <div class="text-field-d tfield"></div>
                         </div>
                     </div>
                     <div class="flex-row-e">
                         <div class="text-e">
                             <span class="label-f">State</span>
-                            <div class="text-field-10"></div>
+                            <div class="text-field-10 tfield"></div>
                         </div>
                         <div class="text-11">
                             <span class="label-12">Country</span>
-                            <div class="text-field-13"></div>
+                            <div class="text-field-13 tfield"></div>
                         </div>
                     </div>
                     <div class="flex-row">
@@ -279,6 +281,7 @@
         </div>
         </div>
             <div id="subtotal" class="carttext"></div>   
+            <div><button class="order_now_button">ORDER NOW</button></div>
         </div>
         <!-- <footer>
             <div class="container">
