@@ -201,11 +201,35 @@
          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
      }
 
-    
-/* Internal CSS */
 #most-wanted {
     background-color: #f8f9fa;
     padding: 0;
+
+     /* Star Rating CSS */
+.checked {
+    color: orange;
+}
+
+
+     .container {
+         max-width: 100%;
+         padding: 0 15px;
+         margin: 0 auto;
+         align-items: center;
+     }
+
+     /*.navbar {
+         
+         position: static;
+         width: 100%;
+     }
+
+     .page-header .navbar .navbar-brand img {
+    height: 50px;
+    margin-left: -160px;
+    object-fit: cover;
+    border-radius: 50%;
+>>>>>>> a07275f5775b25b547b4e85baafcc86bb09e6fa9
 }
 #most-wanted .container {
     margin-right: auto;
@@ -318,7 +342,7 @@
                   <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
                 </li>
                 <li class="nav-item">
-                  <a href="Contact(1).html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
+                  <a href="contact(1).html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
                 </li>
               </ul>
               <input type="checkbox" id="toggle">
@@ -461,6 +485,15 @@
                                         <h4 class="card-title">
                                             <a href="">Potatoes</a>
                                         </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(4.0)</span>
+                                        </div>
                                         <div class="card-price">
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
@@ -487,12 +520,8 @@
                                     </div>
                                     <div class="card-badge">
                                         <div class="card-badge-container left">
-                                            <span class="badge badge-default">
-                                                Until Few Days
-                                            </span>
-                                            <span class="badge badge-primary">
-                                                20% OFF
-                                            </span>
+                                            <span class="badge badge-default">Until Few Days</span>
+                                            <span class="badge badge-primary">20% OFF</span>
                                         </div>
                                         <img src="assets/img/moong.jpg" alt="Card image 2" class="card-img-top">
                                     </div>
@@ -500,6 +529,15 @@
                                         <h4 class="card-title">
                                             <a href="detail-product(1).html">Moong Dhuli</a>
                                         </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(3.0)</span>
+                                        </div>
                                         <div class="card-price">
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
@@ -512,10 +550,10 @@
                                                 Add to Cart
                                             </a>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
@@ -538,6 +576,15 @@
                                         <h4 class="card-title">
                                             <a href="detail-product(1).html">Mustard Oil</a>
                                         </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(4.0)</span>
+                                        </div>
                                         <div class="card-price">
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
@@ -576,6 +623,15 @@
                                         <h4 class="card-title">
                                             <a href="detail-product(1).html">Mangoes</a>
                                         </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="rating-number">(5.0)</span>
+                                        </div>
                                         <div class="card-price">
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
@@ -614,6 +670,15 @@
                                         <h4 class="card-title">
                                             <a href="detail-product(1).html">Cucumber</a>
                                         </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(3.0)</span>
+                                        </div>
                                         <div class="card-price">
                                             <span class="discount">Rp. 300.000</span>
                                             <span class="reguler">Rp. 200.000</span>
@@ -635,8 +700,6 @@
                 </div>
             </div>
         </section>
-
-
     </div>
 
 
