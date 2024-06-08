@@ -1,12 +1,20 @@
- const body = document.querySelector("body");
-            const toggle = document.querySelector("#toggle");
-            const sunIcon = document.querySelector(".toggle .bxs-sun");
-            const moonIcon = document.querySelector(".toggle .bx-moon");
+const body = document.querySelector("body");
+const toggle = document.querySelector("#toggle");
+const sunIcon = document.querySelector(".toggle .bxs-sun");
+const moonIcon = document.querySelector(".toggle .bx-moon");
 
-            toggle.addEventListener("change", () => {
+function updateUI(isDarkMode) {
+    body.classList.toggle("dark", isDarkMode);
+    sunIcon.className = isDarkMode ? "bx bx-sun" : "bx bxs-sun";
+    moonIcon.className = isDarkMode ? "bx bxs-moon" : "bx bx-moon";
+}
 
-                body.classList.toggle("dark");
-                sunIcon.className = sunIcon.className == "bx bxs-sun" ? "bx bx-sun" : "bx bxs-sun";
-                moonIcon.className = moonIcon.className == "bx bxs-moon" ? "bx bx-moon" : "bx bxs-moon";
-  });
-        
+const isDarkMode = localStorage.getItem("darkMode") === "true";
+
+updateUI(isDarkMode);
+
+toggle.addEventListener("change", () => {
+    const isDarkMode = body.classList.toggle("dark");
+    localStorage.setItem("darkMode", isDarkMode);
+    updateUI(isDarkMode);
+});

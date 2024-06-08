@@ -44,6 +44,7 @@
 .wishlist-text {
     font-size: 24px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 
@@ -83,9 +84,12 @@
     color: white;
 }
 
+.btn1{
+  margin-right:10px;
+}
 
 .wishlist-btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 /* For static navbar */
 
@@ -274,8 +278,8 @@
         <div class="wishlist" style="background-color: #132e40;">
             <h1 class="wishlist-text" style="color: white;">Wishlist</h1>
             <div id="wishlist-items" class="wishlist-items"></div>
-            <button class="wishlist-btn" onclick="emptyWishlist()" style="border-radius: 3px; color: rgb(7, 7, 7);">Empty Wishlist</button>
-            <button onclick="window.location.href='cart(1).html'" class="wishlist-btn" style="border-radius: 3px; color: rgb(9, 9, 9);">Go to Cart</button>
+            <button class="wishlist-btn btn1" onclick="emptyWishlist()" style="border-radius: 3px; color: rgb(7, 7, 7);">Empty Wishlist</button>
+            <button onclick="window.location.href='cart(1).html'" class="wishlist-btn btn2" style="border-radius: 3px; color: rgb(9, 9, 9);">Go to Cart</button>
         </div>
         </div>
         <footer class="text-center text-lg-start bg-body-tertiary text-muted" style="padding: 0px;">
