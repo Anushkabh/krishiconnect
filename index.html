@@ -192,6 +192,8 @@
             overflow: hidden;
             box-sizing: border-box;
             height: 100%;
+            display: flex;
+            flex-wrap: wrap;
         }
         
         .card-body {
@@ -359,6 +361,9 @@
                 flex: 1 0 100%;
                 /* One card per row on very small screens */
             }
+            .footer-content{
+                margin-bottom: -10s0px;
+            }
         }
         
         .footer-logo img {
@@ -383,12 +388,12 @@
             border-radius: 50%;
             font-size: 20px;
             cursor: pointer;
-            /*transition: opacity 0.3s ease;*/
+            transition: opacity 0.3s ease;
         }
         
-        /*.scroll-to-top:hover {
+        .scroll-to-top:hover {
             opacity: 0.8;
-        }*/
+        }
         
         #loader {
             height: 100vh;
@@ -793,7 +798,7 @@
     <!-- Footer -->
 
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-body-tertiary text-muted border-0" style="font-size: 1.2em; padding: 10px;">
+<footer class="text-center text-lg-start bg-body-tertiary text-muted border-0" style="font-size: 1.2em;padding: 10px;">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-0">
     <!-- Left -->
@@ -840,7 +845,7 @@
         <!-- Section: Social media -->
 
         <!-- Section: Links  -->
-        <section class="">
+        <section class="footer-content">
             <div class="container text-center text-md-start mt-5">
                 <!-- Grid row -->
                 <div class="row mt-3">
@@ -913,7 +918,7 @@
         <!-- Section: Links  -->
 
         <!-- Copyright -->
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05); font-size: 1.2em;">
+        <div class="text-center p-4 " style="background-color: rgba(0, 0, 0, 0.05); font-size: 1.2em;">
             © <span id="copyright-year"></span> Copyright:
             <a class="text-reset fw-bold" href="https://mdbootstrap.com/" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; "> कृषिCONNECT | Fresh From Farm. All rights reserved.</a>
         </div>

@@ -213,7 +213,7 @@ section .card-title {
 }
 
 .page-header .navbar .navbar-brand img {
-  height: 60px;
+  /* height: 60px; */
   margin-left: -160px;
   object-fit: cover;
   border-radius: 50%;
