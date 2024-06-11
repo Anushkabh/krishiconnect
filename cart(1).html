@@ -31,6 +31,10 @@
     <link rel="stylesheet" href="cart.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 </head>
 <style>
@@ -106,9 +110,34 @@
         top: 50px;
     }
 }
+  /* Custom styles for the toggle button */
+  .toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .toggle .bx {
+      font-size: 24px;
+      margin-right: 5px;
+    }
+    .toggle .ball {
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+    #toggle:checked + .toggle .ball {
+      transform: translateX(24px);
+    }
+    /* Additional custom styles */
+    .navbar-brand img {
+      width: 70px;
+    }
 
 </style>
 <body class="light">
+
     <div class="page-header">
         <!--=============== Navbar ===============-->
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
@@ -164,8 +193,8 @@
           </div>
         </nav>
       </div>
-        </nav>
-    </div>
+    </nav>
+  </div>
     <div id="page-content" class="page-content">
 
         <div class="banner">
@@ -538,6 +567,23 @@
         ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
     </script>
     <script src="./darkmode.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Close navbar on clicking outside
+        $(document).click(function (event) {
+          var clickover = $(event.target);
+          var _opened = $(".navbar-collapse").hasClass("show");
+          if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+            $(".navbar-toggler").click();
+          }
+        });
+        
+        // Close navbar on selecting an item
+        $('.navbar-nav>li>a').on('click', function(){
+          $('.navbar-collapse').collapse('hide');
+        });
+      });
+    </script>
 </body>
 
 </html>
