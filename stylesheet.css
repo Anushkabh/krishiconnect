@@ -650,3 +650,13 @@ h1 {
     }
 }
 
+img{
+    height: 300px;
+    width: auto;
+}
+
+.item{
+    width: 300px;
+    margin: 0;
+    /* background-color: red; */
+}
