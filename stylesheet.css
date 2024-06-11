@@ -1,6 +1,10 @@
 *{
     font-family: sans-serif;
 }
+body{
+    padding:0;
+    margin:0;
+}
 html{
     width: fit-content;
 }
