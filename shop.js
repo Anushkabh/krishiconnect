@@ -110,14 +110,14 @@ function addToCart(name, imageUrl, price) {
 
   localStorage.setItem('cartItems', JSON.stringify(cartItems));
    // Show success toast
-   Toastify({
-    text: "Product added to cart!",
-    duration: 5000,
-    gravity: "top",
-    innerHeight: 50,
-    position: "right",
-    backgroundColor: "rgba(0,128,0,0.8)",
-  }).showToast();
+  //  Toastify({
+  //   text: "Product added to cart!",
+  //   duration: 5000,
+  //   gravity: "top",
+  //   innerHeight: 50,
+  //   position: "right",
+  //   backgroundColor: "rgba(0,128,0,0.8)",
+  // }).showToast();
 }
 
 // Initial update of wishlist on page load
