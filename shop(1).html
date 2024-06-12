@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html style="width: 100%;
+">
 <head>
     <title>KrishiConnect | Shop</title>
     <link rel="icon" type="image/png" href="/assets/img/logo/log.png">
@@ -47,32 +48,7 @@
 
 
     <style>
-        /*.wishlist-button {
-         display: inline-block;
-         padding: 2px 57px;
-         border: 1px solid #ffdbac;
-         border-radius: 2px;
-         color: #007bff;
-         background-color: #ffdbac;
-         cursor: pointer;
-         text-decoration: none;
-         transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s; /* Added transform to the transition
-     }
-
-     .wishlist-button:hover {
-         background-color: #ffffff;
-         border: 1px solid #ffbf00;
-         border-radius: 2px;
-         color: #fff;
-         transform: scale(1.1);
-     }*/
-    
-    .page-header{
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background-color: black;
-    }
+   
 
     .card {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -83,10 +59,7 @@
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 
-    .banner-logo {
-        height: 300px;
-        width: 300px;
-    }
+  
 
      .buttons {
          display: flex;
@@ -136,13 +109,6 @@
          padding: 10px;
          border-radius: 5px;
      }
-    .page-header {
-        width: 100%;
-        --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
-        display: flex;
-        justify-content: space-around;
-    }
 
 
     .container h1 {
@@ -227,71 +193,118 @@
 }
 
 
-     .container {
-         max-width: 100%;
-         padding: 0 15px;
-         margin: 0 auto;
-         align-items: center;
-     }
+  html {
+scroll-behavior: smooth;
+}
 
-     /*.navbar {
-         
-         position: static;
-         width: 100%;
-     }
+body {
+color: #333333;
+font-size: 14px;
+font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+background: #fff;
+}
 
-     .page-header .navbar .navbar-brand img {
-    height: 50px;
+h1, h2, h3, h4, h5, h6 {
+text-transform: uppercase !important;
+font-weight: 700 !important;
+}
+.page-header .navbar{
+  color: white;
+}
+  .page-header .navbar .navbar-brand img {
+    /* height: 50px; */
     margin-left: -160px;
     object-fit: cover;
     border-radius: 50%;
-}
-     .navbar-toggler{
-        position: absolute;
-        right: 25px;
-     }
-     @media screen and (max-width:768px){
-        .navbar-collapse{
-            position: absolute;
-            right:0;
-            top: 95px;
-            text-align: center;
-            background-color: #132e40 ;
-            width: 186px;
-        }
-        
-    /* .navbar-nav .nav-item {
-        margin: 0 auto;
-    } */
-        /*.navbar-nav li{
-            color: black;
-        }
-        .toggle{
-            position: relative;
-            left: 101px;
-        }
-     }
-     
-@media (max-width: 370px) {
-    .navbar-toggler {
-        right: 10px;
-    }
+  }
+  .page-header .navbar .navbar-nav .nav-link {
+    color: #FFF;
+    font-size: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .page-header .navbar .navbar-nav .nav-link:focus, .page-header .navbar .navbar-nav .nav-link:hover, .page-header .navbar .navbar-nav .nav-link.active {
+    color: #E91E63;
+  }
+  .page-header .navbar.bg-white {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  }
+  .page-header .navbar.bg-white .navbar-nav .nav-link {
+    color: #333333;
+  }
+  .page-header .navbar.bg-white .navbar-nav .nav-link:focus, .page-header .navbar.bg-white .navbar-nav .nav-link:hover, .page-header .navbar.bg-white .navbar-nav .nav-link.active {
+    color: #E91E63;
+  }
+  .navbar-brand img{
+      margin-left: 30%;
+  }
 
-    .toggle {
-        right: 10px;
-        top: 10px;
-    }
 
-    .navbar-collapse {
-        top: 50px;
-    }
-}*/
+  .banner .jumbotron {
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+
+    overflow: hidden;
+    height: auto;
+  }
+
+  .banner .jumbotron video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .banner .jumbotron .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+
+  .banner .jumbotron .container {
+    position: relative;
+    z-index: 3;
+    padding-top: 200px; /* Adjust padding as needed to position the text correctly */
+    text-align: center;
+
+  }
+
+  .banner .jumbotron .container h1,
+  .banner .jumbotron .container p {
+    color: #FFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+
+  
+  .banner .jumbotron .container  {
+    margin-top: 2.3rem;
+    /* background-color: transparent; */
+    border: none;
+  }
+
+  .banner .jumbotron .container  {
+    border: none;
+    color: #FFF;
+  }
+
+  .banner .jumbotron .container {
+    color: #FFF;
+    text-transform: uppercase;
+  }
 
 </style>
-<body class="light">
+<body >
     <div class="page-header">
         <!--=============== Navbar ===============-->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" >
           <div class="container">
             <!-- Navbar Brand -->
     
