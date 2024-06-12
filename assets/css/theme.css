@@ -619,3 +619,12 @@ footer .copyright {
   transform: scale(1.05);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+.goog-te-gadget {
+  font-family: arial;
+  font-size: 11px;
+  color: #000000;
+  white-space: nowrap;
+}
+.goog-logo-link {
+  color:#000000;
+}
