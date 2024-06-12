@@ -348,3 +348,32 @@
   </footer>
 </body>
 </html>
+<script>
+  document.querySelector('form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById('full').value;
+      const email = document.getElementById('email').value;
+      const message = document.querySelector('#msg textarea').value;
+
+      fetch('http://localhost:3000/contact', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name, email, message })
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.message === 'Emails sent successfully') {
+              alert('Message sent successfully!');
+          } else {
+              alert('There was an error sending your message.');
+          }
+      })
+      .catch(error => {
+          console.error('Error:', error);
+          alert('There was an error sending your message.');
+      });
+  });
+</script>
