@@ -104,31 +104,33 @@
                         <div class="col-lg-7">
                           <div class="contact-wrapper">
                               <h3 class="title font-weight-normal mt-0 text-left">Send Us a Message</h3>
-                              <form data-aos="fade-left" data-aos-duration="1200">
+                              <form id="contactForm" data-aos="fade-left" data-aos-duration="1200">
                                   <div class="row">
-                                      <div >
+                                      <div class="col">
                                           <div class="form-group">
                                               <input class="form-control" type="text" placeholder="Full Name" id="full" required>
                                           </div>
                                       </div>
-                                      <div >
+                                      <div class="col">
                                           <div class="form-group">
                                               <input class="form-control" type="email" placeholder="Email" id="email" required>
                                           </div>
                                       </div>
                                       <div class="col-lg-12">
                                           <div class="form-group" id="msg">
-                                              <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                                              <textarea class="form-control" rows="3" placeholder="Message" id="message"></textarea>
                                           </div>
                                       </div>
+                                      <div id="thankYouMsg" style="display: none;">
+                                        Thank you! We will connect soon.
+                                    </div>
                                       <div class="col-lg-12 text-right">
                                           <button type="submit" class="btn btn-lg mb-5 contact-btn">Send</button>
                                       </div>
                                   </div>
                               </form>
                           </div>
-                      </div>
-                      
+                      </div>  
                         <!-- Contact Details -->
                         <div class="col-lg-5" id="bk">
                             <div class="detail-wrapper p-5 bg-primary">
@@ -346,5 +348,20 @@
     </div>
     <!-- Copyright -->
   </footer>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const fullName = document.getElementById('full').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const thankYouMsg = document.getElementById('thankYouMsg');
+      if (fullName && email && message) {
+          thankYouMsg.style.display = 'block';
+          this.reset();
+      } else {
+          alert('Please fill in all fields.');
+      }
+  });
+  </script>
 </body>
 </html>
