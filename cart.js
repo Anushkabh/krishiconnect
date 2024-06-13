@@ -27,12 +27,16 @@ function createItemElement(item) {
   itemquantity.appendChild(increaseQuantityButton);
   decreaseQuantityButton.onclick = function () {
     if(item.quantity>0){
-    item.quantity--;
-    cartItems = cartItems.map(cartItem => cartItem.name === item.name ? item : cartItem);
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    updateCartDisplay();
+        item.quantity--;
+        if(item.quantity === 0) {
+            cartItems = cartItems.filter(cartItem => cartItem.name !== item.name);
+        } else {
+            cartItems = cartItems.map(cartItem => cartItem.name === item.name ? item : cartItem);
+        }
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        updateCartDisplay();
     }
-  };
+}
 
   increaseQuantityButton.onclick = function () {
     item.quantity++;
