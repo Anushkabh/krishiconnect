@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="width: 100%;">
 <head>
     <title>KrishiConnect | Transactions</title>
     <link rel="icon" type="image/png" href="/assets/img/logo/log.png">
@@ -27,88 +27,115 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <style>
-    /* For static navbar */
+  html {
+scroll-behavior: smooth;
+}
 
-.page-header{
-    position: sticky;
+body {
+color: #333333;
+font-size: 14px;
+font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+text-transform: uppercase !important;
+font-weight: 700 !important;
+}
+.page-header .navbar{
+  color: white;
+}
+  .page-header .navbar .navbar-brand img {
+    /* height: 50px; */
+    margin-left: -160px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .page-header .navbar .navbar-nav .nav-link {
+    color: #FFF;
+    font-size: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+ 
+  .page-header .navbar.bg-white {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  }
+ 
+   .nav-link:hover {
+    color: #E91E63;
+  }
+  .navbar-brand img{
+      margin-left: 30%;
+  }
+
+
+  .banner .jumbotron {
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+
+    overflow: hidden;
+    height: auto;
+  }
+
+  .banner .jumbotron video {
+    position: absolute;
     top: 0;
-    z-index: 999;
-    background-color: black;
-}
-
-.container {
-    max-width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-    align-items: center;
-}
-
-/*.navbar {
-    background-color: transparent;
-    position: static;
+    left: 0;
     width: 100%;
-}
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
 
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
+  .banner .jumbotron .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
 
-.navbar-brand img {
-    max-height: 50px;
-    margin-right: 10px;
-}
-.navbar-toggler{
-        position: absolute;
-        right: 25px;
-     }*/
-.container h1{
-    color:black;
-}
-.container p{
-    color:black;
-    font-size: bold;
-}
-/*@media screen and (max-width:768px){
-        .navbar-collapse{
-            position: absolute;
-            right:0;
-            top: 95px;
-            text-align: center;
-            background-color: #132e40 ;
-            width: 186px;
-            z-index: 1000;
-        }*/
-        
-    /* .navbar-nav .nav-item {
-        margin: 0 auto;
-    } */
-        /*.navbar-nav li{
-            color: black;
-        }
-        .toggle{
-            position: relative;
-            left: 101px;
-        }
-     }
-     
-@media (max-width: 370px) {
-    .navbar-toggler {
-        right: 10px;
-    }
+  .banner .jumbotron .container {
+    position: relative;
+    z-index: 3;
+    padding-top: 200px; /* Adjust padding as needed to position the text correctly */
+    text-align: center;
 
-    .toggle {
-        right: 10px;
-        top: 10px;
-    }
+  }
 
-    .navbar-collapse {
-        top: 50px;
-    }
-}*/
+  .banner .jumbotron .container h1,
+  .banner .jumbotron .container p {
+    color: #FFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+
+  
+  .banner .jumbotron .container  {
+    margin-top: 2.3rem;
+    /* background-color: transparent; */
+    border: none;
+  }
+
+  .banner .jumbotron .container  {
+    border: none;
+    color: #FFF;
+  }
+
+  .banner .jumbotron .container {
+    color: #FFF;
+    text-transform: uppercase;
+  }
+
+
+
+ 
 
 </style>
-<body class="light">
+<body >
   <div class="page-header">
     <!--=============== Navbar ===============-->
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
