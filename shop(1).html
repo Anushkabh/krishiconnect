@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html style="width: 100%;
+">
 <head>
     <title>KrishiConnect | Shop</title>
     <link rel="icon" type="image/png" href="/assets/img/logo/log.png">
     <meta charset="utf-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css">
     <link href="assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
     <link href="assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap/bootstrap.css">
@@ -18,15 +20,15 @@
     <link rel="stylesheet" type="text/css" media="all"
         href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- Favicon -->
@@ -36,177 +38,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-<!-- <style>
-    .page-header{
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        background-color: black;
-        }
-    
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-    
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-    
-        .banner-logo {
-            height: 300px;
-            width: 300px;
-        }
-    
-         .buttons {
-             display: flex;
-             gap: 12px;
-         }
-    
-         .wishlist-button {
-             display: flex;
-             align-items: center;
-             cursor: pointer;
-             padding: 10px 20px;
-             border: 1px solid #ccc;
-             border-radius: 5px;
-             background-color: #fff;
-             color: #464646;
-             text-decoration: none;
-             transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
-         }
-    
-         .wishlist-button:hover {
-             background-color: #f9b793;
-             color: #fff;
-             transform: scale(1.1);
-         }
-    
-         .wishlist-button .fas {
-             margin-right: 5px;
-         }
-    
-         .buttons .btn.btn-block.btn-primary {
-             display: flex;
-             justify-content: center;
-             align-items: center;
-             padding: 10px 20px;
-             border-radius: 5px;
-             background-color: #e61f61;
-             color: #fff;
-             text-decoration: none;
-         }
-    
-         #wishlistDropdownContent {
-             position: absolute;
-             background-color: #f9f9f9;
-             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-             z-index: 1;
-             width: 200px;
-             padding: 10px;
-             border-radius: 5px;
-         }
-        .page-header {
-            width: 100%;
-            --bs-bg-opacity: 1;
-        background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
-            display: flex;
-            justify-content: space-around;
-        }
-    
-    
-        .container h1 {
-            color: white;
-        }
-    
-        .container p {
-    /*         color: white; */
-            color:rgb(44, 43, 43);
-            font-weight: bold;
-        }
-        .wishlist-item {
-             margin-bottom: 10px;
-         }
-    
-         .item-name {
-             font-weight: bold;
-         }
-    
-         .add-to-cart-button,
-         .remove-button {
-             background-color: #4caf50;
-             color: white;
-             padding: 5px 10px;
-             border: none;
-             border-radius: 3px;
-             cursor: pointer;
-         }
-    
-         .add-to-cart-button:hover {
-             background-color: #539655;
-         }
-    
-         .remove-button {
-             background-color: #e91e63;
-             margin-left: 1px;
-             cursor: pointer;
-         }
-    
-         .remove-button:hover {
-             background-color: #cd1653;
-             color: white;
-             border-radius: 3px;
-         }
-    
-         .view-wishlist-link {
-             display: block;
-             padding: 10px;
-             color: #333;
-             text-decoration: none;
-             font-weight: bold;
-             border-top: 1px solid #ccc;
-         }
-    
-         .view-wishlist-link:hover {
-             background-color: #f5f5f5;
-         }
-    
-         .Toastify {
-             font-family: Arial, sans-serif;
-         }
-    
-         .Toastify__toast-container {
-             position: fixed;
-             z-index: 9999;
-             bottom: 20px;
-             right: 20px;
-         }
-    
-         .Toastify__toast {
-             background-color: rgba(0, 128, 0, 0.8);
-             color: #fff;
-             border-radius: 5px;
-             padding: 15px 20px;
-             font-size: 16px;
-             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-         }
-    
-         /* Star Rating CSS */
-    .checked {
-        color: orange;
-    }
-    
-    
-         .container {
-             max-width: 100%;
-             padding: 0 15px;
-             margin: 0 auto;
-             align-items: center;
-         }
-    
-</style>-->
-=======
-
 </head>
 
 
@@ -214,19 +45,10 @@
     <script src="toast.js"></script>
 
 
+
+
     <style>
-
-        html{
-            width: 100%;
-            height: 100%;
-        }
-
-    .page-header{
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background-color: black;
-    }
+   
 
     .card {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -237,10 +59,7 @@
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 
-    .banner-logo {
-        height: 300px;
-        width: 300px;
-    }
+  
 
      .buttons {
          display: flex;
@@ -291,19 +110,16 @@
          border-radius: 5px;
      }
 
-     .container{
-        width: 100%;
-     }
 
     .container h1 {
         color: white;
     }
 
     .container p {
+/*         color: white; */
         color:rgb(44, 43, 43);
         font-weight: bold;
     }
-
     .wishlist-item {
          margin-bottom: 10px;
      }
@@ -371,124 +187,138 @@
          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
      }
 
-#most-wanted {
-    background-color: #f8f9fa;
-    padding: 0;
-}
-
      /* Star Rating CSS */
 .checked {
     color: orange;
 }
 
 
-     .container {
-         max-width: 100%;
-         padding: 0 15px;
-         margin: 0 auto;
-         align-items: center;
-     }
+  html {
+scroll-behavior: smooth;
+}
 
-     /*.navbar {
-         
-         position: static;
-         width: 100%;
-     }
+body {
+color: #333333;
+font-size: 14px;
+font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+background: #fff;
+}
 
-     .page-header .navbar .navbar-brand img {
-    height: 50px;
+h1, h2, h3, h4, h5, h6 {
+text-transform: uppercase !important;
+font-weight: 700 !important;
+}
+.page-header .navbar{
+  color: white;
+}
+  .page-header .navbar .navbar-brand img {
+    /* height: 50px; */
     margin-left: -160px;
     object-fit: cover;
     border-radius: 50%;
+  }
+  .page-header .navbar .navbar-nav .nav-link {
+    color: #FFF;
+    font-size: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .page-header .navbar .navbar-nav .nav-link:focus, .page-header .navbar .navbar-nav .nav-link:hover, .page-header .navbar .navbar-nav .nav-link.active {
+    color: #E91E63;
+  }
+  .page-header .navbar.bg-white {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  }
+  .page-header .navbar.bg-white .navbar-nav .nav-link {
+    color: #333333;
+  }
+  .page-header .navbar.bg-white .navbar-nav .nav-link:focus, .page-header .navbar.bg-white .navbar-nav .nav-link:hover, .page-header .navbar.bg-white .navbar-nav .nav-link.active {
+    color: #E91E63;
+  }
+  .navbar-brand img{
+      margin-left: 30%;
+  }
 
-}
-#most-wanted .container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-#most-wanted .title {
-    text-align: center;
-    margin-bottom: 50px;
-    color: #343a40;
-}
-.card {
-    background-color: #fff;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+
+  .banner .jumbotron {
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+
     overflow: hidden;
-}
-.card-img-top {
-    width: 100%;
     height: auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-.card-body {
-    padding: 20px;
-}
-.card-title {
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #333;
-}
-.card-price {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-.buttons {
+  }
+
+  .banner .jumbotron video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .banner .jumbotron .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+
+  .banner .jumbotron .container {
+    position: relative;
+    z-index: 3;
+    padding-top: 200px; /* Adjust padding as needed to position the text correctly */
     text-align: center;
-}
-.add-to-cart-btn {
-    width: 80%;
-    margin: 0 auto;
-}
-/* Responsive Styling */
-@media (min-width: 576px) {
-    .w-auto {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 30px;
-    }
-}
-@media (min-width: 768px) {
-    .container {
-        max-width: 750px;
-    }
-}
-@media (min-width: 992px) {
-    .container {
-        max-width: 970px;
-    }
-}
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1170px;
-    }
-}
 
+  }
 
- 
- 
-</head>
-    
-<body class="light">
+  .banner .jumbotron .container h1,
+  .banner .jumbotron .container p {
+    color: #FFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+
+  
+  .banner .jumbotron .container  {
+    margin-top: 2.3rem;
+    /* background-color: transparent; */
+    border: none;
+  }
+
+  .banner .jumbotron .container  {
+    border: none;
+    color: #FFF;
+  }
+
+  .banner .jumbotron .container {
+    color: #FFF;
+    text-transform: uppercase;
+  }
+
+</style>
+<body >
     <div class="page-header">
         <!--=============== Navbar ===============-->
-        <nav style="background: #132e40 ;" class="navbar fixed-top navbar-expand-md navbar-dark ">
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" >
           <div class="container">
             <!-- Navbar Brand -->
-            <a href="index.html" class="navbar-brand mr-auto">
-              <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px;">
-            </a>
+    
+    
+                <a href="index.html" class="navbar-brand mr-auto">
+                    <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px; " >
+                  </a>
+    
+    
             <!-- Toggle Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
+    
             <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
               <!-- Navbar Menu -->
               <ul class="navbar-nav">
@@ -503,12 +333,12 @@
                 </li>
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
-                    Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+                      Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
-                    <!-- Wishlist items will be dynamically added here -->
+                      <!-- Wishlist items will be dynamically added here -->
                   </div>
-                </li>
+              </li>
                 <li class="nav-item" id="nav-link5">
                   <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
                 </li>
@@ -517,16 +347,16 @@
                 </li>
               </ul>
               <input type="checkbox" id="toggle">
-              <label class="toggle" for="toggle">
-                <i class="bx bxs-sun"></i>
-                <i class="bx bx-moon"></i>
-                <span class="ball"></span>
-              </label>
+    
+                        <label class="toggle" for="toggle">
+                            <i class="bx bxs-sun"></i>
+                            <i class="bx bx-moon"></i>
+                            <span class="ball"></span>
+                        </label>
             </div>
           </div>
         </nav>
       </div>
-      
         
     </div>
 
@@ -535,11 +365,13 @@
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('https://scx2.b-cdn.net/gfx/news/2023/uk-food-shortages-how.jpg');">
                 <div class="container">
+
                     <img src="assets/img/logo/log.png" class="banner-logo" alt="" height="300">
-                    <h1 class="pt-5" style="color: #000;">
+                    <h1 class="pt-5">
+
                         Shopping Page
                     </h1>
-                    <p class="lead" id="s" style="color: #000;">
+                    <p class="lead" id="s">
                         Save time and leave the groceries to us.
                     </p>
                 </div>
@@ -569,7 +401,7 @@
                                     <span class="d-flex mr-2"><img src="./assets/img/logo/apple.png"></span>
                                     <div class="media-body">
                                         <h5>Fruits</h5>
-                                        <p>Juicy and vibrant, enjoy the natural sweetness of fresh fruits.</p>
+                                        <p>Variety of Fruits From Local Growers</p>
                                     </div>
                                 </div>
                             </a>
@@ -604,7 +436,7 @@
                                     <span class="d-flex mr-2"><img src="./assets/img/logo/seed.png"></span>
                                     <div class="media-body">
                                         <h5>Pulses</h5>
-                                        <p>Power-packed and protein-rich, sustain your health with quality pulses.</p>
+                                        <p>Protein Rich Ingridients From Local Farmers</p>
                                     </div>
                                 </div>
                             </a>
@@ -616,7 +448,7 @@
                                     <span class="d-flex mr-2"><img src="./assets/img/logo/nutrition.png"></span>
                                     <div class="media-body">
                                         <h5>Miscellanous</h5>
-                                        <p>Versatile and essential, complete your pantry with everyday essentials</p>
+                                        <p></p>
                                     </div>
                                 </div>
                             </a>
@@ -625,12 +457,13 @@
                 </div>
             </div>
         </div>
+
         <section id="most-wanted">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <h2 class="title" id="title">Most Wanted</h2>
-                        <div class="w-auto">
+                        <div class="product-carousel owl-carousel">
                             <div class="item" id="item">
                                 <div class="card card-product">
                                     <div class="card-ribbon">
@@ -647,7 +480,7 @@
                                                 20% OFF
                                             </span>
                                         </div>
-                                        <img src="assets/img/potato.jpg" alt="Card image 2" class="card-img-top" height="260" width="400">
+                                        <img src="assets/img/potato.jpg" alt="Card image 2" class="card-img-top">
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title">
@@ -659,12 +492,12 @@
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star"></span> 
+                                            <span class="fa fa-star"></span>
                                             <span class="rating-number">(4.0)</span>
                                         </div>
                                         <div class="card-price">
-                                            <span class="discount">₹ 300.000</span>
-                                            <span class="reguler">₹ 200.000</span>
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
                                         </div>
                                         <div class="buttons">
                                             <a onclick="addToWishlist('Potatoes1',200)" class="wishlist-button">
@@ -707,8 +540,8 @@
                                             <span class="rating-number">(3.0)</span>
                                         </div>
                                         <div class="card-price">
-                                            <span class="discount">₹ 300.000</span>
-                                            <span class="reguler">₹ 200.000</span>
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
                                         </div>
                                         <div class="buttons">
                                             <a onclick="addToWishlist('Moong Dhuli',200)" class="wishlist-button">
@@ -754,8 +587,8 @@
                                             <span class="rating-number">(4.0)</span>
                                         </div>
                                         <div class="card-price">
-                                            <span class="discount">₹ 300.000</span>
-                                            <span class="reguler">₹ 200.000</span>
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
                                         </div>
                                         <div class="buttons">
                                             <a onclick="addToWishlist('Mustard Oil',200)" class="wishlist-button">
@@ -801,8 +634,8 @@
                                             <span class="rating-number">(5.0)</span>
                                         </div>
                                         <div class="card-price">
-                                            <span class="discount">₹ 300.000</span>
-                                            <span class="reguler">₹ 200.000</span>
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
                                         </div>
                                         <div class="buttons">
                                             <a onclick="addToWishlist('Mangoes',200)" class="wishlist-button">
@@ -848,8 +681,8 @@
                                             <span class="rating-number">(3.0)</span>
                                         </div>
                                         <div class="card-price">
-                                            <span class="discount">₹300.000</span>
-                                            <span class="reguler">₹200.000</span>
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
                                         </div>
                                         <div class="buttons">
                                             <a onclick="addToWishlist('Cucumber',200)" class="wishlist-button">
@@ -868,9 +701,994 @@
                 </div>
             </div>
         </section>
+
+        <section id="vegetables" class="gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="title" id="title">Vegetables</h2>
+                        <div class="product-carousel owl-carousel">
+                            <div class="item" id="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/potato.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Potatoes</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(4.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Potatoes',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Potatoes', 'assets/img/potato.jpg', 200); " class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Potatoes" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" id="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/cucumber.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Cucumber</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(3.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Cucumber',200);" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Cucumber', 'assets/img/cucumber.jpg', 200);" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Cucumber" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" id="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/Cabbage.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Cabbage</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(4.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Cabbage',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Cabbage', 'assets/img/Cabbage.jpg', 200);" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Cabbage" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" id="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/spinach.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Spinach</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(3.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Spinach',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Spinach', 'assets/img/spinach.jpg', 200);" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Spinach" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" id="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/Tomato.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Tomatoes</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(2.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Tomatoes',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Tomatoes', 'assets/img/Tomato.jpg', 200);" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Tomatoes" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="oilseedsandherbs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="title" id="title">Oil Seeds And Herbs</h2>
+                        <div class="product-carousel owl-carousel">
+                            <div class="item" id="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/mustard-flowers-.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Mustard Oil</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(3.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Mustard Oil',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Musturd Oil', 'assets/img/mustard-flowers-.jpg', 200);" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Musturd Oil" data-product-price="200"id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" id="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/groundnut.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Groundnut</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(4.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Groundnut',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Groundnut', 'assets/img/groundnut.jpg', 200);" class="btn btn-block btn-primary   add-to-cart-btn" data-product-name="Groundnut" data-product-price="200"id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" id="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/mint.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Mint Leaves</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(3.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Mint Leaves',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Mint Leaves', 'assets/img/mint.jpg', 200);" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Mint Leaves" data-product-price="200"id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" id="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/coriander.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Coriander Leaves</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="rating-number">(5.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Coriander Leaves',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Coriander Leaves', 'assets/img/coriander.jpg', 200);" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Coriander Leaves" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/castor-oil-plant-.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Castor Seeds</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(3.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Castor seeds',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Castor Seeds', 'assets/img/castor-oil-plant-.jpg', 200);" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Castor Seeds" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Miscellenous" class="gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="title" id="title">Miscellaneous</h2>
+                        <div class="product-carousel owl-carousel">
+                            <div class="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/moong.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Moong Dhuli</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="rating-number">(5.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Moong Dhuli',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Moong Dhuli', 'assets/img/moong.jpg', 200);" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Moong Dhuli" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/sabut-masoor-dal-500x500.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Masoor Dhuli</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(3.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Masoor Dhuli',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Masoor Dhuli', 'assets/img/sabut-masoor-dal-500x500.jpg', 200);" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Masoor Dhuli" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/cumin.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Cumin Powder</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(4.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('cumin Powder',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Cumin Powder', 'assets/img/cumin.jpg', 200);" class="btn btn-block btn-primary  add-to-cart-btn" data-product-name="Cumin Powder" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/turmeric.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Turmeric Powder</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(3.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Turmeric Powder',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Turmeric Powder', 'assets/img/turmeric.jpg', 200);" class="btn btn-block btn-primary   add-to-cart-btn"  data-product-name="Turmeric Powder" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" >
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/miscorg.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Handmade Pots</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="rating-number">(5.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Handmade Pots',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Handmade Pots', 'assets/img/miscorg.jpg', 200);" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Handmade Pots" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fruits">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="title" id="title">Fruits</h2>
+                        <div class="product-carousel owl-carousel">
+                            <div class="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/mango.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Mangoes</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(3.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Mangoes',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Mangoes', 'assets/img/mango.jpg', 200);" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Mangoes" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" >
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/oranges.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Oranges</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(4.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Oranges',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Oranges', 'assets/img/oranges.jpg', 200);" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Oranges" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/watermelon.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Watermelon</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="rating-number">(5.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Watermelon',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Watermelon', 'assets/img/watermelon.jpg', 200);" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Watermelon" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/Grapes.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Grapes</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(3.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Grapes',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Grapes', 'assets/img/Grapes.jpg', 200);" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Grapes" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until Few Days
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                20% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/guava.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product(1).html">Guavas</a>
+                                        </h4>
+                                        <!-- Ratings Section -->
+                                        <div class="card-ratings">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="rating-number">(2.0)</span>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="discount">Rp. 300.000</span>
+                                            <span class="reguler">Rp. 200.000</span>
+                                        </div>
+                                        <div class="buttons">
+                                            <a onclick="addToWishlist('Guavas',200)" class="wishlist-button">
+                                                <i class="fas fa-seedling" style='font-size:18px'></i>
+                                            </a>
+                                            <a onclick="addToCart('Guavas', 'assets/img/guava.jpg', 200);" class="btn btn-block btn-primary add-to-cart-btn" data-product-name="Guavas" data-product-price="200" id="toast-btn">
+                                                Add to Cart
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-
-
 
 
     <footer class="text-center text-lg-start bg-body-tertiary text-muted">
@@ -881,6 +1699,7 @@
             <span style="font-weight: bold;">Get connected with us on social networks:</span>
           </div>
           <!-- Left -->
+
           <!-- Right -->
           <div class="">
             <!-- Facebook -->
@@ -1028,8 +1847,8 @@
           <a class="text-reset fw-bold" href="https://mdbootstrap.com/"> कृषिCONNECT | Fresh From Farm. All rights reserved.</a>
         </div>
         <!-- Copyright -->
-    </footer>
-</div>
+      </footer>
+            </div>
 
     <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
     <script type="text/javascript" src="assets/js/jquery.js"></script>
@@ -1063,10 +1882,6 @@
 <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script src="toast.js"></script>
     <script src="darkmode.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="toast.js"></script>
-
 
 </body>
 </html>
