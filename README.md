@@ -1,5 +1,7 @@
-# KrishiConnect  
-## Revolutionizing Agriculture Consumer Industry
+<h1 align="center">KrishiConnect  </h1>
+
+<h1 align="center">Revolutionizing Agriculture Consumer Industry  </h1>
+
 ## 👇About KrishiConnect
 
 **KrishiConnect** aims to transform the agricultural consumer industry by eliminating intermediaries that hinder our farmer friends from achieving the economic prosperity they deserve. Our website is meticulously designed to be aesthetically pleasing, interactive, and user-friendly for our clients.
@@ -138,5 +140,19 @@ Congratulations🎉, you have made a PR to the KrishiConnect. Wait for your subm
 [](https://github.com/Anushkabh/krishiconnect?tab=readme-ov-file#contact-us)
 
 For inquiries and support, please reach out to us at  [info@krishiconnect.com](mailto:info@krishiconnect.com).
+
+<hr>
+
+<div>
+  <h2 align = "center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" width="35" height="35">Our Contributors</h2>
+  <div align = "center">
+ <h3>Thank you for contributing to our repository</h3>
+
+![Contributors](https://contrib.rocks/image?repo=Anushkabh/krishiconnect)
+
+### Show some ❤️ by starring this awesome repository!
+
+</div>
+
 
 © 2024 KrishiConnect. All rights reserved.
