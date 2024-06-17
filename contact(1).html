@@ -363,5 +363,29 @@
       }
   });
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('toggle');
+        const body = document.body;
+        
+        // Load the saved theme from localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+            toggle.checked = true;
+        }
+
+        // Add event listener for the toggle button
+        toggle.addEventListener('change', function() {
+            if (toggle.checked) {
+                body.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
