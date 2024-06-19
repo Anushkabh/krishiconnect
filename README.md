@@ -22,7 +22,7 @@
 
 # 📸Screenshots
 
-![1](./sreenshots/1.png)  ![2](./sreenshots/2.png) ![3](./sreenshots/3.png) ![4](./sreenshots/4.png)  ![5](/.sreenshots/5.png) ![6](./sreenshots/6.png)
+![1](./screenshots/1.png)  ![2](./screenshots/2.png) ![3](./screenshots/3.png) ![4](./screenshots/4.png)  ![5](/.screenshots/5.png) ![6](./screenshots/6.png)
 
 <!-- ![Home Page](https://photos.app.goo.gl/PF6nTxrAWw4k6zA78)
 ![Why KrishiConnect?](https://photos.app.goo.gl/DqMnZU2BiBRwvaBG6)
