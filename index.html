@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
-    <link rel="stylesheet" type="text/css" href="whykrishiconnect.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/whykrishiconnect.css">
 
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -33,13 +33,13 @@
     <!-- BoxIcons v2.1.2 -->
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="darkmode.css">
+    <link rel="stylesheet" href="assets/css/darkmode.css">
     <link rel="stylesheet" href="./chatBot/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="index.js"></script>
+    <script src="assets/js/index.js"></script>
     <style>
         html {
             scroll-behavior: smooth;
@@ -375,29 +375,24 @@
         .scroll-to-top {
             position: fixed;
             bottom: 20px;
-            right: 18px;
+            right: 20px;
             z-index: 100;
             display: none;
             /* Initially hide the button */
             background-color: #198754;
             color: #fff;
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             text-align: center;
-            line-height: 49px;
+            line-height: 40px;
             border-radius: 50%;
-            font-size: 10px;
+            font-size: 20px;
             cursor: pointer;
-            transition: transform 0.3s ease-in-out;
+            transition: opacity 0.3s ease;
         }
-        i.fa.fa-angle-up {
-            font-size: 21px;
-        }
-    
+        
         .scroll-to-top:hover {
-            /* opacity: 0.8; */
-            transform: scale(1.05);
-            right : 18px;
+            opacity: 0.8;
         }
         
         #loader {
@@ -463,10 +458,10 @@
         }
     </style>
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="test-style.css">
+    <link rel="stylesheet" href="assets/css/test-style.css">
 
 </head>
 
@@ -497,13 +492,13 @@
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav">
                         <li class="nav-item" style="border: 2px solid white" id="nav-link1">
-                            <a href="login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
+                            <a href="src/login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
                         </li>
                         <li class="nav-item" id="nav-link2">
-                            <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
+                            <a href="src/shop.html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
                         </li>
                         <li class="nav-item" id="nav-link3">
-                            <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
+                            <a href="src/transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
@@ -515,13 +510,14 @@
                             </div>
                         </li>
                         <li class="nav-item" id="nav-link5">
-                            <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
+                            
+                            <a href="src/cart.html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
                         </li>
                         <li class="nav-item">
-                            <a href="Contact(1).html" class="nav-link"><i class="ri-user-fill"></i>Contact</a>
+                            <a href="src/contact.html" class="nav-link"><i class="ri-user-fill"></i>Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a href="rateus.html" class="nav-link"><i class="ri-user-star-fill"></i>Rate Us</a>
+                            <a href="src/rateus.html" class="nav-link"><i class="ri-user-star-fill"></i>Rate Us</a>
                         </li>
                     </ul>
                     <input type="checkbox" id="toggle">
@@ -625,7 +621,7 @@
   <div class="containerrr">
     <div class="cardd" style="--clr: #009688;">
     <div class="imgbx">
-        <img src="OIP.jpg">
+        <img src="assets/img/OIP.jpg">
     </div>
     <div class="content">
         <h2>Straight from the Farm</h2>
@@ -634,7 +630,7 @@
     </div>
     <div class="cardd" style="--clr: #ff3e7f;">
     <div class="imgbx">
-        <img src="OIP 3.jpg">
+        <img src="assets/img/OIP 3.jpg">
     </div>
     <div class="content">
         <h2>Sustainable Practices</h2>
@@ -643,7 +639,7 @@
     </div>
     <div class="cardd" style="--clr: #03a9f4;">
     <div class="imgbx">
-        <img src="OIP 2.jpg">
+        <img src="assets/img/OIP 2.jpg">
     </div>
     <div class="content">
         <h2>Local and Convenient</h2>
@@ -673,7 +669,7 @@
             <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
                 <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
                     <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                        <img src="fresh-tomatoes.jpg-2.avif" class="card-img-top" alt="Tomato" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="assets/img/fresh-tomatoes.jpg-2.avif" class="card-img-top" alt="Tomato" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: green; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
                         <h5 class="card-title">Tomato</h5>
@@ -878,13 +874,13 @@
                             Products
                         </h6>
                         <p style="font-weight: bold;">
-                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; ">VEGETABLES</a>
+                            <a href="src/shop.html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; ">VEGETABLES</a>
                         </p>
                         <p style="font-weight: bold;">
-                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; ">FRUITS</a>
+                            <a href="src/shop.html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; ">FRUITS</a>
                         </p>
                         <p style="font-weight: bold;">
-                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; ">OIL SEEDS</a>
+                            <a href="src/shop.html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; ">OIL SEEDS</a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -896,14 +892,14 @@
                             Useful links
                         </h6>
                         <p>
-                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3';" onmouseout="this.style.color='inherit';">HERBS</a>
+                            <a href="src/shop.html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3';" onmouseout="this.style.color='inherit';">HERBS</a>
                         </p>
 
                         <p>
-                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; " onmouseout="this.style.color='inherit';">PULSES</a>
+                            <a href="src/shop.html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; " onmouseout="this.style.color='inherit';">PULSES</a>
                         </p>
                         <p>
-                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; " onmouseout="this.style.color='inherit';">MISCELLANOUS</a>
+                            <a href="src/shop.html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; " onmouseout="this.style.color='inherit';">MISCELLANOUS</a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -954,9 +950,9 @@
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/packages/bootstrap/bootstrap.js"></script>
     <script type="text/javascript" src="assets/js/theme.js"></script>
-    <script src="shop.js"></script>
+    <script src="assets/js/shop.js"></script>
     <script src="assets/js/scripts.js"></script>
-    <script src="./darkmode.js"></script>
+    <script src="assets/js/darkmode.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
         var splide = new Splide('#reviews', {
@@ -1004,10 +1000,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <!-- Swiper JS -->
-    <script src="swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
     <!-- Custom JavaScript -->
     <script src="./chatBot/script.js"></script>
-    <script src="test-script.js"></script>
+    <script src="assets/js/test-script.js"></script>
 </body>
 
 </html>
