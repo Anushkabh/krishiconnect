@@ -105,32 +105,33 @@
                           <div class="contact-wrapper">
                               <h3 class="title font-weight-normal mt-0 text-left">Send Us a Message</h3>
                               <form id="contactForm" data-aos="fade-left" data-aos-duration="1200">
-                                  <div class="row">
-                                      <div class="col">
-                                          <div class="form-group">
-                                              <input class="form-control" type="text" placeholder="Full Name" id="full" required>
-                                          </div>
-                                      </div>
-                                      <div class="col">
-                                          <div class="form-group">
-                                              <input class="form-control" type="email" placeholder="Email" id="email" required>
-                                          </div>
-                                      </div>
-                                      <div class="col-lg-12">
-                                          <div class="form-group" id="msg">
-                                              <textarea class="form-control" rows="3" placeholder="Message" id="message"></textarea>
-                                          </div>
-                                      </div>
-                                      <div id="thankYouMsg" style="display: none;">
-                                        Thank you! We will connect soon.
-                                    </div>
-                                      <div class="col-lg-12 text-right">
-                                          <button type="submit" class="btn btn-lg mb-5 contact-btn">Send</button>
+                                <div class="row">
+                                  <div class="col-lg-12">
+                                      <div class="form-group">
+                                          <input class="form-control" type="text" placeholder="Full Name" id="full" required>
                                       </div>
                                   </div>
+                                  <div class="col-lg-12">
+                                      <div class="form-group">
+                                          <input class="form-control" type="email" placeholder="Email" id="email" required>
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-12">
+                                      <div class="form-group" id="msg">
+                                          <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-12 text-center">
+                                    <div id="responseMessage" style="margin-top: 10px;"></div>
+                                </div>
+                                  <div class="col-lg-12 text-right">
+                                      <button type="submit" class="btn btn-lg mb-5 contact-btn">Send</button>
+                                  </div>
+                                 
+                              </div>
                               </form>
                           </div>
-                      </div>  
+                      </div>
                         <!-- Contact Details -->
                         <div class="col-lg-5" id="bk">
                             <div class="detail-wrapper p-5 bg-primary">
@@ -366,12 +367,18 @@
 </body>
 </html>
 <script>
-  document.querySelector('form').addEventListener('submit', function (event) {
+  document.getElementById('contactForm').addEventListener('submit', function (event) {
       event.preventDefault();
 
       const name = document.getElementById('full').value;
       const email = document.getElementById('email').value;
       const message = document.querySelector('#msg textarea').value;
+      const responseMessage = document.getElementById('responseMessage');
+      const sendButton = document.querySelector('.contact-btn');
+
+      // Disable the button and change its text to "Sending..."
+      sendButton.disabled = true;
+      sendButton.textContent = 'Sending...';
 
       fetch('http://localhost:3000/contact', {
           method: 'POST',
@@ -383,14 +390,19 @@
       .then(response => response.json())
       .then(data => {
           if (data.message === 'Emails sent successfully') {
-              alert('Message sent successfully!');
+              responseMessage.innerHTML = '<span style="color: green;">Message sent successfully!</span>';
           } else {
-              alert('There was an error sending your message.');
+              responseMessage.innerHTML = '<span style="color: red;">There was an error sending your message.</span>';
           }
       })
       .catch(error => {
           console.error('Error:', error);
-          alert('There was an error sending your message.');
+          responseMessage.innerHTML = '<span style="color: red;">There was an error sending your message.</span>';
+      })
+      .finally(() => {
+          // Re-enable the button and reset its text
+          sendButton.disabled = false;
+          sendButton.textContent = 'Send';
       });
   });
 </script>
