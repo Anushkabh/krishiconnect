@@ -1,114 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html style="width: 100%;">
 <head>
     <title>KrishiConnect | Transactions</title>
-    <link rel="icon" type="image/png" href="/assets/img/logo/log.png">
+    <link rel="icon" type="image/png" href="../assets/img/logo/log.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
-    <link href="assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="stylesheet.css" type="text/css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap/bootstrap.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/o2system-ui/o2system-ui.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/owl-carousel/owl-carousel.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/cloudzoom/cloudzoom.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+    <link href="../assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
+    <link href="../assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/o2system-ui/o2system-ui.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/owl-carousel/owl-carousel.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/cloudzoom/cloudzoom.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/thumbelina/thumbelina.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/theme.css">
     <script src="https://unpkg.com/scrollreveal"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="darkmode.css">
+    <link rel="stylesheet" href="../assets/css/darkmode.css">
     
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <style>
-    /* For static navbar */
+  html {
+scroll-behavior: smooth;
+}
 
-.page-header{
-    position: sticky;
+body {
+color: #333333;
+font-size: 14px;
+font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+text-transform: uppercase !important;
+font-weight: 700 !important;
+}
+.page-header .navbar{
+  color: white;
+}
+  .page-header .navbar .navbar-brand img {
+    /* height: 50px; */
+    margin-left: -160px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .page-header .navbar .navbar-nav .nav-link {
+    color: #FFF;
+    font-size: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+ 
+  .page-header .navbar.bg-white {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  }
+ 
+   .nav-link:hover {
+    color: #E91E63;
+  }
+  .navbar-brand img{
+      margin-left: 30%;
+  }
+
+
+  .banner .jumbotron {
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+
+    overflow: hidden;
+    height: auto;
+  }
+
+  .banner .jumbotron video {
+    position: absolute;
     top: 0;
-    z-index: 999;
-    background-color: black;
-}
-
-.container {
-    max-width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-    align-items: center;
-}
-
-/*.navbar {
-    background-color: transparent;
-    position: static;
+    left: 0;
     width: 100%;
-}
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
 
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
+  .banner .jumbotron .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
 
-.navbar-brand img {
-    max-height: 50px;
-    margin-right: 10px;
-}
-.navbar-toggler{
-        position: absolute;
-        right: 25px;
-     }*/
-.container h1{
-    color:black;
-}
-.container p{
-    color:black;
-    font-size: bold;
-}
-/*@media screen and (max-width:768px){
-        .navbar-collapse{
-            position: absolute;
-            right:0;
-            top: 95px;
-            text-align: center;
-            background-color: #132e40 ;
-            width: 186px;
-            z-index: 1000;
-        }*/
-        
-    /* .navbar-nav .nav-item {
-        margin: 0 auto;
-    } */
-        /*.navbar-nav li{
-            color: black;
-        }
-        .toggle{
-            position: relative;
-            left: 101px;
-        }
-     }
-     
-@media (max-width: 370px) {
-    .navbar-toggler {
-        right: 10px;
-    }
+  .banner .jumbotron .container {
+    position: relative;
+    z-index: 3;
+    padding-top: 200px; /* Adjust padding as needed to position the text correctly */
+    text-align: center;
 
-    .toggle {
-        right: 10px;
-        top: 10px;
-    }
+  }
 
-    .navbar-collapse {
-        top: 50px;
-    }
-}*/
+  .banner .jumbotron .container h1,
+  .banner .jumbotron .container p {
+    color: #FFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+
+  
+  .banner .jumbotron .container  {
+    margin-top: 2.3rem;
+    /* background-color: transparent; */
+    border: none;
+  }
+
+  .banner .jumbotron .container  {
+    border: none;
+    color: #FFF;
+  }
+
+  .banner .jumbotron .container {
+    color: #FFF;
+    text-transform: uppercase;
+  }
+
+
+
+ 
 
 </style>
-<body class="light">
+<body >
   <div class="page-header">
     <!--=============== Navbar ===============-->
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
@@ -116,8 +143,8 @@
         <!-- Navbar Brand -->
 
 
-            <a href="index.html" class="navbar-brand mr-auto">
-                <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px; " >
+            <a href="../index.html" class="navbar-brand mr-auto">
+                <img src="../assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px; " >
               </a>
 
 
@@ -133,7 +160,7 @@
               <a href="login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
             </li>
             <li class="nav-item" id="nav-link2">
-              <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
+              <a href="shop.html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
             </li>
             <li class="nav-item" id="nav-link3">
               <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
@@ -147,10 +174,10 @@
               </div>
           </li>
             <li class="nav-item" id="nav-link5">
-              <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
+              <a href="cart.html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
             </li>
             <li class="nav-item">
-              <a href="contact(1).html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
+              <a href="contact.html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
             </li>
           </ul>
           <input type="checkbox" id="toggle">
@@ -170,7 +197,7 @@
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('https://cdn.aarp.net/content/dam/aarp/home-and-family/family-and-friends/2017/04/1140-cashless.jpg');">
                 <div class="container">
-                    <img src="assets/img/logo/log.png" alt="" height="300" id="image">
+                    <img src="../assets/img/logo/log.png" alt="" height="300" id="image">
                     <h1 class="pt-5" id="y">
                         Your Transactions
                     </h1>
@@ -191,7 +218,7 @@
         <!-- Modal -->
 
         <div class="modal-footer">
-                        <button onclick="window.location.href='shop(1).html'" class="cartbtn" data-dismiss="modal">Shop Now</button>
+                        <button onclick="window.location.href='shop.html'" class="cartbtn" data-dismiss="modal">Shop Now</button>
         </div>
     </div>
                 </div>
@@ -208,8 +235,8 @@
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <!-- Content -->
               <h6 class="text-uppercase fw-bold mb-4">
-                <a href="index.html" class="navbar-brand mr-auto">
-                  <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle; margin-left: 0px;">
+                <a href="../index.html" class="navbar-brand mr-auto">
+                  <img src="../assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle; margin-left: 0px;">
                 </a>कृषिCONNECT
               </h6>
               <p>
@@ -223,13 +250,13 @@
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4 footer-navbar">Products</h6>
               <p style="font-weight: bold;">
-                <a href="shop(1).html" class="text-reset footer-navbar">VEGETABLES</a>
+                <a href="shop.html" class="text-reset footer-navbar">VEGETABLES</a>
               </p>
               <p style="font-weight: bold;">
-                <a href="shop(1).html" class="text-reset footer-navbar">FRUITS</a>
+                <a href="shop.html" class="text-reset footer-navbar">FRUITS</a>
               </p>
               <p style="font-weight: bold;">
-                <a href="shop(1).html" class="text-reset footer-navbar">OIL SEEDS</a>
+                <a href="shop.html" class="text-reset footer-navbar">OIL SEEDS</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -239,13 +266,13 @@
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4 footer-navbar">Useful links</h6>
               <p>
-                <a href="shop(1).html" class="text-reset footer-navbar">HERBS</a>
+                <a href="shop.html" class="text-reset footer-navbar">HERBS</a>
               </p>
               <p>
-                <a href="shop(1).html" class="text-reset footer-navbar">PULSES</a>
+                <a href="shop.html" class="text-reset footer-navbar">PULSES</a>
               </p>
               <p>
-                <a href="shop(1).html" class="text-reset footer-navbar">MISCELLANEOUS</a>
+                <a href="shop.html" class="text-reset footer-navbar">MISCELLANEOUS</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -306,18 +333,18 @@
     </footer>
 
     <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
-    <script type="text/javascript" src="assets/js/jquery.js"></script>
-    <script type="text/javascript" src="assets/js/jquery-migrate.js"></script>
-    <script type="text/javascript" src="assets/packages/bootstrap/libraries/popper.js"></script>
-    <script type="text/javascript" src="assets/packages/bootstrap/bootstrap.js"></script>
-    <script type="text/javascript" src="assets/packages/o2system-ui/o2system-ui.js"></script>
-    <script type="text/javascript" src="assets/packages/owl-carousel/owl-carousel.js"></script>
-    <script type="text/javascript" src="assets/packages/cloudzoom/cloudzoom.js"></script>
-    <script type="text/javascript" src="assets/packages/thumbelina/thumbelina.js"></script>
-    <script type="text/javascript" src="assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
-    <script type="text/javascript" src="assets/js/theme.js"></script>
-    <script src="transaction.js"></script>
-    <script src="shop.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery-migrate.js"></script>
+    <script type="text/javascript" src="../assets/packages/bootstrap/libraries/popper.js"></script>
+    <script type="text/javascript" src="../assets/packages/bootstrap/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/packages/o2system-ui/o2system-ui.js"></script>
+    <script type="text/javascript" src="../assets/packages/owl-carousel/owl-carousel.js"></script>
+    <script type="text/javascript" src="../assets/packages/cloudzoom/cloudzoom.js"></script>
+    <script type="text/javascript" src="../assets/packages/thumbelina/thumbelina.js"></script>
+    <script type="text/javascript" src="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
+    <script type="text/javascript" src="../assets/js/theme.js"></script>
+    <script src="../assets/js/transaction.js"></script>
+    <script src="../assets/js/shop.js"></script>
     <script>
         ScrollReveal({
             //reset: true ,
@@ -334,6 +361,6 @@
         ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
 
     </script>
-    <script src="./darkmode.js"></script>
+    <script src="../assets/js/darkmode.js"></script>
 </body>
 </html>
