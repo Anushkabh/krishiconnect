@@ -1,72 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Rating and Feedback</title>
-    <link rel="stylesheet" href="rateus.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const stars = document.querySelectorAll('.star');
-            let selectedRating = 0;
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://media.gettyimages.com/id/108351472/photo/happy-village-girl-using-laptop-with-mother-brother-and-grandfa.jpg?s=612x612&w=0&k=20&c=qMxiW4OqTL_u_l5NWmFd93g6MaYNWIEk9XhYEgnw_0I=');
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+}
 
-            stars.forEach(star => {
-                star.addEventListener('click', () => {
-                    selectedRating = star.getAttribute('data-value');
-                    highlightStars(selectedRating);
-                });
-            });
+/* Container styling */
+.container {
+    position: relative;
+    background: rgba(25, 12, 12, 0.5); /* Added semi-transparent black background */
+    color: white; /* Added white text color for better visibility */
+    padding: 20px;
+    border-radius: 12px;
+    width: 450px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Added background-color transition */
+}
 
-            function highlightStars(value) {
-                stars.forEach(star => {
-                    if (star.getAttribute('data-value') <= value) {
-                        star.classList.add('selected');
-                    } else {
-                        star.classList.remove('selected');
-                    }
-                });
-            }
+.container:hover {
+    transform: translateY(-10px);
+    background-color: rgba(0, 0, 0, 0.7); /* Adjusted background color on hover */
+}
 
-            document.querySelector('button[type="submit"]').addEventListener('click', () => {
-                const feedback = document.querySelector('textarea').value;
-                if (selectedRating > 0 && feedback.trim() !== "") {
-                    Toastify({
-                        text: "Thanks For Your Feedback",
-                        duration: 3000,
-                        close: true,
-                        gravity: "top", // `top` or `bottom`
-                        position: "center", // `left`, `center` or `right`
-                        backgroundColor: "#4CAF50",
-                    }).showToast();
-                } else {
-                    Toastify({
-                        text: "Please Enter Your Details",
-                        duration: 3000,
-                        close: true,
-                        gravity: "top", // `top` or `bottom`
-                        position: "center", // `left`, `center` or `right`
-                        backgroundColor: "#FF0000",
-                    }).showToast();
-                }
-            });
-        });
-    </script>
-</head>
-<body>
-    <div class="container">
-        <h1>Rate Us</h1>
-        <div class="stars">
-            <span class="star" data-value="1">&#9733;</span>
-            <span class="star" data-value="2">&#9733;</span>
-            <span class="star" data-value="3">&#9733;</span>
-            <span class="star" data-value="4">&#9733;</span>
-            <span class="star" data-value="5">&#9733;</span>
-        </div>
-        <textarea placeholder="Give us your Feedback..."></textarea>
-        <button type="submit">Submit</button>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+.stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.star {
+    font-size: 2.5em;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star:hover,
+.star.selected {
+    color: #ffcc00;
+}
+
+textarea {
+    width: 90%;
+    height: 120px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+button {
+    background-color: rgb(41, 134, 234);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: rgb(13, 62, 184);
+}
