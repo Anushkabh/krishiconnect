@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html style="width: 100%;">
+
+<head>
+  <title>KrishiConnect | Transactions</title>
+  <link rel="icon" type="image/png" href="../assets/img/logo/log.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+    type="text/css">
+  <link href="../assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
+  <link href="../assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css">
+  <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/bootstrap/bootstrap.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/o2system-ui/o2system-ui.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/owl-carousel/owl-carousel.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/cloudzoom/cloudzoom.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/thumbelina/thumbelina.css">
+  <link rel="stylesheet" type="text/css" media="all"
+    href="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../assets/css/theme.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/darkmode.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</head>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: #333333;
+    font-size: 14px;
+    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    background: #fff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+  }
+
+  .page-header .navbar {
+    color: white;
+  }
+
+  .page-header .navbar .navbar-brand img {
+    /* height: 50px; */
+    margin-left: -160px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .page-header .navbar .navbar-nav .nav-link {
+    color: #FFF;
+    font-size: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .page-header .navbar.bg-white {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-link:hover {
+    color: #E91E63;
+  }
+
+  .navbar-brand img {
+    margin-left: 30%;
+  }
+
+
+  .banner .jumbotron {
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+
+    overflow: hidden;
+    height: auto;
+  }
+
+  .banner .jumbotron video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .banner .jumbotron .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+
+  .banner .jumbotron .container {
+    position: relative;
+    z-index: 3;
+    padding-top: 200px;
+    /* Adjust padding as needed to position the text correctly */
+    text-align: center;
+
+  }
+
+  .banner .jumbotron .container h1,
+  .banner .jumbotron .container p {
+    color: #FFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+
+
+  .banner .jumbotron .container {
+    margin-top: 2.3rem;
+    /* background-color: transparent; */
+    border: none;
+  }
+
+  .banner .jumbotron .container {
+    border: none;
+    color: #FFF;
+  }
+
+  .banner .jumbotron .container {
+    color: #FFF;
+    text-transform: uppercase;
+  }
+</style>
+
+<body>
+  <div class="page-header">
+    <!--=============== Navbar ===============-->
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
+      <div class="container">
+        <!-- Navbar Brand -->
+
+
+        <a href="../index.html" class=" mr-auto">
+          <img src="../assets/img/logo/brand_logo/Dark_BG_logo.svg" width="90px" height="90px"
+            style="display: inline-block; vertical-align: middle;margin-left: 0px;border-radius: 0%; ">
+        </a>
+
+
+        <!-- Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
+          <!-- Navbar Menu -->
+          <ul class="navbar-nav">
+            <li class="nav-item" style="border: 2px solid white" id="nav-link1">
+              <a href="login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
+            </li>
+            <li class="nav-item" id="nav-link2">
+              <a href="shop.html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
+            </li>
+            <li class="nav-item" id="nav-link3">
+              <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
+                Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                <!-- Wishlist items will be dynamically added here -->
+              </div>
+            </li>
+            <li class="nav-item" id="nav-link5">
+              <a href="cart.html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
+            </li>
+          </ul>
+          <input type="checkbox" id="toggle">
+
+          <label class="toggle" for="toggle">
+            <i class="bx bxs-sun"></i>
+            <i class="bx bx-moon"></i>
+            <span class="ball"></span>
+          </label>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </nav>
+  </div>
+  <div id="page-content" class="page-content">
+    <div class="banner">
+      <div class="jumbotron jumbotron-bg text-center rounded-0"
+        style="background-image: url('https://cdn.aarp.net/content/dam/aarp/home-and-family/family-and-friends/2017/04/1140-cashless.jpg');">
+        <div class="container">
+          <img src="../assets/img/logo/log.png" alt="" height="300" id="image">
+          <h1 class="pt-5" id="y">
+            Your Transactions
+          </h1>
+          <p class="lead" id="s">
+            Save time and leave the groceries to us.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="cart" id="c">
+      <h1 class="carttext">Transaction Page</h1>
+      <div id="buyer-details" style="color:white;text-align:center;font-size:20px ;"></div>
+      <div id="transaction-items" style="color:white;text-align:center;font-size:20px ;" class="carttext"></div>
+
+
+      </section>
+
+      <!-- Modal -->
+
+      <div class="modal-footer">
+        <button onclick="window.location.href='shop.html'" class="cartbtn" data-dismiss="modal">Shop Now</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <footer class="text-center text-lg-start bg-body-tertiary text-muted" style="padding: 0px;">
+    <!-- Section: Links  -->
+    <section class="footer-section" style="padding: 0px; background-color: rgba(255, 255, 255, 0.8);">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <a href="../index.html" class=" mr-auto">
+                <img src="../assets/img/logo/brand_logo/Light_BG_LOGO.svg" width="90px" height="90px"
+                  style="display: inline-block; vertical-align: middle;margin-left: 0px;border-radius: 0%; ">
+              </a>
+            </h6>
+            <p>
+              कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining
+              tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they
+              truly deserve.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4 footer-navbar">Products</h6>
+            <p style="font-weight: bold;">
+              <a href="shop.html" class="text-reset footer-navbar">VEGETABLES</a>
+            </p>
+            <p style="font-weight: bold;">
+              <a href="shop.html" class="text-reset footer-navbar">FRUITS</a>
+            </p>
+            <p style="font-weight: bold;">
+              <a href="shop.html" class="text-reset footer-navbar">OIL SEEDS</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4 footer-navbar">Useful links</h6>
+            <p>
+              <a href="shop.html" class="text-reset footer-navbar">HERBS</a>
+            </p>
+            <p>
+              <a href="shop.html" class="text-reset footer-navbar">PULSES</a>
+            </p>
+            <p>
+              <a href="shop.html" class="text-reset footer-navbar">MISCELLANEOUS</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4 footer-navbar">Contact</h6>
+            <p><i class="fas fa-home me-3"></i>
+              <bold>New York, NY 10012, US</bold>
+            </p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              <bold>krishiconnect@gmail.com</bold>
+            </p>
+            <p><i class="fas fa-phone me-3"></i>
+              <bold>082723 67238</bold>
+            </p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+
+      <!-- Section: Social media -->
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block font footer-navbar">
+        <span style="font-weight: bold;">Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div class="">
+        <!-- Facebook -->
+        <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="#!"
+          role="button"><i class="fab fa-facebook-f"></i></a>
+
+        <!-- Twitter -->
+        <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="#!"
+          role="button"><i class="fab fa-twitter"></i></a>
+
+        <!-- Google -->
+        <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!"
+          role="button"><i class="fab fa-google"></i></a>
+
+        <!-- Instagram -->
+        <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!"
+          role="button"><i class="fab fa-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="#!"
+          role="button"><i class="fab fa-linkedin-in"></i></a>
+
+        <!-- Github -->
+        <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #333333;" href="#!"
+          role="button"><i class="fab fa-github"></i></a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="copyright text-center p-4 footer-navbar"
+      style="background-color: rgba(0, 0, 0, 0.05); padding-top: 40px;">
+      © <span id="copyright-year" class="footer-navbar"></span>
+      <bold> Copyright: </bold>
+      <a class="text-reset fw-bold footer-navbar" href="https://mdbootstrap.com/">
+        <bold> कृषिCONNECT | Fresh From Farm. All rights reserved.</bold>
+      </a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+  <script type="text/javascript" src="../assets/js/jquery.js"></script>
+  <script type="text/javascript" src="../assets/js/jquery-migrate.js"></script>
+  <script type="text/javascript" src="../assets/packages/bootstrap/libraries/popper.js"></script>
+  <script type="text/javascript" src="../assets/packages/bootstrap/bootstrap.js"></script>
+  <script type="text/javascript" src="../assets/packages/o2system-ui/o2system-ui.js"></script>
+  <script type="text/javascript" src="../assets/packages/owl-carousel/owl-carousel.js"></script>
+  <script type="text/javascript" src="../assets/packages/cloudzoom/cloudzoom.js"></script>
+  <script type="text/javascript" src="../assets/packages/thumbelina/thumbelina.js"></script>
+  <script type="text/javascript" src="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
+  <script type="text/javascript" src="../assets/js/theme.js"></script>
+  <script src="../assets/js/transaction.js"></script>
+  <script src="../assets/js/shop.js"></script>
+  <script>
+    ScrollReveal({
+      //reset: true ,
+      distance: '60px',
+      duration: 2500,
+      delay: 400
+    });
+    ScrollReveal().reveal('#image,#y,#s', { delay: 500, origin: 'top' });
+    ScrollReveal().reveal('#c', { delay: 600, origin: 'top' });
+    ScrollReveal().reveal('#update', { delay: 600, origin: 'right' });
+    ScrollReveal().reveal('#container', { delay: 700, origin: 'bottom' });
+    ScrollReveal().reveal('#col-md-3,#col-md-3l', { delay: 500, origin: 'left' });
+    ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500, origin: 'right' });
+    ScrollReveal().reveal('#copyright', { delay: 500, origin: 'bottom' });
+
+  </script>
+  <script src="../assets/js/darkmode.js"></script>
+</body>
+
+</html>

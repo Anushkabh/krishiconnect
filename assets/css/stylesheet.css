@@ -1,6 +1,10 @@
 *{
     font-family: sans-serif;
 }
+body{
+    padding:0;
+    margin:0;
+}
 html{
     width: fit-content;
 }
@@ -38,7 +42,7 @@ i {
 .jumbotron-bg::before {
     content: '';
     position: absolute;
-    top: 100px;
+    top: 70px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -100,7 +104,7 @@ h4 {
 }
 *, ::after, ::before {
     box-sizing: border-box;
-}
+    }
 .row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -649,4 +653,8 @@ h1 {
         width: auto;
     }
 }
+
+
+
+
 

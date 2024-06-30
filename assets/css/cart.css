@@ -957,16 +957,38 @@ button {
     border: 1px solid #004b08;
     background: #004b08;
   }
-  .order_now_button{
-    padding:10px;
-    width:160px;
-    font-size: 20px;
-    background-color: #ececec;
-    color:#004b08;
-    font-weight: bold;
-    border-radius:6px;
+
+  .buttons-1 {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
   }
+
+  .order_now_button{
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color:rgb(244, 244, 244);
+  color:#004b08;
+  font-weight: bold;
+  border-radius:6px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  color: #004b08;
+  text-decoration: none;
+  transition: 0.2s ease all;
+  z-index: 1;
+  
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+
+  }
+
   .order_now_button:hover{
-    background-color:#047e10;
-    color:#cef9d4;
+    background-color:#ffd386;
+    color:#014137;
+    transition: 0.2s all ease;
+    box-shadow: 2px 2px 0px #ddffbf;
+  transform: translateY(-5px);
+
   }

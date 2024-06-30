@@ -1,69 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html style="width: 100%;">
 
 <head>
     <title>KrishiConnect | Cart</title>
-    <link rel="icon" type="image/png" href="/assets/img/logo/log.png">
+    <link rel="icon" type="image/png" href="..../assets/img/logo/log.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="..../assets/css/stylesheet.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
         type="text/css">
-    <link href="assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
-    <link href="assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap/bootstrap.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/o2system-ui/o2system-ui.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/owl-carousel/owl-carousel.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/cloudzoom/cloudzoom.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
+    <link href="../assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
+    <link href="../assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/o2system-ui/o2system-ui.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/owl-carousel/owl-carousel.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/cloudzoom/cloudzoom.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all"
-        href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+        href="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/theme.css">
 
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/img/logo/log.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/logo/log.png" type="image/x-icon">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="darkmode.css">
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="../assets/css/darkmode.css">
+    <link rel="stylesheet" href="../assets/css/cart.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </head>
 <style>
-    /* For static navbar */
+  html {
+scroll-behavior: smooth;
+}
 
-.page-header{
-    position: sticky;
+body {
+color: #333333;
+font-size: 14px;
+font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+text-transform: uppercase !important;
+font-weight: 700 !important;
+}
+.page-header .navbar{
+  color: white;
+}
+  .page-header .navbar .navbar-brand img {
+    /* height: 50px; */
+    margin-left: -160px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .page-header .navbar .navbar-nav .nav-link {
+    color: #FFF;
+    font-size: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .page-header .navbar .navbar-nav .nav-link:focus, .page-header .navbar .navbar-nav .nav-link:hover, .page-header .navbar .navbar-nav .nav-link.active {
+    color: #E91E63;
+  }
+  .page-header .navbar.bg-white {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  }
+  .page-header .navbar.bg-white .navbar-nav .nav-link {
+    color: #333333;
+  }
+  .page-header .navbar.bg-white .navbar-nav .nav-link:focus, .page-header .navbar.bg-white .navbar-nav .nav-link:hover, .page-header .navbar.bg-white .navbar-nav .nav-link.active {
+    color: #E91E63;
+  }
+  .navbar-brand img{
+      margin-left: 30%;
+  }
+
+
+  .banner .jumbotron {
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+
+    overflow: hidden;
+    height: auto;
+  }
+
+  .banner .jumbotron video {
+    position: absolute;
     top: 0;
-    z-index: 999;
-    background-color: black;
-}
-
-.container {
-    max-width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-    align-items: center;
-}
-
-.navbar {
-    background-color: transparent;
-    position: static;
+    left: 0;
     width: 100%;
-}
-/*.navbar-toggler{
-        position: absolute;
-        right: 25px;
-     }
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
 
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
+  .banner .jumbotron .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
 
 .navbar-brand img {
     max-height: 58px;
@@ -96,86 +141,103 @@
     .navbar-toggler {
         right: 10px;
     }
+  .banner .jumbotron .container {
+    position: relative;
+    z-index: 3;
+    padding-top: 200px; /* Adjust padding as needed to position the text correctly */
+    text-align: center;
 
-    .toggle {
-        right: 10px;
-        top: 10px;
-    }
+  }
 
-    .navbar-collapse {
-        top: 50px;
-    }
-}
+  .banner .jumbotron .container h1,
+  .banner .jumbotron .container p {
+    color: #FFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+
+  
+  .banner .jumbotron .container  {
+    margin-top: 2.3rem;
+    /* background-color: transparent; */
+    border: none;
+  }
+
+  .banner .jumbotron .container  {
+    border: none;
+    color: #FFF;
+  }
+
+  .banner .jumbotron .container {
+    color: #FFF;
+    text-transform: uppercase;
+  }
+
+
+
+ 
 
 </style>
-<body class="light">
-    <div class="page-header">
-        <!--=============== Navbar ===============-->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
-          <div class="container">
-            <!-- Navbar Brand -->
-    
-    
-            <a href="index.html" class="navbar-brand mr-auto">
-              <img src="assets/img/logo/brand_logo/Dark_BG_logo.svg" width="90px" height="90px" style="display: inline-block; vertical-align: middle;margin-left: 0px;border-radius: 0%; " >
-            </a>
-    
-    
-            <!-- Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
-              <!-- Navbar Menu -->
-              <ul class="navbar-nav">
-                <li class="nav-item" style="border: 2px solid white" id="nav-link1">
-                  <a href="login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
-                </li>
-                <li class="nav-item" id="nav-link2">
-                  <a href="shop(1).html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
-                </li>
-                <li class="nav-item" id="nav-link3">
-                  <a href="transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
-                      Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
-                      <!-- Wishlist items will be dynamically added here -->
-                  </div>
-              </li>
-                <li class="nav-item" id="nav-link5">
-                  <a href="cart(1).html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
-                </li>
-                <li class="nav-item">
-                  <a href="contact(1).html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
-                </li>
-              </ul>
-              <input type="checkbox" id="toggle">
-    
-                        <label class="toggle" for="toggle">
-                            <i class="bx bxs-sun"></i>
-                            <i class="bx bx-moon"></i>
-                            <span class="ball"></span>
-                        </label>
-            </div>
-          </div>
-        </nav>
+<body >
+    <div class="page-header" >
+    <!--=============== Navbar ===============-->
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark"  style="height: 80px;">
+      <div class="container">
+        <!-- Navbar Brand -->
+
+
+            <a href="../index.html" class="navbar-brand mr-auto">
+                <img src="../assets/img/logo/brand_logo/Dark_BG_logo.svg" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px; " >
+              </a>
+            
+
+        <!-- Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
+          <!-- Navbar Menu -->
+          <ul class="navbar-nav">
+            <li class="nav-item" style="border: 2px solid white; border-radius: 20px;" id="nav-link1">
+              <a href="../src/login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
+            </li>
+            <li class="nav-item" id="nav-link2">
+              <a href="../src/shop.html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
+            </li>
+            <li class="nav-item" id="nav-link3">
+              <a href="../src/transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
+            </li>
+            <li class="nav-item" id="nav-link4">
+              <a href="../src/shop.html" class="nav-link"><i class="ri-seedling-fill"></i> Wishlist</a>
+            </li>
+            <li class="nav-item" id="nav-link5">
+              <a href="../src/cart.html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
+            </li>
+            <li class="nav-item">
+              <a href="../src/contact.html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
+            </li>
+          </ul>
+          <input type="checkbox" id="toggle">
+
+                    <label class="toggle" for="toggle">
+                        <i class="bx bxs-sun"></i>
+                        <i class="bx bx-moon"></i>
+                        <span class="ball"></span>
+                    </label>
+        </div>
       </div>
-        </nav>
-    </div>
+    </nav>
+  </div>
     <div id="page-content" class="page-content">
 
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0"
-                style="background-image: url('assets/img/cart.jpg');">
+                style="background-image: url('../assets/img/cart.jpg');">
 
         <div class="banner" id="banner">
 
                 <div class="container">
-                    <img src="assets/img/logo/log.png" alt="" height="300">
+                    <img src="../assets/img/logo/log.png" alt="" height="300">
                 </div>
                     <h1 class="pt-5">
                         Your Cart
@@ -241,19 +303,19 @@
                     </div>
                     <div class="flex-row">
                         <div class="button">
-                            <button class="cartbtn-1" onclick="emptyCart()"></button>
-                            <div class="vector"></div>
-                            <span class="empty-cart">Empty Cart</span>
+                            <button class="cartbtn-1" onclick="emptyCart()">
+                            <div class="vector" style="height:30px;"></div>
+                            <span class="empty-cart">Empty Cart</span></button>
                             <div class="rectangle-14"></div>
                         </div>
                         <div class="button-15">
-                            <button class="cartbtn-2" onclick="checkout()"></button>
-                            <div class="vector-16"></div>
-                            <span class="checkout">Checkout</span>
+                            <button class="cartbtn-2" onclick="checkout()">
+                            <div class="vector-16" style="height:30px;"></div>
+                            <span class="checkout">Checkout</span></button>
                             <div class="rectangle-17"></div>
                         </div>
                         <div class="button-div">
-                            <a onclick="window.location.href='shop(1).html'" class="cartbtn-3"></a></button>
+                            <a onclick="window.location.href='shop.html'" class="cartbtn-3"></a></button>
                             <div class="vector-19"></div>
                             <span class="continue-span">Continue</span>
                             <div class="rectangle-1a"></div>
@@ -280,7 +342,7 @@
             </div>
         </div>
         </div>
-            <div id="subtotal" class="carttext"></div>   
+            <div id="subtotal" class="carttext"></div>
             <div><button class="order_now_button">ORDER NOW</button></div>
         </div>
         <!-- <footer>
@@ -297,13 +359,13 @@
                         <h5>Links</h5>
                         <ul>
                             <li>
-                                <a href="about(1).html">About</a>
+                                <a href="about.html">About</a>
                             </li>
                             <li>
-                                <a href="contact(1).html">Contact Us</a>
+                                <a href="contact.html">Contact Us</a>
                             </li>
                             <li>
-                                <a href="faq(1).html">FAQ</a>
+                                <a href="faq.html">FAQ</a>
                             </li>
                         </ul>
                     </div>
@@ -429,10 +491,8 @@
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
             <h6 class="text-uppercase fw-bold mb-4">
-              <a href="index.html" class=" mr-auto">
-                
-                  <img src="assets/img/logo/brand_logo/Light_BG_LOGO.svg" width="90px" height="90px" style="display: inline-block; vertical-align: middle;margin-left: 0px;border-radius: 0%; " >
-               
+              <a href="../index.html" class=" mr-auto"> 
+                <img src="../assets/img/logo/brand_logo/Light_BG_LOGO.svg" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px; " >
               </a>
             </h6>
             <p>
@@ -448,13 +508,13 @@
               Products
             </h6>
             <p style="font-weight: bold;">
-              <a href="shop(1).html" class="text-reset">VEGETABLES</a>
+              <a href="../src/shop.html" class="text-reset">VEGETABLES</a>
             </p>
             <p style="font-weight: bold;">
-              <a href="shop(1).html" class="text-reset">FRUITS</a>
+              <a href="../src/shop.html" class="text-reset">FRUITS</a>
             </p>
             <p style="font-weight: bold;">
-              <a href="shop(1).html" class="text-reset">OIL SEEDS</a>
+              <a href="../src/shop.html" class="text-reset">OIL SEEDS</a>
             </p>
 
           </div>
@@ -467,13 +527,13 @@
               Useful links
             </h6>
             <p>
-              <a href="shop(1).html" class="text-reset">HERBS</a>
+              <a href="../src/shop.html" class="text-reset">HERBS</a>
             </p>
             <p>
-              <a href="shop(1).html" class="text-reset">PULSES</a>
+              <a href="../src/shop.html" class="text-reset">PULSES</a>
             </p>
             <p>
-              <a href="shop(1).html" class="text-reset">MISCELLANOUS</a>
+              <a href="../src/shop.html" class="text-reset">MISCELLANOUS</a>
             </p>
 
           </div>
@@ -507,18 +567,18 @@
   </footer>
 
     <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
-    <script type="text/javascript" src="assets/js/jquery.js"></script>
-    <script type="text/javascript" src="assets/js/jquery-migrate.js"></script>
-    <script type="text/javascript" src="assets/packages/bootstrap/libraries/popper.js"></script>
-    <script type="text/javascript" src="assets/packages/bootstrap/bootstrap.js"></script>
-    <script type="text/javascript" src="assets/packages/o2system-ui/o2system-ui.js"></script>
-    <script type="text/javascript" src="assets/packages/owl-carousel/owl-carousel.js"></script>
-    <script type="text/javascript" src="assets/packages/cloudzoom/cloudzoom.js"></script>
-    <script type="text/javascript" src="assets/packages/thumbelina/thumbelina.js"></script>
-    <script type="text/javascript" src="assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
-    <script type="text/javascript" src="assets/js/theme.js"></script>
-    <script src="cart.js"></script>
-    <script src="shop.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery-migrate.js"></script>
+    <script type="text/javascript" src="../assets/packages/bootstrap/libraries/popper.js"></script>
+    <script type="text/javascript" src="../assets/packages/bootstrap/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/packages/o2system-ui/o2system-ui.js"></script>
+    <script type="text/javascript" src="../assets/packages/owl-carousel/owl-carousel.js"></script>
+    <script type="text/javascript" src="../assets/packages/cloudzoom/cloudzoom.js"></script>
+    <script type="text/javascript" src="../assets/packages/thumbelina/thumbelina.js"></script>
+    <script type="text/javascript" src="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
+    <script type="text/javascript" src="../assets/js/theme.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/shop.js"></script>
 
     <script>
         ScrollReveal({
@@ -534,7 +594,7 @@
         ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500 , origin:'right'});
         ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
     </script>
-    <script src="./darkmode.js"></script>
+    <script src="../assets/js/darkmode.js"></script>
 </body>
 
 </html>
