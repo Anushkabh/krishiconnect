@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> KrishiConnect | Home</title>
+  <link rel="icon" type="image/png" href="../assets/img/logo/log.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/stylehome.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/style2.css" type="text/css" media="screen and (max-width: 1060px)">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="../assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
+    <link href="../assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/o2system-ui/o2system-ui.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/owl-carousel/owl-carousel.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/cloudzoom/cloudzoom.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/thumbelina/thumbelina.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/theme.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+
+<body>
+  <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="krishiconnect-high-resolution-logo-color-on-transparent-background (1).png" alt="Bootstrap"
+            width="40" height="40">
+        </a>
+      </div>
+      <a class="navbar-brand" href="#">KrishiConnect</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="schemes.html">Schemes</a>
+          </li>
+          <li class="navbar-item">
+            <button class="nav-link" id="logout"
+              style="background-color: rgba(224, 0, 0, 0.7); border-radius: 3px; color: aliceblue;"
+              onclick="logout(event)">LogOut</button>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+  <div class="page-header">
+    <!--=============== Navbar ===============-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="page-navigation">
+        <div class="container">
+            <!-- Navbar Brand -->
+            <a href="../index.html" class="navbar-brand">
+              <div style="flex-direction: row; display: flex; align-items: center;">
+                  <img id="your-image" src="../assets/img/logo/krishiconnect-high-resolution-logo_black.png" >
+              <h3 id="h3">कृषिCONNECT</h3>
+              </div>
+          </a>
+
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarcollapse">
+                <!-- Navbar Menu -->
+                <ul class="navbar-nav ml-auto" >
+
+                  <li class="nav-item" id="h">
+                      <a href="home.html" class="nav-link active">HOME</a>
+                  </li>
+                  <li class="nav-item" id="s">
+                      <a href="schemes.html" class="nav-link active">SCHEMES</a>
+                  </li>
+                  <li class="navbar-item" id="l">
+                    <button class="nav-link" id="logout"
+                      style="background-color: rgba(224, 0, 0, 0.7); border-radius: 3px; color: aliceblue;"
+                      onclick="logout(event)">LogOut</button>
+                  </li>
+              </ul>
+
+            </div>
+
+        </div>
+    </nav>
+</div>
+  <!-- Nav link -->
+
+  <div class="banner">
+    <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('../assets/img/farmer.png');">
+        <div class="container">
+          <img src="../assets/img/logo/log.png" alt="" height="300" id="image">
+            <h1 class="pt-5" style="text-shadow: #2572b9;">
+                Welcome
+            </h1>
+            <p class="lead">
+                You Mean A Lot To Us :) <br> Made with LOVE, by <i>Team Berozgar</i>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- My Section -->
+  <!-- <h1 style="margin-top: 50px;">Welcome <span id="displayname"></span></h1>
+  <h2 style="margin-top: 10px;">You mean a lot to Us :) </h2> -->
+  <div class="dashboard" style="background-color: rgba(249, 249, 249, 0.5); padding: 30px;">
+    <!-- Dashboard Section -->
+    <section id="progspace">
+
+      <!-- next circle -->
+      <!-- <div class="outcircle c1"> -->
+      <!-- <div class="incircle">
+
+               <span class="prod">Potato</span>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+              <defs>
+                <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="blue" />
+                  <stop offset="100%" stop-color="aqua" />
+                </linearGradient>
+              </defs>
+              <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+            </svg>
+
+          </div>
+
+
+          <section class="skillname">
+            <h2>Frontend Devlopment</h2>
+            <p>I am a frontend devloper with skills in HTML, CSS, Javascript.</p>
+          </section>
+        </div> -->
+
+      <!-- Weaather -->
+
+      <div class="card mb-4 rounded-3 shadow-sm" id="card">
+        <div class="card-header py-3" style="background-color: #E91E63; color: aliceblue;">
+          <h4 class="my-0 fw-normal"><strong>Jamshedpur</strong></h4>
+        </div>
+        <div class="card-body" style="background-color: rgba(228, 224, 224, 0.5); color:rgb(5, 5, 5);">
+          <h1 class="card-title pricing-card-title" style="font-size: 72px; color: green;"><span id="temp"></span>°C<small class="text-body-secondary"
+              style="color: rgb(8, 8, 8);"></small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Feels Like : <span id="feels_like"></span> </li>
+            <li>Cloud PCT : <span id="cloud_pct"></span> </li>
+            <li>Minimum Temperature : <span id="min_temp"></span></li>
+            <li>Maximum Temperature : <span id="max_temp"></span></li>
+            <li>Humidity :<span id="humidity"></span> </li>
+          </ul>
+          <!-- <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> -->
+        </div>
+      </div>
+
+      <!-- News -->
+      <div class="card mb-4 rounded-3 shadow-sm" id="newssection"
+        style="background-color: rgba(228, 224, 224, 0.5); color:#E91E63; max-width: 50%; min-width: 300px;">
+        <div class="card-header py-3" style="background-color: #E91E63; color: aliceblue;">
+          <h4 class="my-0 fw-normal text-center"><strong>News Section</strong></h4>
+        </div>
+        <ul class="list-unstyled mt-3 mb-4" style="padding: 10px; ">
+          <li class="headline"><span class="col" id="news" style="color: black; font-size: 18px;"></span></li>
+          <li class="headline"><span class="col" id="news2" style="color: black; font-size: 18px;"></span></li>
+          <li class="headline"><span class="col" id="news3" style="color: black; font-size: 18px;"></span></li>
+          <li class="headline"><span class="col" id="news4" style="color: black; font-size: 18px;"></span></li>
+          <li class="headline"><span class="col" id="news5" style="color: black; font-size: 18px;"></span></li>
+        </ul>
+      </div>
+
+      <!-- Sales -->
+      <div class="card mb-4 rounded-3 shadow-sm" id="sales"
+        style="background-color: rgba(228, 224, 224, 0.5); color:rgb(3, 3, 3); ">
+        <div class="card-header py-3" style="background-color: #E91E63; color: aliceblue;">
+          <h4 class="my-0 fw-normal text-center"><strong>Your Sales</strong></h4>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+          <div class="outcircle c1" style="margin: 20px;">
+            <div class="incircle">
+
+              <span style="font-size: 14px; color: rgb(2, 153, 2); font-weight: bold; text-align: center;">Last<br>Month</span>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+              <defs>
+                <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#E91E63" />
+                  <stop offset="100%" stop-color="aliceblue" />
+                </linearGradient>
+              </defs>
+              <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <div class="outcircle c2" style="margin: 20px;">
+            <div class="incircle">
+
+              <span style="font-size: 14px; color: rgb(3, 151, 3); font-weight: bold;">Average</span>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+              <defs>
+                <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#E91E63" />
+                  <stop offset="100%" stop-color="aliceblue" />
+                </linearGradient>
+              </defs>
+              <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+        <section class="skillname">
+          <h5>Last Month Sales : <span id="msale"></span></h5>
+          <h5>Average Sales : <span id="avgsale"></span></h5>
+
+        </section>
+
+      </div>
+
+    </section>
+    </div>
+    <div class="upper" >
+      <h1 id="heading">List your Products Here</h1>
+      <form id="productform"><br><br>
+
+        <input type="text" id="Product" style="height: 50px; width: 600px; max-width: 85%;" name="product"
+          placeholder="Product"><br><br>
+
+
+        <select class="form-select" style="height: 50px; width: 600px; max-width: 85%;" id="category"
+          aria-label="Default select example">
+          <option value="Vegetables" selected>Open this select menu</option>
+          <option>Vegetables</option>
+          <option value="Oils">Oils</option>
+          <option value="Herbs">Herbs</option>
+          <option value="Dairy Products">Dairy Products</option>
+          <option value="Fruits">Fruits</option>
+          <option value="Hand Crafts">Hand Crafts</option>
+        </select><br><br>
+
+        <input type="number" style="height: 50px; width: 600px; max-width: 85%;" id="quantity" name="quantity" placeholder="Quantity">
+        <br><br><select id="unit" style="height: 50px; width: 600px; max-width: 85%;" class="form-select form-select-sm"
+          aria-label=".form-select-sm example">
+          <option selected>Select Unit</option>
+          <option value="Kilogram">Kilogram</option>
+          <option value="Gram">Gram</option>
+          <option value="Litre">Litre</option>
+          <option value="Dozen">Dozen</option>
+          <option value="Piece">Piece</option>
+        </select><br><br>
+
+
+        <input type="submit" value="Submit" id="submitform"><br>
+        <h2 id="email"></h2>
+    </div>
+
+<br>
+<hr>
+    <div class="tablediv" >
+      <table class="table table-hover" style="color: #E91E63; width: 80%; border: 2px solid #E91E63; max-width: 95%;">
+        <h2 class="heading">Your Listings</h2>
+        <thead>
+          <th>S no.
+          </th>
+          <th>Product</th>
+          <th>Category</th>
+          <th>Quantity</th>
+          <th>Unit</th>
+          <th>Sold</th>
+        </thead>
+        <tbody id="tbody1">
+
+        </tbody>
+      </table>
+    </div>
+    <hr>
+    <!-- <div class="footer">
+      <h2>We Pray to Grow With You :)</h2>
+      <div class="contact">
+
+        <a href="https://www.facebook.com/profile.php?id=100007019597211"><img src="facebook.png" alt=""></a>
+        <a href="https://www.instagram.com/sidharth_sharma_100/"><img src="instagram.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/sidharth-sharma-3bb107205/"><img src="linkedin.png" alt=""></a>
+        <a href="https://twitter.com/SidSharma100"><img src="twitter.png" alt=""></a>
+      </div>
+      <br>
+      <br>
+      <span style="font-size: 18, ;"> Made By: Team Berozgar</span>
+    </div> -->
+    <!-- Footer -->
+    <footer>
+      <div class="container" id="container">
+        <div class="row">
+            <div class="col-md-3" id="col-md-3">
+                <h5>About</h5>
+
+                <p>कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.</p>
+            </div>
+            <div class="col-md-3l" id="col-md-3l">
+                <h5>Links</h5>
+                <ul>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md" id="col-md">
+                 <h5>Contact</h5>
+                 <ul>
+                     <li>
+                        <a href="tel:+620892738334"><i  class="fa fa-phone mirrored-icon"></i> 08272367238</a>
+                    </li>
+                    <li>
+                        <a href="mailto:hello@domain.com"><i class="fa fa-envelope"></i> krishiconnect@gmail.com</a>
+                     </li>
+                 </ul>
+
+                 <h5>Follow Us</h5>
+                 <ul class="social">
+                     <li>
+                        <a href="javascript:void(0)" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                     </li>
+                     <li>
+                        <a href="javascript:void(0)" target="_blank"><i class="fab fa-instagram"></i></a>
+                     </li>
+                     <li>
+                        <a href="javascript:void(0)" target="_blank"><i class="fab fa-youtube"></i></a>
+                     </li>
+                     <li>
+                      <a href="javascript:void(0)" target="_blank"><i class="fab fa-google"></i></a>
+                     </li>
+                 </ul>
+            </div>
+            <div class="col-md-3m" id="col-md-3m">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+           </div>
+        </div>
+    </div>
+    <p class="copyright" id="copyright">&copy; <span id="copyright-year"></span> कृषिCONNECT | Fresh From Farm. All rights reserved.</p>
+  </footer>
+
+
+
+    </script>
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+    <script type="text/javascript" src="../assets/js/jquery.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery-migrate.js"></script>
+    <script type="text/javascript" src="../assets/packages/bootstrap/libraries/popper.js"></script>
+    <script type="text/javascript" src="../assets/packages/bootstrap/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/packages/o2system-ui/o2system-ui.js"></script>
+    <script type="text/javascript" src="../assets/packages/owl-carousel/owl-carousel.js"></script>
+    <script type="text/javascript" src="../assets/packages/cloudzoom/cloudzoom.js"></script>
+    <script type="text/javascript" src="../assets/packages/thumbelina/thumbelina.js"></script>
+    <script type="text/javascript" src="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
+    <script type="text/javascript" src="../assets/js/theme.js"></script>
+</body>
+<script src="//code.tidio.co/6lhn3kmjiszzas6xkcf7ubffrutssad7.js" async></script>
+<script src="../assets/js/script.js" type="module">
+
+</script>
+<script src="../assets/js/scriptdasboard.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+  integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+  integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+<script src="//code.tidio.co/6lhn3kmjiszzas6xkcf7ubffrutssad7.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+<script>
+  ScrollReveal({
+      //reset: true ,
+      distance : '60px' ,
+      duration:2500,
+      delay:400
+  });
+  ScrollReveal().reveal('#h3,#h,#s,#l,#image,.pt-5,.lead', { delay: 500 , origin:'top' ,interval:'200'});
+  ScrollReveal().reveal('#card,#newssection,#sales', { delay: 600 , origin:'top' });
+  ScrollReveal().reveal('.tablediv,.upper', { delay: 600 , origin:'top' });
+  ScrollReveal().reveal('#container', { delay: 700 , origin:'bottom' });
+  ScrollReveal().reveal('#col-md-3,#col-md-3l', { delay: 500 , origin:'left'});
+  ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500 , origin:'right'});
+  ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
+</script>
+
+</html>
