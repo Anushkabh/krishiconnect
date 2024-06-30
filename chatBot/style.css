@@ -14,6 +14,21 @@
     border-radius: 50%;
     outline: none;
     cursor: pointer;
+    transition: background-color 0.2s ease-in-out; 
+}
+
+.chatbotImage {
+    height: 50px;
+    width: 50px;
+}
+  
+.chatbot__button:hover {
+    background-color: #f0f0f0; 
+}
+  
+.chatbot__button:hover .chatbotImage {
+    transform: scale(1.1); 
+    transition: transform 0.2s ease-in-out; 
 }
 
 .chatbot__button span {
