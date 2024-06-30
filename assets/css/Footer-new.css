@@ -24,7 +24,7 @@
 }
 
 .footer-logo-image {
-    width: 90px;
+    width: 60px;
     height: 60px;
     border-radius: 50%;
 }
@@ -40,9 +40,9 @@
 }
 
 .footer-left-about-container {
-    width: 250px;
+    width: 350px;
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -93,6 +93,9 @@
     justify-content: center;
     flex-direction: column; /* Stack items vertically on smaller screens */
    
+}
+.footer-center-productlist-item p span{
+    margin-right: 1rem;
 }
 
 .footer-center-productlist h3 {
