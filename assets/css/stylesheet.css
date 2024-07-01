@@ -4,9 +4,10 @@
 body{
     padding:0;
     margin:0;
+    overflow-x: hidden;
 }
 html{
-    width: fit-content;
+    width: 100%;
     overflow-x: hidden;
 }
 section {
