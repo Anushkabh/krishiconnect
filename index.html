@@ -258,6 +258,72 @@
         }
         
         #products .card {
+            flex: 1 0 100%; /* One card per row on very small screens */
+        }
+    }
+
+    .footer-logo img {
+            max-height: 50px; /* Limit the height of the logo */
+        }
+
+    /* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none; /* Initially hide the button */
+    background-color: #198754;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    opacity: 0.8;
+}
+
+.card1:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transform-style: preserve-3d;
+        transition: transform 0.8s;
+    }
+
+    .card-front, .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+    .card-back {
+        transform: rotateY(180deg);
+    }
+  </style>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-bundle.min.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="test-style.css">
+<body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="product.css">
+
+  <script src="product.js" defer></script>
+=======
             flex: 1 0 30%;
             /* Adjust the value as needed to fit your design */
             margin: 10px;
@@ -464,7 +530,6 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/test-style.css">
-
 </head>
 
 <body class="light">
@@ -651,6 +716,148 @@
     </div>
     </div>
 </div>
+
+
+  </div>
+  
+  
+  <!--PRODUCT SECTION-->
+
+ <div  class="conttainer">
+
+  <h3 class="title"> Products </h3>
+
+  <div class="products-container">
+
+     <div class="product" data-name="p-1">
+        <img src="assets/product image/Spinach.png" alt="">
+        <h3>Spinach</h3>
+        <div class="price">$2.00</div>
+     </div>
+
+     <div class="product" data-name="p-2">
+        <img src="assets/product image/OIP2.png" alt="">
+        <h3>Tomato</h3>
+        <div class="price">$2.00</div>
+     </div>
+
+     <div class="product" data-name="p-3">
+        <img src="assets/product image/oip1.png" alt="">
+        <h3>Broccoli</h3>
+        <div class="price">$2.00</div>
+     </div>
+
+
+  </div>
+
+</div>
+
+<div class="products-preview">
+
+  <div class="preview" data-target="p-1">
+     <i class="fas fa-times"></i>
+     <img src="assets/product image/Spinach.png" alt="">
+     <h3>Organic strawberries</h3>
+     <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>( 250 )</span>
+     </div>
+     <p>Healthy and fresh spinach leaves.</p>
+     <div class="price">$2.00</div>
+     <div class="buttons">
+        <a href="" class="buy">buy now</a>
+        <a href="" class="cart">add to cart</a>
+     </div>
+  </div>
+
+  <div class="preview" data-target="p-2">
+     <i class="fas fa-times"></i>
+     <img src="assets/product image/OIP2.png" alt="">
+     <h3>Organic Tomato</h3>
+     <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>( 250 )</span>
+     </div>
+     <p>Fresh organic tomatoes directly from our farms.</p>
+     <div class="price">$2.00</div>
+     <div class="buttons">
+        <a href="" class="buy">buy now</a>
+        <a href="" class="cart">add to cart</a>
+     </div>
+  </div>
+
+  <div class="preview" data-target="p-3">
+     <i class="fas fa-times"></i>
+     <img src="assets/product image/oip1.png" alt="">
+     <h3>Organic Broccoli</h3>
+     <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>( 250 )</span>
+     </div>
+     <p>Green and fresh broccoli heads.</p>
+     <div class="price">$2.00</div>
+     <div class="buttons">
+        <a href="" class="buy">buy now</a>
+        <a href="" class="cart">add to cart</a>
+     </div>
+  </div>
+
+  
+
+</div>
+
+
+<!-- --Testimonials -->
+<section id="test">
+<h2 class="h2 section-title has-underline" style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
+    What Clients Say
+  </h2>
+  <p class="section-subtitle" style="align-items: center; justify-content: center; display: flex;color:#E91E63;font-size: 20px;">Explore on the world's best & largest Bidding marketplace with our beautiful
+    Bidding</p>
+
+<div class="slide-container swiper" style="margin-bottom: 15px;">
+<div class="slide-content">
+<div class="card-wrapper swiper-wrapper">
+    <div class="card swiper-slide">
+        <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+
+        <div class="image-content" >
+
+
+            <div class="card-image">
+                <img src="assets/images/testimonials-1.jpg" alt="" class="card-img">
+            </div>
+            <h2 style="font-size: 20px;">B.Sharmila</h2>
+        </div>
+
+        <div class="rating" >
+            <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+        </div>
+        </div>
+        <div class="backs" style="align-items: center;justify-content: center;display: flex;padding: 10px 10px  ;color:black;">
+
+            The Pacific Grove Chamber of Commerce would like to thank eLab Communications
+            and Mr. Will Elkadi for all the efforts that assisted me nicely manners. </div>
+
+    </div>
+    <div class="card swiper-slide">
+        <div class="fronts" style="align-items: center; justify-content: center; display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
 </div>
 
 
