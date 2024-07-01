@@ -1,0 +1,103 @@
+.checked {
+    color: orange;
+}
+.hidden {
+    display: none;
+}
+.search-bar-section{
+    padding: 30px;
+}
+.searchBar-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.price-rating{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+.searchbar {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+}
+.search-results {
+    margin: 20px auto;
+    width: 60%;
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+}
+.search-results .card-product {
+    display: flex;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+}
+.search-results .card-product img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.search-results .card-body {
+    padding: 10px;
+    width: 100%;
+}
+.search-results .card-title {
+    text-align: left;
+    margin: 0;
+    font-size: 18px;
+}
+.search-results .card-ratings {
+    display: flex;
+    align-items: center;
+}
+.search-results .card-price {
+    font-size: 16px;
+    margin-top: 5px;
+}
+.search-results .discount {
+    color: red;
+    text-decoration: line-through;
+    margin-right: 5px;
+}
+.search-results .regular {
+    color: green;
+}
+.search-results .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.search-results .wishlist-button,
+.search-results .add-to-cart-btn {
+    cursor: pointer;
+    margin-right: 10px;
+}
+.default-card {
+    text-align: center;
+    margin-top: 20px;
+}
+.default-card h4{
+    text-align: center !important;
+}
+.default-card img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+.default-card .card-title {
+    font-size: 20px;
+    margin: 10px 0;
+}
