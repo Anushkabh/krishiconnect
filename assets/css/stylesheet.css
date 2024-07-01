@@ -7,6 +7,7 @@ body{
 }
 html{
     width: fit-content;
+    overflow-x: hidden;
 }
 section {
     padding: 80px 0;
