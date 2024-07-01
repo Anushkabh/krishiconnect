@@ -78,7 +78,7 @@
     align-items: center;
     font-size: 16px;
     justify-content: center;
-    flex-direction: column; /* Stack items vertically on smaller screens */
+    flex-direction: column;
 }
 
 .footer-center-right-products h3, .footer-center-left-products h3 {
@@ -91,9 +91,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; /* Stack items vertically on smaller screens */
-   
+    flex-direction: column;   
 }
+
 .footer-center-productlist-item p span{
     margin-right: 1rem;
 }
@@ -123,6 +123,11 @@
     font-size: 1rem;
     margin-top: 30px;
     text-align: center;
+}
+
+.footer-center-left-productlist-item .link, .footer-center-right-productlist-item .link {
+    color: inherit;
+    text-decoration: none;
 }
 
 /* Responsive Design */
