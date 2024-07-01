@@ -83,7 +83,13 @@ function emptyCart() {
   localStorage.removeItem('cartItems');
   cartItemsContainer.innerHTML = '';
   var subtotalElement = document.getElementById('subtotal');
-  subtotalElement.innerHTML = '';
+  let cartTableId = document.getElementById("cartTable")
+  cartTableId.style.display = "none"
+  subtotalElement.innerHTML = `<div>
+    <h1 style="color: #73B63C" >Your Cart is Empty!</h1>
+    <p>You Have No Items In Cart in your shopping cart.</p>
+    <p> Let's go by something </P>
+  </div>`;
 }
 
 function checkout() {
