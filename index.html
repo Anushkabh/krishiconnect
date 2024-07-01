@@ -41,6 +41,10 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="assets/js/index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+
+  <script src="assets/js/product.js" defer></script>
     <style>
         html {
             scroll-behavior: smooth;
@@ -654,49 +658,102 @@
 </div>
 
 
-    <section id="products" class="products">
-        <h2 class="title">Products</h2>
-        <div class="container" style="display: flex; flex-wrap: wrap; ">
+      <!--PRODUCT SECTION-->
 
-            <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
-                <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
-                    <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                        <img src="assets/img/spinach.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: green; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
-                        <h5 class="card-title">Spinach</h5>
-                        <p class="card-text">Healthy and fresh spinach leaves.</p>
-                        <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
-                <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
-                    <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                        <img src="assets/img/fresh-tomatoes.jpg-2.avif" class="card-img-top" alt="Tomato" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: green; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
-                        <h5 class="card-title">Tomato</h5>
-                        <p class="card-text">Fresh organic tomatoes directly from our farms.</p>
-                        <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card text-center card1" style=" height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
-                <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
-                    <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-                        <img src="https://t3.ftcdn.net/jpg/04/68/10/86/360_F_468108626_wpL1hcDkE4g12mPPnbVxx8rCnWpHYKmV.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: green; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
-                        <h5 class="card-title">Broccoli</h5>
-                        <p class="card-text">Green and fresh broccoli heads.</p>
-                        <a href="#" class="btn btn-primary" id="toast-btn">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ <div  class="conttainer">
 
+    <h3 class="title"> Products </h3>
+  
+    <div class="products-container">
+  
+       <div class="product" data-name="p-1">
+          <img src="assets/img/product image/Spinach.png" alt="">
+          <h3>Spinach</h3>
+          <div class="price">$2.00</div>
+       </div>
+  
+       <div class="product" data-name="p-2">
+          <img src="assets/img/product image/OIP2.png" alt="">
+          <h3>Tomato</h3>
+          <div class="price">$2.00</div>
+       </div>
+  
+       <div class="product" data-name="p-3">
+          <img src="assets/img/product image/oip1.png" alt="">
+          <h3>Broccoli</h3>
+          <div class="price">$2.00</div>
+       </div>
+  
+  
+    </div>
+  
+  </div>
+  
+  <div class="products-preview">
+  
+    <div class="preview" data-target="p-1">
+       <i class="fas fa-times"></i>
+       <img src="assets/img/product image/Spinach.png" alt="">
+       <h3>Organic strawberries</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>Healthy and fresh spinach leaves.</p>
+       <div class="price">$2.00</div>
+       <div class="buttons">
+          <a href="" class="buy">buy now</a>
+          <a href="" class="cart">add to cart</a>
+       </div>
+    </div>
+  
+    <div class="preview" data-target="p-2">
+       <i class="fas fa-times"></i>
+       <img src="assets/img/product image/OIP2.png" alt="">
+       <h3>Organic Tomato</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>Fresh organic tomatoes directly from our farms.</p>
+       <div class="price">$2.00</div>
+       <div class="buttons">
+          <a href="" class="buy">buy now</a>
+          <a href="" class="cart">add to cart</a>
+       </div>
+    </div>
+  
+    <div class="preview" data-target="p-3">
+       <i class="fas fa-times"></i>
+       <img src="assets/img/product image/oip1.png" alt="">
+       <h3>Organic Broccoli</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>Green and fresh broccoli heads.</p>
+       <div class="price">$2.00</div>
+       <div class="buttons">
+          <a href="" class="buy">buy now</a>
+          <a href="" class="cart">add to cart</a>
+       </div>
+    </div>
+  
+    
+  
+  </div>
 
     <!-- --Testimonials -->
     <section id="test">
