@@ -65,10 +65,17 @@ function updateDropdownWishlist(items) {
     dropdownContent.appendChild(listItem);
   });
 
+  
   var viewWishlistLink = document.createElement("a");
   viewWishlistLink.textContent = "View Wishlist";
   viewWishlistLink.href = "wishlist.html";
   viewWishlistLink.classList.add("view-wishlist-link");
+  
+  let currentURL = window.location.href;
+  if(currentURL.search('src')==-1){
+    viewWishlistLink.href = "src/wishlist.html";
+  }
+
   dropdownContent.appendChild(viewWishlistLink);
 
   var wishlistCount = items.length;
