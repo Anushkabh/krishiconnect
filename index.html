@@ -23,7 +23,13 @@
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/thumbelina/thumbelina.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+
+    <link rel="stylesheet" type="text/css" href="whykrishiconnect.css">
+    <link rel="stylesheet" href="googledemo.css">
+
+
     <link rel="stylesheet" type="text/css" href="assets/css/whykrishiconnect.css">
+
 
     <link rel="stylesheet" href="./assets/css/Footer-new.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -531,8 +537,24 @@
                     </ul>
                     <input type="checkbox" id="toggle">
               <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                
                   <!-- Wishlist items will be dynamically added here -->
               </div>
+              <button id="translateButton">Translate</button>
+              <div id="translatePopup" class="popup">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                        function googleTranslateElementInit() {
+                            new google.translate.TranslateElement({
+                                pageLanguage: 'en',
+                            }, 'google_translate_element');
+                        }
+                    </script>
+                    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+             </div>
           </ul>
           <input type="checkbox" id="toggle">
 
@@ -828,6 +850,101 @@
               <p><a href="src\vegetables.html" class="link">Vegetables</a></p>
               <p><a href="#" class="link">Oil Seeds</a></p>
             </div>
+
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="footer-content">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <a href="index.html" class="nav-item" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; ">
+                                <img src="assets/img/logo/logo3.png" width="70px" style="display: inline-block; vertical-align: middle; margin-left: 0px;"> कृषिCONNECT
+                            </a>
+                        </h6>
+                        <p>
+                            कृषिCONNECT is an online B2C platform to bring fresh organic produce from farmers, straight to your dining tables. We aim to remove unnecessary middlemen and help out local farmers by getting them the pay they truly deserve.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h6>
+                        <p style="font-weight: bold;">
+                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; ">VEGETABLES</a>
+                        </p>
+                        <p style="font-weight: bold;">
+                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; ">FRUITS</a>
+                        </p>
+                        <p style="font-weight: bold;">
+                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; ;" onmouseout="this.style.color='inherit'; ">OIL SEEDS</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3';" onmouseout="this.style.color='inherit';">HERBS</a>
+                        </p>
+
+                        <p>
+                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; " onmouseout="this.style.color='inherit';">PULSES</a>
+                        </p>
+                        <p>
+                            <a href="shop(1).html" class="text-reset" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#0056b3'; " onmouseout="this.style.color='inherit';">MISCELLANOUS</a>
+                        </p>
+                    </div>
+                    
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p style="font-weight: bold;"><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                        <p style="font-weight: bold;">
+                            <i class="fas fa-envelope me-3"></i> krishiconnect@gmail.com
+                        </p>
+                        <p style="font-weight: bold;"><i class="fas fa-phone me-3"></i> 082723 67238</p>
+                    </div>
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                      
+                      <h6 class="text-uppercase fw-bold mb-4">
+                        <div class="wrapper">
+                          <div id="google_element"></div>
+                          <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                          <script>
+                            function loadGoogleTranslate() {
+                              new google.translate.TranslateElement({
+                                pageLanguage: 'en'
+                              }, 'google_element');
+                            }
+                            
+                    
+                      </script>
+                      
+                        
+                  </div>
+                    
+                </div>
+                <!-- Grid row -->
+
           </div>
           
       </div>
@@ -839,6 +956,7 @@
                 <p><a href="#" class="link">Pesticides</a></p>
                 <p><a href="src\faq.html" class="link">FAQ</a></p>
               </div>
+
             </div>
       </div>
       
@@ -924,6 +1042,7 @@
     <script>
         document.getElementById("copyright-year").textContent = new Date().getFullYear();
     </script>
+    <script src="googledemo.js"></script>
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/packages/bootstrap/bootstrap.js"></script>
     <script type="text/javascript" src="assets/js/theme.js"></script>
