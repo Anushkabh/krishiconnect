@@ -4,25 +4,47 @@
 .hidden {
     display: none;
 }
-.search-bar-section{
+.search-bar-section {
     padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.price-rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchbar:hover {
+    background-color: white !important;
+}
+
+.searchicon {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 .searchBar-container {
     text-align: center;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 20px 0;
-}
-
-.price-rating{
-    display: flex !important;
-    justify-content: space-between !important;
+    position: relative;
+    width: 50%;
 }
 .searchbar {
-    width: 50%;
+    width: 100%;
+    display: block;
     padding: 10px;
     font-size: 16px;
+    box-sizing: border-box;
 }
+
 .search-results {
     margin: 20px auto;
     width: 60%;
@@ -89,7 +111,7 @@
     text-align: center;
     margin-top: 20px;
 }
-.default-card h4{
+.default-card h4 {
     text-align: center !important;
 }
 .default-card img {
