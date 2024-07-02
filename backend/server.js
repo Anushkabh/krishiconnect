@@ -2,6 +2,10 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const rateLimit = require('express-rate-limit');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -9,9 +13,13 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
+app.use(rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100 // limit each IP to 100 requests per windowMs
+}));
 
-const your_email = ""; // Replace with your email
-const password = ""; // Replace with your email password or app password
+const your_email = process.env.YOUR_EMAIL; // Environment variable for your email
+const password = process.env.PASSWORD; // Environment variable for your email password or app password
 
 // Nodemailer transporter
 const transporter = nodemailer.createTransport({
@@ -55,6 +63,11 @@ const adminNotificationTemplate = (name, email, message) => `
 app.post('/contact', (req, res) => {
     const { name, email, message } = req.body;
 
+    // Validation
+    if (!name || !email || !message) {
+        return res.status(400).json({ message: 'All fields are required' });
+    }
+
     const userMailOptions = {
         from: your_email,
         to: email,
@@ -87,5 +100,5 @@ app.post('/contact', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(Server is running on port ${PORT});
 });
