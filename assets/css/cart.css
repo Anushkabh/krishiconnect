@@ -242,7 +242,7 @@ button {
     gap: 3.549px;
     position: relative;
     width: 504px;
-    margin: 39px 0 0 145px;
+    margin: 39px 0 0 135px;
     z-index: 4;
 }
 
@@ -293,7 +293,7 @@ button {
     gap: 3.549px;
     position: relative;
     width: 504px;
-    margin: 22.803px 0 0 145px;
+    margin: 22.803px 0 0 135px;
     z-index: 8;
 }
 
@@ -614,6 +614,8 @@ button {
     width: 176px;
     height: 72px;
     z-index: 30;
+    transition: 2s ease;
+  
 }
 
 .cartbtn-1 {
@@ -623,10 +625,17 @@ button {
     top: 0;
     left: 0;
     cursor: pointer;
-    background: #eb3581;
+    background: #eb3589;
     border: none;
     z-index: 32;
     border-radius: 8px;
+    transition: 1s ease;
+}
+.cartbtn-1:hover{
+    background-color:  #eb1076;
+    color: #eb1076;
+    box-shadow: 0px 0px 0px 10px;
+    transform: translateY(-5px);
 }
 
 .vector {
@@ -690,6 +699,13 @@ button {
     border: none;
     z-index: 37;
     border-radius: 8px;
+    transition: 1s ease;
+}
+.cartbtn-2:hover{
+    background-color:  #eb1076;
+    color: #eb1076;
+    box-shadow: 0px 0px 0px 10px ;
+    transform: translateY(-5px);
 }
 
 .vector-16 {
@@ -752,8 +768,15 @@ button {
     cursor: pointer;
     background: #eb3581;
     border: none;
-    z-index: 42;
+    z-index: 37;
     border-radius: 8px;
+    transition: 1s all ease;
+}
+.cartbtn-3:hover {
+    background-color:  #eb1076;
+    color: #eb1076;
+    box-shadow: 0px 0px 0px 10px ;
+    transform: translateY(-5px);
 }
 
 .vector-19 {
@@ -767,11 +790,13 @@ button {
     z-index: 44;
 }
 
+
 .continue-span {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
+    cursor: pointer;
     height: 18px;
     top: 19px;
     left: 54px;
@@ -785,6 +810,7 @@ button {
     letter-spacing: 0.9px;
     z-index: 43;
 }
+
 
 .rectangle-1a {
     position: absolute;
@@ -989,6 +1015,6 @@ button {
     color:#014137;
     transition: 0.2s all ease;
     box-shadow: 2px 2px 0px #ddffbf;
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 
   }
