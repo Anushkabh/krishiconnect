@@ -89,6 +89,9 @@ function emptyCart() {
   cartItemsContainer.innerHTML = '';
   var subtotalElement = document.getElementById('subtotal');
   subtotalElement.innerHTML = '';
+  alert(
+    'Your cart is empty. Please add some items to your cart to continue shopping.')
+  ;
 }
 
 function checkout() {
