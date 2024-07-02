@@ -38,82 +38,98 @@ toggleSwitch.addEventListener('click', () => {
         </head>
 <style>
 
-.page-header{
+/* Assuming you have imported your desired fonts */
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif; /* Change font family */
+    color: #333; /* Default text color */
+    background-color: #f0f0f0; /* Default background color */
+}
+
+.page-header {
     position: sticky;
     top: 0;
     z-index: 999;
-    background-color: black;
+    background-color: #222; /* Darker background color */
+    padding: 10px 0; /* Add padding for better spacing */
 }
 
 .container {
     max-width: 100%;
     padding: 0 15px;
     margin: 0 auto;
+    display: flex; /* Ensure container is flexbox for alignment */
     align-items: center;
 }
-.container h1{
-    color:black;
+
+.container h1 {
+    color: #fff; /* White text color */
+    font-family: 'Roboto', sans-serif; /* Change font family */
+    font-size: 28px; /* Increase font size for emphasis */
+    margin: 0; /* Remove default margin */
 }
-.container p{
-    color:black;
-    font-size: bold;
+
+.container p {
+    color: #ddd; /* Lighter text color */
+    font-weight: bold; /* Use font-weight instead of font-size bold */
+    margin: 10px 0; /* Add margin for better spacing */
 }
+
+#faq-container {
+    width: 75%;
+    max-width: 100%; /* Ensure it's responsive */
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 760px) {
     #faq-container {
-        width: 75%;
-        display: block;
-        margin: auto;
-        margin-bottom: 2rem;
-    }
-
-    @media screen and (max-width: 760px) {
-    #faq-container {
-        width: 90%;
+        width: 90%; /* Adjust width for smaller screens */
     }
 }
 
-
-    .answers.show {
-    display: block; /* show answers when the show class is present */
-}
-
-  .main-heading {
+.main-heading {
     display: flex;
+    align-items: center;
     margin-top: 30px;
     padding: 20px;
     background: #ffefb3;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
     cursor: pointer;
-  }
+}
 
-  .main-heading h3 {
-    margin-left: 30px;
+.main-heading h3 {
+    margin: 0;
     color: #433c30;
-    word-spacing: 1px;
-    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif; /* Change font family */
     font-weight: 600;
     font-size: 18px;
-  }
-  .main-heading p {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+}
 
-  .answers {
-    padding: 30px 20px 40px 20px;
+.main-heading p {
+    margin-left: 30px;
+    color: #433c30;
+    font-family: 'Montserrat', sans-serif; /* Change font family */
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.answers {
+    padding: 20px; /* Adjust padding for better content spacing */
     font-size: 16px;
     font-weight: 500;
     background: #f9e189;
-    color: rgb(40, 37, 53);
+    color: #282535;
     border-radius: 0 0 5px 5px;
     display: none;
-  }
+}
 
-  body.dark .answers {
-    color: rgb(40, 37, 53);
-  }
+body.dark .answers {
+    color: #282535; /* Adjust text color for dark mode */
+}
+
 </style>
 <body>
 
