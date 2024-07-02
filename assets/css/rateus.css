@@ -17,7 +17,7 @@ body {
     position: relative;
     background: rgba(25, 12, 12, 0.5); /* Added semi-transparent black background */
     color: white; /* Added white text color for better visibility */
-    padding: 30px;
+    padding: 20px;
     border-radius: 12px;
     width: 450px;
     text-align: center;
