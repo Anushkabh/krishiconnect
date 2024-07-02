@@ -1,3 +1,7 @@
+let getCartItems = JSON.parse(localStorage.getItem('cartItems'))
+let cartItemCountId = document.getElementById("cartItemCount")
+cartItemCountId.textContent = getCartItems.length
+
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 3,
     spaceBetween: 25,
