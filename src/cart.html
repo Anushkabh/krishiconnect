@@ -37,6 +37,7 @@
 <style>
   html {
 scroll-behavior: smooth;
+width: 100vw;
 }
 
 body {
@@ -81,6 +82,16 @@ font-weight: 700 !important;
       margin-left: 30%;
   }
 
+  .page-content {
+    width: 99.98%;
+    overflow: hidden;
+  }
+
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .banner .jumbotron {
     margin-bottom: 0;
@@ -182,13 +193,13 @@ font-weight: 700 !important;
 <body >
     <div class="page-header" >
     <!--=============== Navbar ===============-->
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark"  style="height: 80px;">
+    <nav class="navbar fixed-top navbar-expand-md bg-dark bg-opacity-25"  style="height: 80px;">
       <div class="container">
         <!-- Navbar Brand -->
 
 
             <a href="../index.html" class="navbar-brand mr-auto">
-                <img src="../assets/img/logo/brand_logo/Dark_BG_logo.svg" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px; " >
+                <img src="../assets/img/logo/brand_logo/Dark_BG_logo.svg" width="70px" style="display: inline-block; vertical-align: middle;margin-left: 0px;" >
               </a>
             
 
@@ -234,13 +245,13 @@ font-weight: 700 !important;
 
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0"
-                style="background-image: url('../assets/img/cart.jpg');">
+                style="background-image: url('../assets/img/cart.jpg');opacity: 0.8;">
 
         <div class="banner" id="banner">
 
                 <div class="container">
-                    <img src="../assets/img/logo/log.png" alt="" height="300">
-                </div>
+                    <img src="../assets/img/logo/log.png" alt="" height="300" style="opacity: 1;">
+                </div style="opacity: 1;">
                     <h1 class="pt-5">
                         Your Cart
                     </h1>
@@ -261,7 +272,7 @@ font-weight: 700 !important;
                 <div class="cube"></div>
                 <div class="cube"></div>
             </div>
-                <div class="sign-up-overlay">
+                <div class="sign-up-overlay"  style="margin-left: 280px;">
                     <span class="enter-details">Enter your Details</span>
                   <div class="text-field">
                       <div class="frame"><span class="label">Name</span></div>
