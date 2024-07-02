@@ -5,9 +5,7 @@ const chatBox = document.querySelector('.chatbot__box');
 const chatbotCloseBtn = document.querySelector('.chatbot__header span');
 
 let userMessage;
-// Need GPT key
 const inputInitHeight = chatInput.scrollHeight;
-const API_KEY = '033f3bcc57msh4cbeceaaa74b3fbp172fd5jsn8008c32db481'; // ~IMPORTANT~
 
 const createChatLi = (message, className) => {
     const chatLi = document.createElement('li');
@@ -17,38 +15,30 @@ const createChatLi = (message, className) => {
 };
 
 const generateResponse = (incomingChatLi) => {
-    const API_URL = 'https://chatgpt53.p.rapidapi.com/';
+    const API_URL = '/chat';  // Use a server-side endpoint for security
     const messageElement = incomingChatLi.querySelector('p');
 
     const requestOptions = {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "X-RapidAPI-Key": "033f3bcc57msh4cbeceaaa74b3fbp172fd5jsn8008c32db481", // ! IMPORTANT !
-            "X-RapidAPI-Host": "chatgpt53.p.rapidapi.com",
         },
         body: JSON.stringify({
             messages: [{ role: "user", content: userMessage }],
         }),
     };
 
-    console.log('Sending API request:', requestOptions);
-
     fetch(API_URL, requestOptions)
         .then((res) => res.json())
         .then((data) => {
-            console.log('API response:', data);
-            console.log(data.choices[0].message.content);
             messageElement.textContent = data.choices[0].message.content;
         })
         .catch((error) => {
-            console.log('API error:', error);
             messageElement.classList.add('error');
             messageElement.textContent = 'Oops! Please try again!';
         })
         .finally(() => chatBox.scrollTo(0, chatBox.scrollHeight));
 };
-
 
 const handleChat = () => {
     userMessage = chatInput.value.trim();

@@ -1,5 +1,7 @@
-# KrishiConnect  
-## Revolutionizing Agriculture Consumer Industry
+<h1 align="center">KrishiConnect  </h1>
+
+<h1 align="center">Revolutionizing Agriculture Consumer Industry  </h1>
+
 ## 👇About KrishiConnect
 
 **KrishiConnect** aims to transform the agricultural consumer industry by eliminating intermediaries that hinder our farmer friends from achieving the economic prosperity they deserve. Our website is meticulously designed to be aesthetically pleasing, interactive, and user-friendly for our clients.
@@ -16,13 +18,11 @@
 **KrishiConnect** prioritizes the satisfaction of all parties involved in agricultural transactions. By fostering direct connections between farmers and consumers, we facilitate transparent and mutually beneficial exchanges.
 
 ## 📌 Tech Stack
-[![linkedin](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://www.linkedin.com/in/yashpreeth-nijalinge-aa8a36214/)[![portfolio](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://linkedin.com/)![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)[![twitter](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://twitter.com/)![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34)
+[![linkedin](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://www.linkedin.com/in/yashpreeth-nijalinge-aa8a36214/) [![portfolio](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://linkedin.com/) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) [![twitter](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://twitter.com/) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34)
+
 # 📸Screenshots
-<!--![1](1.png)  ![2](2.png) ![3](3.png) ![4](4.png)  ![5](5.png) ![6](6.png)-->
 
-![KrishiConnect](ss.png)
-
-
+![1](./screenshots/1.png)  ![2](./screenshots/2.png) ![3](./screenshots/3.png) ![4](./screenshots/4.png)  ![5](/.screenshots/5.png) ![6](./screenshots/6.png)
 
 <!-- ![Home Page](https://photos.app.goo.gl/PF6nTxrAWw4k6zA78)
 ![Why KrishiConnect?](https://photos.app.goo.gl/DqMnZU2BiBRwvaBG6)
@@ -138,5 +138,19 @@ Congratulations🎉, you have made a PR to the KrishiConnect. Wait for your subm
 [](https://github.com/Anushkabh/krishiconnect?tab=readme-ov-file#contact-us)
 
 For inquiries and support, please reach out to us at  [info@krishiconnect.com](mailto:info@krishiconnect.com).
+
+<hr>
+
+<div>
+  <h2 align = "center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" width="35" height="35">Our Contributors</h2>
+  <div align = "center">
+ <h3>Thank you for contributing to our repository</h3>
+
+![Contributors](https://contrib.rocks/image?repo=Anushkabh/krishiconnect)
+
+### Show some ❤️ by starring this awesome repository!
+
+</div>
+
 
 © 2024 KrishiConnect. All rights reserved.
