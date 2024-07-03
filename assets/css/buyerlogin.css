@@ -6,7 +6,7 @@
 
 body {
   display: flex;
-  background: url('explore.mp4');
+  background: url('../media/explore.mp4');
   justify-content: center;
   align-items: center;
   flex-direction: column;
