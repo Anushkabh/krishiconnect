@@ -247,7 +247,7 @@ input {
 }
 
 .overlay {
-  background-image: url('buyerlogin.gif');
+  background-image: url('../img/buyerlogin.gif');
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 0 0;
