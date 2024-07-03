@@ -353,7 +353,55 @@ font-weight: 700 !important;
         </div>
         </div>
             <div id="subtotal" class="carttext"></div>
-            <div><button class="order_now_button">ORDER NOW</button></div>
+            <div>
+              <button class="order_now_button" id="popuppermission" onclick="openpopup()">ORDER NOW</button></div>
+              <div class="popup" id="popup">
+      
+                <!-- <img src="https://banner2.cleanpng.com/20180730/fle/kisspng-check-mark-computer-icons-clip-art-action-symbol-5b5ea39e1743a4.3326126115329289260953.jpg"> -->
+                <img src="https://image.similarpng.com/very-thumbnail/2021/08/Green-check-mark-icon.png">
+                 <h2>
+                   Thank-you
+                 </h2>
+                 <p style="color: rgb(37, 70, 41);"> For choosing our<br><b> KrishiConnect</b></p>
+                 <p>Your order has been placed</p>
+                 <button type="button" onclick="closepopup()"><b>OK</b></button>
+               </div>
+               </div>
+               <script>
+                 let popup = document.getElementById("popup");
+                 function openpopup(){
+                //  popup.classList.add("open-popup");
+               if (cartItems.length > 0) {
+             popup.classList.add("open-popup");
+             } else {
+              alert('Your cart is empty. Please add some items to your cart to continue shopping.');
+             }
+                 }
+           
+                 function closepopup(){
+                 popup.classList.remove("open-popup");
+                 }
+               </script>
+               <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+               <script>
+                document.getElementsByClassName("order_now_button")[0].addEventListener("click",()=>{
+                  if (cartItems.length > 0) {
+                  confetti();}
+                })
+               </script>
+             
+           
+           
+            
+            
+            <!-- </div> -->
+
+
+
+
+
+
+
         </div>
 
   <!------------------ Footer------------------->
