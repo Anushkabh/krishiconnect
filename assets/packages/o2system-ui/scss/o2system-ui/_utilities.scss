@@ -4,6 +4,11 @@
 //     box-shadow: none;
 // }
 
+.bg-transparent {
+    background: transparent !important;
+    box-shadow: none;
+}
+
 .bg-inverse{
 	color: #fff !important;
 }

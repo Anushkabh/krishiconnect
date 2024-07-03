@@ -17,4 +17,11 @@ $brand-dark:			darken($primary-color, 30%);
 $white:                       #FFF !default;
 $black:                       #000 !default; 
 
+$transparent: rgba(58, 50, 50, 0); 
+
+.header {
+    background-color: $transparent;
+    
+}
+
 $extra-light: #ebf3f5;
