@@ -16,6 +16,7 @@ body {
 
 .hero-heading {
   font-size: 100px;
+  overflow: hidden;
   color: #f7e227;
 }
 
@@ -44,8 +45,9 @@ body {
   position: absolute;
   top: 10px;
   left: auto;
-  margin-left: 20px;
+  background: rgba(0, 0, 0, 0.5);
   padding-left: 30px;
+  max-width: 1000px;
 }
 
 .about-img {
