@@ -39,7 +39,7 @@
     <!-- Page Header -->
     <div class="page-header">
         <!-- Navbar -->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
+        <nav class="navbar  navbar-expand-md navbar-dark bg-dark" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
                 <a href="../index.html" class="navbar-brand">
@@ -73,13 +73,17 @@
                         <li class="nav-item">
                             <a href="../src/contact.html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
                         </li>
+                        <li class="nav-item" style="padding: 2px 20px;">
+                            <input type="checkbox" id="toggle">
+            
+                            <label class="toggle" for="toggle" >
+                                <i class="bx bxs-sun"></i>
+                                <i class="bx bx-moon"></i>
+                                <span class="ball"></span>
+                            </label>
+                          </li>
                     </ul>
-                    <input type="checkbox" id="toggle">
-                    <label class="toggle" for="toggle">
-                        <i class="bx bxs-sun"></i>
-                        <i class="bx bx-moon"></i>
-                        <span class="ball"></span>
-                    </label>
+                    
                 </div>
             </div>
         </nav>
@@ -87,7 +91,7 @@
     
     <!-- Page Content -->
     <div id="page-content" class="page-content">
-        <div class="banner">
+        <div class="banner" style="position: relative;">
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('https://www.samt.org.in/img/about-us.png'); height:500px; background-size: cover; background-repeat: no-repeat;">
                 <div class="container" style="margin-top: 33px;">
                     <h1 class="pt-5" id="c">Contact</h1>

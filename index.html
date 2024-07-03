@@ -231,6 +231,7 @@
             z-index: 100;
         }
         
+        
         @media (max-width: 1200px) and (min-width:995px) {
             .card-title {
                 font-size: 1.25rem;
@@ -265,7 +266,17 @@
             margin: 10px;
             box-sizing: border-box;
         }
-        
+        .navbar .container{
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+}
+@media (max-width:768px) {
+    .navbar .container{
+    padding: 0px 20px;
+  }
+  }
+  .nav-item{
+    margin-top: 5px;
+  }
         #products .card img {
             width: 100%;
             height: 200px;
@@ -477,7 +488,7 @@
     </div>
     <div class="page-header">
         <!--=============== Navbar ===============-->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
+        <nav class="navbar  navbar-expand-md navbar-dark bg-dark" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
 
