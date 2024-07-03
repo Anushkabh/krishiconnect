@@ -97,7 +97,8 @@ font-weight: 700 !important;
     margin-bottom: 0;
     padding: 0;
     position: relative;
-
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
     height: auto;
   }
@@ -121,6 +122,17 @@ font-weight: 700 !important;
     background: rgba(0, 0, 0, 0.5);
     z-index: 2;
   }
+
+  .banner .container img{
+    margin-top: -120px;
+  }
+
+  .banner p {
+    margin-bottom: 50px;
+    color: rgb(36, 248, 92);
+    font-weight: 700;
+  }
+
 
 .navbar-brand img {
     max-height: 58px;
@@ -315,24 +327,26 @@ font-weight: 700 !important;
   </div>
     <div id="page-content" class="page-content">
 
-        <div class="banner">
-            <div class="jumbotron jumbotron-bg text-center rounded-0"
-                style="background-image: url('../assets/img/cart.jpg');opacity: 0.8;">
+      <div class="banner">
+        <div class="jumbotron jumbotron-bg text-center rounded-0"
+        style="background-image: url('../assets/img/cart1.png');"
+        >
 
-        <div class="banner" id="banner">
+    <div class="banner" id="banner">
 
-                <div class="container">
-                    <img src="../assets/img/logo/log.png" alt="" height="300" style="opacity: 1;">
-                </div style="opacity: 1;">
-                    <h1 class="pt-5">
-                        Your Cart
-                    </h1>
-                    <p class="lead ltext">
-                        Save time and leave the groceries to us.
-                    </p>
-                </div>
+            <div class="container">
+                <img src="../assets/img/logo/log.png" alt="" height="300">
+            </div>
+                <h1 class="pt-5">
+                    Your Cart
+                </h1>
+                <p class="lead ltext">
+                    Save time and leave the groceries to us!
+                </p>
             </div>
         </div>
+    </div>
+
 
         <div class="main-container">
 
