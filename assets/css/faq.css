@@ -367,7 +367,7 @@ h1 {
     position: absolute;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 6;
     width: 200px;
     padding: 10px;
     border-radius: 5px;
@@ -592,18 +592,22 @@ h1 {
 
 
 
-
 /* Mobile Responsiveness */
 /* For landscape phones, 576px and up */
 @media (max-width: 576px) {
     .navbar-nav {
         flex-direction: column;
         align-items: flex-start;
+        margin-top: 5px;
     }
+    .navbar .container{
+        padding: 0px 20px;
+      }
 
     .nav-item {
         margin-left: 0;
         width: 100%;
+        margin-top: 10px;
     }
 
     .nav-link {
@@ -621,11 +625,15 @@ h1 {
     .navbar-nav {
         flex-direction: column;
         align-items: flex-start;
+        margin-top: 5px;
     }
-
+    .navbar .container{
+        padding: 0px 20px !important;
+      }
     .nav-item {
         margin-left: 0;
         width: 100%;
+        margin-top: 10px;
     }
 
     .nav-link {
@@ -671,4 +679,3 @@ h1 {
         width: auto;
     }
 }
-
