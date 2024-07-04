@@ -30,6 +30,15 @@
   background-color: white;
   height: 300px;
   transition: transform 0.5s ease;
+  margin: 0px;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover{
+  transform: scale(1.001);
+  box-shadow: 2px 8px 16px rgba(17, 215, 37, 0.986);
+  padding: 10px;
 }
 
 .image-content {
