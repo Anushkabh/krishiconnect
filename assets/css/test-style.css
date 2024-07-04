@@ -37,8 +37,8 @@
 }
 .card:hover{
   transform: scale(1.001);
-  box-shadow: 2px 8px 16px rgba(17, 215, 37, 0.986);
-  padding: 10px;
+  /* box-shadow: 2px 8px 16px rgba(17, 215, 37, 0.986); */
+  /* padding: 10px; */
 }
 
 .image-content {
