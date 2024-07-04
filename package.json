@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "format": "prettier --write '**/*.{js,jsx,json,css,scss,html}'"
+  },
   "dependencies": {
     "firebase": "^9.19.1"
   },
