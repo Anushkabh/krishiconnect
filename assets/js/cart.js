@@ -10,13 +10,13 @@ function createItemElement(item) {
   itemElement.innerHTML = "<span class='item-detail'><img src='" + item.imageUrl + "'/>  <span>" + item.name + "</span>  <span>" + item.price + "</span></span>";
   const decreaseQuantityButton = document.createElement('button');
   const increaseQuantityButton = document.createElement('button');
-  const image=document.createElement('img')
-  image.setAttribute('src','https://cdn-icons-png.flaticon.com/128/6861/6861362.png')
-  image.setAttribute('alt',"delete_image")
-  image.style.width='30px'
-  image.style.height='30px'
-  image.style.padding="0.2rem"
-  image.style.cursor="pointer"
+  const image = document.createElement('img')
+  image.setAttribute('src', 'https://cdn-icons-png.flaticon.com/128/6861/6861362.png')
+  image.setAttribute('alt', "delete_image")
+  image.style.width = '30px'
+  image.style.height = '30px'
+  image.style.padding = "0.2rem"
+  image.style.cursor = "pointer"
   decreaseQuantityButton.textContent = '-';
   increaseQuantityButton.textContent = '+';
   const itemquantity = document.createElement('span');
@@ -26,11 +26,16 @@ function createItemElement(item) {
   itemquantity.appendChild(quantityText);
   itemquantity.appendChild(increaseQuantityButton);
   decreaseQuantityButton.onclick = function () {
-    if(item.quantity>0){
-    item.quantity--;
-    cartItems = cartItems.map(cartItem => cartItem.name === item.name ? item : cartItem);
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    updateCartDisplay();
+    if (item.quantity == 1) {
+      cartItems = cartItems.filter(cartItem => cartItem !== item);
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      updateCartDisplay();
+    }
+    if (item.quantity > 0) {
+      item.quantity--;
+      cartItems = cartItems.map(cartItem => cartItem.name === item.name ? item : cartItem);
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      updateCartDisplay();
     }
   };
 
@@ -39,7 +44,7 @@ function createItemElement(item) {
     cartItems = cartItems.map(cartItem => cartItem.name === item.name ? item : cartItem);
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
     updateCartDisplay();
-  };        
+  };
 
   image.onclick = function () {
     cartItems = cartItems.filter(cartItem => cartItem !== item);
@@ -74,7 +79,7 @@ function updateSubtotal() {
   if (cartItems.length === 0) {
     emptyCart()
   } else {
-    subtotalElement.innerHTML = 'Subtotal: ' + subtotal.toFixed(2)+' RS';
+    subtotalElement.innerHTML = 'Subtotal: ' + subtotal.toFixed(2) + ' RS';
   }
 }
 updateSubtotal();
@@ -90,6 +95,10 @@ function emptyCart() {
     <p>You Have No Items In Cart in your shopping cart.</p>
     <p> Let's go by something </P>
   </div>`;
+  subtotalElement.innerHTML = '';
+  alert(
+    'Your cart is empty. Please add some items to your cart to continue shopping.')
+  ;
 }
 
 function checkout() {

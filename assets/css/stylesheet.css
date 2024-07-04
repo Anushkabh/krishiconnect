@@ -4,9 +4,11 @@
 body{
     padding:0;
     margin:0;
+    overflow-x: hidden;
 }
 html{
-    width: fit-content;
+    width: 100%;
+    overflow-x: hidden;
 }
 section {
     padding: 80px 0;
@@ -567,7 +569,7 @@ h1 {
 }
 
 .navbar-brand img {
-    max-height: 50px;
+    max-height: 58px;
     margin-right: 10px;
 }
 
