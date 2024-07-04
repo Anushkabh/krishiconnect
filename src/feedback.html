@@ -27,8 +27,32 @@
 <link rel="stylesheet" typex="text/css" media="all" href="../assets/css/theme.css">
 
 <link rel="stylesheet" href="../assets/css/feedback.css">
+<style>
+    #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
+
+        }
+</style>
 </head>
 <body>
+
+              <!-- Progress bar -->
+  <div id="progressBar"></div>
+  <script>
+    window.onscroll = function () {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+  </script>
+  <!-- end -->
     <div class="page-header">
         <!--=============== Navbar ===============-->
         <nav class="navbar  navbar-expand-md navbar-dark bg-dark" id="page-navigation">
