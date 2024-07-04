@@ -1,0 +1,30 @@
+name: Prettier Check
+
+on:
+  push:
+    branches:
+      - main # Adjust as per your default branch
+  pull_request:
+    branches:
+      - main # Adjust as per your default branch
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Prettier
+        run: npm run prettier:check # Adjust the npm script name if different
+
+      - name: Fail if Prettier found issues
+        run: |
+          if git diff --name-only | grep '\.js\|\.jsx\|\.ts\|\.tsx\|\.css\|\.scss\|\.json\|\.html\|\.md\|\.yaml\|\.yml$'; then
+            echo "Prettier found formatting issues. Please run Prettier locally and commit the changes."
+            exit 1
+          fi
