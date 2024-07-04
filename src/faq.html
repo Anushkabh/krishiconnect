@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <!DOCTYPE html>
     <html>
@@ -61,220 +61,518 @@ toggleSwitch.addEventListener('click', () => {
     font-size: bold;
 }
     #faq-container {
+=======
+  <!doctype html>
+  <html>
+    <head>
+      <title>KrishiConnect | FAQ</title>
+      <link rel="icon" type="image/png" href="../assets/img/logo/log.png" />
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <link
+        href="../assets/fonts/sb-bistro/sb-bistro.css"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <link
+        href="../assets/fonts/font-awesome/font-awesome.css"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <!-- Css for FAQ page -->
+      <link rel="stylesheet" href="../assets/css/faq.css" type="text/css" />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        media="all"
+        href="../assets/packages/bootstrap/bootstrap.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        media="all"
+        href="../assets/packages/o2system-ui/o2system-ui.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        media="all"
+        href="../assets/packages/owl-carousel/owl-carousel.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        media="all"
+        href="../assets/packages/cloudzoom/cloudzoom.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        media="all"
+        href="../assets/packages/thumbelina/thumbelina.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        media="all"
+        href="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        media="all"
+        href="../assets/css/theme.css"
+      />
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+        rel="stylesheet"
+      />
+      <!-- Favicon -->
+      <link
+        rel="shortcut icon"
+        href="../assets/img/logo/krishiconnect-high-resolution-logo_black.png"
+        type="image/x-icon"
+      />
+      <link
+        href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+        rel="stylesheet"
+      />
+      <!-- css for dark mode -->
+      <link rel="stylesheet" href="../assets/css/darkmode.css" />
+      <script>
+        const toggleSwitch = document.getElementById('toggle');
+        const body = document.body;
+        toggleSwitch.addEventListener('click', () => {
+          body.classList.toggle('dark');
+        });
+      </script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+      ></script>
+    </head>
+    <style>
+      .page-header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background-color: black;
+      }
+
+      .container {
+        max-width: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+        align-items: center;
+      }
+      .container h1 {
+        color: black;
+      }
+      .container p {
+        color: black;
+        font-size: bold;
+      }
+      #faq-container {
         width: 75%;
         display: block;
         margin: auto;
         margin-bottom: 2rem;
-    }
+      }
 
-    @media screen and (max-width: 760px) {
-    #faq-container {
-        width: 90%;
-    }
-}
+      @media screen and (max-width: 760px) {
+        #faq-container {
+          width: 90%;
+        }
+      }
 
+      .answers.show {
+        display: block; /* show answers when the show class is present */
+      }
 
-    .answers.show {
-    display: block; /* show answers when the show class is present */
-}
+      .main-heading {
+        display: flex;
+        margin-top: 30px;
+        padding: 20px;
+        background: #ffefb3;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+        cursor: pointer;
+      }
 
-  .main-heading {
-    display: flex;
-    margin-top: 30px;
-    padding: 20px;
-    background: #ffefb3;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
-    cursor: pointer;
-  }
+      .main-heading h3 {
+        margin-left: 30px;
+        color: #433c30;
+        word-spacing: 1px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        font-size: 18px;
+      }
+      .main-heading p {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-  .main-heading h3 {
-    margin-left: 30px;
-    color: #433c30;
-    word-spacing: 1px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    font-size: 18px;
-  }
-  .main-heading p {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+      .answers {
+        padding: 30px 20px 40px 20px;
+        font-size: 16px;
+        font-weight: 500;
+        background: #f9e189;
+        color: rgb(40, 37, 53);
+        border-radius: 0 0 5px 5px;
+        display: none;
+      }
 
-  .answers {
-    padding: 30px 20px 40px 20px;
-    font-size: 16px;
-    font-weight: 500;
-    background: #f9e189;
-    color: rgb(40, 37, 53);
-    border-radius: 0 0 5px 5px;
-    display: none;
-  }
-
-  body.dark .answers {
-    color: rgb(40, 37, 53);
-  }
-</style>
-<body>
-
-    <!-- FAQ Page's Navbar similar to all other page navbar's -->
-    <div class="page-header">
+      body.dark .answers {
+        color: rgb(40, 37, 53);
+      }
+    </style>
+    <body>
+      <!-- FAQ Page's Navbar similar to all other page navbar's -->
+      <div class="page-header">
         <!--=============== Navbar ===============-->
-        <nav class="navbar  navbar-expand-md navbar-dark bg-dark" id="page-navigation">
-            <div class="container">
-                <!-- Navbar Brand -->
-    
-    
-    
+        <nav
+          class="navbar navbar-expand-md navbar-dark bg-dark"
+          id="page-navigation"
+        >
+          <div class="container">
+            <!-- Navbar Brand -->
+
             <a href="../index.html" class="navbar-brand mr-auto">
-                <img src="../assets/img/logo/brand_logo/Dark_BG_logo.svg" width="90px" height="90px" style="display: inline-block; vertical-align: middle;margin-left: 0px;border-radius: 0%; " >
-              </a>
-    
-    
-    
-                <!-- Toggle Button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-                <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
-                    <!-- Navbar Menu -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item" style="border: 2px solid white" id="nav-link1">
-                            <a href="./login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
-                        </li>
-                        <li class="nav-item" id="nav-link2">
-                            <a href="./shop.html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
-                        </li>
-                        <li class="nav-item" id="nav-link3">
-                            <a href="./transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
-                  Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
-              </a>
-    
-                            <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
-                                <!-- Wishlist items will be dynamically added here -->
-                            </div>
-                        </li>
-                        <li class="nav-item" id="nav-link5">
-                            
-                            <a href="./cart.html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./faq.html" class="nav-link"><i class="fa fa-question-circle" style="margin-right: 7px; font-size: 22px;"></i>FAQ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./contact.html" class="nav-link"><i class="ri-user-fill"></i>Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./rateus.html" class="nav-link"><i class="ri-user-star-fill"></i>Rate Us</a>
-                        </li>
-                    </ul>
-                    <input type="checkbox" id="toggle">
-              <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
-                  <!-- Wishlist items will be dynamically added here -->
+              <img
+                src="../assets/img/logo/brand_logo/Dark_BG_logo.svg"
+                width="90px"
+                height="90px"
+                style="
+                  display: inline-block;
+                  vertical-align: middle;
+                  margin-left: 0px;
+                  border-radius: 0%;
+                "
+              />
+            </a>
+
+            <!-- Toggle Button -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarcollapse"
+              aria-controls="navbarCollapse"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarcollapse"
+            >
+              <!-- Navbar Menu -->
+              <ul class="navbar-nav">
+                <li
+                  class="nav-item"
+                  style="border: 2px solid white"
+                  id="nav-link1"
+                >
+                  <a href="./login.html" class="nav-link"
+                    ><i class="ri-user-3-fill"></i> Are You A Seller?</a
+                  >
+                </li>
+                <li class="nav-item" id="nav-link2">
+                  <a href="./shop.html" class="nav-link"
+                    ><i class="ri-shopping-bag-fill"></i> Shop</a
+                  >
+                </li>
+                <li class="nav-item" id="nav-link3">
+                  <a href="./transaction.html" class="nav-link"
+                    ><i class="ri-bank-card-fill"></i> Transactions</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    id="wishlistDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    ><i class="ri-seedling-fill"></i> Wishlist
+                    <span id="wishlistCount" class="wishlist-count">0</span>
+                  </a>
+
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="wishlistDropdown"
+                    id="wishlistDropdownContent"
+                  >
+                    <!-- Wishlist items will be dynamically added here -->
+                  </div>
+                </li>
+                <li class="nav-item" id="nav-link5">
+                  <a href="./cart.html" class="nav-link"
+                    ><i class="ri-shopping-cart-2-fill"></i> My Cart</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="./faq.html" class="nav-link"
+                    ><i
+                      class="fa fa-question-circle"
+                      style="margin-right: 7px; font-size: 22px"
+                    ></i
+                    >FAQ</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="./contact.html" class="nav-link"
+                    ><i class="ri-user-fill"></i>Contact</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="./rateus.html" class="nav-link"
+                    ><i class="ri-user-star-fill"></i>Rate Us</a
+                  >
+                </li>
+              </ul>
+              <input type="checkbox" id="toggle" />
+              <div
+                class="dropdown-menu"
+                aria-labelledby="wishlistDropdown"
+                id="wishlistDropdownContent"
+              >
+                <!-- Wishlist items will be dynamically added here -->
               </div>
-          </ul>
-          <input type="checkbox" id="toggle">
-    
-                    <label class="toggle" for="toggle" style="margin-left: 20px;">
-                        <i class="bx bxs-sun"></i>
-                        <i class="bx bx-moon"></i>
-                        <span class="ball"></span>
-                    </label>
-                </div>
+              <input type="checkbox" id="toggle" />
+
+              <label class="toggle" for="toggle" style="margin-left: 20px">
+                <i class="bx bxs-sun"></i>
+                <i class="bx bx-moon"></i>
+                <span class="ball"></span>
+              </label>
             </div>
+          </div>
         </nav>
-    </div>
-    <div id="page-content" class="page-content">
+      </div>
+      <div id="page-content" class="page-content">
         <div class="banner">
-            <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('../assets/img/logo/faq.png');">
-                <div class="container">
-                    <centre><img src="../assets/img/llo.png" alt="" width="350" height="300"></centre>
-                    <h1 class="pt-5" style="color: red;">
-                        FAQ
-                    </h1>
-                    <h2 class="lead" style="color: blueviolet;" >
-                        Frequently Asked Questions.
-                    </h2>
-                </div>
+          <div
+            class="jumbotron jumbotron-bg text-center rounded-0"
+            style="background-image: url('../assets/img/logo/faq.png')"
+          >
+            <div class="container">
+              <centre
+                ><img
+                  src="../assets/img/llo.png"
+                  alt=""
+                  width="350"
+                  height="300"
+              /></centre>
+              <h1 class="pt-5" style="color: red">FAQ</h1>
+              <h2 class="lead" style="color: blueviolet">
+                Frequently Asked Questions.
+              </h2>
             </div>
+          </div>
         </div>
 
         <div id="faq-container">
-            <div class="main-heading" onclick="toggleAnswer('question1')">
-                <p id="icon1">➕</p>
-                <h3>What is कृषिCONNECT?</h3>
-            </div>
-            <p id="question1" class="answers">कृषिCONNECT delivers groceries from the farms you to your doorstep in as little as few hours! We empower you to shop at your trusted stores using our own trained and experienced Personal Shoppers, and then ensure a safe delivery to you.</p>
+          <div class="main-heading" onclick="toggleAnswer('question1')">
+            <p id="icon1">➕</p>
+            <h3>What is कृषिCONNECT?</h3>
+          </div>
+          <p id="question1" class="answers">
+            कृषिCONNECT delivers groceries from the farms you to your doorstep
+            in as little as few hours! We empower you to shop at your trusted
+            stores using our own trained and experienced Personal Shoppers, and
+            then ensure a safe delivery to you.
+          </p>
 
-            <div class="main-heading" onclick="toggleAnswer('question2')">
-                <p id="icon2">➕</p>
-                <h3>Do you serve my area?</h3>
-            </div>
-            <p id="question2" class="answers">Currently we serve only in Jamshedpur.Check if we deliver to your area using our Website.</p>
+          <div class="main-heading" onclick="toggleAnswer('question2')">
+            <p id="icon2">➕</p>
+            <h3>Do you serve my area?</h3>
+          </div>
+          <p id="question2" class="answers">
+            Currently we serve only in Jamshedpur.Check if we deliver to your
+            area using our Website.
+          </p>
 
-            <div class="main-heading" onclick="toggleAnswer('question3')">
-                <p id="icon3">➕</p>
-                <h3>How fast do you deliver?</h3>
-            </div>
-            <p id="question3" class="answers">We deliver to you in the next hour, or at any other one-hour time-slot today and in the next 6 days.</p>
+          <div class="main-heading" onclick="toggleAnswer('question3')">
+            <p id="icon3">➕</p>
+            <h3>How fast do you deliver?</h3>
+          </div>
+          <p id="question3" class="answers">
+            We deliver to you in the next hour, or at any other one-hour
+            time-slot today and in the next 6 days.
+          </p>
 
-            <div class="main-heading" onclick="toggleAnswer('question4')">
-                <p id="icon4">➕</p>
-                <h3>How much does delivery cost?</h3>
-            </div>
-            <p id="question4" class="answers">It costs INR 20,000 for the delivery on all delivery slots. And FREE DELIVERY for order placed above INR 500,000 in May 2024 only.</p>
+          <div class="main-heading" onclick="toggleAnswer('question4')">
+            <p id="icon4">➕</p>
+            <h3>How much does delivery cost?</h3>
+          </div>
+          <p id="question4" class="answers">
+            It costs INR 20,000 for the delivery on all delivery slots. And FREE
+            DELIVERY for order placed above INR 500,000 in May 2024 only.
+          </p>
 
-            <div class="main-heading" onclick="toggleAnswer('question5')">
-                <p id="icon4">➕</p>
-                <h3>What are the delivery hours?</h3>
-            </div>
-            <p id="question5" class="answers">Usually between 10am and 10pm. You can place your orders at any time of the day.</p>
+          <div class="main-heading" onclick="toggleAnswer('question5')">
+            <p id="icon4">➕</p>
+            <h3>What are the delivery hours?</h3>
+          </div>
+          <p id="question5" class="answers">
+            Usually between 10am and 10pm. You can place your orders at any time
+            of the day.
+          </p>
 
-            <div class="main-heading" onclick="toggleAnswer('question6')">
-                <p id="icon4">➕</p>
-                <h3>Can you assure the quality of the products that I bought?</h3>
-            </div>
-            <p id="question6" class="answers">Of course! We can assure the quality of the items for you, our beloved customer. If you found any bad quality items, you can contact our Customer Service and we will replace it.</p>
+          <div class="main-heading" onclick="toggleAnswer('question6')">
+            <p id="icon4">➕</p>
+            <h3>Can you assure the quality of the products that I bought?</h3>
+          </div>
+          <p id="question6" class="answers">
+            Of course! We can assure the quality of the items for you, our
+            beloved customer. If you found any bad quality items, you can
+            contact our Customer Service and we will replace it.
+          </p>
 
-            <div class="main-heading" onclick="toggleAnswer('question7')">
-                <p id="icon4">➕</p>
-                <h3>How do I edit or cancel my order?</h3>
-            </div>
-            <p id="question7" class="answers">You can edit your order until the shopper starts picking your items. Go to “My Orders” section in the app and select the order you want to edit. Click on “Edit Order” and then choose the appropriate reason.</p>
+          <div class="main-heading" onclick="toggleAnswer('question7')">
+            <p id="icon4">➕</p>
+            <h3>How do I edit or cancel my order?</h3>
+          </div>
+          <p id="question7" class="answers">
+            You can edit your order until the shopper starts picking your items.
+            Go to “My Orders” section in the app and select the order you want
+            to edit. Click on “Edit Order” and then choose the appropriate
+            reason.
+          </p>
 
-            <div class="main-heading" onclick="toggleAnswer('question8')">
-                <p id="icon4">➕</p>
-                <h3>How do I report a problem with my order?</h3>
-            </div>
-            <p id="question8" class="answers">You can contact us following the “Help” button in the app and selecting “Contact Us”. We respond very quickly.</p>
+          <div class="main-heading" onclick="toggleAnswer('question8')">
+            <p id="icon4">➕</p>
+            <h3>How do I report a problem with my order?</h3>
+          </div>
+          <p id="question8" class="answers">
+            You can contact us following the “Help” button in the app and
+            selecting “Contact Us”. We respond very quickly.
+          </p>
 
-            <div class="main-heading" onclick="toggleAnswer('question9')">
-                <p id="icon4">➕</p>
-                <h3>When will I receive my refund?</h3>
-            </div>
-            <p id="question9" class="answers">Payment will be made within 14 days by crediting your credit card.</p>
+          <div class="main-heading" onclick="toggleAnswer('question9')">
+            <p id="icon4">➕</p>
+            <h3>When will I receive my refund?</h3>
+          </div>
+          <p id="question9" class="answers">
+            Payment will be made within 14 days by crediting your credit card.
+          </p>
 
-            <div class="main-heading" onclick="toggleAnswer('question10')">
-                <p id="icon4">➕</p>
-                <h3>How do I return items?</h3>
-            </div>
-            <p id="question10" class="answers">If something seems to be wrong with your order, such as a missing item or an incorrect item, you can reject the items when our rider arrives at your doorstep. We will charge you only for the delivered items. Once an item is accepted by you, it cannot be returned. We do not currently support a return process for any items you may have accidentally purchased via Freshchery. You are more than welcome to coordinate returns directly with your store. Keep in mind that we do keep the in-store receipts for accounting purposes.</p>
+          <div class="main-heading" onclick="toggleAnswer('question10')">
+            <p id="icon4">➕</p>
+            <h3>How do I return items?</h3>
+          </div>
+          <p id="question10" class="answers">
+            If something seems to be wrong with your order, such as a missing
+            item or an incorrect item, you can reject the items when our rider
+            arrives at your doorstep. We will charge you only for the delivered
+            items. Once an item is accepted by you, it cannot be returned. We do
+            not currently support a return process for any items you may have
+            accidentally purchased via Freshchery. You are more than welcome to
+            coordinate returns directly with your store. Keep in mind that we do
+            keep the in-store receipts for accounting purposes.
+          </p>
 
-            <div class="main-heading" onclick="toggleAnswer('question11')">
-                <p id="icon4">➕</p>
-                <h3>Who will deliver my order?</h3>
-            </div>
-            <p id="question11" class="answers">Your orders will be delivered by our professional delivery boys.</p>
+          <div class="main-heading" onclick="toggleAnswer('question11')">
+            <p id="icon4">➕</p>
+            <h3>Who will deliver my order?</h3>
+          </div>
+          <p id="question11" class="answers">
+            Your orders will be delivered by our professional delivery boys.
+          </p>
 
-            <div class="main-heading" onclick="toggleAnswer('question12')">
-                <p id="icon4">➕</p>
-                <h3>I have many more questions for you!</h3>
+          <div class="main-heading" onclick="toggleAnswer('question12')">
+            <p id="icon4">➕</p>
+            <h3>I have many more questions for you!</h3>
+          </div>
+          <p id="question12" class="answers">
+            Contact us! We will be there for support at
+            <a href="mailto:krishiconnect@gmail.com">krishiconnect@gmail.com</a
+            >.
+          </p>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <h5>About</h5>
+
+              <p>
+                कृषिCONNECT is an online B2C platform to bring fresh organic
+                produce from farmers, straight to your dining tables. We aim to
+                remove unnecessary middlemen and help out local farmers by
+                getting them the pay they truly deserve.
+              </p>
+            </div>
+            <div class="col-md-3l">
+              <h5>Links</h5>
+              <ul>
+                <li>
+                  <a href="./blog.html">Blogs</a>
+                </li>
+                <li>
+                  <a href="about.html">About</a>
+                </li>
+                <li>
+                  <a href="contact.html">Contact Us</a>
+                </li>
+                <li>
+                  <a href="faq.html">FAQ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md">
+              <h5>Contact</h5>
+              <ul>
+                <li>
+                  <a href="tel:+620892738334"
+                    ><i class="fa fa-phone mirrored-icon"></i> 08272367238</a
+                  >
+                </li>
+                <li>
+                  <a href="mailto:hello@domain.com"
+                    ><i class="fa fa-envelope"></i> krishiconnect@gmail.com</a
+                  >
+                </li>
+              </ul>
+
+              <h5>Follow Us</h5>
+              <ul class="social">
+                <li>
+                  <a href="javascript:void(0)" target="_blank"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" target="_blank"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" target="_blank"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                </li>
+              </ul>
             </div>
             <p id="question12" class="answers">Contact us! We will be there for support at <a href="mailto:krishiconnect@gmail.com">krishiconnect@gmail.com</a>.</p>
 
@@ -381,13 +679,100 @@ toggleSwitch.addEventListener('click', () => {
     <script type="text/javascript" src="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
     <script type="text/javascript" src="../assets/js/theme.js"></script>
     <script>
+
+            <div class="col-md-3m">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6887952893885!2d86.14298181488601!3d22.776927685078057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1681221470770!5m2!1sen!2sin"
+                width="100%"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <p class="copyright">
+          &copy; <span id="copyright-year"></span> कृषिCONNECT | Fresh From
+          Farm. All rights reserved.
+        </p>
+      </footer>
+
+      <script>
+        document.getElementById('copyright-year').textContent =
+          new Date().getFullYear();
+      </script>
+
+      <script>
+        function toggleAnswer(id) {
+          var answer = document.getElementById(id);
+          if (answer) {
+            if (answer.style.display === 'block') {
+              answer.style.display = 'none';
+              document.getElementById(
+                'icon' + id.charAt(id.length - 1)
+              ).innerText = '➕';
+            } else {
+              answer.style.display = 'block';
+              document.getElementById(
+                'icon' + id.charAt(id.length - 1)
+              ).innerText = '➖';
+            }
+          }
+        }
+      </script>
+
+      <!-- js file for dark mode -->
+      <script type="text/javascript" src="/scripts/darkmode.js"></script>
+
+      <script type="text/javascript" src="../assets/js/jquery.js"></script>
+      <script
+        type="text/javascript"
+        src="../assets/js/jquery-migrate.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="../assets/packages/bootstrap/libraries/popper.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="../assets/packages/bootstrap/bootstrap.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="../assets/packages/o2system-ui/o2system-ui.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="../assets/packages/owl-carousel/owl-carousel.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="../assets/packages/cloudzoom/cloudzoom.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="../assets/packages/thumbelina/thumbelina.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"
+      ></script>
+      <script type="text/javascript" src="../assets/js/theme.js"></script>
+      <script>
+
         ScrollReveal({
-            //reset: true ,
-            distance : '60px' ,
-            duration:2500,
-            delay:400
+          //reset: true ,
+          distance: '60px',
+          duration: 2500,
+          delay: 400,
         });
-        ScrollReveal().reveal('#q1,#q2,#q3,#q4,#q5,#q6,#q7,#q8,#q9,#q10,#q11,#q12', { delay: 500 , origin:'left' , interval:'300' });
-    </script>
-</body>
+        ScrollReveal().reveal(
+          '#q1,#q2,#q3,#q4,#q5,#q6,#q7,#q8,#q9,#q10,#q11,#q12',
+          { delay: 500, origin: 'left', interval: '300' }
+        );
+      </script>
+    </body>
+  </html>
 </html>

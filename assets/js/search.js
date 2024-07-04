@@ -1,37 +1,48 @@
 function searchItems() {
-    const searchBar = document.getElementById('searchBar');
-    const filter = searchBar.value.toLowerCase().trim();
-    const items = document.querySelectorAll('.item');
-    const searchResults = document.getElementById('searchResults');
-    
-    searchResults.innerHTML = '';  // Clear previous results
+  const searchBar = document.getElementById('searchBar');
+  const filter = searchBar.value.toLowerCase().trim();
+  const items = document.querySelectorAll('.item');
+  const searchResults = document.getElementById('searchResults');
 
-    // If search bar is empty, hide the search results div and return
-    if (filter === '') {
-        searchResults.style.display = 'none';
-        return;
-    }
+  searchResults.innerHTML = ''; // Clear previous results
 
-    let resultsFound = false;
-    const addedItems = new Set();  // Set to keep track of added items
+  // If search bar is empty, hide the search results div and return
+  if (filter === '') {
+    searchResults.style.display = 'none';
+    return;
+  }
 
-    items.forEach(item => {
-        const name = item.getAttribute('data-name');
-        const category = item.getAttribute('data-category');
-        const imgSrc = item.getAttribute('data-img');
-        const price = item.getAttribute('data-new-price');
-        const oldprice = item.getAttribute('data-old-price');
-        const rating = item.getAttribute('data-rating');
-        const detailPageUrl = 'detail-product.html'; // Modify this as per your actual detail page URL
+  let resultsFound = false;
+  const addedItems = new Set(); // Set to keep track of added items
 
-        // Ensure all attributes exist and the item hasn't been added yet
-        if (name&& oldprice && category && imgSrc && price && rating && !addedItems.has(name)) {
-            if (name.toLowerCase().includes(filter) || category.toLowerCase().includes(filter)) {
-                const card = document.createElement('div');
-               
-                card.className = 'card-product';
-                
-                card.innerHTML = `
+  items.forEach((item) => {
+    const name = item.getAttribute('data-name');
+    const category = item.getAttribute('data-category');
+    const imgSrc = item.getAttribute('data-img');
+    const price = item.getAttribute('data-new-price');
+    const oldprice = item.getAttribute('data-old-price');
+    const rating = item.getAttribute('data-rating');
+    const detailPageUrl = 'detail-product.html'; // Modify this as per your actual detail page URL
+
+    // Ensure all attributes exist and the item hasn't been added yet
+    if (
+      name &&
+      oldprice &&
+      category &&
+      imgSrc &&
+      price &&
+      rating &&
+      !addedItems.has(name)
+    ) {
+      if (
+        name.toLowerCase().includes(filter) ||
+        category.toLowerCase().includes(filter)
+      ) {
+        const card = document.createElement('div');
+
+        card.className = 'card-product';
+
+        card.innerHTML = `
                     <img src="${imgSrc}" alt="${name}">
                     <div class="card-body">
                         <h4 class="card-title"><a href=${detailPageUrl} >${name}</a></h4>
@@ -55,37 +66,37 @@ function searchItems() {
                         </div>
                     </div>
                 `;
-                searchResults.appendChild(card);
-                addedItems.add(name);  // Add the item to the set
-                resultsFound = true;
-            }
-        }
-    });
+        searchResults.appendChild(card);
+        addedItems.add(name); // Add the item to the set
+        resultsFound = true;
+      }
+    }
+  });
 
-    if (!resultsFound) {
-        const defaultCard = document.createElement('div');
-        defaultCard.className = 'default-card';
-        defaultCard.innerHTML = `
+  if (!resultsFound) {
+    const defaultCard = document.createElement('div');
+    defaultCard.className = 'default-card';
+    defaultCard.innerHTML = `
             <h4 class="card-title" >No results found</h4>
             <p>Please try searching for another item.</p>
         `;
-        searchResults.appendChild(defaultCard);
-    }
+    searchResults.appendChild(defaultCard);
+  }
 
-    // Display the search results div
-    searchResults.style.display = 'block';
+  // Display the search results div
+  searchResults.style.display = 'block';
 }
 
 function getStars(rating) {
-    const fullStar = '<span class="fa fa-star checked"></span>';
-    const emptyStar = '<span class="fa fa-star"></span>';
-    let stars = '';
-    for (let i = 0; i < 5; i++) {
-        if (i < rating) {
-            stars += fullStar;
-        } else {
-            stars += emptyStar;
-        }
+  const fullStar = '<span class="fa fa-star checked"></span>';
+  const emptyStar = '<span class="fa fa-star"></span>';
+  let stars = '';
+  for (let i = 0; i < 5; i++) {
+    if (i < rating) {
+      stars += fullStar;
+    } else {
+      stars += emptyStar;
     }
-    return stars;
+  }
+  return stars;
 }
