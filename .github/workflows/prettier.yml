@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Run Prettier to format code
-        run: npm run format:code  # Adjust to your npm script that runs Prettier formatting
+        run: npm run format
 
       - name: Commit formatted code
         run: |
