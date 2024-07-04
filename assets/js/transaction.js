@@ -9,13 +9,15 @@ if (!order) {
   transactionItemsContainer.innerHTML = ''; // Clear any existing content
 } else {
   var buyerDetailsContainer = document.getElementById('buyer-details');
-  buyerDetailsContainer.innerHTML = 'Buyer Name: ' + order.buyerName + '<br>Email: ' + order.buyerEmail;
+  buyerDetailsContainer.innerHTML =
+    'Buyer Name: ' + order.buyerName + '<br>Email: ' + order.buyerEmail;
 
   var transactionItemsContainer = document.getElementById('transaction-items');
 
-  order.items.forEach(function(item) {
+  order.items.forEach(function (item) {
     var itemElement = document.createElement('div');
-    itemElement.innerHTML = item.name + ' - Rp ' + item.price + ' - Quantity: ' + item.quantity;
+    itemElement.innerHTML =
+      item.name + ' - Rp ' + item.price + ' - Quantity: ' + item.quantity;
 
     transactionItemsContainer.appendChild(itemElement);
   });

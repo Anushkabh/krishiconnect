@@ -1,21 +1,41 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
-import { getFirestore, setDoc, addDoc, doc, updateDoc, deleteDoc, getDoc, query, collection, where, getDocs, onSnapshot } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js";
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js';
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+} from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js';
+import {
+  getFirestore,
+  setDoc,
+  addDoc,
+  doc,
+  updateDoc,
+  deleteDoc,
+  getDoc,
+  query,
+  collection,
+  where,
+  getDocs,
+  onSnapshot,
+} from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAmVZazd1cBsO5mftadw5HppCKu-JC4GRY",
-  authDomain: "krishiconnect-64752.firebaseapp.com",
-  databaseURL: "https://krishiconnect-64752-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "krishiconnect-64752",
-  storageBucket: "krishiconnect-64752.appspot.com",
-  messagingSenderId: "641022690248",
-  appId: "1:641022690248:web:0f6761e2847339d69536fd",
-  measurementId: "G-4Z04QQF90G"
+  apiKey: 'AIzaSyAmVZazd1cBsO5mftadw5HppCKu-JC4GRY',
+  authDomain: 'krishiconnect-64752.firebaseapp.com',
+  databaseURL:
+    'https://krishiconnect-64752-default-rtdb.asia-southeast1.firebasedatabase.app',
+  projectId: 'krishiconnect-64752',
+  storageBucket: 'krishiconnect-64752.appspot.com',
+  messagingSenderId: '641022690248',
+  appId: '1:641022690248:web:0f6761e2847339d69536fd',
+  measurementId: 'G-4Z04QQF90G',
 };
 
 // Initialize Firebase
@@ -24,11 +44,11 @@ const auth = getAuth();
 const db = getFirestore(app);
 
 // Get elements by ID
-var email = document.getElementById("email");
-var password = document.getElementById("pass");
-var fname = document.getElementById("fname");
-var lname = document.getElementById("lname");
-var username = "";
+var email = document.getElementById('email');
+var password = document.getElementById('pass');
+var fname = document.getElementById('fname');
+var lname = document.getElementById('lname');
+var username = '';
 
 // Signup function
 window.signup = (e) => {
@@ -37,50 +57,52 @@ window.signup = (e) => {
     fname: fname.value,
     lname: lname.value,
     email: email.value,
-    password: password.value
+    password: password.value,
   };
 
   createUserWithEmailAndPassword(auth, obj.email, obj.password)
     .then(function (success) {
-      alert("Signup Successful");
+      alert('Signup Successful');
       username = obj.email;
       addDoc(collection(db, username), {});
     })
     .catch(function (err) {
-      alert("Error: " + err);
+      alert('Error: ' + err);
     });
   console.log(obj);
 };
 
 // Login function
-var userid = document.getElementById("User1");
-var pass = document.getElementById("pass1");
+var userid = document.getElementById('User1');
+var pass = document.getElementById('pass1');
 
 window.login = (e) => {
   e.preventDefault();
   var obj2 = {
     email: userid.value,
-    password: pass.value
+    password: pass.value,
   };
 
   signInWithEmailAndPassword(auth, obj2.email, obj2.password)
     .then(function (userCredential) {
-      alert("Login successful");
-      window.location.href = "home.html";
+      alert('Login successful');
+      window.location.href = 'home.html';
       username = obj2.email;
     })
     .catch(function (err) {
-      alert("Error: " + err);
+      alert('Error: ' + err);
     });
 };
 
 // Logout function
 window.logout = (e) => {
-  signOut(auth).then(() => {
-    window.location.href = "login.html";
-  }).catch((error) => {
-    alert("Error: " + error);
-  });
+  signOut(auth)
+    .then(() => {
+      window.location.href = 'login.html';
+    })
+    .catch((error) => {
+      alert('Error: ' + error);
+    });
 };
 
 // Auth state change listener
@@ -94,27 +116,27 @@ onAuthStateChanged(auth, (user) => {
 // Initialize Cloud Firestore
 var pNo = 0;
 
-var submitform = document.getElementById("submitform");
+var submitform = document.getElementById('submitform');
 submitform.addEventListener('click', (e) => {
   e.preventDefault();
-  var product = document.getElementById("Product").value;
-  var category = document.getElementById("category").value;
-  var quantity = document.getElementById("quantity").value;
-  var unit = document.getElementById("unit").value;
+  var product = document.getElementById('Product').value;
+  var category = document.getElementById('category').value;
+  var quantity = document.getElementById('quantity').value;
+  var unit = document.getElementById('unit').value;
 
   addDoc(collection(db, username), {
     product: product,
     category: category,
     quantity: quantity,
     unit: unit,
-    sold: 0
+    sold: 0,
   });
 
-  alert("Product added");
+  alert('Product added');
 });
 
 var stdNo = 0;
-var tbody = document.getElementById("tbody1");
+var tbody = document.getElementById('tbody1');
 
 function addItem(product, category, quantity, unit, id, sold) {
   var trow = document.createElement('tr');
@@ -144,9 +166,16 @@ function addItem(product, category, quantity, unit, id, sold) {
 
 function allItem(productlist) {
   stdNo = 0;
-  tbody.innerHTML = "";
-  productlist.forEach(element => {
-    addItem(element.product, element.category, element.quantity, element.unit, element.id, element.sold);
+  tbody.innerHTML = '';
+  productlist.forEach((element) => {
+    addItem(
+      element.product,
+      element.category,
+      element.quantity,
+      element.unit,
+      element.id,
+      element.sold
+    );
   });
 }
 
@@ -162,16 +191,17 @@ async function getAllData(username) {
 
 window.Deleterow = (id) => {
   deleteDoc(doc(db, username, id));
-}
+};
 
 // Weather API call
-const weatherUrl = 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Delhi';
+const weatherUrl =
+  'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Delhi';
 const weatherOptions = {
   method: 'GET',
   headers: {
     'X-RapidAPI-Key': 'f00852dd75msh30e9d9e37fb9613p1b22c6jsn063d05d7d46d',
-    'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
-  }
+    'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com',
+  },
 };
 
 try {
@@ -184,17 +214,18 @@ try {
   document.getElementById('cloud_pct').innerHTML = weatherResult.cloud_pct;
   document.getElementById('humidity').innerHTML = weatherResult.humidity;
 } catch (error) {
-  console.error("Weather API Error: ", error);
+  console.error('Weather API Error: ', error);
 }
 
 // News API call
-const newsUrl = 'https://news-api14.p.rapidapi.com/top-headlines?country=in&language=en&pageSize=10&category=agro';
+const newsUrl =
+  'https://news-api14.p.rapidapi.com/top-headlines?country=in&language=en&pageSize=10&category=agro';
 const newsOptions = {
   method: 'GET',
   headers: {
     'X-RapidAPI-Key': 'f00852dd75msh30e9d9e37fb9613p1b22c6jsn063d05d7d46d',
-    'X-RapidAPI-Host': 'news-api14.p.rapidapi.com'
-  }
+    'X-RapidAPI-Host': 'news-api14.p.rapidapi.com',
+  },
 };
 
 try {
@@ -207,8 +238,5 @@ try {
   document.getElementById('news4').innerHTML = articles[3].title;
   document.getElementById('news5').innerHTML = articles[4].title;
 } catch (error) {
-  console.error("News API Error: ", error);
+  console.error('News API Error: ', error);
 }
-
-
-
