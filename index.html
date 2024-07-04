@@ -238,8 +238,8 @@
             position: relative;
             z-index: 100;
         }
-        
-        
+
+
         @media (max-width: 1200px) and (min-width:995px) {
             .card-title {
                 font-size: 1.25rem;
@@ -277,17 +277,21 @@
             margin: 10px;
             box-sizing: border-box;
         }
-        .navbar .container{
-  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
-}
-@media (max-width:768px) {
-    .navbar .container{
-    padding: 0px 20px;
-  }
-  }
-  .nav-item{
-    margin-top: 5px;
-  }
+
+        .navbar .container {
+            background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+        }
+
+        @media (max-width:768px) {
+            .navbar .container {
+                padding: 0px 20px;
+            }
+        }
+
+        .nav-item {
+            margin-top: 5px;
+        }
+
         #products .card img {
             width: 100%;
             height: 200px;
@@ -486,6 +490,17 @@
         .card-back {
             transform: rotateY(180deg);
         }
+
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
+
+        }
     </style>
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
@@ -509,9 +524,10 @@
 
 
 
-            <a href="../index.html" class="navbar-brand mr-auto">
-                <img src="assets/img/logo/brand_logo/Dark_BG_logo.svg" width="90px" height="90px" style="display: inline-block; vertical-align: middle;margin-left: 0px;border-radius: 0%; " >
-              </a>
+                <a href="../index.html" class="navbar-brand mr-auto">
+                    <img src="assets/img/logo/brand_logo/Dark_BG_logo.svg" width="90px" height="90px"
+                        style="display: inline-block; vertical-align: middle;margin-left: 0px;border-radius: 0%; ">
+                </a>
 
 
 
@@ -525,13 +541,15 @@
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav">
                         <li class="nav-item" style="border: 2px solid white" id="nav-link1">
-                            <a href="./src/login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
+                            <a href="./src/login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A
+                                Seller?</a>
                         </li>
                         <li class="nav-item" id="nav-link2">
                             <a href="./src/shop.html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
                         </li>
                         <li class="nav-item" id="nav-link3">
-                            <a href="./src/transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
+                            <a href="./src/transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i>
+                                Transactions</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button"
@@ -545,11 +563,13 @@
                             </div>
                         </li>
                         <li class="nav-item" id="nav-link5">
-                            
-                            <a href="./src/cart.html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
+
+                            <a href="./src/cart.html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My
+                                Cart</a>
                         </li>
                         <li class="nav-item">
-                            <a href="./src/faq.html" class="nav-link"><i class="fa fa-question-circle" style="margin-right: 7px; font-size: 22px;"></i>FAQ</a>
+                            <a href="./src/faq.html" class="nav-link"><i class="fa fa-question-circle"
+                                    style="margin-right: 7px; font-size: 22px;"></i>FAQ</a>
                         </li>
                         <li class="nav-item">
                             <a href="./src/contact.html" class="nav-link"><i class="ri-user-fill"></i>Contact</a>
@@ -763,7 +783,7 @@
 
     <section id="blogs" class="blogs">
         <h2 class="title">Trending Blogs</h2>
-        <div class="container trending-blogs cards-wrapper"  style="display: flex; flex-wrap: wrap; ">
+        <div class="container trending-blogs cards-wrapper" style="display: flex; flex-wrap: wrap; ">
 
         </div>
         <a href="./src/blog.html"><button style="margin-inline: auto; margin-top: 25px;">Explore more</button></a>
@@ -893,6 +913,17 @@
 
 
     </section>
+    <!-- Progress bar -->
+    <div id="progressBar"></div>
+    <script>
+        window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+    <!-- end -->
 
     <!-- Testimonials -->
 
