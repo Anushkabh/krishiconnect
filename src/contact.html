@@ -34,6 +34,18 @@
     
     <!-- JavaScript Libraries -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
+
+        }
+    </style>
 </head>
 <body class="light">
     <!-- Page Header -->
@@ -275,6 +287,17 @@
   
   <!------------------ Footer Section Ends ------------------->
   
+        <!-- Progress bar -->
+        <div id="progressBar"></div>
+        <script>
+          window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+          };
+        </script>
+        <!-- end -->
   <script>
     document.getElementById('contactForm').addEventListener('submit', function(event) {
       event.preventDefault();
