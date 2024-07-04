@@ -170,6 +170,17 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+#progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
+
+        }
+
 </style>
 <div>
 
@@ -434,6 +445,17 @@
 
 <!------------------ Footer Section Ends ------------------->
           </div>
+            <!-- Progress bar -->
+  <div id="progressBar"></div>
+  <script>
+    window.onscroll = function () {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+  </script>
+  <!-- end -->
 
     <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
     <script type="text/javascript" src="../assets/js/jquery.js"></script>
