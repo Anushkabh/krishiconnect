@@ -3,7 +3,7 @@
 
 ![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
 
-## What you can  Contribute?
+## What you can Contribute?
 
 **🐞Bug Fixing :**
 Contributors can help by reviewing and confirming reported issues. This includes verifying bugs, providing additional details, and prioritizing tasks for the development team.
@@ -13,25 +13,24 @@ Contributors can enhance the project by implementing new features or improvement
 
 ![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
 
- ## How to Contribute?
+## How to Contribute?
+
 - Drop a Star ⭐ in this repo
-- Take a look at the existing issues. 
+- Take a look at the existing issues.
 - Fork the Repo & create a branch for any issue that you are working on and commit your work.
 - At first raise an issue in which you want to work
-- Then after assigning only then work on that issue & make a PR 
+- Then after assigning only then work on that issue & make a PR
 - Create a Pull Request
 - **IMPORTANT: Don't make any type of `Pull Request` until & unless you get assigned to an `Issue`**
 - Add screenshots or screen captures to your `Pull Request` to help us understand the effects of the changes that are included in your commits.
-  
+
 # Task Levels and Durations
 
-| Level | Duration to Complete (Days) |
-|-------|-----------------------------|
-| Level 1 | 1 day |
-| Level 2 | 2-3 days |
-| Level 3 | 4-5 days |
-
-
+| Level   | Duration to Complete (Days) |
+| ------- | --------------------------- |
+| Level 1 | 1 day                       |
+| Level 2 | 2-3 days                    |
+| Level 3 | 4-5 days                    |
 
 ![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
 

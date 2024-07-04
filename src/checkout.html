@@ -18,86 +18,65 @@
     <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" type="text/css" media="all" href="../assets/css/theme.css">
     <script src="https://unpkg.com/scrollreveal"></script>
-    
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="shortcut icon" href="../assets/img/logo/log.png" type="image/x-icon">
-    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/darkmode.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" typex="text/css" media="all" href="../assets/css/theme.css">
 </head>
 <body>
-  <div class="page-header">
-    <!--=============== Navbar ===============-->
-    <nav class="navbar  navbar-expand-md navbar-dark bg-dark" id="page-navigation">
-        <div class="container">
+    <div class="page-header">
+        <!--=============== Navbar ===============-->
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id="page-navigation">
+          <div class="container">
             <!-- Navbar Brand -->
-
-
-
-        <a href="../index.html" class="navbar-brand mr-auto">
-            <img src="../assets/img/logo/brand_logo/Dark_BG_logo.svg" width="90px" height="90px" style="display: inline-block; vertical-align: middle;margin-left: 0px;border-radius: 0%; object-fit: contain; " >
+    
+    
+            <a href="index.html" class=" mr-auto">
+                
+              <img src="../assets/img/logo/brand_logo/Dark_BG_logo.svg" width="90px" height="90px" style="display: inline-block; vertical-align: middle;margin-left: 0px;border-radius: 0%; " >
+           
           </a>
-
-
-
+    
+    
             <!-- Toggle Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
             <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
-                <!-- Navbar Menu -->
-                <ul class="navbar-nav">
-                    <li class="nav-item" style="border: 2px solid white" id="nav-link1">
-                        <a href="./login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
-                    </li>
-                    <li class="nav-item" id="nav-link2">
-                        <a href="./shop.html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
-                    </li>
-                    <li class="nav-item" id="nav-link3">
-                        <a href="./transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
-              Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
-          </a>
-
-                        <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
-                            <!-- Wishlist items will be dynamically added here -->
-                        </div>
-                    </li>
-                    <li class="nav-item" id="nav-link5">
-                        
-                        <a href="./cart.html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./faq.html" class="nav-link"><i class="fa fa-question-circle" style="margin-right: 7px; font-size: 22px;"></i>FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./contact.html" class="nav-link"><i class="ri-user-fill"></i>Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./rateus.html" class="nav-link"><i class="ri-user-star-fill"></i>Rate Us</a>
-                    </li>
-                </ul>
-                <input type="checkbox" id="toggle">
-          <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
-              <!-- Wishlist items will be dynamically added here -->
-          </div>
-      </ul>
-      <input type="checkbox" id="toggle">
-
-                <label class="toggle" for="toggle" style="margin-left: 20px;">
-                    <i class="bx bxs-sun"></i>
-                    <i class="bx bx-moon"></i>
-                    <span class="ball"></span>
-                </label>
+              <!-- Navbar Menu -->
+              <ul class="navbar-nav">
+                <li class="nav-item" style="border: 2px solid white" id="nav-link1">
+                  <a href="../src/login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
+                </li>
+                <li class="nav-item" id="nav-link2">
+                  <a href="../src/shop.html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
+                </li>
+                <li class="nav-item" id="nav-link3">
+                  <a href="../src/transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
+                      Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                      <!-- Wishlist items will be dynamically added here -->
+                  </div>
+              </li>
+                <li class="nav-item" id="nav-link5">
+                  <a href="../src/cart.html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
+                </li>
+                <li class="nav-item">
+                  <a href="../src/contact.html" class="nav-link"><i class="ri-user-star-fill"></i>Contact</a>
+                </li>
+              </ul>
+              <input type="checkbox" id="toggle">
+    
+                        <label class="toggle" for="toggle">
+                            <i class="bx bxs-sun"></i>
+                            <i class="bx bx-moon"></i>
+                            <span class="ball"></span>
+                        </label>
             </div>
-        </div>
-    </nav>
-</div>
+          </div>
+        </nav>
+      </div>
     <div id="page-content" class="page-content">
         <div class="banner">
             <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('../assets/img/bg.jpg');">
@@ -220,7 +199,6 @@
           <div class="footer-center-left-productlist">
               <h3>Useful Links</h3>
               <div  class="footer-center-left-productlist-item">
-                <p><a href="./blog.html" class="link">Blogs</a></p>
                 <p><a href="#" class="link">Herbs</a></p>
                 <p><a href="#" class="link">Pesticides</a></p>
                 <p><a href="..\src\faq.html" class="link">FAQ</a></p>
