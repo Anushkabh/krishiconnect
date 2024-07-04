@@ -325,8 +325,32 @@ body.dark .gray-bag{
     height: 40vh;
     width: 20vw;
   }
+
+  #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
+
+        }
 </style>
 <body >
+
+              <!-- Progress bar -->
+  <div id="progressBar"></div>
+  <script>
+    window.onscroll = function () {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+  </script>
+  <!-- end -->
+   
     <div class="page-header">
         <!--=============== Navbar ===============-->
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" >
