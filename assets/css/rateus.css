@@ -10,10 +10,9 @@ body {
     margin-top: 200px;
     margin-bottom: 200px;
     padding: 40px;
-    background-color: rgba(47, 47, 47, 0.141);
+    background-color: rgba(47, 47, 47, 0.6);
     border: px solid #0e4003;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
@@ -35,7 +34,7 @@ body {
 
 .rate-container .star {
     font-size: 30px;
-    color: #3c3c3c;
+    color: #cecece;
     cursor: pointer;
     transition: color 0.3s;
 }
