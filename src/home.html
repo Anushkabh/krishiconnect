@@ -34,7 +34,18 @@
 
 <link rel="stylesheet" typex="text/css" media="all" href="../assets/css/theme.css">
     <script src="https://unpkg.com/scrollreveal"></script>
+<style>
+          #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
 
+        }
+</style>
 </head>
 
 <body>
@@ -70,6 +81,17 @@
     </div>
   </nav> -->
 
+            <!-- Progress bar -->
+            <div id="progressBar"></div>
+            <script>
+              window.onscroll = function () {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("progressBar").style.width = scrolled + "%";
+              };
+            </script>
+            <!-- end -->
   <div class="page-header">
     <!--=============== Navbar ===============-->
     <nav class="navbar  navbar-expand-lg navbar-dark bg-dark" id="page-navigation">
