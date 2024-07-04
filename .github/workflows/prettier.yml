@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main  # Adjust as per your default branch
+  pull_request:
+    branches:
+      - main
 
 jobs:
   format:
