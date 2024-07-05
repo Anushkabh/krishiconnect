@@ -1,5 +1,7 @@
+let getCartItems = JSON.parse(localStorage.getItem('cartItems'))
+let cartItemCountId = document.getElementById("cartItemCount")
+cartItemCountId.textContent = getCartItems.length
 // Add to Wishlist
-
 function addToWishlist(name, price) {
   var wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
 
@@ -119,6 +121,8 @@ function addToCart(name, imageUrl, price) {
     position: 'right',
     backgroundColor: 'rgba(0,128,0,0.8)',
   }).showToast();
+  let getLocalStorage =JSON.parse( localStorage.getItem("cartItems"))
+cartItemCountId.textContent=getLocalStorage.length
 }
 
 // Initial update of wishlist on page load

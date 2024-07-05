@@ -1,3 +1,4 @@
+let cartItemCountId = document.getElementById("cartItemCount")
 var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
 var cartItemsContainer = document.getElementById('cart-items');
@@ -77,7 +78,8 @@ function updateCartDisplay() {
     const itemElement = createItemElement(item);
     cartItemsContainer.appendChild(itemElement);
   });
-  updateSubtotal();
+  cartItemCountId.textContent=cartItems.length
+  updateSubtotal();  
 }
 
 updateCartDisplay();

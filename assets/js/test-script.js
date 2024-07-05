@@ -1,3 +1,6 @@
+let getCartItems = JSON.parse(localStorage.getItem('cartItems'))
+let cartItemCountId = document.getElementById("cartItemCount")
+cartItemCountId.textContent = getCartItems.length
 import { blogs, categories } from './blogsData.js';
 
 var swiper = new Swiper('.slide-content', {

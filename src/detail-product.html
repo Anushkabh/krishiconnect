@@ -271,6 +271,48 @@
                 <a href="../index.html" class="nav-link"
                   ><i class="ri-home-fill"></i> Home
                 </a>
+
+
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarcollapse">
+                    <!-- Navbar Menu -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+
+                            <!-- <a href="../src/shop.html" class="nav-link active"><i class="ri-shopping-bag-fill"></i> Shop</a> -->
+
+
+                            <a href="../index.html"class="nav-link"><i class="ri-home-fill"></i> Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../src/shop.html" class="nav-link active">Shop</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="../src/transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i>
+                                Wishlist <span id="wishlistCount" class="wishlist-count">0</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                                <!-- Wishlist items will be dynamically added here -->
+
+                            </div>
+                        </li>
+
+                        <li class="nav-item" id="nav-link5" style="position: relative;">
+                            <a href="../src/cart.html" class="nav-link"><i class="ri-shopping-cart-2-fill" ></i> My Cart </a>
+                            <span id="cartItemCount" class="wishlist-count" style="position: absolute; top: 1px; left: 21px; background-color:#f05d5d; height: 17px; width: 17px; border-radius: 50%; text-align: center; font-size: 13px; font-weight: 600;"  >0</span>
+                          </li>
+
+
+                    </ul>
               </li>
               <li class="nav-item">
                 <a href="../src/shop.html" class="nav-link active">Shop</a>
