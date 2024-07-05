@@ -65,22 +65,20 @@
   transition: 0.3s all ease-in-out;
 }
 
-
 .soc1:hover {
-    background-color: #1877F2;
+  background-color: #1877f2;
 }
 .soc2:hover {
-    background: linear-gradient(45deg, #833AB4, #E1306C, #FD1D1D, #FDCB5D);
-
+  background: linear-gradient(45deg, #833ab4, #e1306c, #fd1d1d, #fdcb5d);
 }
 .soc3:hover {
-    background-color: #25D366;
+  background-color: #25d366;
 }
 .soc4:hover {
-    background-color: black;
+  background-color: black;
 }
 .soc5:hover {
-    background-color: #0077B5;
+  background-color: #0077b5;
 }
 
 .footer-left-social-icons:hover svg {
@@ -198,12 +196,12 @@
     height: 35px;
   }
 }
-.right-social-icn{
-    position: fixed;
-    right: 10px;
-    top: 150px;
-    z-index: 100;
+.right-social-icn {
+  position: fixed;
+  right: 10px;
+  top: 150px;
+  z-index: 100;
 }
-.right-social-icn div{
-    margin: 15px;
+.right-social-icn div {
+  margin: 15px;
 }
