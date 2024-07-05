@@ -1,10 +1,9 @@
 let getCartItems = JSON.parse(localStorage.getItem('cartItems'))
 let cartItemCountId = document.getElementById("cartItemCount")
 cartItemCountId.textContent = getCartItems.length
+import { blogs, categories } from './blogsData.js';
 
-import { blogs, categories } from "./blogsData.js"
-
-var swiper = new Swiper(".slide-content", {
+var swiper = new Swiper('.slide-content', {
   slidesPerView: 3,
   spaceBetween: 25,
   loop: true,
@@ -12,13 +11,13 @@ var swiper = new Swiper(".slide-content", {
   fade: 'true',
   grabCursor: 'true',
   pagination: {
-    el: ".swiper-pagination",
+    el: '.swiper-pagination',
     clickable: true,
     dynamicBullets: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 
   breakpoints: {
@@ -34,17 +33,16 @@ var swiper = new Swiper(".slide-content", {
   },
 });
 
-const trending = document.querySelector(".trending-blogs")
+const trending = document.querySelector('.trending-blogs');
 
 // Sort trending blogs by no of hearts and render them under Trending posts in index.html
 blogs
   .sort((a, b) => new Date(b.hearts) - new Date(a.hearts))
   .slice(0, 3)
   .map((blog) => {
-
-    const card = document.createElement("div");
-    card.setAttribute("class", "blog-card")
-    card.style.flex = 1
+    const card = document.createElement('div');
+    card.setAttribute('class', 'blog-card');
+    card.style.flex = 1;
 
     card.innerHTML = `
             <div class="image">
@@ -58,7 +56,7 @@ blogs
                 <span>${blog.hearts}</span>
               </span>
             </p>
-          `
+          `;
 
     trending.appendChild(card);
-  })
+  });
