@@ -65,8 +65,20 @@
   transition: 0.3s all ease-in-out;
 }
 
-.footer-left-social-icons:hover {
-  background-color: rgb(104 198 123 / 79%);
+.soc1:hover {
+  background-color: #1877f2;
+}
+.soc2:hover {
+  background: linear-gradient(45deg, #833ab4, #e1306c, #fd1d1d, #fdcb5d);
+}
+.soc3:hover {
+  background-color: #25d366;
+}
+.soc4:hover {
+  background-color: black;
+}
+.soc5:hover {
+  background-color: #0077b5;
 }
 
 .footer-left-social-icons:hover svg {
@@ -183,4 +195,13 @@
     width: 35px;
     height: 35px;
   }
+}
+.right-social-icn {
+  position: fixed;
+  right: 10px;
+  top: 150px;
+  z-index: 100;
+}
+.right-social-icn div {
+  margin: 15px;
 }
