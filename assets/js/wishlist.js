@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 quantity: 1
             });
         }
-
+        window.alert = function() {};
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
         // Show success toast
