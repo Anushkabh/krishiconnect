@@ -3,6 +3,7 @@ var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 var cartItemsContainer = document.getElementById('cart-items');
 var buyerNameInput = document.getElementById('buyer-name');
 var buyerEmailInput = document.getElementById('buyer-email');
+let noItemCart = document.getElementById("noItemCart")
 
 function createItemElement(item) {
   const itemElement = document.createElement('div');
@@ -76,14 +77,12 @@ function updateCartDisplay() {
     noItemCart.style.display = "flex"
     noItemCart.style.flexDirection = "column"
   }
-  else {
-    noItemCart.style.display = "none"
-    cartItems.forEach(item => {
-      const itemElement = createItemElement(item);
-      cartItemsContainer.appendChild(itemElement);
-    });
-    updateSubtotal();
-  }
+  cartItemsContainer.innerHTML = '';
+  cartItems.forEach(item => {
+    const itemElement = createItemElement(item);
+    cartItemsContainer.appendChild(itemElement);
+  });
+  updateSubtotal();
 }
 
 updateCartDisplay();
