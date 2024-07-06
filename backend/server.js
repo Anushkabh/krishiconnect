@@ -23,15 +23,6 @@ app.use(
 const your_email = process.env.YOUR_EMAIL; // Environment variable for your email
 const password = process.env.PASSWORD; // Environment variable for your email password or app password
 
-// Nodemailer transporter
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: your_email,
-    pass: password,
-  },
-});
-
 // Email templates
 const userAcknowledgmentTemplate = (name) => `
     <html>
@@ -61,8 +52,17 @@ const adminNotificationTemplate = (name, email, message) => `
     </html>
 `;
 
+// Nodemailer transporter (cached)
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: your_email,
+    pass: password,
+  },
+});
+
 // Handle contact form submission
-app.post('/contact', (req, res) => {
+app.post('/contact', async (req, res) => {
   const { name, email, message } = req.body;
 
   // Validation
@@ -84,27 +84,17 @@ app.post('/contact', (req, res) => {
     html: adminNotificationTemplate(name, email, message),
   };
 
-  transporter.sendMail(userMailOptions, (error) => {
-    if (error) {
-      console.error('Error sending acknowledgment email:', error);
-      return res
-        .status(500)
-        .json({ message: 'Error sending acknowledgment email' });
-    }
-
-    transporter.sendMail(adminMailOptions, (err) => {
-      if (err) {
-        console.error('Error sending admin notification email:', err);
-        return res
-          .status(500)
-          .json({ message: 'Error sending admin notification email' });
-      }
-      res.status(200).json({ message: 'Emails sent successfully' });
-    });
-  });
+  try {
+    await transporter.sendMail(userMailOptions);
+    await transporter.sendMail(adminMailOptions);
+    res.status(200).json({ message: 'Emails sent successfully' });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).json({ message: 'Error sending email' });
+  }
 });
 
 // Start server
 app.listen(PORT, () => {
-  console.log('Server is running on port ${PORT}');
+  console.log(`Server is running on port ${PORT}`);
 });
