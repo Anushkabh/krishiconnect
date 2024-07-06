@@ -4,6 +4,20 @@
     'Hiragino Sans GB', 'Microsoft Yahei UI', 'Microsoft Yahei',
     'Source Han Sans CN', sans-serif;
 }
+
+.no-items-cart{
+  display: none;
+}
+.no-items-cart h1{
+  color:#73B63C !important;
+  font-size: 40px;
+}
+.no-items-cart p{
+  color:#A9FFC7;
+  font-weight: 500;
+  font-size: 20px;
+}
+
 @media (max-width: 768px) {
   .container {
     display: flex;

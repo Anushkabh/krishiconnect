@@ -72,12 +72,18 @@ function createItemElement(item) {
 }
 
 function updateCartDisplay() {
-  cartItemsContainer.innerHTML = '';
-  cartItems.forEach((item) => {
-    const itemElement = createItemElement(item);
-    cartItemsContainer.appendChild(itemElement);
-  });
-  updateSubtotal();
+  if (cartItems.length === 0) {
+    noItemCart.style.display = "flex"
+    noItemCart.style.flexDirection = "column"
+  }
+  else {
+    noItemCart.style.display = "none"
+    cartItems.forEach(item => {
+      const itemElement = createItemElement(item);
+      cartItemsContainer.appendChild(itemElement);
+    });
+    updateSubtotal();
+  }
 }
 
 updateCartDisplay();
