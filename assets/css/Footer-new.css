@@ -86,7 +86,7 @@
 }
 
 .footer-center-right-products,
-.footer-center-left-products {
+.footer-center-left-products, .footer-legal-list {
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -96,7 +96,7 @@
 }
 
 .footer-center-right-products h3,
-.footer-center-left-products h3 {
+.footer-center-left-products h3, .footer-legal h3{
   font-size: 20px;
   margin-bottom: 20px;
   color: rgb(104 198 123 / 79%);
@@ -107,9 +107,10 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 30px;
+  padding: 0;
+  margin-right: 5px;
+  margin-top: 30px;
 }
-
 .footer-center-productlist-item p span {
   margin-right: 1rem;
 }
@@ -124,6 +125,35 @@
 .footer-center-right-productlist-item p {
   cursor: pointer;
   transition: 0.3s all ease-in-out;
+}
+
+.footer-legal-list-item p{
+  cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    transform: translateX(5);
+}
+
+.footer-new-contents > div {
+  flex: 1;
+  transition: margin-left 0.3s ease; /* Adding transition for smooth animation */
+}
+
+.footer-legal-list-item:hover ~ div {
+  margin-left: -20px; 
+}
+
+.footer-legal-list-item:hover {
+  position: relative;
+  z-index: 2; 
+}
+
+
+.footer-center-left-productlist-item p:hover,
+.footer-center-right-productlist-item p:hover,
+.footer-legal-list-item p:hover {
+    border-left: 6px solid rgb(104 198 123 / 79%);
+    color: rgb(104 198 123 / 79%);
+    transform: translateX(-1);
 }
 
 .footer-center-left-productlist-item p:hover {
@@ -147,6 +177,34 @@
   color: inherit;
   text-decoration: none;
 }
+.footer-center-left-productlist-item p:hover {
+  border-left: 6px solid rgb(104 198 123 / 79%);
+  color: rgb(104 198 123 / 79%);
+}
+.footer-legal-list-item p:hover {
+  border-left: 6px solid rgb(104 198 123 / 79%);
+  color: rgb(104 198 123 / 79%);
+}
+
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;  
+  margin-bottom: 42px;
+}
+
+.footer-legal-list-item a {
+  text-decoration: none;
+  color: white
+}
+
+.footer-legal-list-item a:hover{
+  color:rgb(104 198 123);
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 900px) {
@@ -165,7 +223,7 @@
 
   .footer-center-right-products,
   .footer-center-left-products,
-  .footer-right-products {
+  .footer-right-products, .footer-legal-list {
     width: 100%;
     align-items: center; /* Center align items */
   }
