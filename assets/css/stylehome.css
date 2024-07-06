@@ -1,0 +1,172 @@
+body {
+  background: url('sunlight-forest-children-water-nature-grass-114691-wallhere.com.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+}
+h1 {
+  font-size: 72px;
+  color: rgb(44, 49, 216);
+  text-align: center;
+  font-weight: bold;
+}
+h2 {
+  font-size: 48px;
+  width: 100%;
+  color: rgb(229, 31, 71);
+  text-align: center;
+}
+.upper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgbA(1, 171, 35, 0.3);
+  padding: 50px;
+}
+#heading {
+  font-size: 56px;
+  color: rgb(0, 0, 0);
+  font-weight: normal;
+}
+#submitform {
+  height: 50px;
+  width: 600px;
+  max-width: 70%;
+  font-size: 28px;
+  background: linear-gradient(to bottom right, #e91e63 0%, #f8a1a1 100%);
+  border: none;
+  border-radius: 8px;
+  color: rgb(19, 74, 122);
+}
+input {
+  border-radius: 8px;
+  border: none;
+}
+#submitform:hover {
+  scale: 1.2;
+  transition-duration: 0.4s;
+  background: linear-gradient(to top right, #e91e63 0%, #dd1c1c 100%);
+}
+#productform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+table {
+  color: bisque;
+}
+.tablediv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom, rgb(33, 33, 33), rgb(55, 55, 55));
+  color: aliceblue;
+  padding: 30px;
+}
+.contact {
+  display: flex;
+  padding: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact img {
+  height: 50px;
+  margin: 40px;
+}
+.contact img:hover {
+  transition-duration: 0.5s;
+  scale: 1.2;
+}
+.nav-item a:hover {
+  background-color: aqua;
+}
+
+.prog {
+  display: flex;
+  background-color: rgb(38, 38, 38);
+  height: 500px;
+  width: 100%;
+  box-shadow: inset;
+  border-radius: 10px;
+  margin: 20px;
+  color: antiquewhite;
+  padding: 20px;
+  align-items: center;
+  box-shadow:
+    6px 6px 10px -1px rgb(0, 0, 0),
+    -6px -6px 20px -1px rgba(144, 141, 141, 0.7);
+}
+
+#progspace {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.outcircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  padding: 50px;
+  background-color: rgba(226, 222, 222, 0.2);
+  border-radius: 50px;
+  box-shadow:
+    6px 6px 10px -1px rgb(0, 0, 0),
+    -6px -6px 10px -1px rgba(144, 141, 141, 0.7);
+}
+
+.incircle {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(198, 198, 198, 0.5);
+  box-shadow:
+    inset 4px 4px 10px -1px rgb(0, 0, 0),
+    inset -4px -4px 10px -1px rgb(141, 141, 141);
+}
+
+circle {
+  stroke-width: 10px;
+  stroke-dasharray: 400;
+  fill: none;
+  stroke: url(#GradientColor);
+  /* r: 45px; */
+}
+
+svg {
+  position: absolute;
+}
+
+.skillname {
+  margin: 20px;
+}
+
+.c1 circle {
+  stroke-dashoffset: 220;
+}
+.c2 circle {
+  stroke-dashoffset: 320;
+}
+.prod {
+  position: absolute;
+}
+.headline {
+  padding: 10px;
+}

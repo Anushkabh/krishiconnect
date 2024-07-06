@@ -1,0 +1,9 @@
+.rating {
+  width: 180px;
+}
+
+.rating__star {
+  font-size: 20px;
+  cursor: pointer;
+  color: #dabd18b2;
+}

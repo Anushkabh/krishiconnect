@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Rating and Feedback</title>
+    <link rel="stylesheet" href="../assets/css//rateus.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const stars = document.querySelectorAll('.star');
+        let selectedRating = 0;
+
+        stars.forEach((star) => {
+          star.addEventListener('click', () => {
+            selectedRating = star.getAttribute('data-value');
+            highlightStars(selectedRating);
+          });
+        });
+
+        function highlightStars(value) {
+          stars.forEach((star) => {
+            if (star.getAttribute('data-value') <= value) {
+              star.classList.add('selected');
+            } else {
+              star.classList.remove('selected');
+            }
+          });
+        }
+
+        document
+          .querySelector('button[type="submit"]')
+          .addEventListener('click', () => {
+            const feedback = document.querySelector('textarea').value;
+            if (selectedRating > 0 && feedback.trim() !== '') {
+              Toastify({
+                text: 'Thanks For Your Feedback',
+                duration: 3000,
+                close: true,
+                gravity: 'top', // `top` or `bottom`
+                position: 'center', // `left`, `center` or `right`
+                backgroundColor: '#4CAF50',
+              }).showToast();
+            } else {
+              Toastify({
+                text: 'Please Enter Your Details',
+                duration: 3000,
+                close: true,
+                gravity: 'top', // `top` or `bottom`
+                position: 'center', // `left`, `center` or `right`
+                backgroundColor: '#FF0000',
+              }).showToast();
+            }
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Rate Us</h1>
+      <div class="stars">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+      </div>
+      <textarea placeholder="Give us your Feedback..."></textarea>
+      <button type="submit">Submit</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
