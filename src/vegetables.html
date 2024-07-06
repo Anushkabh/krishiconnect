@@ -6,8 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Organic Vegetables</title>
     <link rel="stylesheet" href="../assets/css/vegitable.css" />
+    <style>
+      html {
+            scroll-behavior: smooth;
+          }
+    
+    .scrollToTop {
+      height: 50px;
+      width: 50px;
+      background: #198754;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      position: fixed;
+      bottom: 22px;
+      right: 30px;
+    
+        .inner {
+      height: 82%;
+      width: 82%;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+        }
+    }
+    </style>
   </head>
   <body>
+    <div class="scrollToTop">
+      <div class="inner">
+          <i class="fa fa-arrow-up icon"></i>
+      </div>
+  </div>
     <div class="hero-img" style="height: 700px">
       <img
         src="https://media.istockphoto.com/id/1198965879/photo/organic-vegan-food.jpg?s=612x612&w=0&k=20&c=WdTEJ9S_byPyF0nCpg4lMJ4pch8XiSABX7CZl1UuMQ0="
@@ -518,5 +553,34 @@
     </div>
 
     <!------------------ Footer Section Ends ------------------->
+    <script>
+      // Select the scrollToTop element
+var scrollToTop = document.querySelector(".scrollToTop");
+
+// Function to calculate the scroll value and update the scrollToTop button
+function calcScrollValue() {
+    let pos = document.body.scrollTop || document.documentElement.scrollTop;
+    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let percentval = Math.round((pos * 100) / calcHeight);
+
+    if (pos > 100) {
+        scrollToTop.style.display = "flex";
+    } else {
+        scrollToTop.style.display = "none";
+    }
+
+    scrollToTop.style.background = `conic-gradient(#198754 ${percentval}%, white ${percentval}%)`;
+}
+
+// Add click event listener to scrollToTop button
+scrollToTop.addEventListener("click", function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+});
+
+// Call calcScrollValue on scroll and on load
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
+    </script>
   </body>
 </html>
