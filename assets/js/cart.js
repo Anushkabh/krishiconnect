@@ -7,16 +7,26 @@ var buyerEmailInput = document.getElementById('buyer-email');
 function createItemElement(item) {
   const itemElement = document.createElement('div');
   itemElement.classList.add('cartlist');
-  itemElement.innerHTML = "<span class='item-detail'><img src='" + item.imageUrl + "'/>  <span>" + item.name + "</span>  <span>" + item.price + "</span></span>";
+  itemElement.innerHTML =
+    "<span class='item-detail'><img src='" +
+    item.imageUrl +
+    "'/>  <span>" +
+    item.name +
+    '</span>  <span>' +
+    item.price +
+    '</span></span>';
   const decreaseQuantityButton = document.createElement('button');
   const increaseQuantityButton = document.createElement('button');
-  const image = document.createElement('img')
-  image.setAttribute('src', 'https://cdn-icons-png.flaticon.com/128/6861/6861362.png')
-  image.setAttribute('alt', "delete_image")
-  image.style.width = '30px'
-  image.style.height = '30px'
-  image.style.padding = "0.2rem"
-  image.style.cursor = "pointer"
+  const image = document.createElement('img');
+  image.setAttribute(
+    'src',
+    'https://cdn-icons-png.flaticon.com/128/6861/6861362.png'
+  );
+  image.setAttribute('alt', 'delete_image');
+  image.style.width = '30px';
+  image.style.height = '30px';
+  image.style.padding = '0.2rem';
+  image.style.cursor = 'pointer';
   decreaseQuantityButton.textContent = '-';
   increaseQuantityButton.textContent = '+';
   const itemquantity = document.createElement('span');
@@ -27,13 +37,15 @@ function createItemElement(item) {
   itemquantity.appendChild(increaseQuantityButton);
   decreaseQuantityButton.onclick = function () {
     if (item.quantity == 1) {
-      cartItems = cartItems.filter(cartItem => cartItem !== item);
+      cartItems = cartItems.filter((cartItem) => cartItem !== item);
       localStorage.setItem('cartItems', JSON.stringify(cartItems));
       updateCartDisplay();
     }
     if (item.quantity > 0) {
       item.quantity--;
-      cartItems = cartItems.map(cartItem => cartItem.name === item.name ? item : cartItem);
+      cartItems = cartItems.map((cartItem) =>
+        cartItem.name === item.name ? item : cartItem
+      );
       localStorage.setItem('cartItems', JSON.stringify(cartItems));
       updateCartDisplay();
     }
@@ -41,13 +53,15 @@ function createItemElement(item) {
 
   increaseQuantityButton.onclick = function () {
     item.quantity++;
-    cartItems = cartItems.map(cartItem => cartItem.name === item.name ? item : cartItem);
+    cartItems = cartItems.map((cartItem) =>
+      cartItem.name === item.name ? item : cartItem
+    );
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
     updateCartDisplay();
   };
 
   image.onclick = function () {
-    cartItems = cartItems.filter(cartItem => cartItem !== item);
+    cartItems = cartItems.filter((cartItem) => cartItem !== item);
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
     updateCartDisplay();
   };
@@ -59,7 +73,7 @@ function createItemElement(item) {
 
 function updateCartDisplay() {
   cartItemsContainer.innerHTML = '';
-  cartItems.forEach(item => {
+  cartItems.forEach((item) => {
     const itemElement = createItemElement(item);
     cartItemsContainer.appendChild(itemElement);
   });
@@ -77,7 +91,7 @@ function updateSubtotal() {
 
   var subtotalElement = document.getElementById('subtotal');
   if (cartItems.length === 0) {
-    emptyCart()
+    emptyCart();
   } else {
     subtotalElement.innerHTML = 'Subtotal: ' + subtotal.toFixed(2) + ' RS';
   }
@@ -90,19 +104,18 @@ function emptyCart() {
   var subtotalElement = document.getElementById('subtotal');
   subtotalElement.innerHTML = '';
   alert(
-    'Your cart is empty. Please add some items to your cart to continue shopping.')
-  ;
+    'Your cart is empty. Please add some items to your cart to continue shopping.'
+  );
 }
 
 function checkout() {
   var order = {
     buyerName: buyerNameInput.value,
     buyerEmail: buyerEmailInput.value,
-    items: cartItems
+    items: cartItems,
   };
 
   localStorage.setItem('order', JSON.stringify(order));
   window.location.href = 'transaction.html';
   emptyCart();
 }
-
