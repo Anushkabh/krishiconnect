@@ -237,6 +237,27 @@
         color: #fff;
         text-transform: uppercase;
       }
+      #login-signup-box {
+      width: 600px;
+      min-height: 600px; 
+      height: auto; 
+    }
+    @media (max-width: 516px) {
+      #login-signup-box {
+        width: 100%;
+        height: auto; 
+        min-height: unset; 
+      }
+      .signup-box {
+        margin-bottom: 20px; 
+      }
+      .d-flex {
+        flex-direction: column;
+      }
+      .flex-fill {
+        width: 100%;
+      }
+    }
     </style>
   </head>
 
@@ -447,147 +468,64 @@
 
     <div class="d-flex justify-content-center p-4">
       <div class="main" id="main"></div>
-      <div
-        class="border bg-white"
-        id="login-signup-box"
-        style="width: 600px; height: 600px"
-      >
+      <div class="border bg-white" id="login-signup-box">
         <div class="login-box m-4">
           <form id="login" onsubmit="login(event)" style="display: none">
             <div class="register_head title">LOG IN</div>
             <div class="m-3">
-              <label for="exampleInputEmail1" class="form-label"
-                >Email address</label
-              >
-              <input
-                type="email"
-                name="User1"
-                class="form-control"
-                id="User1"
-                required
-                aria-describedby="emailHelp"
-              />
+              <label for="User1" class="form-label">Email address</label>
+              <input type="email" name="User1" class="form-control" id="User1" required aria-describedby="emailHelp">
             </div>
             <div class="m-3">
-              <label for="exampleInputPassword1" class="form-label"
-                >Password</label
-              >
-              <input
-                type="password"
-                id="pass1"
-                name="pass1"
-                class="form-control"
-                id="exampleInputPassword1"
-                required
-              />
+              <label for="pass1" class="form-label">Password</label>
+              <input type="password" id="pass1" name="pass1" class="form-control" required>
               <span class="psw"><a href="login.html">forgot password?</a></span>
             </div>
-
-            <button
-              type="submit"
-              value="Submit"
-              id="submit1"
-              class="btn btn-success m-3"
-            >
-              LogIn
-            </button>
+            <button type="submit" value="Submit" id="submit1" class="btn btn-success m-3">LogIn</button>
             <p id="signup" class="text-success mx-3">
               <i>Don't have an Account? Create one</i>
             </p>
           </form>
         </div>
         <div class="signup-box m-2">
-          <form
-            id="form1"
-            onsubmit="signup(event)"
-            style="display: block; align-items: center"
-          >
+          <form id="form1" onsubmit="signup(event)" style="display: block;">
             <div class="register_head title">REGISTRATION</div>
-            <div class="d-flex flex-row">
-              <div class="m-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >First Name</label
-                >
-                <input
-                  type="text"
-                  name="fname"
-                  id="fname"
-                  class="form-control"
-                  required
-                />
+            <div class="d-flex flex-wrap" style="gap: 10px;">
+              <div class="flex-fill">
+                <label for="fname" class="form-label">First Name</label>
+                <input type="text" name="fname" id="fname" class="form-control" required>
               </div>
-              <div class="m-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Last Name</label
-                >
-                <input
-                  type="text"
-                  name="lname"
-                  id="lname"
-                  class="form-control"
-                  required
-                />
+              <div class="flex-fill">
+                <label for="lname" class="form-label">Last Name</label>
+                <input type="text" name="lname" id="lname" class="form-control" required>
               </div>
             </div>
-            <div class="d-flex flex-row">
-              <div class="m-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Username</label
-                >
-                <input
-                  type="text"
-                  name="username"
-                  id="user"
-                  class="form-control"
-                  required
-                />
+            <br>
+            <div class="d-flex flex-wrap" style="gap: 10px;">
+              <div class="flex-fill">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" id="username" class="form-control" required>
               </div>
-              <div class="m-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Phone number</label
-                >
-                <input
-                  type="text"
-                  name="no"
-                  id="no"
-                  class="form-control"
-                  required
-                />
+              <div class="flex-fill">
+                <label for="no" class="form-label">Phone number</label>
+                <input type="text" name="no" id="no" class="form-control" required>
               </div>
             </div>
-            <div class="m-3">
-              <label for="exampleInputEmail1" class="form-label"
-                >Email address</label
-              >
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="form-control"
-                required
-              />
+            <br>
+            <div class="m-1">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" name="email" id="email" class="form-control" required>
             </div>
-            <div class="m-3">
-              <label for="exampleInputPassword1" class="form-label"
-                >Password</label
-              >
-              <input
-                type="password"
-                id="pass"
-                name="password"
-                class="form-control"
-                required
-              />
+            <br>
+            <div class="m-1">
+              <label for="pass" class="form-label">Password</label>
+              <input type="password" id="pass" name="password" class="form-control" required>
             </div>
-            <button
-              type="submit"
-              value="Submit"
-              id="submit"
-              class="btn btn-success m-3"
-            >
-              SignUp
-            </button>
-            <p id="logswitch" class="text-success mx-3">
+            <br>
+            <button type="submit" value="Submit" id="submit" class="btn btn-success m-1">SignUp</button>
+            <br>
+            <br>
+            <p id="logswitch" class="text-success mx-1">
               <i>Already a user? LOG IN</i>
             </p>
           </form>
