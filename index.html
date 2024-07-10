@@ -129,6 +129,7 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../assets/css/googletranslate.css">
 
     <!-- Favicon -->
     <!--<link rel="shortcut icon" href="assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">-->
@@ -686,6 +687,7 @@
                   ><i class="ri-bank-card-fill"></i> Transactions</a
                 >
               </li>
+              
               <li class="nav-item dropdown">
                 <a
                   href="#"
@@ -840,7 +842,30 @@
 
       <!-- </div> -->
     </div>
+   
+    
     <!--   Chat bot   -->
+    <button id="translateButton">Translate</button>
+
+    <!-- Popup for Google Translate -->
+    <div id="translatePopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <div id="google_translate_element"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'en',
+          }, 'google_translate_element');
+      }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Your custom JavaScript -->
+  <script src="script.js"></script>
+      
     <div class="chatbotui">
       <button class="chatbot__button" style="background-color: white">
         <span class="material-symbols-outlined"
@@ -883,6 +908,7 @@
       </div>
     </div>
     <!--  chat bot finish  -->
+    
 
     <div id="page-content" class="page-content">
       <div class="banner">
@@ -1691,6 +1717,7 @@
     <!-- Swiper JS -->
     <script src="assets/js/swiper-bundle.min.js"></script>
     <!-- Custom JavaScript -->
+    <script src="../assets/js/googletranslate.js"></script>
     <script src="./chatBot/script.js"></script>
     <script type="module" src="assets/js/test-script.js"></script>
   </body>
