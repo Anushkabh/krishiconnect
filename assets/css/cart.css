@@ -4,6 +4,42 @@
     'Hiragino Sans GB', 'Microsoft Yahei UI', 'Microsoft Yahei',
     'Source Han Sans CN', sans-serif;
 }
+
+@media (max-width: 1024px) {
+  .page-header .navbar .navbar-nav .nav-link {
+    color: #FFF;
+    font-size: 14px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 989px) {
+  .page-header .navbar .navbar-nav .nav-link {
+    color: #FFF;
+    font-size: 10px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+    .page-header .navbar .navbar-brand img {
+        /* height: 50px; */
+        margin-left: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+    .page-header .navbar .navbar-nav .nav-link {
+        color: #FFF;
+        font-size: 12px;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+}
+
 @media (max-width: 768px) {
   .container {
     display: flex;
