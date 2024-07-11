@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 .chatbot__button {
   position: fixed;
@@ -53,7 +53,8 @@
   height: 500px;
   background-color: #f3f7f8;
   border-radius: 15px;
-  box-shadow: 0 0 128px 0 rgba(63, 207, 6, 0.1),
+  box-shadow:
+    0 0 128px 0 rgba(63, 207, 6, 0.1),
     0 32px 64px -48px rgba(63, 207, 6, 0.1);
   transform: scale(0.5);
   transition: transform 0.3s ease;
@@ -173,7 +174,7 @@
 }
 
 .chatbot__textarea::placeholder {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #fff;
 }
 
