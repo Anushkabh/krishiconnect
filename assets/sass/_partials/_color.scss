@@ -1,19 +1,19 @@
 // color elements
-$primary-color:			 #25b28e !important;;
-$gray-base:              #000 !default;
-$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              lighten($gray-base, 20%) !default;   // #333
-$gray:                   lighten($gray-base, 33.5%) !default; // #555
-$gray-light:             lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
-$brand-primary:			 #25b28e !important;
-$brand-secondary:		#926dde !default;
-$brand-success:         #2c9668 !default;
-$brand-info:            #57c7d4 !default;
-$brand-warning:         #f2a654 !default;
-$brand-danger:          #f96868 !default;
+$primary-color: #25b28e !important;
+$gray-base: #000 !default;
+$gray-darker: lighten($gray-base, 13.5%) !default; // #222
+$gray-dark: lighten($gray-base, 20%) !default; // #333
+$gray: lighten($gray-base, 33.5%) !default; // #555
+$gray-light: lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
+$brand-primary: #25b28e !important;
+$brand-secondary: #926dde !default;
+$brand-success: #2c9668 !default;
+$brand-info: #57c7d4 !default;
+$brand-warning: #f2a654 !default;
+$brand-danger: #f96868 !default;
 
-$white:                       #FFF !default;
-$black:                       #000 !default;
+$white: #fff !default;
+$black: #000 !default;
 
 $extra-light: #ebf3f5;
