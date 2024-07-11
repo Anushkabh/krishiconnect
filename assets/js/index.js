@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   };
 
+
   // Add initial animation classes
   staggeredClassAddition(headings, 'animate', 500);
 

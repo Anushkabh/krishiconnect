@@ -47,6 +47,7 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link
       href="assets/fonts/sb-bistro/sb-bistro.css"
       rel="stylesheet"
@@ -627,129 +628,61 @@
     </div>
     <div class="page-header">
       <!--=============== Navbar ===============-->
-      <nav
-        class="navbar navbar-expand-md navbar-dark bg-dark"
-        id="page-navigation"
-      >
-        <div class="container">
-          <!-- Navbar Brand -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="page-navigation">
+  <div class="container">
+    <!-- Navbar Brand -->
+    <a href="../index.html" class="navbar-brand mr-auto">
+      <img src="assets/img/logo/brand_logo/Dark_BG_logo.svg" width="90px" height="90px" style="display: inline-block; vertical-align: middle; margin-left: 0px; border-radius: 0%;" />
+    </a>
 
-          <a href="../index.html" class="navbar-brand mr-auto">
-            <img
-              src="assets/img/logo/brand_logo/Dark_BG_logo.svg"
-              width="90px"
-              height="90px"
-              style="
-                display: inline-block;
-                vertical-align: middle;
-                margin-left: 0px;
-                border-radius: 0%;
-              "
-            />
-          </a>
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-          <!-- Toggle Button -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarcollapse"
-            aria-controls="navbarCollapse"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarcollapse"
-          >
-            <!-- Navbar Menu -->
-            <ul class="navbar-nav">
-              <li
-                class="nav-item"
-                style="border: 2px solid white"
-                id="nav-link1"
-              >
-                <a href="./src/login.html" class="nav-link"
-                  ><i class="ri-user-3-fill"></i> Are You A Seller?</a
-                >
-              </li>
-              <li class="nav-item" id="nav-link2">
-                <a href="./src/shop.html" class="nav-link"
-                  ><i class="ri-shopping-bag-fill"></i> Shop</a
-                >
-              </li>
-              <li class="nav-item" id="nav-link3">
-                <a href="./src/transaction.html" class="nav-link"
-                  ><i class="ri-bank-card-fill"></i> Transactions</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle"
-                  id="wishlistDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  ><i class="ri-seedling-fill"></i> Wishlist
-                  <span id="wishlistCount" class="wishlist-count">0</span>
-                </a>
-
-                <div
-                  class="dropdown-menu"
-                  aria-labelledby="wishlistDropdown"
-                  id="wishlistDropdownContent"
-                >
-                  <!-- Wishlist items will be dynamically added here -->
-                </div>
-              </li>
-              <li class="nav-item" id="nav-link5">
-                <a href="./src/cart.html" class="nav-link"
-                  ><i class="ri-shopping-cart-2-fill"></i> My Cart</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="./src/faq.html" class="nav-link"
-                  ><i
-                    class="fa fa-question-circle"
-                    style="margin-right: 7px; font-size: 22px"
-                  ></i
-                  >FAQ</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="./src/contact.html" class="nav-link"
-                  ><i class="ri-user-fill"></i>Contact</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="./src/rateus.html" class="nav-link"
-                  ><i class="ri-user-star-fill"></i>Rate Us</a
-                >
-              </li>
-            </ul>
-            <input type="checkbox" id="toggle" />
-            <div
-              class="dropdown-menu"
-              aria-labelledby="wishlistDropdown"
-              id="wishlistDropdownContent"
-            >
-              <!-- Wishlist items will be dynamically added here -->
-            </div>
-            <input type="checkbox" id="toggle" />
-
-            <label class="toggle" for="toggle" style="margin-left: 20px">
-              <i class="bx bxs-sun"></i>
-              <i class="bx bx-moon"></i>
-              <span class="ball"></span>
-            </label>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
+      <!-- Navbar Menu -->
+      <ul class="navbar-nav">
+        <li class="nav-item" style="border: 2px solid white" id="nav-link1">
+          <a href="./src/login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
+        </li>
+        <li class="nav-item" id="nav-link2">
+          <a href="./src/shop.html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
+        </li>
+        <li class="nav-item" id="nav-link3">
+          <a href="./src/transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i> Wishlist <span id="wishlistCount" class="wishlist-count">0</span></a>
+          <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+            <!-- Wishlist items will be dynamically added here -->
           </div>
-        </div>
-      </nav>
+        </li>
+        <li class="nav-item" id="nav-link5">
+          <a href="./src/cart.html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
+        </li>
+        <li class="nav-item">
+          <a href="./src/faq.html" class="nav-link"><i class="fa fa-question-circle" style="margin-right: 7px; font-size: 22px"></i>FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a href="./src/contact.html" class="nav-link"><i class="ri-user-fill"></i>Contact</a>
+        </li>
+        <li class="nav-item">
+          <a href="./src/rateus.html" class="nav-link"><i class="ri-user-star-fill"></i>Rate Us</a>
+        </li>
+      </ul>
+
+      <!-- Toggle for Dark/Light Mode -->
+      <input type="checkbox" id="toggle" />
+      <label class="toggle" for="toggle" style="margin-left: 20px">
+        <i class="bx bxs-sun"></i>
+        <i class="bx bx-moon"></i>
+        <span class="ball"></span>
+      </label>
+    </div>
+  </div>
+</nav>
+
     </div>
     <!-- adding social icon in right side -->
     <div class="right-social-icn">
@@ -1659,6 +1592,20 @@
       splide.mount();
     </script>
     <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const toggler = document.querySelector('.navbar-toggler');
+          const navbarCollapse = document.querySelector('#navbarcollapse');
+
+          navbarCollapse.addEventListener('show.bs.collapse', function () {
+              toggler.querySelector('.navbar-toggler-icon').classList.add('cross');
+          });
+
+          navbarCollapse.addEventListener('hide.bs.collapse', function () {
+              toggler.querySelector('.navbar-toggler-icon').classList.remove('cross');
+          });
+      });
+  </script>
+    <script>
       $(document).ready(function () {
         // Show or hide the scroll to top button based on the scroll position
         $(window).scroll(function () {
@@ -1693,5 +1640,6 @@
     <!-- Custom JavaScript -->
     <script src="./chatBot/script.js"></script>
     <script type="module" src="assets/js/test-script.js"></script>
+ 
   </body>
 </html>
