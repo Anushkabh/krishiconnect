@@ -1,337 +1,367 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<html style="width: 100%;">
+<head>
     <title>KrishiConnect | Wishlist</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="../assets/css/stylesheet.css"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="../assets/fonts/sb-bistro/sb-bistro.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="../assets/fonts/font-awesome/font-awesome.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="../assets/css/Footer-new.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-      href="../assets/packages/bootstrap/bootstrap.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-      href="../assets/packages/o2system-ui/o2system-ui.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-      href="../assets/packages/owl-carousel/owl-carousel.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-      href="../assets/packages/cloudzoom/cloudzoom.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-      href="../assets/packages/thumbelina/thumbelina.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-      href="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-      href="../assets/css/theme.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/img/logo/log.png">
+    <link rel="shortcut icon" href="../assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="../assets/fonts/sb-bistro/sb-bistro.css" type="text/css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="../assets/packages/bootstrap/bootstrap.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../assets/packages/o2system-ui/o2system-ui.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../assets/packages/owl-carousel/owl-carousel.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../assets/packages/cloudzoom/cloudzoom.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../assets/packages/thumbelina/thumbelina.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Footer-new.css">
+    <link rel="stylesheet" href="../assets/css/darkmode.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <script src="https://unpkg.com/scrollreveal"></script>
-
-    <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../assets/css/darkmode.css" />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-  </head>
-  <style>
-    .wishlist-container {
-      display: flex;
-      justify-content: center;
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<style>
+     #wishlistDropdownContent {
+      position: absolute;
+      background-color: #f9f9f9;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 6;
+      width: 200px;
+      padding: 10px;
+      border-radius: 5px;
     }
 
-    .footer-section {
-      position: relative;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      height: 100vh; /* Ensures the section covers the full viewport height */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .container h1 {
+        color: white;
     }
 
-    .wishlist {
-      background-color: #132e40;
-      color: white;
-      padding: 20px;
-      border-radius: 10px;
-      margin: 20px;
-    }
-
-    .wishlist-text {
-      font-size: 24px;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-
-    .wishlist-items {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      grid-gap: 20px;
+    .container p {
+        color: rgb(44, 43, 43);
+        font-weight: bold;
     }
 
     .wishlist-item {
-      margin-bottom: 10px;
+         margin-bottom: 10px;
+     }
+
+     .item-name {
+         font-weight: bold;
+     }
+
+    .wishlist-item .item-image {
+        width: 50px; 
+        height: 50px;
+        background-size: cover;
+        background-position: center;
+        margin-right: 10px;
     }
 
-    .item-name {
-      font-weight: bold;
-      width: 200px;
-      display: inline-block;
-      margin-right: 20px;
+    .add-to-cart-button,
+    .remove-button {
+        background-color: #4caf50;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
     }
 
-    .item-price {
-      font-weight: bold;
-      color: #ffffff;
-      width: 100px;
-      display: inline-block;
-      text-align: right;
+    .add-to-cart-button:hover {
+        background-color: #539655;
     }
 
-    .wishlist-btn {
-      border: none;
-      padding: 10px 20px;
-      margin-top: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      background-color: #ffffff;
+    .remove-button {
+        background-color: #e91e63;
+        margin-left: 1px;
+        cursor: pointer;
+    }
+
+    .remove-button:hover {
+        background-color: #cd1653;
+        color: white;
+        border-radius: 3px;
+    }
+
+    .view-wishlist-link {
+        display: block;
+        padding: 10px;
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        border-top: 1px solid #ccc;
+    }
+
+    .view-wishlist-link:hover {
+        background-color: #f5f5f5;
+    }
+
+    /* wishlist table */
+    .wishlist {
+        max-width: 1000px;
+        margin: 20px auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 2px solid #b4d3b5;
+        font-size: 17px;
+    }
+
+    th {
+        background-color: rgba(111, 168, 122, 0.952);
+        color: white;
+        border-bottom: 3px solid #027205;
+        font-size: 17px;
+    }
+
+    .data-image {
+        max-width: 100px;
+        height: auto;
+    }
+
+    .wishlist-buttons {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .wishlist-buttons button {
+        background-color: #c2fbd7;
+        border-radius: 10px;
+        box-shadow: 0px 2px 14px rgba(2, 128, 0, 0.549);
+        color: rgb(0, 100, 0);
+        cursor: pointer;
+        display: inline-block;
+        padding: 7px 20px;
+        margin: 20px 10px;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        font-size: 16px;
+        transition: all 0.1s ease-in-out;
+    }
+
+    .wishlist-buttons button:hover {
+        box-shadow: rgba(44,187,99,.35);
+        border: 1px solid rgb(18, 62, 5);
+        transform: scale(1.05);
+    }
+
+    .add-to-cart-btn { 
+        background-color: #1fea0044;
+        color: rgb(7, 79, 24);
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .add-to-cart-btn:hover { 
+        border-bottom: 1px solid green;
+        border-right: 1px solid green;
+    }
+
+    .remove-btn {
+        background-color: #ff00002c;
+        color: rgb(118, 0, 0);
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .remove-btn:hover {
+        border-right:1px solid rgb(79, 7, 7);
+        border-bottom:1px solid rgb(79, 7, 7);
+    }
+    .page-header .navbar .navbar-brand img {
+      height: 58px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: #333333;
+      font-size: 14px;
+      font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+      background: #fff;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-transform: uppercase !important;
+      font-weight: 700 !important;
+    }
+    .page-header .navbar {
       color: white;
     }
-
-    .btn1 {
-      margin-right: 10px;
+    .page-header .navbar .navbar-brand img {
+      /* height: 50px; */
+      margin-left: -160px;
+      object-fit: cover;
+      border-radius: 50%;
     }
-
-    .wishlist-btn:hover {
-      transform: scale(1.1);
+    .page-header .navbar .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 1rem;
+      padding-right: 1rem;
+      padding-left: 1rem;
     }
-    /* For static navbar */
-
-    .container {
-      max-width: 100%;
-      padding: 0 15px;
-      margin: 0 auto;
-      align-items: center;
+    .page-header .navbar .navbar-nav .nav-link:focus,
+    .page-header .navbar .navbar-nav .nav-link:hover,
+    .page-header .navbar .navbar-nav .nav-link.active {
+      color: #e91e63;
     }
-
-    .navbar {
-      background-color: transparent;
-      position: static;
-      width: 100%;
+    .page-header .navbar.bg-white {
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
     }
-
-    .navbar-brand {
-      display: flex;
-      align-items: center;
+    .page-header .navbar.bg-white .navbar-nav .nav-link {
+      color: #333333;
     }
-
+    .page-header .navbar.bg-white .navbar-nav .nav-link:focus,
+    .page-header .navbar.bg-white .navbar-nav .nav-link:hover,
+    .page-header .navbar.bg-white .navbar-nav .nav-link.active {
+      color: #e91e63;
+    }
     .navbar-brand img {
-      max-height: 50px;
-      margin-right: 10px;
-    }
-    .container h1 {
-      color: black;
-    }
-    .container p {
-      color: black;
-      font-size: bolder;
+      margin-left: 30%;
     }
 
-    .footer-navbar {
-      color: black;
+    .banner .jumbotron {
+      margin-bottom: 0;
+      padding: 0;
+      position: relative;
+
+      overflow: hidden;
+      height: auto;
     }
 
-    @media screen and (max-width: 768px) {
-      .navbar-collapse {
-        position: absolute;
-        right: 0;
-        top: 95px;
-        text-align: center;
-        background-color: #132e40;
-        width: 186px;
-        z-index: 1000;
-      }
-
-      .navbar-nav li {
-        color: black;
-      }
-      .toggle {
-        position: relative;
-        left: 101px;
-      }
+    .banner .jumbotron video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
     }
 
-    @media (max-width: 370px) {
-      .navbar-toggler {
-        right: 10px;
-      }
-
-      .toggle {
-        right: 10px;
-        top: 10px;
-      }
-
-      .navbar-collapse {
-        top: 50px;
-      }
+    .banner .jumbotron .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 2;
     }
-  </style>
-  <body class="light">
-    <div class="page-header">
-      <!--=============== Navbar ===============-->
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+    .banner .jumbotron .container {
+      position: relative;
+      z-index: 3;
+      padding-top: 200px; /* Adjust padding as needed to position the text correctly */
+      text-align: center;
+    }
+
+    .banner .jumbotron .container h1,
+    .banner .jumbotron .container p {
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    .banner .jumbotron .container {
+      margin-top: 2.3rem;
+      /* background-color: transparent; */
+      border: none;
+    }
+
+    .banner .jumbotron .container {
+      border: none;
+      color: #fff;
+    }
+
+    .banner .jumbotron .container {
+      color: #fff;
+      text-transform: uppercase;
+    }
+</style>
+<body>
+  <div class="page-header">
+    <!--=============== Navbar ===============-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="page-navigation">
         <div class="container">
-          <!-- Navbar Brand -->
+            <!-- Navbar Brand -->
+            <a href="../index.html" class="navbar-brand mr-auto">
+                <img src="../assets/img/logo/logo3.png" width="70px" height="70px" style="display: inline-block; vertical-align: middle; margin-left: 0px;" />
+            </a>
 
-          <a href="../index.html" class="navbar-brand mr-auto">
-            <img
-              src="../assets/img/logo/brand_logo/Dark_BG_logo.svg"
-              width="90px"
-              height="90px"
-              style="
-                display: inline-block;
-                vertical-align: middle;
-                margin-left: 0px;
-                border-radius: 0%;
-              "
-            />
-          </a>
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <!-- Toggle Button -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarcollapse"
-            aria-controls="navbarCollapse"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarcollapse"
-          >
-            <!-- Navbar Menu -->
-            <ul class="navbar-nav">
-              <li
-                class="nav-item"
-                style="border: 2px solid white"
-                id="nav-link1"
-              >
-                <a href="login.html" class="nav-link"
-                  ><i class="ri-user-3-fill"></i> Are You A Seller?</a
-                >
-              </li>
-              <li class="nav-item" id="nav-link2">
-                <a href="shop.html" class="nav-link"
-                  ><i class="ri-shopping-bag-fill"></i> Shop</a
-                >
-              </li>
-              <li class="nav-item" id="nav-link3">
-                <a href="transaction.html" class="nav-link"
-                  ><i class="ri-bank-card-fill"></i> Transactions</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle"
-                  id="wishlistDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  ><i class="ri-seedling-fill"></i> Wishlist
-                  <span id="wishlistCount" class="wishlist-count">0</span>
-                </a>
-                <div
-                  class="dropdown-menu"
-                  aria-labelledby="wishlistDropdown"
-                  id="wishlistDropdownContent"
-                >
-                  <!-- Wishlist items will be dynamically added here -->
-                </div>
-              </li>
-              <li class="nav-item" id="nav-link5">
-                <a href="cart.html" class="nav-link"
-                  ><i class="ri-shopping-cart-2-fill"></i> My Cart</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="contact.html" class="nav-link"
-                  ><i class="ri-user-star-fill"></i>Contact</a
-                >
-              </li>
-              <li class="nav-item" style="padding: 2px 20px">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
+                <!-- Navbar Menu -->
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="border: 2px solid white" id="nav-link1">
+                        <a href="./login.html" class="nav-link"><i class="ri-user-3-fill"></i> Are You A Seller?</a>
+                    </li>
+                    <li class="nav-item" id="nav-link2">
+                        <a href="./shop.html" class="nav-link"><i class="ri-shopping-bag-fill"></i> Shop</a>
+                    </li>
+                    <li class="nav-item" id="nav-link3">
+                        <a href="./transaction.html" class="nav-link"><i class="ri-bank-card-fill"></i> Transactions</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="wishlistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-seedling-fill"></i> Wishlist <span id="wishlistCount" class="wishlist-count">0</span></a>
+                        <div class="dropdown-menu" aria-labelledby="wishlistDropdown" id="wishlistDropdownContent">
+                            <!-- Wishlist items will be dynamically added here -->
+                        </div>
+                    </li>
+                    <li class="nav-item" id="nav-link5">
+                        <a href="./cart.html" class="nav-link"><i class="ri-shopping-cart-2-fill"></i> My Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./faq.html" class="nav-link"><i class="fa fa-question-circle" style="margin-right: 7px; font-size: 22px"></i> FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contact.html" class="nav-link"><i class="ri-user-fill"></i> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./rateus.html" class="nav-link"><i class="ri-user-star-fill"></i> Rate Us</a>
+                    </li>
+                </ul>
                 <input type="checkbox" id="toggle" />
-
-                <label class="toggle" for="toggle">
-                  <i class="bx bxs-sun"></i>
-                  <i class="bx bx-moon"></i>
-                  <span class="ball"></span>
+                <label class="toggle" for="toggle" style="margin-left: 20px">
+                    <i class="bx bxs-sun"></i>
+                    <i class="bx bx-moon"></i>
+                    <span class="ball"></span>
                 </label>
+            </div>
               </li>
             </ul>
           </div>
@@ -426,7 +456,7 @@
 
       <!-- </div> -->
     </div>
-    <div id="page-content" class="page-content">
+    <!--<div id="page-content" class="page-content">
       <div class="banner">
         <div
           class="jumbotron jumbotron-bg text-center rounded-0"
@@ -446,256 +476,242 @@
             <p class="lead" id="s">Save time and leave the groceries to us.</p>
           </div>
         </div>
-      </div>
+    </nav>
+</div>-->
 
-      <div class="wishlist-container" id="wishlist-container">
-        <div class="wishlist" style="background-color: #132e40">
-          <h1 class="wishlist-text" style="color: white">Wishlist</h1>
-          <div id="wishlist-items" class="wishlist-items"></div>
-          <button
-            class="wishlist-btn btn1"
-            onclick="emptyWishlist()"
-            style="border-radius: 3px; color: rgb(7, 7, 7)"
-          >
-            Empty Wishlist
-          </button>
-          <button
-            onclick="window.location.href='cart.html'"
-            class="wishlist-btn btn2"
-            style="border-radius: 3px; color: rgb(9, 9, 9)"
-          >
-            Go to Cart
-          </button>
-        </div>
-      </div>
-      <!------------------ Footer------------------->
-      <div class="footer-new">
-        <div class="footer-new-contents">
-          <div class="footer-left-social">
-            <div class="footer-left-social-image-container">
-              <img
-                src="../assets/img/logo/brand_logo/Dark_BG_logo.svg"
-                style="
-                  width: 100px;
-                  height: 100px;
-                  display: inline-block;
-                  vertical-align: middle;
-                  margin: 0px;
-                  padding: 0px;
-                  border-radius: 0%;
-                "
-                alt="footer-logo"
-                class="footer-logo-image"
-              />
-            </div>
-            <div class="footer-left-about-container">
-              <p>
-                कृषिCONNECT is an online B2C platform that delivers fresh
-                organic produce from local farmers directly to your table,
-                eliminating middlemen and ensuring farmers receive fair
-                compensation.
-              </p>
-            </div>
-          </div>
-          <div class="footer-center-right-products">
-            <div class="footer-center-right-productlist">
-              <h3>PRODUCTS</h3>
-              <div class="footer-center-right-productlist-item">
-                <p><a href="src/fruites.html" class="link">Fruits</a></p>
-                <p><a href="src\vegetables.html" class="link">Vegetables</a></p>
-                <p><a href="#" class="link">Oil Seeds</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="footer-center-left-products">
-            <div class="footer-center-left-productlist">
-              <h3>Useful Links</h3>
-              <div class="footer-center-left-productlist-item">
-                <p><a href="src/blog.html" class="link">Blogs</a></p>
-                <p><a href="#" class="link">Herbs</a></p>
-                <p><a href="#" class="link">Pesticides</a></p>
-                <p><a href="src\faq.html" class="link">FAQ</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="footer-right-products">
-            <div class="footer-center-productlist">
-              <h3>Contact US</h3>
-              <div class="footer-center-productlist-item">
-                <p>
-                  <span><i class="fas fa-home me-3"></i></span> New York, NY
-                  10012, US
+<div id="page-content" class="page-content">
+    <div class="banner">
+        <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('https://w0.peakpx.com/wallpaper/505/685/HD-wallpaper-still-life-vegetables-basket-fresh-fruits.jpg');">
+            <div class="container">
+                <img src="../assets/img/logo/log.png" alt="" height="300" id="image">
+                <h1 class="pt-5" id="y" style="color: rgb(255, 255, 255); text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);">
+                    Your Wishlist
+                </h1>
+                <p class="lead" id="s" style="color: rgb(255, 255, 255); text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);">
+                    Save time and leave the groceries to us.
                 </p>
-                <p>
-                  <span><i class="fas fa-envelope me-3"> </i> </span
-                  >krishiconnect@gmail.com
-                </p>
-                <p>
-                  <span><i class="fas fa-phone me-3"></i></span>082723 67238
-                </p>
-              </div>
             </div>
-          </div>
         </div>
-
-        <div class="footer-new-copyright">
-          © 2024 Copyright: कृषिCONNECT | Fresh From Farm. All rights reserved.
-          <div class="footer-left-Social-icon-container">
-            <div class="footer-left-social-icons soc1">
-              <a href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  width="24"
-                  height="24"
-                  fill="#007b00"
-                  viewBox="0 0 32 32"
-                >
-                  <path
-                    d="M 19.253906 2 C 15.311906 2 13 4.0821719 13 8.8261719 L 13 13 L 8 13 L 8 18 L 13 18 L 13 30 L 18 30 L 18 18 L 22 18 L 23 13 L 18 13 L 18 9.671875 C 18 7.884875 18.582766 7 20.259766 7 L 23 7 L 23 2.2050781 C 22.526 2.1410781 21.144906 2 19.253906 2 z"
-                  ></path></svg
-              ></a>
-            </div>
-            <div class="footer-left-social-icons soc2">
-              <a href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  width="24"
-                  height="24"
-                  fill="#007b00"
-                  viewBox="0 0 32 32"
-                >
-                  <path
-                    d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z"
-                  ></path></svg
-              ></a>
-            </div>
-            <div class="footer-left-social-icons soc3">
-              <a href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  width="24"
-                  height="24"
-                  fill="#007b00"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M 12.011719 2 C 6.5057187 2 2.0234844 6.478375 2.0214844 11.984375 C 2.0204844 13.744375 2.4814687 15.462563 3.3554688 16.976562 L 2 22 L 7.2324219 20.763672 C 8.6914219 21.559672 10.333859 21.977516 12.005859 21.978516 L 12.009766 21.978516 C 17.514766 21.978516 21.995047 17.499141 21.998047 11.994141 C 22.000047 9.3251406 20.962172 6.8157344 19.076172 4.9277344 C 17.190172 3.0407344 14.683719 2.001 12.011719 2 z M 12.009766 4 C 14.145766 4.001 16.153109 4.8337969 17.662109 6.3417969 C 19.171109 7.8517969 20.000047 9.8581875 19.998047 11.992188 C 19.996047 16.396187 16.413812 19.978516 12.007812 19.978516 C 10.674812 19.977516 9.3544062 19.642812 8.1914062 19.007812 L 7.5175781 18.640625 L 6.7734375 18.816406 L 4.8046875 19.28125 L 5.2851562 17.496094 L 5.5019531 16.695312 L 5.0878906 15.976562 C 4.3898906 14.768562 4.0204844 13.387375 4.0214844 11.984375 C 4.0234844 7.582375 7.6067656 4 12.009766 4 z M 8.4765625 7.375 C 8.3095625 7.375 8.0395469 7.4375 7.8105469 7.6875 C 7.5815469 7.9365 6.9355469 8.5395781 6.9355469 9.7675781 C 6.9355469 10.995578 7.8300781 12.182609 7.9550781 12.349609 C 8.0790781 12.515609 9.68175 15.115234 12.21875 16.115234 C 14.32675 16.946234 14.754891 16.782234 15.212891 16.740234 C 15.670891 16.699234 16.690438 16.137687 16.898438 15.554688 C 17.106437 14.971687 17.106922 14.470187 17.044922 14.367188 C 16.982922 14.263188 16.816406 14.201172 16.566406 14.076172 C 16.317406 13.951172 15.090328 13.348625 14.861328 13.265625 C 14.632328 13.182625 14.464828 13.140625 14.298828 13.390625 C 14.132828 13.640625 13.655766 14.201187 13.509766 14.367188 C 13.363766 14.534188 13.21875 14.556641 12.96875 14.431641 C 12.71875 14.305641 11.914938 14.041406 10.960938 13.191406 C 10.218937 12.530406 9.7182656 11.714844 9.5722656 11.464844 C 9.4272656 11.215844 9.5585938 11.079078 9.6835938 10.955078 C 9.7955938 10.843078 9.9316406 10.663578 10.056641 10.517578 C 10.180641 10.371578 10.223641 10.267562 10.306641 10.101562 C 10.389641 9.9355625 10.347156 9.7890625 10.285156 9.6640625 C 10.223156 9.5390625 9.737625 8.3065 9.515625 7.8125 C 9.328625 7.3975 9.131125 7.3878594 8.953125 7.3808594 C 8.808125 7.3748594 8.6425625 7.375 8.4765625 7.375 z"
-                  ></path></svg
-              ></a>
-            </div>
-            <div class="footer-left-social-icons soc4">
-              <a href="https://github.com/Anushkabh/krishiconnect">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  width="24"
-                  height="24"
-                  fill="#007b00"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.481.5.092.684-.217.684-.484 0-.238-.009-.866-.014-1.7-2.782.604-3.37-1.338-3.37-1.338-.455-1.156-1.112-1.465-1.112-1.465-.908-.621.069-.608.069-.608 1.003.07 1.532 1.03 1.532 1.03.893 1.532 2.344 1.09 2.915.832.091-.645.35-1.086.635-1.335-2.22-.251-4.555-1.11-4.555-4.937 0-1.09.39-1.983 1.032-2.68-.103-.252-.448-1.267.098-2.636 0 0 .837-.268 2.74 1.02A9.432 9.432 0 0112 6.73c.84.003 1.686.113 2.48.33 1.902-1.288 2.738-1.02 2.738-1.02.547 1.369.202 2.384.1 2.636.643.697 1.03 1.59 1.03 2.68 0 3.836-2.34 4.684-4.567 4.927.359.308.678.916.678 1.847 0 1.334-.012 2.411-.012 2.737 0 .268.18.581.688.482C19.135 20.164 22 16.417 22 12c0-5.523-4.477-10-10-10z"
-                  />
-                </svg>
-              </a>
-            </div>
-            <div class="footer-left-social-icons soc5">
-              <a href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  width="24"
-                  height="24"
-                  fill="#007b00"
-                  viewBox="0 0 448 512"
-                >
-                  <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                  <path
-                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!------------------ Footer Section Ends ------------------->
-
-      <script>
-        document.getElementById('copyright-year').textContent =
-          new Date().getFullYear();
-      </script>
-      <script type="text/javascript" src="../assets/js/jquery.js"></script>
-      <script
-        type="text/javascript"
-        src="../assets/js/jquery-migrate.js"
-      ></script>
-      <script
-        type="text/javascript"
-        src="../assets/packages/bootstrap/libraries/popper.js"
-      ></script>
-      <script
-        type="text/javascript"
-        src="../assets/packages/bootstrap/bootstrap.js"
-      ></script>
-      <script
-        type="text/javascript"
-        src="../assets/packages/o2system-ui/o2system-ui.js"
-      ></script>
-      <script
-        type="text/javascript"
-        src="../assets/packages/owl-carousel/owl-carousel.js"
-      ></script>
-      <script
-        type="text/javascript"
-        src="../assets/packages/cloudzoom/cloudzoom.js"
-      ></script>
-      <script
-        type="text/javascript"
-        src="../assets/packages/thumbelina/thumbelina.js"
-      ></script>
-      <script
-        type="text/javascript"
-        src="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"
-      ></script>
-      <script type="text/javascript" src="../assets/js/theme.js"></script>
-      <script src="../assets/js/wishlist.js"></script>
-      <script src="../assets/js/cart.js"></script>
-      <script src="../assets/js/shop.js"></script>
-      <script>
-        ScrollReveal({
-          //reset: true ,
-          distance: '60px',
-          duration: 2500,
-          delay: 400,
-        });
-        ScrollReveal().reveal('#image,#y,#s', { delay: 500, origin: 'top' });
-        ScrollReveal().reveal('#wishlist-container', {
-          delay: 600,
-          origin: 'top',
-        });
-        ScrollReveal().reveal('#container', { delay: 700, origin: 'bottom' });
-        ScrollReveal().reveal('#col-md-3,#col-md-3l', {
-          delay: 500,
-          origin: 'left',
-        });
-        ScrollReveal().reveal('#col-md,#col-md-3m', {
-          delay: 500,
-          origin: 'right',
-        });
-        ScrollReveal().reveal('#copyright', { delay: 500, origin: 'bottom' });
-      </script>
-      <script src="../assets/js/darkmode.js"></script>
     </div>
-  </body>
+
+    <!-- Wishlist Body -->
+    <div class="wishlist">
+        <table>
+            <thead>
+                <!--<tr>
+                    <th>Product</th>
+                    <th></th>
+                    <th>In Stock</th>
+                    <th>Action</th>
+                    <th>Remove</th>
+                </tr>-->
+            </thead>
+            <tbody id="wishlistBody"> </tbody>
+        </table>
+    </div>
+
+    <div class="wishlist-buttons">
+        <button id="emptyWishlistBtn">Empty Wishlist</button>
+        <button id="goToCartBtn">Go to Cart</button>
+    </div>
+</div>
+
+<!------------------ Footer------------------->
+<div class="footer-new">
+  <div class="footer-new-contents">
+    <div class="footer-left-social">
+      <div class="footer-left-social-image-container">
+        <img
+          src="../assets/img/logo/brand_logo/Dark_BG_logo.svg"
+          style="
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0px;
+            padding: 0px;
+            border-radius: 0%;
+          "
+          alt="footer-logo"
+          class="footer-logo-image"
+        />
+      </div>
+      <div class="footer-left-about-container">
+        <p>
+          कृषिCONNECT is an online B2C platform that delivers fresh organic
+          produce from local farmers directly to your table, eliminating
+          middlemen and ensuring farmers receive fair compensation.
+        </p>
+      </div>
+    </div>
+    <div class="footer-center-right-products">
+      <div class="footer-center-right-productlist">
+        <h3>PRODUCTS</h3>
+        <div class="footer-center-right-productlist-item">
+          <p><a href="src/fruites.html" class="link">Fruits</a></p>
+          <p><a href="src\vegetables.html" class="link">Vegetables</a></p>
+          <p><a href="#" class="link">Oil Seeds</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-center-left-products">
+      <div class="footer-center-left-productlist">
+        <h3>Useful Links</h3>
+        <div class="footer-center-left-productlist-item">
+          <p><a href="src/blog.html" class="link">Blogs</a></p>
+          <p><a href="#" class="link">Herbs</a></p>
+          <p><a href="#" class="link">Pesticides</a></p>
+          <p><a href="src\faq.html" class="link">FAQ</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-right-products">
+      <div class="footer-center-productlist">
+        <h3>Contact US</h3>
+        <div class="footer-center-productlist-item">
+          <p>
+            <span><i class="fas fa-home me-3"></i></span> New York, NY
+            10012, US
+          </p>
+          <p>
+            <span><i class="fas fa-envelope me-3"> </i> </span
+            >krishiconnect@gmail.com
+          </p>
+          <p>
+            <span><i class="fas fa-phone me-3"></i></span>082723 67238
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-new-copyright">
+    © 2024 Copyright: कृषिCONNECT | Fresh From Farm. All rights reserved.
+    <div class="footer-left-Social-icon-container">
+      <div class="footer-left-social-icons soc1">
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            fill="#007b00"
+            viewBox="0 0 32 32"
+          >
+            <path
+              d="M 19.253906 2 C 15.311906 2 13 4.0821719 13 8.8261719 L 13 13 L 8 13 L 8 18 L 13 18 L 13 30 L 18 30 L 18 18 L 22 18 L 23 13 L 18 13 L 18 9.671875 C 18 7.884875 18.582766 7 20.259766 7 L 23 7 L 23 2.2050781 C 22.526 2.1410781 21.144906 2 19.253906 2 z"
+            ></path></svg
+        ></a>
+      </div>
+      <div class="footer-left-social-icons soc2">
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            fill="#007b00"
+            viewBox="0 0 32 32"
+          >
+            <path
+              d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z"
+            ></path></svg
+        ></a>
+      </div>
+      <div class="footer-left-social-icons soc3">
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            fill="#007b00"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M 12.011719 2 C 6.5057187 2 2.0234844 6.478375 2.0214844 11.984375 C 2.0204844 13.744375 2.4814687 15.462563 3.3554688 16.976562 L 2 22 L 7.2324219 20.763672 C 8.6914219 21.559672 10.333859 21.977516 12.005859 21.978516 L 12.009766 21.978516 C 17.514766 21.978516 21.995047 17.499141 21.998047 11.994141 C 22.000047 9.3251406 20.962172 6.8157344 19.076172 4.9277344 C 17.190172 3.0407344 14.683719 2.001 12.011719 2 z M 12.009766 4 C 14.145766 4.001 16.153109 4.8337969 17.662109 6.3417969 C 19.171109 7.8517969 20.000047 9.8581875 19.998047 11.992188 C 19.996047 16.396187 16.413812 19.978516 12.007812 19.978516 C 10.674812 19.977516 9.3544062 19.642812 8.1914062 19.007812 L 7.5175781 18.640625 L 6.7734375 18.816406 L 4.8046875 19.28125 L 5.2851562 17.496094 L 5.5019531 16.695312 L 5.0878906 15.976562 C 4.3898906 14.768562 4.0204844 13.387375 4.0214844 11.984375 C 4.0234844 7.582375 7.6067656 4 12.009766 4 z M 8.4765625 7.375 C 8.3095625 7.375 8.0395469 7.4375 7.8105469 7.6875 C 7.5815469 7.9365 6.9355469 8.5395781 6.9355469 9.7675781 C 6.9355469 10.995578 7.8300781 12.182609 7.9550781 12.349609 C 8.0790781 12.515609 9.68175 15.115234 12.21875 16.115234 C 14.32675 16.946234 14.754891 16.782234 15.212891 16.740234 C 15.670891 16.699234 16.690438 16.137687 16.898438 15.554688 C 17.106437 14.971687 17.106922 14.470187 17.044922 14.367188 C 16.982922 14.263188 16.816406 14.201172 16.566406 14.076172 C 16.317406 13.951172 15.090328 13.348625 14.861328 13.265625 C 14.632328 13.182625 14.464828 13.140625 14.298828 13.390625 C 14.132828 13.640625 13.655766 14.201187 13.509766 14.367188 C 13.363766 14.534188 13.21875 14.556641 12.96875 14.431641 C 12.71875 14.305641 11.914938 14.041406 10.960938 13.191406 C 10.218937 12.530406 9.7182656 11.714844 9.5722656 11.464844 C 9.4272656 11.215844 9.5585938 11.079078 9.6835938 10.955078 C 9.7955938 10.843078 9.9316406 10.663578 10.056641 10.517578 C 10.180641 10.371578 10.223641 10.267562 10.306641 10.101562 C 10.389641 9.9355625 10.347156 9.7890625 10.285156 9.6640625 C 10.223156 9.5390625 9.737625 8.3065 9.515625 7.8125 C 9.328625 7.3975 9.131125 7.3878594 8.953125 7.3808594 C 8.808125 7.3748594 8.6425625 7.375 8.4765625 7.375 z"
+            ></path></svg
+        ></a>
+      </div>
+      <div class="footer-left-social-icons soc4">
+        <a href="https://github.com/Anushkabh/krishiconnect">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            fill="#007b00"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.481.5.092.684-.217.684-.484 0-.238-.009-.866-.014-1.7-2.782.604-3.37-1.338-3.37-1.338-.455-1.156-1.112-1.465-1.112-1.465-.908-.621.069-.608.069-.608 1.003.07 1.532 1.03 1.532 1.03.893 1.532 2.344 1.09 2.915.832.091-.645.35-1.086.635-1.335-2.22-.251-4.555-1.11-4.555-4.937 0-1.09.39-1.983 1.032-2.68-.103-.252-.448-1.267.098-2.636 0 0 .837-.268 2.74 1.02A9.432 9.432 0 0112 6.73c.84.003 1.686.113 2.48.33 1.902-1.288 2.738-1.02 2.738-1.02.547 1.369.202 2.384.1 2.636.643.697 1.03 1.59 1.03 2.68 0 3.836-2.34 4.684-4.567 4.927.359.308.678.916.678 1.847 0 1.334-.012 2.411-.012 2.737 0 .268.18.581.688.482C19.135 20.164 22 16.417 22 12c0-5.523-4.477-10-10-10z"
+            />
+          </svg>
+        </a>
+      </div>
+      <div class="footer-left-social-icons soc5">
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            fill="#007b00"
+            viewBox="0 0 448 512"
+          >
+            <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!------------------ Footer Section Ends ------------------->
+
+<script>
+  document.getElementById("copyright-year").textContent = new Date().getFullYear();
+</script>
+<script type="text/javascript" src="../assets/js/jquery.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-migrate.js"></script>
+<script type="text/javascript" src="../assets/packages/bootstrap/libraries/popper.js"></script>
+<script type="text/javascript" src="../assets/packages/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/packages/o2system-ui/o2system-ui.js"></script>
+<script type="text/javascript" src="../assets/packages/owl-carousel/owl-carousel.js"></script>
+<script type="text/javascript" src="../assets/packages/cloudzoom/cloudzoom.js"></script>
+<script type="text/javascript" src="../assets/packages/thumbelina/thumbelina.js"></script>
+<script type="text/javascript" src="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
+<script type="text/javascript" src="../assets/js/theme.js"></script>
+<script src="../assets/js/shop.js"></script>
+<script src="../assets/js/wishlist.js"></script>
+
+<script>
+  ScrollReveal({
+      // reset: true,
+      distance: '60px',
+      duration: 2500,
+      delay: 400
+  });
+  ScrollReveal().reveal('#image, #s, #s', { delay: 500, origin: 'top' });
+  ScrollReveal().reveal('#title', { delay: 600, origin: 'top' });
+  ScrollReveal().reveal('#container', { delay: 700, origin: 'bottom' });
+  ScrollReveal().reveal('#col-md-3, #col-md-3l', { delay: 500, origin: 'left' });
+  ScrollReveal().reveal('#col-md, #col-md-3m', { delay: 500, origin: 'right' });
+  ScrollReveal().reveal('#copyright', { delay: 500, origin: 'bottom' });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="../assets/js/toast.js"></script>
+<script src="../assets/js/darkmode.js"></script>
+
+</body>
 </html>
