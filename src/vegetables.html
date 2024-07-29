@@ -6,8 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Organic Vegetables</title>
     <link rel="stylesheet" href="../assets/css/vegitable.css" />
+    <style>
+      #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
+
+        }
+    </style>
   </head>
   <body>
+           <!-- Progress bar -->
+           <div id="progressBar"></div>
+           <script>
+             window.onscroll = function () {
+               var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+               var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+               var scrolled = (winScroll / height) * 100;
+               document.getElementById("progressBar").style.width = scrolled + "%";
+             };
+           </script>
+           <!-- end -->
+    
     <div class="hero-img" style="height: 700px">
       <img
         src="https://media.istockphoto.com/id/1198965879/photo/organic-vegan-food.jpg?s=612x612&w=0&k=20&c=WdTEJ9S_byPyF0nCpg4lMJ4pch8XiSABX7CZl1UuMQ0="

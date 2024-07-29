@@ -280,12 +280,71 @@
       z-index: 2;
     }
 
-    .banner .jumbotron .container {
-      position: relative;
-      z-index: 3;
-      padding-top: 200px; /* Adjust padding as needed to position the text correctly */
-      text-align: center;
+    @media screen and (max-width: 768px) {
+      .navbar-collapse {
+        position: absolute;
+        right: 0;
+        top: 95px;
+        text-align: center;
+        background-color: #132e40;
+        width: 186px;
+        z-index: 1000;
+      }
+
+      .navbar-nav li {
+        color: black;
+      }
+      .toggle {
+        position: relative;
+        left: 101px;
+      }
     }
+
+    @media (max-width: 370px) {
+      .navbar-toggler {
+        right: 10px;
+      }
+
+      .toggle {
+        right: 10px;
+        top: 10px;
+      }
+
+      .navbar-collapse {
+        top: 50px;
+      }
+    }
+}
+#progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
+
+        }
+</style>
+<body class="light">
+            <!-- Progress bar -->
+            <div id="progressBar"></div>
+            <script>
+              window.onscroll = function () {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("progressBar").style.width = scrolled + "%";
+              };
+            </script>
+            <!-- end -->
+
+    <div class="page-header">
+      <!--=============== Navbar ===============-->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <!-- Navbar Brand -->
+
 
     .banner .jumbotron .container h1,
     .banner .jumbotron .container p {

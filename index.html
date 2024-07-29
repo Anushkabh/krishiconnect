@@ -521,6 +521,17 @@
         /* Limit the height of the logo */
       }
 
+      #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
+
+        }
+
       /* Scroll to Top Button */
 
       .scroll-to-top {
@@ -1824,5 +1835,17 @@
     <!-- Custom JavaScript -->
     <script src="./chatBot/script.js"></script>
     <script type="module" src="assets/js/test-script.js"></script>
+
+                <!-- Progress bar -->
+                <div id="progressBar"></div>
+                <script>
+                  window.onscroll = function () {
+                    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    var scrolled = (winScroll / height) * 100;
+                    document.getElementById("progressBar").style.width = scrolled + "%";
+                  };
+                </script>
+                <!-- end -->
   </body>
 </html>
