@@ -169,6 +169,7 @@
       crossorigin="anonymous"
     />
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/googletranslate.js"></script>
     <style>
       html {
         scroll-behavior: smooth;
@@ -846,6 +847,23 @@
       <!-- </div> -->
   
     <!--   Chat bot   -->
+    <button id="translateButton">Translate</button>
+
+    <!-- Popup for Google Translate -->
+    <div id="translatePopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <div id="google_translate_element"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'en',
+          }, 'google_translate_element');
+      }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     
       <button class="chatbot__button" style="background-color: white">
         <span class="material-symbols-outlined"
