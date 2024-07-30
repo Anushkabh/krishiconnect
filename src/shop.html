@@ -383,32 +383,54 @@
       color: #fff;
     }
 
-    .banner .jumbotron .container {
-      color: #fff;
-      text-transform: uppercase;
-    }
-    body.dark .card-body {
-      background-color: black;
-      color: white;
-    }
-    body.dark .wishlist-button {
-      background-color: black;
-      color: white;
-    }
-    body.dark .card-title a {
-      color: white;
-    }
-    body.dark .media-body p {
-      color: white;
-    }
-    .gray-bag {
-      background: #f8f8f8;
-    }
-    body.dark .gray-bag {
-      background-color: #0f151f;
-    }
-  </style>
-  <body>
+  .banner .jumbotron .container {
+    color: #FFF;
+    text-transform: uppercase;
+  }
+  body.dark .card-body{
+    background-color: black;
+    color: white;
+  }
+  body.dark .wishlist-button{
+    background-color: black;
+    color: white;
+  }
+  body.dark .card-title a{
+    color: white;
+  }
+  body.dark .media-body p{
+    color: white;
+  }
+  .gray-bag {
+    background: #f8f8f8;
+}
+body.dark .gray-bag{
+    background-color: #0f151f;
+  }
+  #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
+
+        }
+</style>
+<body >
+              <!-- Progress bar -->
+  <div id="progressBar"></div>
+  <script>
+    window.onscroll = function () {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+  </script>
+  <!-- end -->
+
     <div class="page-header">
       <!--=============== Navbar ===============-->
       <nav
@@ -731,7 +753,7 @@
                 </a>
               </div>
               <div class="item" id="item">
-                <a href="#oilseedsandherbs">
+                <a href="herbs.html">
                   <div
                     style="
                       border-radius: 8px;
@@ -857,8 +879,10 @@
                           </div>
                           <div class="buttons">
                             <a
-                              onclick="addToWishlist('Potatoes1',200)"
+                              onclick="addToWishlist('Potatoes', '../assets/img/potato.jpg', 60)"
                               class="wishlist-button"
+                              data-product-name="Potatoes"
+                              data-product-price="60"
                             >
                               <i
                                 class="fas fa-seedling"
@@ -926,9 +950,11 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Moong Dhuli',200)"
-                          class="wishlist-button"
-                        >
+                        onclick="addToWishlist('Moong Dhuli', '../assets/img/moong.jpg', 230)"
+                        class="wishlist-button"
+                        data-product-name="Moong Dhuli"
+                        data-product-price="230"
+                      >
                           <i
                             class="fas fa-seedling"
                             style="font-size: 18px"
@@ -991,9 +1017,11 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Mustard Oil',200)"
-                          class="wishlist-button"
-                        >
+                        onclick="addToWishlist('Mustard Oil', '../assets/img/mustard-flowers-.jpg', 240)"
+                        class="wishlist-button"
+                        data-product-name="Mustard Oil"
+                        data-product-price="240"
+                      >
                           <i
                             class="fas fa-seedling"
                             style="font-size: 18px"
@@ -1128,9 +1156,11 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Cucumber',200)"
-                          class="wishlist-button"
-                        >
+                        onclick="addToWishlist('Cucumber', '../assets/img/cucumber.jpg', 80)"
+                        class="wishlist-button"
+                        data-product-name="Cucumber"
+                        data-product-price="80"
+                      >
                           <i
                             class="fas fa-seedling"
                             style="font-size: 18px"
@@ -1209,9 +1239,11 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Potatoes',200)"
-                          class="wishlist-button"
-                        >
+                        onclick="addToWishlist('Potatoes', '../assets/img/potato.jpg', 60)"
+                        class="wishlist-button"
+                        data-product-name="Potatoes"
+                        data-product-price="60"
+                      >
                           <i
                             class="fas fa-seedling"
                             style="font-size: 18px"
@@ -1278,9 +1310,11 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Cucumber',200);"
-                          class="wishlist-button"
-                        >
+                        onclick="addToWishlist('Cucumber', '../assets/img/cucumber.jpg', 80)"
+                        class="wishlist-button"
+                        data-product-name="Cucumber"
+                        data-product-price="80"
+                      >
                           <i
                             class="fas fa-seedling"
                             style="font-size: 18px"
@@ -1347,8 +1381,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Cabbage',200)"
+                          onclick="addToWishlist('Cabbage', '../assets/img/Cabbage.jpg', 60);"
                           class="wishlist-button"
+                          data-product-name="Cabbage"
+                          data-product-price="60"
                         >
                           <i
                             class="fas fa-seedling"
@@ -1416,8 +1452,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Spinach',200)"
+                          onclick="addToWishlist('Spinach', '../assets/img/spinach.jpg', 55);"
                           class="wishlist-button"
+                          data-product-name="Spinach"
+                          data-product-price="55"
                         >
                           <i
                             class="fas fa-seedling"
@@ -1485,8 +1523,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Tomatoes',200)"
+                          onclick="addToWishlist('Tomatoes', '../assets/img/Tomato.jpg', 65);"
                           class="wishlist-button"
+                          data-product-name="Tomatoes"
+                          data-product-price="65"
                         >
                           <i
                             class="fas fa-seedling"
@@ -1566,8 +1606,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Mustard Oil',200)"
+                          onclick="addToWishlist('Musturd Oil', '../assets/img/mustard-flowers-.jpg', 240);"
                           class="wishlist-button"
+                          data-product-name="Mustard Oil"
+                          data-product-price="240"
                         >
                           <i
                             class="fas fa-seedling"
@@ -1635,8 +1677,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Groundnut',200)"
+                          onclick="addToWishlist('Musturd Oil', '../assets/img/mustard-flowers-.jpg', 240);"
                           class="wishlist-button"
+                          data-product-name="Mustard Oil"
+                          data-product-price="240"
                         >
                           <i
                             class="fas fa-seedling"
@@ -1704,8 +1748,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Mint Leaves',200)"
+                          onclick="addToWishlist('Mint Leaves', '../assets/img/mint.jpg', 41);"
                           class="wishlist-button"
+                          data-product-name="Mint Leaves"
+                          data-product-price="41"
                         >
                           <i
                             class="fas fa-seedling"
@@ -1773,8 +1819,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Coriander Leaves',200)"
+                          onclick="addToWishlist('Coriander Leaves', '../assets/img/coriander.jpg', 33);"
                           class="wishlist-button"
+                          data-product-name="Coriander Leaves"
+                          data-product-price="33"
                         >
                           <i
                             class="fas fa-seedling"
@@ -1841,8 +1889,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Castor seeds',200)"
+                          onclick="addToWishlist('Castor Seeds', '../assets/img/castor-oil-plant-.jpg', 645);"
                           class="wishlist-button"
+                          data-product-name="Castor Seeds"
+                          data-product-price="645"
                         >
                           <i
                             class="fas fa-seedling"
@@ -1920,8 +1970,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Moong Dhuli',200)"
+                          onclick="addToWishlist('Moong Dhuli', '../assets/img/moong.jpg', 251);"
                           class="wishlist-button"
+                          data-product-name="Moong Dhuli"
+                          data-product-price="251"
                         >
                           <i
                             class="fas fa-seedling"
@@ -1988,8 +2040,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Masoor Dhuli',200)"
+                          onclick="addToWishlist('Masoor Dhuli', '../assets/img/sabut-masoor-dal-500x500.jpg', 185);"
                           class="wishlist-button"
+                          data-product-name="Masoor Dhuli"
+                          data-product-price="185"
                         >
                           <i
                             class="fas fa-seedling"
@@ -2056,8 +2110,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('cumin Powder',200)"
+                          onclick="addToWishlist('Cumin Powder', '../assets/img/cumin.jpg', 140);"
                           class="wishlist-button"
+                          data-product-name="Cumin Powder"
+                          data-product-price="140"
                         >
                           <i
                             class="fas fa-seedling"
@@ -2124,8 +2180,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Turmeric Powder',200)"
+                          onclick="addToWishlist('Turmeric Powder', '../assets/img/turmeric.jpg', 200);"
                           class="wishlist-button"
+                          data-product-name="Turmeric Powder"
+                          data-product-price="200"
                         >
                           <i
                             class="fas fa-seedling"
@@ -2192,8 +2250,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Handmade Pots',200)"
+                          onclick="addToWishlist('Handmade Pots', '../assets/img/miscorg.jpg', 200);"
                           class="wishlist-button"
+                          data-product-name="Handmade Pots"
+                          data-product-price="200"
                         >
                           <i
                             class="fas fa-seedling"
@@ -2272,8 +2332,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Mangoes',200)"
+                          onclick="addToWishlist('Mangoes', '../assets/img/mango.jpg', 180);"
                           class="wishlist-button"
+                          data-product-name="Mangoes"
+                          data-product-price="180"
                         >
                           <i
                             class="fas fa-seedling"
@@ -2340,8 +2402,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Oranges',200)"
+                          onclick="addToWishlist('Oranges', '../assets/img/oranges.jpg', 219);"
                           class="wishlist-button"
+                          data-product-name="Oranges"
+                          data-product-price="219"
                         >
                           <i
                             class="fas fa-seedling"
@@ -2408,8 +2472,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Watermelon',200)"
+                          onclick="addToWishlist('Watermelon', '../assets/img/watermelon.jpg', 60);"
                           class="wishlist-button"
+                          data-product-name="Watermelon"
+                          data-product-price="60"
                         >
                           <i
                             class="fas fa-seedling"
@@ -2476,8 +2542,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Grapes',200)"
+                          onclick="addToWishlist('Grapes', '../assets/img/Grapes.jpg', 260);"
                           class="wishlist-button"
+                          data-product-name="Grapes"
+                          data-product-price="260"
                         >
                           <i
                             class="fas fa-seedling"
@@ -2544,8 +2612,10 @@
                       </div>
                       <div class="buttons">
                         <a
-                          onclick="addToWishlist('Guavas',200)"
+                          onclick="addToWishlist('Guavas', '../assets/img/guava.jpg', 200);"
                           class="wishlist-button"
+                          data-product-name="Guavas"
+                          data-product-price="200"
                         >
                           <i
                             class="fas fa-seedling"
@@ -2615,7 +2685,7 @@
             <h3>Useful Links</h3>
             <div class="footer-center-left-productlist-item">
               <p><a href="src/blog.html" class="link">Blogs</a></p>
-              <p><a href="#" class="link">Herbs</a></p>
+              <p><a href="src/herbs.html" class="link">Herbs</a></p>
               <p><a href="#" class="link">Pesticides</a></p>
               <p><a href="src\faq.html" class="link">FAQ</a></p>
             </div>
@@ -2802,3 +2872,5 @@
     <script src="../assets/js/search.js"></script>
   </body>
 </html>
+
+
