@@ -1,4 +1,4 @@
-/* Fixed translate button */
+
 #translateButton {
     position: fixed;
     bottom: 20px;
@@ -121,6 +121,7 @@ body > .skiptranslate {
 }
 .goog-te-banner {
     display: none !important;
+
 }
 @media (max-width: 1200px) {
     
@@ -150,4 +151,5 @@ body > .skiptranslate {
        
         
     }
+
 }
