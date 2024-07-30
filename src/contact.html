@@ -85,8 +85,8 @@
       media="all"
       href="../assets/css/theme.css"
     />
-    <link rel="stylesheet" href="../assets/css/darkmode.css" />
     <link rel="stylesheet" href="../assets/css/stylesheet.css" />
+    <link rel="stylesheet" href="../assets/css/darkmode.css" />
 
     <!-- Bootstrap -->
     <link
@@ -238,7 +238,7 @@
 
             <label class="toggle" for="toggle" style="margin-left: 20px">
               <i class="bx bxs-sun"></i>
-              <i class="bx bx-moon"></i>
+              <i class="bx bxs-moon"></i>
               <span class="ball"></span>
             </label>
           </div>
@@ -689,4 +689,28 @@
           sendButton.textContent = 'Send';
         });
     });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.getElementById('toggle');
+      const body = document.body;
+
+      // Load the saved theme from localStorage
+      if (localStorage.getItem('theme') === 'dark') {
+          body.classList.add('dark');
+          toggle.checked = true;
+      }
+
+      // Add event listener for the toggle button
+      toggle.addEventListener('change', function() {
+          if (toggle.checked) {
+              body.classList.add('dark');
+              localStorage.setItem('theme', 'dark');
+          } else {
+              body.classList.remove('dark');
+              localStorage.setItem('theme', 'light');
+          }
+      });
+  });
 </script>

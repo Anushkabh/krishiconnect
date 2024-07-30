@@ -46,16 +46,19 @@ input {
 }
 
 .light .toggle .bxs-sun {
-  color: #fafafa;
+  color: #ff8f00;
 }
 
-.light .toggle .bx-moon {
-  color: #198754;
+.light .toggle .bxs-moon {
+  color: white;
 }
 
 .light .toggle .ball {
-  background: #198754;
+  background: white;
 }
+
+
+
 /* -- Dark Mode -- */
 .dark {
   background: #151d2a;
