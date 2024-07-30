@@ -1,6 +1,6 @@
 // Add to Wishlist
 
-function addToWishlist(name, price) {
+function addToWishlist(name, imageUrl, price) {
   var wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
 
   var existingItem = wishlistItems.find(function (item) {
@@ -13,6 +13,7 @@ function addToWishlist(name, price) {
 
   var newItem = {
     name: name,
+    imageUrl: imageUrl,
     price: price,
   };
 

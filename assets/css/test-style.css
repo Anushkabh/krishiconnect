@@ -29,9 +29,16 @@
     border-radius: 25px;
     background-color: white;
     height: 300px;
-    transition: transform 0.5s ease;
-  }
-
+    transition: transform 0.5s ease;margin: 0px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover{
+  transform: scale(1.001);
+  box-shadow: 2px 8px 16px rgba(17, 215, 37, 0.986);
+  padding: 10px;
+}
   .image-content {
     display: flex;
     flex-direction: column;
@@ -116,10 +123,10 @@
     bottom: 0;
     backface-visibility: hidden;
     opacity: 0;
-    border: 2px solid #198754;
+    /* border: 2px solid #198754; */
     background-color: white;
-    border-radius: 50px;
-    font-size: 1em;
+    /* border-radius: 50px; */
+    font-size: 2.3vh;
     padding: 10px 40px;
     transition: opacity 0.5s ease;
   }
