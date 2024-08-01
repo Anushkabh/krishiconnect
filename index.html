@@ -407,7 +407,7 @@
         }
       }
       .nav-item {
-        margin-top: 5px;
+        margin-top: 2px;
       }
       #products .card img {
         width: 100%;
@@ -611,6 +611,60 @@
       .card-back {
         transform: rotateY(180deg);
       }
+      .navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin: 0 -9px; /* Reduced margin for better fit */
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 4px; /* Adjust font size for better fit */
+}
+
+.nav-link i {
+  margin-right: 5px;
+}
+
+/* Additional styling for better appearance */
+.nav-item:hover .nav-link {
+  color: #ddd;
+}
+
+.nav-item.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    margin: 10px 0; /* Adjust margin for vertical layout */
+  }
+}
+
     </style>
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
@@ -667,24 +721,20 @@
           >
             <!-- Navbar Menu -->
             <ul class="navbar-nav">
-              <li
-                class="nav-item"
-                style="border: 2px solid white"
-                id="nav-link1"
-              >
-                <a href="./src/login.html" class="nav-link"
-                  ><i class="ri-user-3-fill"></i> Are You A Seller?</a
-                >
+              <li class="nav-item" style="border: 2px solid white" id="nav-link1">
+                <a href="./src/login.html" class="nav-link">
+                  <i class="ri-user-3-fill"></i> Are You A Seller?
+                </a>
               </li>
               <li class="nav-item" id="nav-link2">
-                <a href="./src/shop.html" class="nav-link"
-                  ><i class="ri-shopping-bag-fill"></i> Shop</a
-                >
+                <a href="./src/shop.html" class="nav-link">
+                  <i class="ri-shopping-bag-fill"></i> Shop
+                </a>
               </li>
               <li class="nav-item" id="nav-link3">
-                <a href="./src/transaction.html" class="nav-link"
-                  ><i class="ri-bank-card-fill"></i> Transactions</a
-                >
+                <a href="./src/transaction.html" class="nav-link">
+                  <i class="ri-bank-card-fill"></i> Transactions
+                </a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -695,7 +745,8 @@
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
-                  ><i class="ri-seedling-fill"></i> Wishlist
+                >
+                  <i class="ri-seedling-fill"></i> Wishlist
                   <span id="wishlistCount" class="wishlist-count">0</span>
                 </a>
                 <div
@@ -707,30 +758,30 @@
                 </div>
               </li>
               <li class="nav-item" id="nav-link5">
-                <a href="./src/cart.html" class="nav-link"
-                  ><i class="ri-shopping-cart-2-fill"></i> My Cart</a
-                >
+                <a href="./src/cart.html" class="nav-link">
+                  <i class="ri-shopping-cart-2-fill"></i> MyCart
+                </a>
               </li>
               <li class="nav-item">
-                <a href="./src/faq.html" class="nav-link"
-                  ><i
+                <a href="./src/faq.html" class="nav-link">
+                  <i
                     class="fa fa-question-circle"
                     style="margin-right: 7px; font-size: 22px"
-                  ></i
-                  >FAQ</a
-                >
+                  ></i> FAQ
+                </a>
               </li>
               <li class="nav-item">
-                <a href="./src/contact.html" class="nav-link"
-                  ><i class="ri-user-fill"></i>Contact</a
-                >
+                <a href="./src/contact.html" class="nav-link">
+                  <i class="ri-user-fill"></i> Contact
+                </a>
               </li>
               <li class="nav-item">
-                <a href="./src/rateus.html" class="nav-link"
-                  ><i class="ri-user-star-fill"></i>Rate Us</a
-                >
+                <a href="./src/rateus.html" class="nav-link">
+                  <i class="ri-user-star-fill"></i> RateUs
+                </a>
               </li>
             </ul>
+            
             <input type="checkbox" id="toggle" />
             <input type="checkbox" id="toggle" />
 
