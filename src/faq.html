@@ -131,58 +131,45 @@
         margin-bottom: 2rem;
       }
 
-      @media screen and (max-width: 760px) {
-        #faq-container {
-          width: 90%;
+  .answers {
+    padding: 30px 20px 40px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    background: #f9e189;
+    color: rgb(40, 37, 53);
+    border-radius: 0 0 5px 5px;
+    display: none;
+  }
+
+  body.dark .answers {
+    color: rgb(40, 37, 53);
+  }
+  #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
+
         }
-      }
+</style>
+<body>
+          <!-- Progress bar -->
+          <div id="progressBar"></div>
+          <script>
+            window.onscroll = function () {
+              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled = (winScroll / height) * 100;
+              document.getElementById("progressBar").style.width = scrolled + "%";
+            };
+          </script>
+          <!-- end -->
+    <!-- FAQ Page's Navbar similar to all other page navbar's -->
+    <div class="page-header">
 
-      .answers.show {
-        display: block; /* show answers when the show class is present */
-      }
-
-      .main-heading {
-        display: flex;
-        margin-top: 30px;
-        padding: 20px;
-        background: #ffefb3;
-        border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
-        cursor: pointer;
-      }
-
-      .main-heading h3 {
-        margin-left: 30px;
-        color: #433c30;
-        word-spacing: 1px;
-        letter-spacing: 1px;
-        font-weight: 600;
-        font-size: 18px;
-      }
-      .main-heading p {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .answers {
-        padding: 30px 20px 40px 20px;
-        font-size: 16px;
-        font-weight: 500;
-        background: #f9e189;
-        color: rgb(40, 37, 53);
-        border-radius: 0 0 5px 5px;
-        display: none;
-      }
-
-      body.dark .answers {
-        color: rgb(40, 37, 53);
-      }
-    </style>
-    <body>
-      <!-- FAQ Page's Navbar similar to all other page navbar's -->
-      <div class="page-header">
         <!--=============== Navbar ===============-->
         <nav
           class="navbar navbar-expand-md navbar-dark bg-dark"

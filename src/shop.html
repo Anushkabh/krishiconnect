@@ -383,32 +383,54 @@
       color: #fff;
     }
 
-    .banner .jumbotron .container {
-      color: #fff;
-      text-transform: uppercase;
-    }
-    body.dark .card-body {
-      background-color: black;
-      color: white;
-    }
-    body.dark .wishlist-button {
-      background-color: black;
-      color: white;
-    }
-    body.dark .card-title a {
-      color: white;
-    }
-    body.dark .media-body p {
-      color: white;
-    }
-    .gray-bag {
-      background: #f8f8f8;
-    }
-    body.dark .gray-bag {
-      background-color: #0f151f;
-    }
-  </style>
-  <body>
+  .banner .jumbotron .container {
+    color: #FFF;
+    text-transform: uppercase;
+  }
+  body.dark .card-body{
+    background-color: black;
+    color: white;
+  }
+  body.dark .wishlist-button{
+    background-color: black;
+    color: white;
+  }
+  body.dark .card-title a{
+    color: white;
+  }
+  body.dark .media-body p{
+    color: white;
+  }
+  .gray-bag {
+    background: #f8f8f8;
+}
+body.dark .gray-bag{
+    background-color: #0f151f;
+  }
+  #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
+
+        }
+</style>
+<body >
+              <!-- Progress bar -->
+  <div id="progressBar"></div>
+  <script>
+    window.onscroll = function () {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+  </script>
+  <!-- end -->
+
     <div class="page-header">
       <!--=============== Navbar ===============-->
       <nav
@@ -731,7 +753,7 @@
                 </a>
               </div>
               <div class="item" id="item">
-                <a href="#oilseedsandherbs">
+                <a href="herbs.html">
                   <div
                     style="
                       border-radius: 8px;
@@ -2663,7 +2685,7 @@
             <h3>Useful Links</h3>
             <div class="footer-center-left-productlist-item">
               <p><a href="src/blog.html" class="link">Blogs</a></p>
-              <p><a href="#" class="link">Herbs</a></p>
+              <p><a href="src/herbs.html" class="link">Herbs</a></p>
               <p><a href="#" class="link">Pesticides</a></p>
               <p><a href="src\faq.html" class="link">FAQ</a></p>
             </div>

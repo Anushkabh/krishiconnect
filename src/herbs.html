@@ -677,22 +677,7 @@
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
-    }
-    
-    .card-back {
-        transform: rotateY(180deg);
-    }
-    #progressBar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 8px;
-            background-color: #E91E63;
-            z-index: 9999;
-
-        }
-
+      }
 
       .card-back {
         transform: rotateY(180deg);
@@ -700,17 +685,6 @@
     </style>
   </head>
   <body>
-               <!-- Progress bar -->
-               <div id="progressBar"></div>
-               <script>
-                 window.onscroll = function () {
-                   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                   var scrolled = (winScroll / height) * 100;
-                   document.getElementById("progressBar").style.width = scrolled + "%";
-                 };
-               </script>
-               <!-- end -->
     <div class="page-header">
       <!--=============== Navbar ===============-->
       <nav
@@ -879,7 +853,7 @@
 
     <div class="hero" style="height: 600px; margin-top: 70px">
       <img
-        src="https://i.pinimg.com/564x/17/f3/66/17f366543f867c162851071fcd33fdae.jpg"
+        src="https://i.pinimg.com/564x/57/80/df/5780df174e2b9f5f6197eb924972a750.jpg"
         height="100%"
         width="100%"
         style="object-fit: cover"
@@ -888,15 +862,15 @@
     </div>
     <div class="abs" style="margin-top: 60px; padding-block: 38px">
       <h1 class="hero-heading font-primary">
-        <span style="color: #fff">Oil & Seeds</span>
+        <span style="color: #fff">Herbs</span>
         <span>100%</span>
         <span style="color: #fff">Organic</span>
       </h1>
       <p class="font sub-title" style="margin-top: 30px">
-        Handpicked Fresh Oil Seeds
+        Handpicked Fresh Herbs
       </p>
       <p style="max-width: 500px; color: #fff">
-        Discover our premium oil seeds, sourced from the finest farms. Perfect
+        Discover our premium Herbs, sourced from the finest farms. Perfect
         for oil extraction and culinary use, our seeds ensure top quality and
         rich nutritional value. Elevate your cooking with our diverse selection
         of sunflower, soybean, and canola seeds.
@@ -909,9 +883,10 @@
           padding: 10px;
           border: none;
           border-radius: 10px;
+          margin-block: 9px;
         "
       >
-        All Oil Seeds
+        All Herbs
       </button>
     </div>
 
@@ -919,7 +894,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="title" id="title">Oil Seeds And Herbs</h2>
+            <h2 class="title" id="title">Herbs</h2>
             <div class="product-carousel owl-carousel">
               <div class="item" id="item">
                 <div class="card card-product">
@@ -1522,7 +1497,7 @@
             <div class="footer-center-right-productlist-item">
               <p><a href="src/fruites.html" class="link">Fruits</a></p>
               <p><a href="src\vegetables.html" class="link">Vegetables</a></p>
-              <p><a href="#" class="link">Oil Seeds</a></p>
+              <p><a href="#" class="link">Herbs</a></p>
             </div>
           </div>
         </div>
