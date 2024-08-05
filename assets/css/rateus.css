@@ -30,6 +30,28 @@ body {
 .rate-container .stars {
     margin-bottom: 20px;
 }
+.rate-container .rating-emoji {
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.3s, text-shadow 0.3s;
+  }
+  
+  .rate-container .rating-emoji:hover,
+  .rate-container .rating-emoji.selected {
+    transform: scale(1.5);
+    text-shadow: 0 0 10px yellow;
+    animation: shine 1s infinite alternate;
+  }
+  
+  @keyframes shine {
+    from {
+      text-shadow: 0 0 20px yellow;
+    }
+    to {
+      text-shadow: 0 0 30px yellow;
+    }
+  }
+  
 
 .rate-container .star {
     font-size: 30px;
