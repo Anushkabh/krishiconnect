@@ -85,8 +85,8 @@
       media="all"
       href="../assets/css/theme.css"
     />
-    <link rel="stylesheet" href="../assets/css/darkmode.css" />
     <link rel="stylesheet" href="../assets/css/stylesheet.css" />
+    <link rel="stylesheet" href="../assets/css/darkmode.css" />
 
     <!-- Bootstrap -->
     <link
@@ -103,8 +103,21 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://unpkg.com/scrollreveal"></script>
-  </head>
-  <body class="light">
+    <style>
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
+
+        }
+    </style>
+</head>
+<body class="light">
+
     <!-- Page Header -->
     <div class="page-header">
       <!--=============== Navbar ===============-->
@@ -225,7 +238,7 @@
 
             <label class="toggle" for="toggle" style="margin-left: 20px">
               <i class="bx bxs-sun"></i>
-              <i class="bx bx-moon"></i>
+              <i class="bx bxs-moon"></i>
               <span class="ball"></span>
             </label>
           </div>
@@ -596,28 +609,41 @@
           </div>
         </div>
       </div>
-    </div>
+     
+  </div>
+              </div>
+  
+  
+  <!------------------ Footer Section Ends ------------------->
+  
+        <!-- Progress bar -->
+        <div id="progressBar"></div>
+        <script>
+          window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+          };
+        </script>
+        <!-- end -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const fullName = document.getElementById('full').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const thankYouMsg = document.getElementById('thankYouMsg');
+      if (fullName && email && message) {
+          thankYouMsg.style.display = 'block';
+          this.reset();
+      } else {
+          alert('Please fill in all fields.');
+      }
+  });
+  </script>
+</body>
 
-    <!------------------ Footer Section Ends ------------------->
-
-    <script>
-      document
-        .getElementById('contactForm')
-        .addEventListener('submit', function (event) {
-          event.preventDefault();
-          const fullName = document.getElementById('full').value;
-          const email = document.getElementById('email').value;
-          const message = document.getElementById('message').value;
-          const thankYouMsg = document.getElementById('thankYouMsg');
-          if (fullName && email && message) {
-            thankYouMsg.style.display = 'block';
-            this.reset();
-          } else {
-            alert('Please fill in all fields.');
-          }
-        });
-    </script>
-  </body>
 </html>
 <script>
   document
@@ -663,4 +689,28 @@
           sendButton.textContent = 'Send';
         });
     });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.getElementById('toggle');
+      const body = document.body;
+
+      // Load the saved theme from localStorage
+      if (localStorage.getItem('theme') === 'dark') {
+          body.classList.add('dark');
+          toggle.checked = true;
+      }
+
+      // Add event listener for the toggle button
+      toggle.addEventListener('change', function() {
+          if (toggle.checked) {
+              body.classList.add('dark');
+              localStorage.setItem('theme', 'dark');
+          } else {
+              body.classList.remove('dark');
+              localStorage.setItem('theme', 'light');
+          }
+      });
+  });
 </script>
