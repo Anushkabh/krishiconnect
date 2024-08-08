@@ -398,10 +398,7 @@
               </li>
             </ul>
           </div>
-        </div>
-      </nav>
-    </div>
-
+          <input type="checkbox" id="toggle" />
     <div class="login-container">
       <form class="login-form">
         <h2 class="text-center">Login</h2>
@@ -418,6 +415,23 @@
           <div class="invalid-feedback">
             Please enter your password.
           </div>
+          <button type="submit" value="Submit" id="submit" class="btn btn-success m-3">
+            SignUp
+          </button>
+          <p id="logswitch" class="text-success mx-3">
+            <i>Already a user? LOG IN</i>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="border bg-white" id="login-signup-box" style="width: 600px; height: 600px;">
+    <div class="login-box m-4">
+      <form id="login" onsubmit="login(event)" style="display:none; ">
+        <div class="register_head title">LOG IN</div>
+        <div class="m-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" name="User1" class="form-control" id="User1" required aria-describedby="emailHelp">
         </div>
         <button type="submit" class="btn btn-primary btn-block">Login</button>
         <div class="form-footer">
