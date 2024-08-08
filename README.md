@@ -13,7 +13,7 @@
 - Promoting sustainable farming practices through useful tips and resources.
 - Offering services such as soil-testing, water-testing, etc., to enhance productivity.
 
-## 🤔Why Choose KrishiConnect?
+## Why Choose KrishiConnect?
 
 **KrishiConnect** prioritizes the satisfaction of all parties involved in agricultural transactions. By fostering direct connections between farmers and consumers, we facilitate transparent and mutually beneficial exchanges.
 
@@ -21,7 +21,7 @@
 
 [![linkedin](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://www.linkedin.com/in/yashpreeth-nijalinge-aa8a36214/) [![portfolio](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://linkedin.com/) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) [![twitter](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://twitter.com/) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34)
 
-# 📸Screenshots
+# Screenshots
 
 ![1](./screenshots/1.png) ![2](./screenshots/2.png) ![3](./screenshots/3.png) ![4](./screenshots/4.png) ![5](/.screenshots/5.png) ![6](./screenshots/6.png)
 
@@ -50,7 +50,7 @@ file:<your folder location>/krishiconnect/index.html
 
 4.  You are ready to explore the website of **KrishiConnect**.
 
-# 🤝How to Contribute
+# How to Contribute
 
 If you think that you can add a new feature or want to fix a bug, we invite you to contribute to **KrishiConnect** and make this project better. To start contributing, follow the below instructions:
 
