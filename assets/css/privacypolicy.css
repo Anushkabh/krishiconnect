@@ -1,0 +1,41 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background for the entire page */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    margin: 0;
+    
+}
+
+.container-my {
+    width: 70%;
+    background: linear-gradient(to bottom, white, #add8e6); /* Gradient from white to light blue */
+    padding: 20px;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 50px auto; 
+}
+
+.container-my h1 {
+    text-align: center;
+    color: #c71585;
+    font-size: 45px;
+    margin-bottom: 20px; 
+}
+.footer-legal {
+    margin-top: 0px;
+}
+
+.container-my h2 {
+    color: #a55e69; 
+    font-size: 25px;
+}
+
+.container-my p {
+    line-height: 1.6;
+    font-size: 18px;
+}

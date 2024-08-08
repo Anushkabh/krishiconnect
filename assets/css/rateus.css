@@ -1,80 +1,106 @@
-/* Body styling */
 body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-image: url('https://media.gettyimages.com/id/108351472/photo/happy-village-girl-using-laptop-with-mother-brother-and-grandfa.jpg?s=612x612&w=0&k=20&c=qMxiW4OqTL_u_l5NWmFd93g6MaYNWIEk9XhYEgnw_0I=');
-  background-size: cover; /* Cover the entire viewport */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent repeating */
+    background: url('https://images.squarespace-cdn.com/content/v1/62e7a92f066fa3730dcd4604/ecfe70eb-aba9-401f-8618-bc0d240610d8/v2-7fxx8-5iq65.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.rate-container {
+    max-width: 500px;
+    margin: 20px auto; 
+    margin-top: 200px;
+    margin-bottom: 200px;
+    padding: 40px;
+    background-color: rgba(47, 47, 47, 0.6);
+    border: px solid #0e4003;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Container styling */
-.container {
-  position: relative;
-  background: rgba(
-    25,
-    12,
-    12,
-    0.5
-  ); /* Added semi-transparent black background */
-  color: white; /* Added white text color for better visibility */
-  padding: 20px;
-  border-radius: 12px;
-  width: 450px;
-  text-align: center;
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s,
-    background-color 0.3s; /* Added background-color transition */
+.rate-container:hover {
+    transform: scale(1.05);
 }
 
-.container:hover {
-  transform: translateY(-10px);
-  background-color: rgba(0, 0, 0, 0.7); /* Adjusted background color on hover */
+.rate-container h1 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.stars {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+.rate-container .stars {
+    margin-bottom: 20px;
+}
+.rate-container .rating-emoji {
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.3s, text-shadow 0.3s;
+  }
+  
+  .rate-container .rating-emoji:hover,
+  .rate-container .rating-emoji.selected {
+    transform: scale(1.5);
+    text-shadow: 0 0 10px yellow;
+    animation: shine 1s infinite alternate;
+  }
+  
+  @keyframes shine {
+    from {
+      text-shadow: 0 0 20px yellow;
+    }
+    to {
+      text-shadow: 0 0 30px yellow;
+    }
+  }
+  
+
+.rate-container .star {
+    font-size: 30px;
+    color: #cecece;
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
-.star {
-  font-size: 2.5em;
-  color: #ccc;
-  cursor: pointer;
-  transition: color 0.2s;
+.rate-container .star:hover,
+.rate-container .star.selected {
+    color: gold
 }
 
-.star:hover,
-.star.selected {
-  color: #ffcc00;
+.star:hover {
+    color: gold;
+    animation: glow 1s infinite alternate; 
 }
 
-textarea {
-  width: 90%;
-  height: 120px;
-  margin-bottom: 20px;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1em;
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px yellow;
+    }
+    to {
+        text-shadow: 0 0 30px yellow;
+    }
 }
 
-button {
-  background-color: rgb(41, 134, 234);
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1em;
+.rate-container textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical; 
 }
 
-button:hover {
-  background-color: rgb(13, 62, 184);
+.rate-container button {
+    max-width: 500px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border:none;
+    background-color: #ca3628;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.rate-container button:hover {
+    background-color: #a90e00;
 }

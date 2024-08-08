@@ -1,34 +1,33 @@
-<!doctype html>
-<html style="width: 100%">
+<!DOCTYPE html>
+<html style="width: 100%;">
 
 <head>
   <title>KrishiConnect | Transactions</title>
-  <link rel="icon" type="image/png" href="../assets/img/logo/log.png" />
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="../assets/img/logo/log.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
-    type="text/css" />
-  <link href="../assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css" />
-  <link href="../assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css" />
-  <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/bootstrap/bootstrap.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/o2system-ui/o2system-ui.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/owl-carousel/owl-carousel.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/cloudzoom/cloudzoom.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/thumbelina/thumbelina.css" />
+    type="text/css">
+  <link href="../assets/fonts/sb-bistro/sb-bistro.css" rel="stylesheet" type="text/css">
+  <link href="../assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../assets/css/stylesheet.css" type="text/css">
+  <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/bootstrap/bootstrap.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/o2system-ui/o2system-ui.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/owl-carousel/owl-carousel.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/cloudzoom/cloudzoom.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../assets/packages/thumbelina/thumbelina.css">
   <link rel="stylesheet" type="text/css" media="all"
-    href="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="../assets/css/theme.css" />
-  <link rel="stylesheet" href="../assets/css/Footer-new.css" />
+    href="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/Footer-new.css">
   <script src="https://unpkg.com/scrollreveal"></script>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <!-- Favicon -->
-  <link rel="shortcut icon" href="../assets/img/logo/krishiconnect-high-resolution-logo_black.png"
-    type="image/x-icon" />
-  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/css/darkmode.css" />
-  <link rel="stylesheet" href="../assets/css/Footer-new.css" />
+  <link rel="shortcut icon" href="../assets/img/logo/krishiconnect-high-resolution-logo_black.png" type="image/x-icon">
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/darkmode.css">
+  <link rel="stylesheet" href="../assets/css/Footer-new.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
@@ -41,7 +40,7 @@
   body {
     color: #333333;
     font-size: 14px;
-    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
     background: #fff;
   }
 
@@ -54,7 +53,11 @@
     text-transform: uppercase !important;
     font-weight: 700 !important;
   }
-
+  .navbar{
+        position: fixed;
+        width: 100vw;
+        z-index: 101;
+      }
   .page-header .navbar {
     color: white;
   }
@@ -67,7 +70,7 @@
   }
 
   .page-header .navbar .navbar-nav .nav-link {
-    color: #fff;
+    color: #FFF;
     font-size: 1rem;
     padding-right: 1rem;
     padding-left: 1rem;
@@ -78,7 +81,7 @@
   }
 
   .nav-link:hover {
-    color: #e91e63;
+    color: #E91E63;
   }
 
   .navbar-brand img {
@@ -124,9 +127,10 @@
 
   .banner .jumbotron .container h1,
   .banner .jumbotron .container p {
-    color: #fff;
+    color: #FFF;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   }
+
 
   .banner .jumbotron .container {
     margin-top: 2.3rem;
@@ -136,24 +140,51 @@
 
   .banner .jumbotron .container {
     border: none;
-    color: #fff;
+    color: #FFF;
   }
 
   .banner .jumbotron .container {
-    color: #fff;
+    color: #FFF;
     text-transform: uppercase;
   }
+
+  #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
+
+        }
 </style>
 
 <body>
+            <!-- Progress bar -->
+            <div id="progressBar"></div>
+            <script>
+              window.onscroll = function () {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("progressBar").style.width = scrolled + "%";
+              };
+            </script>
+            <!-- end -->
   <div class="page-header">
     <!--=============== Navbar ===============-->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="page-navigation">
-      <div class="container">
-        <!-- Navbar Brand -->
+    <nav class="navbar  navbar-expand-md navbar-dark bg-dark" id="page-navigation">
 
-        <a href="../index.html" class="navbar-brand mr-auto">
-          <img src="../assets/img/logo/brand_logo/Dark_BG_logo.svg" width="90px" height="90px" style="
+        <div class="container">
+          <!-- Navbar Brand -->
+
+          <a href="../index.html" class="navbar-brand mr-auto">
+            <img
+              src="../assets/img/logo/brand_logo/Dark_BG_logo.svg"
+              width="90px"
+              height="90px"
+              style="
                 display: inline-block;
                 vertical-align: middle;
                 margin-left: 0px;

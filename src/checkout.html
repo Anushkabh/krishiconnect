@@ -69,6 +69,36 @@
       href="../assets/css/theme.css"
     />
     <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/img/logo/log.png" type="image/x-icon">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/darkmode.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" typex="text/css" media="all" href="../assets/css/theme.css">
+
+<style>
+
+#progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
+
+        }
+</style>
+</head>
+<body>
+  <div class="page-header">
+    <!--=============== Navbar ===============-->
+    <nav class="navbar  navbar-expand-md navbar-dark bg-dark" id="page-navigation">
+        <div class="container">
+            <!-- Navbar Brand -->
+
 
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
@@ -499,6 +529,59 @@
                     ></path></svg
                 ></a>
               </div>
+  
+  
+  <!------------------ Footer Section Ends ------------------->
+
+        <!-- Progress bar -->
+        <div id="progressBar"></div>
+        <script>
+          window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+          };
+        </script>
+        <!-- end -->
+  
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+    <script type="text/javascript" src="../assets/js/jquery.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery-migrate.js"></script>
+    <script type="text/javascript" src="../assets/packages/bootstrap/libraries/popper.js"></script>
+    <script type="text/javascript" src="../assets/packages/bootstrap/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/packages/o2system-ui/o2system-ui.js"></script>
+    <script type="text/javascript" src="../assets/packages/owl-carousel/owl-carousel.js"></script>
+    <script type="text/javascript" src="../assets/packages/cloudzoom/cloudzoom.js"></script>
+    <script type="text/javascript" src="../assets/packages/thumbelina/thumbelina.js"></script>
+    <script type="text/javascript" src="../assets/packages/bootstrap-touchspin/bootstrap-touchspin.js"></script>
+    <script type="text/javascript" src="../assets/js/theme.js"></script>
+    <script src="../assets/js/checkout.js"></script>
+    <script>
+        ScrollReveal({
+            //reset: true ,
+            distance : '60px' ,
+            duration:2500,
+            delay:400
+        });
+        ScrollReveal().reveal('#n1,#n2,#n3', { delay: 300 , origin:'top' });
+        ScrollReveal().reveal('#h1,#h2', { delay: 500 , origin:'top',interval:'100' });
+        ScrollReveal().reveal('#h3', { delay: 700 , origin:'left' });
+        ScrollReveal().reveal('#h5', { delay: 700 , origin:'right' });
+        ScrollReveal().reveal('#i1,#i3,#i4,#i5,#i6', { delay: 700 , origin:'left' });
+        ScrollReveal().reveal('#i7,#i8', { delay: 700 , origin:'left' });
+        ScrollReveal().reveal('#i2,#i9', { delay: 700 , origin:'right'});
+        ScrollReveal().reveal('#i10', { delay: 700 , origin:'left' });
+        ScrollReveal().reveal('#11', { delay: 700 , origin:'left' });
+        ScrollReveal().reveal('#i12', { delay: 700 , origin:'left' });
+        ScrollReveal().reveal('#i13', { delay: 700 , origin:'rightt' });
+        ScrollReveal().reveal('.text-right', { delay: 700 , origin:'left' });
+        ScrollReveal().reveal('#15', { delay: 700 , origin:'left' });
+        ScrollReveal().reveal('#container', { delay: 700 , origin:'bottom' });
+        ScrollReveal().reveal('#col-md-3,#col-md-3l', { delay: 500 , origin:'left'});
+        ScrollReveal().reveal('#col-md,#col-md-3m', { delay: 500 , origin:'right'});
+        ScrollReveal().reveal('#copyright', { delay: 500 , origin:'bottom'});
+    </script>
             </div>
           </div>
         </div>
