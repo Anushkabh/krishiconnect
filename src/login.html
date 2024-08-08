@@ -131,11 +131,47 @@
         text-transform: uppercase !important;
         font-weight: 700 !important;
       }
-      
+
+      .navbar{
+        position: fixed;
+        width: 100vw;
+        z-index: 101;
+      }
       .page-header .navbar {
         color: white;
       }
+        .banner .jumbotron .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          z-index: 2;
+        }
       
+        .banner .jumbotron .container {
+          position: relative;
+          z-index: 3;
+          padding-top: 200px; /* Adjust padding as needed to position the text correctly */
+          text-align: center;
+      
+        }
+      
+        .banner .jumbotron .container h1,
+        .banner .jumbotron .container p {
+          color: #FFF;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+      
+        
+        .banner .jumbotron .container  {
+          margin-top: 2.3rem;
+          /* background-color: transparent; */
+          border: none;
+        }
+        .banner .jumbotron {
+
       .page-header .navbar .navbar-brand img {
         margin-left: -160px;
         object-fit: cover;
@@ -167,6 +203,7 @@
       }
 
       .banner .jumbotron {
+
         margin-bottom: 0;
         padding: 0;
         position: relative;
@@ -259,7 +296,44 @@
         text-align: center;
         margin-top: 20px;
       }
-    </style>
+        .banner .jumbotron .container  {
+          border: none;
+          color: #FFF;
+        }
+      
+        .banner .jumbotron .container {
+          color: #FFF;
+          text-transform: uppercase;
+        }
+      
+      
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #E91E63;
+            z-index: 9999;
+
+        }
+       
+      
+      </style>
+</head>
+
+<body class="light">
+              <!-- Progress bar -->
+  <div id="progressBar"></div>
+  <script>
+    window.onscroll = function () {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+  </script>
+  <!-- end -->
   </head>
 
   <body class="light">
