@@ -517,10 +517,10 @@ section .card-title {
 }
 footer {
   background-color: #f8f8f8;
-  padding: 50px 0;
-  padding-bottom: 0;
+  padding: 70px;
+  /* padding-bottom: 0; */
   border-top: 1px solid #eee;
-  border: 2px solid crimson;
+  /* border: 2px solid crimson; */
   background-image: url(https://t3.ftcdn.net/jpg/06/73/59/22/360_F_673592233_GRdQaHtfPN3t9NvLEn4V7jscQlIQLiUi.jpg);
   background-size: cover;
   background-position-y: -43px;
