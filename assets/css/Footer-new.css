@@ -264,3 +264,8 @@
 .right-social-icn div {
   margin: 15px;
 }
+
+.footer-center-productlist-item a {
+  color: #ffffff; 
+  text-decoration: none; 
+}
